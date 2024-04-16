@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,9 +10,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Final_Exam {
-    public partial class Form1 : Form {
-        public Form1() {
+    public partial class QuanLySinhVienForm : Form{ 
+        public QuanLySinhVienForm() {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e) {
+
+        }
+
+        private void button_WOC2_Click(object sender, EventArgs e) {
+
+        }
     }
+
 }
