@@ -19,8 +19,8 @@ namespace Final_Exam {
 
         }
 
-        private void button_WOC2_Click(object sender, EventArgs e) {
-
+        private void searchBtn_Click(object sender, EventArgs e) {
+            searchTextBox.Visible = true;
         }
     }
 
