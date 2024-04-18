@@ -47,5 +47,10 @@ namespace Final_Exam {
         private void hocVienBtn_Click(object sender, EventArgs e) {
             OpenChildForm(new QuanLySinhVienForm());
         }
+
+        private void lopHocBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new LophocForm());
+        }
     }
 }
