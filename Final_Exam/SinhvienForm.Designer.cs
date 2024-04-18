@@ -118,19 +118,17 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 29);
+            this.label1.Size = new System.Drawing.Size(296, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh sách học sinh";
             // 
             // searchBtn
             // 
+            this.searchBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.searchBtn.BackColor = System.Drawing.Color.RoyalBlue;
             this.searchBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
             this.searchBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -151,6 +149,7 @@
             // 
             // filterBtn
             // 
+            this.filterBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.filterBtn.BackColor = System.Drawing.Color.RoyalBlue;
             this.filterBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
             this.filterBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -170,6 +169,7 @@
             // 
             // createBtn
             // 
+            this.createBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.createBtn.BackColor = System.Drawing.Color.RoyalBlue;
             this.createBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
             this.createBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -190,6 +190,7 @@
             // 
             // settingBtn
             // 
+            this.settingBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.settingBtn.BackColor = System.Drawing.Color.RoyalBlue;
             this.settingBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
             this.settingBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -217,6 +218,7 @@
             this.hocsinhGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.hocsinhGridView.Location = new System.Drawing.Point(17, 180);
             this.hocsinhGridView.Name = "hocsinhGridView";
+            this.hocsinhGridView.RowHeadersWidth = 51;
             this.hocsinhGridView.Size = new System.Drawing.Size(1170, 500);
             this.hocsinhGridView.TabIndex = 4;
             // 
@@ -256,19 +258,17 @@
             // 
             // searchTextBox
             // 
-            this.searchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.searchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchTextBox.Location = new System.Drawing.Point(521, 104);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(544, 31);
+            this.searchTextBox.Size = new System.Drawing.Size(544, 37);
             this.searchTextBox.TabIndex = 9;
             this.searchTextBox.Visible = false;
             // 
             // QuanLySinhVienForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.searchTextBox);
