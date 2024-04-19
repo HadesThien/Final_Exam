@@ -38,7 +38,6 @@
             this.settingBtn = new CustomControls.RJControls.RJButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tatcaBtn = new CustomControls.RJControls.RJButton();
-            this.thoihocBtn = new CustomControls.RJControls.RJButton();
             this.danghocBtn = new CustomControls.RJControls.RJButton();
             this.hocthuBtn = new CustomControls.RJControls.RJButton();
             this.hocsinhGridView = new System.Windows.Forms.DataGridView();
@@ -55,7 +54,7 @@
             this.searchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchTextBox.Location = new System.Drawing.Point(521, 104);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(544, 37);
+            this.searchTextBox.Size = new System.Drawing.Size(544, 31);
             this.searchTextBox.TabIndex = 15;
             this.searchTextBox.Visible = false;
             // 
@@ -89,6 +88,7 @@
             this.searchBtn.Text = " ";
             this.searchBtn.TextColor = System.Drawing.Color.White;
             this.searchBtn.UseVisualStyleBackColor = false;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // filterBtn
             // 
@@ -165,12 +165,11 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.Controls.Add(this.tatcaBtn);
-            this.panel1.Controls.Add(this.thoihocBtn);
             this.panel1.Controls.Add(this.danghocBtn);
             this.panel1.Controls.Add(this.hocthuBtn);
             this.panel1.Location = new System.Drawing.Point(17, 89);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(468, 53);
+            this.panel1.Size = new System.Drawing.Size(354, 53);
             this.panel1.TabIndex = 12;
             // 
             // tatcaBtn
@@ -191,24 +190,6 @@
             this.tatcaBtn.TextColor = System.Drawing.Color.White;
             this.tatcaBtn.UseVisualStyleBackColor = false;
             // 
-            // thoihocBtn
-            // 
-            this.thoihocBtn.BackColor = System.Drawing.Color.RoyalBlue;
-            this.thoihocBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.thoihocBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.thoihocBtn.BorderRadius = 0;
-            this.thoihocBtn.BorderSize = 0;
-            this.thoihocBtn.FlatAppearance.BorderSize = 0;
-            this.thoihocBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.thoihocBtn.ForeColor = System.Drawing.Color.White;
-            this.thoihocBtn.Location = new System.Drawing.Point(349, 7);
-            this.thoihocBtn.Name = "thoihocBtn";
-            this.thoihocBtn.Size = new System.Drawing.Size(114, 40);
-            this.thoihocBtn.TabIndex = 5;
-            this.thoihocBtn.Text = "Thôi học";
-            this.thoihocBtn.TextColor = System.Drawing.Color.White;
-            this.thoihocBtn.UseVisualStyleBackColor = false;
-            // 
             // danghocBtn
             // 
             this.danghocBtn.BackColor = System.Drawing.Color.RoyalBlue;
@@ -223,7 +204,7 @@
             this.danghocBtn.Name = "danghocBtn";
             this.danghocBtn.Size = new System.Drawing.Size(114, 40);
             this.danghocBtn.TabIndex = 5;
-            this.danghocBtn.Text = "Đang học";
+            this.danghocBtn.Text = "Đã đóng";
             this.danghocBtn.TextColor = System.Drawing.Color.White;
             this.danghocBtn.UseVisualStyleBackColor = false;
             // 
@@ -241,7 +222,7 @@
             this.hocthuBtn.Name = "hocthuBtn";
             this.hocthuBtn.Size = new System.Drawing.Size(114, 40);
             this.hocthuBtn.TabIndex = 5;
-            this.hocthuBtn.Text = "Học thử";
+            this.hocthuBtn.Text = "Đang mở";
             this.hocthuBtn.TextColor = System.Drawing.Color.White;
             this.hocthuBtn.UseVisualStyleBackColor = false;
             // 
@@ -266,13 +247,13 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(280, 36);
+            this.label1.Size = new System.Drawing.Size(227, 29);
             this.label1.TabIndex = 10;
             this.label1.Text = "Danh sách lớp học";
             // 
             // LophocForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.searchTextBox);
@@ -309,7 +290,6 @@
         private CustomControls.RJControls.RJButton settingBtn;
         private System.Windows.Forms.Panel panel1;
         private CustomControls.RJControls.RJButton tatcaBtn;
-        private CustomControls.RJControls.RJButton thoihocBtn;
         private CustomControls.RJControls.RJButton danghocBtn;
         private CustomControls.RJControls.RJButton hocthuBtn;
         private System.Windows.Forms.DataGridView hocsinhGridView;

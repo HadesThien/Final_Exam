@@ -21,5 +21,9 @@ namespace Final_Exam
         {
 
         }
+
+        private void searchBtn_Click(object sender, EventArgs e) {
+            searchTextBox.Visible = true;
+        }
     }
 }
