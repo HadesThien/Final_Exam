@@ -79,8 +79,8 @@ CREATE TABLE Document
   inventory INT NOT NULL,
   handoutId VARCHAR(10) NOT NULL,
   name VARCHAR(50) NOT NULL,
-  creation_date DATE NOT NULL,
-  history_ DATE NOT NULL,
+  dateCreated DATE NOT NULL,
+  dateUpdated DATE NOT NULL,
   PRIMARY KEY (handoutId)
 );
 
@@ -96,10 +96,8 @@ CREATE TABLE Center_Account
 CREATE TABLE Teacher_Account
 (
   username VARCHAR(20) NOT NULL,
-  Id VARCHAR(10) NOT NULL,
   PRIMARY KEY (username),
-  FOREIGN KEY (username) REFERENCES Account(username),
-  FOREIGN KEY (Id) REFERENCES Teacher(teacherId)
+  FOREIGN KEY (username) REFERENCES Account(username)
 );
 
 CREATE TABLE Admin_Account
