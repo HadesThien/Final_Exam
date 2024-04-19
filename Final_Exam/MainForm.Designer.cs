@@ -27,7 +27,7 @@
             this.Topbar_Panel = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.hiddenBtn = new CustomControls.RJControls.RJButton();
-            this.rjButton2 = new CustomControls.RJControls.RJButton();
+            this.minimizeButton = new CustomControls.RJControls.RJButton();
             this.exitBtn = new CustomControls.RJControls.RJButton();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -77,7 +77,7 @@
             // 
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.Controls.Add(this.hiddenBtn);
-            this.flowLayoutPanel1.Controls.Add(this.rjButton2);
+            this.flowLayoutPanel1.Controls.Add(this.minimizeButton);
             this.flowLayoutPanel1.Controls.Add(this.exitBtn);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(1111, 7);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -102,22 +102,23 @@
             this.hiddenBtn.UseVisualStyleBackColor = false;
             this.hiddenBtn.Click += new System.EventHandler(this.hiddenBtn_Click);
             // 
-            // rjButton2
+            // minimizeButton
             // 
-            this.rjButton2.BackColor = System.Drawing.Color.Gold;
-            this.rjButton2.BackgroundColor = System.Drawing.Color.Gold;
-            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton2.BorderRadius = 10;
-            this.rjButton2.BorderSize = 0;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(30, 3);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(21, 22);
-            this.rjButton2.TabIndex = 1;
-            this.rjButton2.TextColor = System.Drawing.Color.White;
-            this.rjButton2.UseVisualStyleBackColor = false;
+            this.minimizeButton.BackColor = System.Drawing.Color.Gold;
+            this.minimizeButton.BackgroundColor = System.Drawing.Color.Gold;
+            this.minimizeButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.minimizeButton.BorderRadius = 10;
+            this.minimizeButton.BorderSize = 0;
+            this.minimizeButton.FlatAppearance.BorderSize = 0;
+            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeButton.ForeColor = System.Drawing.Color.White;
+            this.minimizeButton.Location = new System.Drawing.Point(30, 3);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.Size = new System.Drawing.Size(21, 22);
+            this.minimizeButton.TabIndex = 1;
+            this.minimizeButton.TextColor = System.Drawing.Color.White;
+            this.minimizeButton.UseVisualStyleBackColor = false;
+            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
             // 
             // exitBtn
             // 
@@ -144,7 +145,7 @@
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label1.Location = new System.Drawing.Point(58, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 29);
+            this.label1.Size = new System.Drawing.Size(152, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Menu | Sidebar";
             // 
@@ -415,7 +416,7 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.panel_Body);
@@ -451,7 +452,7 @@
         private System.Windows.Forms.Label label1;
         private CustomControls.RJControls.RJButton exitBtn;
         private CustomControls.RJControls.RJButton hiddenBtn;
-        private CustomControls.RJControls.RJButton rjButton2;
+        private CustomControls.RJControls.RJButton minimizeButton;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private CustomControls.RJControls.RJButton rjButton3;
