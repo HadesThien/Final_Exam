@@ -33,12 +33,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
             this.tatcaBtn = new CustomControls.RJControls.RJButton();
             this.danghocBtn = new CustomControls.RJControls.RJButton();
             this.hocthuBtn = new CustomControls.RJControls.RJButton();
-=======
->>>>>>> 17d0f5200b84551168a10b5f882eec7a970c0b58
             this.hocsinhGridView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.searchBtn = new CustomControls.RJControls.RJButton();
@@ -203,7 +200,6 @@
             this.settingBtn.TextColor = System.Drawing.Color.White;
             this.settingBtn.UseVisualStyleBackColor = false;
             // 
-<<<<<<< HEAD
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -215,8 +211,6 @@
             this.panel1.Size = new System.Drawing.Size(354, 53);
             this.panel1.TabIndex = 12;
             // 
-=======
->>>>>>> 17d0f5200b84551168a10b5f882eec7a970c0b58
             // tatcaBtn
             // 
             this.tatcaBtn.BackColor = System.Drawing.Color.RoyalBlue;
@@ -271,7 +265,6 @@
             this.hocthuBtn.TextColor = System.Drawing.Color.White;
             this.hocthuBtn.UseVisualStyleBackColor = false;
             // 
-<<<<<<< HEAD
             // hocsinhGridView
             // 
             this.hocsinhGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -297,8 +290,6 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Danh sách lớp học";
             // 
-=======
->>>>>>> 17d0f5200b84551168a10b5f882eec7a970c0b58
             // LophocForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
