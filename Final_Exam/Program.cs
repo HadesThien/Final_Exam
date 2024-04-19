@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GUI {
+namespace Final_Exam{ 
     internal static class Program {
         /// <summary>
         /// The main entry point for the application.
