@@ -26,27 +26,27 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.Topbar_Panel = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.hiddenBtn = new CustomControls.RJControls.RJButton();
-            this.rjButton2 = new CustomControls.RJControls.RJButton();
-            this.exitBtn = new CustomControls.RJControls.RJButton();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.rjButton9 = new CustomControls.RJControls.RJButton();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.hocVienBtn = new CustomControls.RJControls.RJButton();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.rjButton8 = new CustomControls.RJControls.RJButton();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.lopHocBtn = new CustomControls.RJControls.RJButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.rjButton3 = new CustomControls.RJControls.RJButton();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.khoDeBtn = new CustomControls.RJControls.RJButton();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.congNoBtn = new CustomControls.RJControls.RJButton();
             this.panel_Body = new System.Windows.Forms.Panel();
+            this.hiddenBtn = new CustomControls.RJControls.RJButton();
+            this.minimizeBtn = new CustomControls.RJControls.RJButton();
+            this.exitBtn = new CustomControls.RJControls.RJButton();
+            this.rjButton9 = new CustomControls.RJControls.RJButton();
+            this.hocVienBtn = new CustomControls.RJControls.RJButton();
+            this.rjButton8 = new CustomControls.RJControls.RJButton();
+            this.lopHocBtn = new CustomControls.RJControls.RJButton();
+            this.rjButton3 = new CustomControls.RJControls.RJButton();
+            this.khoDeBtn = new CustomControls.RJControls.RJButton();
+            this.congNoBtn = new CustomControls.RJControls.RJButton();
             this.Topbar_Panel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,65 +77,12 @@
             // 
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.Controls.Add(this.hiddenBtn);
-            this.flowLayoutPanel1.Controls.Add(this.rjButton2);
+            this.flowLayoutPanel1.Controls.Add(this.minimizeBtn);
             this.flowLayoutPanel1.Controls.Add(this.exitBtn);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(1111, 7);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(87, 32);
             this.flowLayoutPanel1.TabIndex = 2;
-            // 
-            // hiddenBtn
-            // 
-            this.hiddenBtn.BackColor = System.Drawing.Color.LightGreen;
-            this.hiddenBtn.BackgroundColor = System.Drawing.Color.LightGreen;
-            this.hiddenBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.hiddenBtn.BorderRadius = 10;
-            this.hiddenBtn.BorderSize = 0;
-            this.hiddenBtn.FlatAppearance.BorderSize = 0;
-            this.hiddenBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.hiddenBtn.ForeColor = System.Drawing.Color.White;
-            this.hiddenBtn.Location = new System.Drawing.Point(3, 3);
-            this.hiddenBtn.Name = "hiddenBtn";
-            this.hiddenBtn.Size = new System.Drawing.Size(21, 22);
-            this.hiddenBtn.TabIndex = 1;
-            this.hiddenBtn.TextColor = System.Drawing.Color.White;
-            this.hiddenBtn.UseVisualStyleBackColor = false;
-            this.hiddenBtn.Click += new System.EventHandler(this.hiddenBtn_Click);
-            // 
-            // rjButton2
-            // 
-            this.rjButton2.BackColor = System.Drawing.Color.Gold;
-            this.rjButton2.BackgroundColor = System.Drawing.Color.Gold;
-            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton2.BorderRadius = 10;
-            this.rjButton2.BorderSize = 0;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(30, 3);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(21, 22);
-            this.rjButton2.TabIndex = 1;
-            this.rjButton2.TextColor = System.Drawing.Color.White;
-            this.rjButton2.UseVisualStyleBackColor = false;
-            // 
-            // exitBtn
-            // 
-            this.exitBtn.BackColor = System.Drawing.Color.Red;
-            this.exitBtn.BackgroundColor = System.Drawing.Color.Red;
-            this.exitBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.exitBtn.BorderRadius = 10;
-            this.exitBtn.BorderSize = 0;
-            this.exitBtn.FlatAppearance.BorderSize = 0;
-            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitBtn.ForeColor = System.Drawing.Color.White;
-            this.exitBtn.Location = new System.Drawing.Point(57, 3);
-            this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(21, 22);
-            this.exitBtn.TabIndex = 1;
-            this.exitBtn.TextColor = System.Drawing.Color.White;
-            this.exitBtn.UseVisualStyleBackColor = false;
-            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // label1
             // 
@@ -144,7 +91,7 @@
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label1.Location = new System.Drawing.Point(58, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 29);
+            this.label1.Size = new System.Drawing.Size(152, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Menu | Sidebar";
             // 
@@ -182,6 +129,120 @@
             this.panel9.Size = new System.Drawing.Size(235, 56);
             this.panel9.TabIndex = 3;
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.hocVienBtn);
+            this.panel6.Location = new System.Drawing.Point(0, 113);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(235, 56);
+            this.panel6.TabIndex = 3;
+            // 
+            // panel8
+            // 
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel8.Controls.Add(this.rjButton8);
+            this.panel8.Location = new System.Drawing.Point(0, 568);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(235, 56);
+            this.panel8.TabIndex = 3;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.lopHocBtn);
+            this.panel7.Location = new System.Drawing.Point(0, 175);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(235, 56);
+            this.panel7.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.rjButton3);
+            this.panel3.Location = new System.Drawing.Point(0, 51);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(235, 56);
+            this.panel3.TabIndex = 3;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.khoDeBtn);
+            this.panel5.Location = new System.Drawing.Point(0, 301);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(235, 56);
+            this.panel5.TabIndex = 3;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.congNoBtn);
+            this.panel4.Location = new System.Drawing.Point(0, 238);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(235, 56);
+            this.panel4.TabIndex = 3;
+            // 
+            // panel_Body
+            // 
+            this.panel_Body.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_Body.Location = new System.Drawing.Point(235, 45);
+            this.panel_Body.Name = "panel_Body";
+            this.panel_Body.Size = new System.Drawing.Size(965, 647);
+            this.panel_Body.TabIndex = 2;
+            // 
+            // hiddenBtn
+            // 
+            this.hiddenBtn.BackColor = System.Drawing.Color.LightGreen;
+            this.hiddenBtn.BackgroundColor = System.Drawing.Color.LightGreen;
+            this.hiddenBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.hiddenBtn.BorderRadius = 10;
+            this.hiddenBtn.BorderSize = 0;
+            this.hiddenBtn.FlatAppearance.BorderSize = 0;
+            this.hiddenBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hiddenBtn.ForeColor = System.Drawing.Color.White;
+            this.hiddenBtn.Location = new System.Drawing.Point(3, 3);
+            this.hiddenBtn.Name = "hiddenBtn";
+            this.hiddenBtn.Size = new System.Drawing.Size(21, 22);
+            this.hiddenBtn.TabIndex = 1;
+            this.hiddenBtn.TextColor = System.Drawing.Color.White;
+            this.hiddenBtn.UseVisualStyleBackColor = false;
+            this.hiddenBtn.Click += new System.EventHandler(this.hiddenBtn_Click);
+            // 
+            // minimizeBtn
+            // 
+            this.minimizeBtn.BackColor = System.Drawing.Color.Gold;
+            this.minimizeBtn.BackgroundColor = System.Drawing.Color.Gold;
+            this.minimizeBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.minimizeBtn.BorderRadius = 10;
+            this.minimizeBtn.BorderSize = 0;
+            this.minimizeBtn.FlatAppearance.BorderSize = 0;
+            this.minimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeBtn.ForeColor = System.Drawing.Color.White;
+            this.minimizeBtn.Location = new System.Drawing.Point(30, 3);
+            this.minimizeBtn.Name = "minimizeBtn";
+            this.minimizeBtn.Size = new System.Drawing.Size(21, 22);
+            this.minimizeBtn.TabIndex = 1;
+            this.minimizeBtn.TextColor = System.Drawing.Color.White;
+            this.minimizeBtn.UseVisualStyleBackColor = false;
+            this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click);
+            // 
+            // exitBtn
+            // 
+            this.exitBtn.BackColor = System.Drawing.Color.Red;
+            this.exitBtn.BackgroundColor = System.Drawing.Color.Red;
+            this.exitBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.exitBtn.BorderRadius = 10;
+            this.exitBtn.BorderSize = 0;
+            this.exitBtn.FlatAppearance.BorderSize = 0;
+            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitBtn.ForeColor = System.Drawing.Color.White;
+            this.exitBtn.Location = new System.Drawing.Point(57, 3);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(21, 22);
+            this.exitBtn.TabIndex = 1;
+            this.exitBtn.TextColor = System.Drawing.Color.White;
+            this.exitBtn.UseVisualStyleBackColor = false;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            // 
             // rjButton9
             // 
             this.rjButton9.BackColor = System.Drawing.Color.MidnightBlue;
@@ -206,14 +267,6 @@
             this.rjButton9.TextColor = System.Drawing.Color.White;
             this.rjButton9.UseVisualStyleBackColor = false;
             this.rjButton9.Click += new System.EventHandler(this.rjButton9_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.hocVienBtn);
-            this.panel6.Location = new System.Drawing.Point(0, 113);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(235, 56);
-            this.panel6.TabIndex = 3;
             // 
             // hocVienBtn
             // 
@@ -240,15 +293,6 @@
             this.hocVienBtn.UseVisualStyleBackColor = false;
             this.hocVienBtn.Click += new System.EventHandler(this.hocVienBtn_Click);
             // 
-            // panel8
-            // 
-            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel8.Controls.Add(this.rjButton8);
-            this.panel8.Location = new System.Drawing.Point(0, 568);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(235, 56);
-            this.panel8.TabIndex = 3;
-            // 
             // rjButton8
             // 
             this.rjButton8.BackColor = System.Drawing.Color.MidnightBlue;
@@ -272,14 +316,6 @@
             this.rjButton8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.rjButton8.TextColor = System.Drawing.Color.White;
             this.rjButton8.UseVisualStyleBackColor = false;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.lopHocBtn);
-            this.panel7.Location = new System.Drawing.Point(0, 175);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(235, 56);
-            this.panel7.TabIndex = 3;
             // 
             // lopHocBtn
             // 
@@ -306,15 +342,6 @@
             this.lopHocBtn.UseVisualStyleBackColor = false;
             this.lopHocBtn.Click += new System.EventHandler(this.lopHocBtn_Click);
             // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.rjButton3);
-            this.panel3.Location = new System.Drawing.Point(0, 51);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(235, 56);
-            this.panel3.TabIndex = 3;
-            // 
             // rjButton3
             // 
             this.rjButton3.BackColor = System.Drawing.Color.MidnightBlue;
@@ -338,14 +365,6 @@
             this.rjButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.rjButton3.TextColor = System.Drawing.Color.White;
             this.rjButton3.UseVisualStyleBackColor = false;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.khoDeBtn);
-            this.panel5.Location = new System.Drawing.Point(0, 301);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(235, 56);
-            this.panel5.TabIndex = 3;
             // 
             // khoDeBtn
             // 
@@ -371,14 +390,6 @@
             this.khoDeBtn.TextColor = System.Drawing.Color.White;
             this.khoDeBtn.UseVisualStyleBackColor = false;
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.congNoBtn);
-            this.panel4.Location = new System.Drawing.Point(0, 238);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(235, 56);
-            this.panel4.TabIndex = 3;
-            // 
             // congNoBtn
             // 
             this.congNoBtn.BackColor = System.Drawing.Color.MidnightBlue;
@@ -403,19 +414,9 @@
             this.congNoBtn.TextColor = System.Drawing.Color.White;
             this.congNoBtn.UseVisualStyleBackColor = false;
             // 
-            // panel_Body
-            // 
-            this.panel_Body.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_Body.Location = new System.Drawing.Point(235, 45);
-            this.panel_Body.Name = "panel_Body";
-            this.panel_Body.Size = new System.Drawing.Size(965, 647);
-            this.panel_Body.TabIndex = 2;
-            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.panel_Body);
@@ -425,6 +426,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Form";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -451,7 +453,7 @@
         private System.Windows.Forms.Label label1;
         private CustomControls.RJControls.RJButton exitBtn;
         private CustomControls.RJControls.RJButton hiddenBtn;
-        private CustomControls.RJControls.RJButton rjButton2;
+        private CustomControls.RJControls.RJButton minimizeBtn;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private CustomControls.RJControls.RJButton rjButton3;

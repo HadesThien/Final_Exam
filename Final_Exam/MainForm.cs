@@ -41,7 +41,7 @@ namespace Final_Exam {
         }
 
         private void hiddenBtn_Click(object sender, EventArgs e) {
-            
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void hocVienBtn_Click(object sender, EventArgs e) {
@@ -51,6 +51,13 @@ namespace Final_Exam {
         private void lopHocBtn_Click(object sender, EventArgs e)
         {
             OpenChildForm(new LophocForm());
+        }
+
+        private void minimizeBtn_Click(object sender, EventArgs e) {
+            if (this.WindowState == FormWindowState.Maximized) {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else this.WindowState = FormWindowState.Maximized;
         }
     }
 }
