@@ -191,8 +191,8 @@
             this.bodyPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.bodyPanel.AutoSize = true;
             this.bodyPanel.Location = new System.Drawing.Point(231, 45);
-            this.bodyPanel.MaximumSize = new System.Drawing.Size(1137, 647);
             this.bodyPanel.MinimumSize = new System.Drawing.Size(969, 647);
             this.bodyPanel.Name = "bodyPanel";
             this.bodyPanel.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -459,6 +459,7 @@
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

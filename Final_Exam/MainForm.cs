@@ -33,7 +33,7 @@ namespace Final_Exam {
         //Constructor
         public MainForm() {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.None;
+            //this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 20, 20));
             move = new MakeMovable(this);
             move.SetMovable(crossbar);
@@ -42,25 +42,25 @@ namespace Final_Exam {
         }
         //Setting size Form 
 
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            Rectangle rc = new Rectangle(ClientSize.Width - cGrip, ClientSize.Height - cGrip, cGrip, cGrip);
-            ControlPaint.DrawSizeGrip(e.Graphics, BackColor, rc);
-        }
-        protected override void WndProc(ref Message m)
-        {
-            if (m.Msg == 0x84)
-            {
-                Point pos = new Point(m.LParam.ToInt32());
-                pos = this.PointToScreen(pos);
-                if (pos.X >= ClientSize.Width - cGrip && pos.Y >= ClientSize.Height - cGrip)
-                {
-                    m.Result = (IntPtr)17;
-                    return;
-                }
-            }
-            base.WndProc(ref m);
-        }
+        //protected override void OnPaint(PaintEventArgs e)
+        //{
+        //    Rectangle rc = new Rectangle(ClientSize.Width - cGrip, ClientSize.Height - cGrip, cGrip, cGrip);
+        //    ControlPaint.DrawSizeGrip(e.Graphics, BackColor, rc);
+        //}
+        //protected override void WndProc(ref Message m)
+        //{
+        //    if (m.Msg == 0x84)
+        //    {
+        //        Point pos = new Point(m.LParam.ToInt32());
+        //        pos = this.PointToScreen(pos);
+        //        if (pos.X >= ClientSize.Width - cGrip && pos.Y >= ClientSize.Height - cGrip)
+        //        {
+        //            m.Result = (IntPtr)17;
+        //            return;
+        //        }
+        //    }
+        //    base.WndProc(ref m);
+        //}
         //Methods
         private void OpenChildForm(Form childForm) {
             //if(currentFormChild != null) {
@@ -94,6 +94,7 @@ namespace Final_Exam {
                 int w = this.Width;
                 int h = this.Height;
                 this.WindowState = FormWindowState.Maximized;
+                currentFormChild.WindowState = FormWindowState.Maximized;
                 Region = null;
                 w = this.Width - w;
                 h =this.Height - h;
@@ -153,10 +154,16 @@ namespace Final_Exam {
                 if(bodyPanel.Width == bodyPanel.MinimumSize.Width) {
                     OpenChildForm(currentFormChild);
                 }
-                if(sidebar.Width == sidebar.MaximumSize.Width) {
-                    sideBarExpand=true;
-                    sideBarTimer.Stop();
-                }
+                if(this.WindowState == FormWindowState.Maximized) {
+                    if(sidebar.Width >=235) {
+                        sideBarExpand = true;
+                        sideBarTimer.Stop();
+                    }
+                }else 
+                    if(sidebar.Width == sidebar.MaximumSize.Width) {
+                        sideBarExpand=true;
+                        sideBarTimer.Stop();
+                    }
             }
         }
 
