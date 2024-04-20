@@ -107,6 +107,7 @@
             this.createBtn.BorderSize = 0;
             this.createBtn.FlatAppearance.BorderSize = 0;
             this.createBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.createBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createBtn.ForeColor = System.Drawing.Color.White;
             this.createBtn.Image = ((System.Drawing.Image)(resources.GetObject("createBtn.Image")));
             this.createBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -146,6 +147,7 @@
             this.tatcaBtn.BorderSize = 0;
             this.tatcaBtn.FlatAppearance.BorderSize = 0;
             this.tatcaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tatcaBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tatcaBtn.ForeColor = System.Drawing.Color.White;
             this.tatcaBtn.Location = new System.Drawing.Point(17, 85);
             this.tatcaBtn.Name = "tatcaBtn";
@@ -165,6 +167,7 @@
             this.daDongBtn.BorderSize = 0;
             this.daDongBtn.FlatAppearance.BorderSize = 0;
             this.daDongBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.daDongBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.daDongBtn.ForeColor = System.Drawing.Color.White;
             this.daDongBtn.Location = new System.Drawing.Point(132, 85);
             this.daDongBtn.Name = "daDongBtn";
@@ -184,6 +187,7 @@
             this.dangMoBtn.BorderSize = 0;
             this.dangMoBtn.FlatAppearance.BorderSize = 0;
             this.dangMoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dangMoBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dangMoBtn.ForeColor = System.Drawing.Color.White;
             this.dangMoBtn.Location = new System.Drawing.Point(247, 85);
             this.dangMoBtn.Name = "dangMoBtn";
@@ -197,10 +201,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 29);
+            this.label1.Size = new System.Drawing.Size(125, 32);
             this.label1.TabIndex = 16;
             this.label1.Text = "Đề cương";
             // 

@@ -51,10 +51,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 29);
+            this.label1.Size = new System.Drawing.Size(233, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh sách học sinh";
             // 
@@ -102,7 +102,7 @@
             this.dateCreated});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -163,6 +163,7 @@
             this.tatcaBtn.BorderSize = 0;
             this.tatcaBtn.FlatAppearance.BorderSize = 0;
             this.tatcaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tatcaBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tatcaBtn.ForeColor = System.Drawing.Color.White;
             this.tatcaBtn.Location = new System.Drawing.Point(17, 95);
             this.tatcaBtn.Name = "tatcaBtn";
@@ -182,6 +183,7 @@
             this.thoihocBtn.BorderSize = 0;
             this.thoihocBtn.FlatAppearance.BorderSize = 0;
             this.thoihocBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.thoihocBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thoihocBtn.ForeColor = System.Drawing.Color.White;
             this.thoihocBtn.Location = new System.Drawing.Point(363, 95);
             this.thoihocBtn.Name = "thoihocBtn";
@@ -219,6 +221,7 @@
             this.danghocBtn.BorderSize = 0;
             this.danghocBtn.FlatAppearance.BorderSize = 0;
             this.danghocBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.danghocBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.danghocBtn.ForeColor = System.Drawing.Color.White;
             this.danghocBtn.Location = new System.Drawing.Point(132, 95);
             this.danghocBtn.Name = "danghocBtn";
@@ -239,6 +242,7 @@
             this.createBtn.BorderSize = 0;
             this.createBtn.FlatAppearance.BorderSize = 0;
             this.createBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.createBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createBtn.ForeColor = System.Drawing.Color.White;
             this.createBtn.Image = ((System.Drawing.Image)(resources.GetObject("createBtn.Image")));
             this.createBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -260,6 +264,7 @@
             this.hocthuBtn.BorderSize = 0;
             this.hocthuBtn.FlatAppearance.BorderSize = 0;
             this.hocthuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hocthuBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hocthuBtn.ForeColor = System.Drawing.Color.White;
             this.hocthuBtn.Location = new System.Drawing.Point(247, 95);
             this.hocthuBtn.Name = "hocthuBtn";
