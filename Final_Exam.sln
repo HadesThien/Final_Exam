@@ -14,6 +14,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2BE11B00-5DA1-4B16-8D14-35B53DC93D6C}"
 	ProjectSection(SolutionItems) = preProject
 		Final_Exam\Final_SE_Querysql.sql = Final_Exam\Final_SE_Querysql.sql
+		ResizeMovable\ResizeMovable\MakeMovable.cs = ResizeMovable\ResizeMovable\MakeMovable.cs
 	EndProjectSection
 EndProject
 Global
