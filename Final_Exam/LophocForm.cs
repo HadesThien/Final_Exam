@@ -41,5 +41,17 @@ namespace Final_Exam
         private void label1_Click(object sender, EventArgs e) {
 
         }
+
+        private void filterBtn_Click(object sender, EventArgs e) {
+
+        }
+
+        private void settingBtn_Click(object sender, EventArgs e) {
+
+        }
+
+        private void createBtn_Click(object sender, EventArgs e) {
+
+        }
     }
 }

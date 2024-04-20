@@ -25,5 +25,17 @@ namespace Final_Exam {
         private void CongNoForm_Load(object sender, EventArgs e) {
 
         }
+
+        private void tatcaBtn_Click(object sender, EventArgs e) {
+
+        }
+
+        private void registeredBtn_Click(object sender, EventArgs e) {
+
+        }
+
+        private void paidBtn_Click(object sender, EventArgs e) {
+
+        }
     }
 }
