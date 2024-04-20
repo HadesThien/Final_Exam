@@ -100,6 +100,7 @@ namespace Final_Exam {
                 h =this.Height - h;
                 bodyPanel.MaximumSize= new Size(bodyPanel.Width+ w,bodyPanel.Height+ h);
                 sidebar.MaximumSize = new Size(sidebar.Width+ w,sidebar.Height+ h);
+                MainForm_Load(sender,e);
             }
         }
         private void hiddenBtn_Click(object sender, EventArgs e) {
@@ -149,17 +150,11 @@ namespace Final_Exam {
                 sidebar.Width += 10;
                 bodyPanel.Width -= 10;
                 bodyPanel.Left += 10;
-                if(this.WindowState == FormWindowState.Maximized) {
-                    if(sidebar.Width >=242) {
+                if(sidebar.Width >=242) {
                         sideBarExpand = true;
                         sideBarTimer.Stop();
                         OpenChildForm(currentFormChild);
-                    }
-                }else 
-                    if(sidebar.Width == sidebar.MaximumSize.Width) {
-                        sideBarExpand=true;
-                        sideBarTimer.Stop();
-                    }
+                }           
             }
         }
 
