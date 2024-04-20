@@ -34,12 +34,12 @@
             this.createBtn = new CustomControls.RJControls.RJButton();
             this.settingBtn = new CustomControls.RJControls.RJButton();
             this.hocsinhGridView = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.listPanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.hocsinhGridView)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.listPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +79,7 @@
             this.hocthuBtn.Text = "Học thử";
             this.hocthuBtn.TextColor = System.Drawing.Color.White;
             this.hocthuBtn.UseVisualStyleBackColor = false;
+            this.hocthuBtn.Click += new System.EventHandler(this.hocthuBtn_Click);
             // 
             // danghocBtn
             // 
@@ -97,6 +98,7 @@
             this.danghocBtn.Text = "Đang học";
             this.danghocBtn.TextColor = System.Drawing.Color.White;
             this.danghocBtn.UseVisualStyleBackColor = false;
+            this.danghocBtn.Click += new System.EventHandler(this.danghocBtn_Click);
             // 
             // tatcaBtn
             // 
@@ -115,6 +117,7 @@
             this.tatcaBtn.Text = "Tất cả ";
             this.tatcaBtn.TextColor = System.Drawing.Color.White;
             this.tatcaBtn.UseVisualStyleBackColor = false;
+            this.tatcaBtn.Click += new System.EventHandler(this.tatcaBtn_Click);
             // 
             // label1
             // 
@@ -122,7 +125,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(296, 36);
+            this.label1.Size = new System.Drawing.Size(238, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh sách học sinh";
             // 
@@ -187,6 +190,7 @@
             this.createBtn.Text = "   Tạo mới";
             this.createBtn.TextColor = System.Drawing.Color.White;
             this.createBtn.UseVisualStyleBackColor = false;
+            this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
             // settingBtn
             // 
@@ -222,17 +226,17 @@
             this.hocsinhGridView.Size = new System.Drawing.Size(1170, 500);
             this.hocsinhGridView.TabIndex = 4;
             // 
-            // panel1
+            // listPanel
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel1.Controls.Add(this.tatcaBtn);
-            this.panel1.Controls.Add(this.thoihocBtn);
-            this.panel1.Controls.Add(this.danghocBtn);
-            this.panel1.Controls.Add(this.hocthuBtn);
-            this.panel1.Location = new System.Drawing.Point(17, 89);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(468, 53);
-            this.panel1.TabIndex = 6;
+            this.listPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.listPanel.Controls.Add(this.tatcaBtn);
+            this.listPanel.Controls.Add(this.thoihocBtn);
+            this.listPanel.Controls.Add(this.danghocBtn);
+            this.listPanel.Controls.Add(this.hocthuBtn);
+            this.listPanel.Location = new System.Drawing.Point(17, 89);
+            this.listPanel.Name = "listPanel";
+            this.listPanel.Size = new System.Drawing.Size(468, 53);
+            this.listPanel.TabIndex = 6;
             // 
             // panel2
             // 
@@ -262,19 +266,19 @@
             this.searchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchTextBox.Location = new System.Drawing.Point(521, 104);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(544, 37);
+            this.searchTextBox.Size = new System.Drawing.Size(544, 31);
             this.searchTextBox.TabIndex = 9;
             this.searchTextBox.Visible = false;
             // 
             // QuanLySinhVienForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.listPanel);
             this.Controls.Add(this.hocsinhGridView);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -283,9 +287,8 @@
             this.Name = "QuanLySinhVienForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý sinh viên";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.hocsinhGridView)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.listPanel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -304,7 +307,7 @@
         private CustomControls.RJControls.RJButton danghocBtn;
         private CustomControls.RJControls.RJButton tatcaBtn;
         private CustomControls.RJControls.RJButton filterBtn;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel listPanel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox searchTextBox;

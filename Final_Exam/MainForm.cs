@@ -10,26 +10,25 @@ using System.Windows.Forms;
 
 namespace Final_Exam {
     public partial class MainForm : Form {
-
-
+        bool sideBarExpand = true;
         private Form currentFormChild;
         public MainForm() {
             InitializeComponent();
         }
         private void OpenChildForm(Form childForm) {
-            if(currentFormChild != null) {
-                currentFormChild.Close();
-            }
+            //if(currentFormChild != null) {
+            //    currentFormChild.Close();
+            //}
             currentFormChild = childForm;
             childForm.TopLevel = false;
             childForm.Dock = DockStyle.Fill;
-            panel_Body.Controls.Add(childForm);
-            panel_Body.Tag = childForm;
+            bodyPanel.Controls.Add(childForm);
+            bodyPanel.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
         private void MainForm_Load(object sender, EventArgs e) {
-
+            OpenChildForm(new DashboardForm());
         }
 
         private void rjButton9_Click(object sender, EventArgs e) {
@@ -58,6 +57,57 @@ namespace Final_Exam {
                 this.WindowState = FormWindowState.Normal;
             }
             else this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void khoDeBtn_Click(object sender, EventArgs e) {
+            OpenChildForm(new KhoForm());
+        }
+
+        private void congNoBtn_Click(object sender, EventArgs e) {
+            OpenChildForm(new CongNoForm());
+        }
+
+        private void dashboardBtn_Click(object sender, EventArgs e) {
+            OpenChildForm(new DashboardForm());
+        }
+
+        private void sideBarTimer_Tick(object sender, EventArgs e) {
+            if (sideBarExpand) {
+                sidebar.Width -= 10;
+                bodyPanel.Width += 10;
+                bodyPanel.Left -= 10;
+                if(bodyPanel.Width == bodyPanel.MaximumSize.Width) {
+                    OpenChildForm(currentFormChild);
+                }
+                if(sidebar.Width == sidebar.MinimumSize.Width) {
+                    sideBarExpand = false;
+                    sideBarTimer.Stop();
+                }
+            }
+            else {
+                sidebar.Width += 10;
+                bodyPanel.Width -= 10;
+                bodyPanel.Left += 10;
+                if(bodyPanel.Width == bodyPanel.MinimumSize.Width) {
+                    OpenChildForm(currentFormChild);
+                }
+                if(sidebar.Width == sidebar.MaximumSize.Width) {
+                    sideBarExpand=true;
+                    sideBarTimer.Stop();
+                }
+            }
+        }
+
+        private void menuBtn_Click(object sender, EventArgs e) {
+            sideBarTimer.Start();
+        }
+
+        private void menuBtn_MouseHover(object sender, EventArgs e) {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void menuBtn_MouseLeave(object sender, EventArgs e) {
+            this.Cursor = Cursors.Default;
         }
     }
 }
