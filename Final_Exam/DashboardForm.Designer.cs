@@ -84,7 +84,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.MaximumSize = new System.Drawing.Size(1000, 300);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(729, 212);

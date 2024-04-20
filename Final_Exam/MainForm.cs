@@ -94,13 +94,11 @@ namespace Final_Exam {
                 int w = this.Width;
                 int h = this.Height;
                 this.WindowState = FormWindowState.Maximized;
-                currentFormChild.WindowState = FormWindowState.Maximized;
                 Region = null;
                 w = this.Width - w;
                 h =this.Height - h;
                 bodyPanel.MaximumSize= new Size(bodyPanel.Width+ w,bodyPanel.Height+ h);
                 sidebar.MaximumSize = new Size(sidebar.Width+ w,sidebar.Height+ h);
-                MainForm_Load(sender,e);
             }
         }
         private void hiddenBtn_Click(object sender, EventArgs e) {
