@@ -155,7 +155,7 @@ namespace Final_Exam {
                     OpenChildForm(currentFormChild);
                 }
                 if(this.WindowState == FormWindowState.Maximized) {
-                    if(sidebar.Width >=235) {
+                    if(sidebar.Width >=242) {
                         sideBarExpand = true;
                         sideBarTimer.Stop();
                     }
@@ -177,6 +177,26 @@ namespace Final_Exam {
 
         private void menuBtn_MouseLeave(object sender, EventArgs e) {
             this.Cursor = Cursors.Default;
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e) {
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e) {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e) {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e) {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e) {
+
         }
         //----------------Ends with all feature of menu Btn----------------
     }
