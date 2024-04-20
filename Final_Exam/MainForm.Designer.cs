@@ -39,14 +39,24 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.bodyPanel = new System.Windows.Forms.Panel();
             this.sideBarTimer = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.hiddenBtn = new CustomControls.RJControls.RJButton();
             this.minimizeBtn = new CustomControls.RJControls.RJButton();
             this.exitBtn = new CustomControls.RJControls.RJButton();
             this.accountBtn = new CustomControls.RJControls.RJButton();
+            this.rjButton5 = new CustomControls.RJControls.RJButton();
             this.hocVienBtn = new CustomControls.RJControls.RJButton();
+            this.rjButton4 = new CustomControls.RJControls.RJButton();
             this.logoutBtn = new CustomControls.RJControls.RJButton();
+            this.rjButton3 = new CustomControls.RJControls.RJButton();
             this.lopHocBtn = new CustomControls.RJControls.RJButton();
+            this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.dashboardBtn = new CustomControls.RJControls.RJButton();
+            this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.khoDeBtn = new CustomControls.RJControls.RJButton();
             this.congNoBtn = new CustomControls.RJControls.RJButton();
             this.crossbar.SuspendLayout();
@@ -60,6 +70,11 @@
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // crossbar
@@ -72,7 +87,7 @@
             this.crossbar.Controls.Add(this.menuBtn);
             this.crossbar.Location = new System.Drawing.Point(0, -1);
             this.crossbar.Name = "crossbar";
-            this.crossbar.Size = new System.Drawing.Size(1201, 46);
+            this.crossbar.Size = new System.Drawing.Size(1699, 46);
             this.crossbar.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -81,7 +96,7 @@
             this.flowLayoutPanel1.Controls.Add(this.hiddenBtn);
             this.flowLayoutPanel1.Controls.Add(this.minimizeBtn);
             this.flowLayoutPanel1.Controls.Add(this.exitBtn);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1111, 7);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1609, 7);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(87, 32);
             this.flowLayoutPanel1.TabIndex = 2;
@@ -113,27 +128,32 @@
             // 
             this.sidebar.BackColor = System.Drawing.Color.MidnightBlue;
             this.sidebar.Controls.Add(this.panel9);
+            this.sidebar.Controls.Add(this.panel12);
             this.sidebar.Controls.Add(this.panel6);
+            this.sidebar.Controls.Add(this.panel11);
             this.sidebar.Controls.Add(this.panel8);
+            this.sidebar.Controls.Add(this.panel10);
             this.sidebar.Controls.Add(this.panel7);
+            this.sidebar.Controls.Add(this.panel2);
             this.sidebar.Controls.Add(this.panel3);
+            this.sidebar.Controls.Add(this.panel1);
             this.sidebar.Controls.Add(this.panel5);
             this.sidebar.Controls.Add(this.panel4);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
-            this.sidebar.MaximumSize = new System.Drawing.Size(235, 692);
+            this.sidebar.MaximumSize = new System.Drawing.Size(242, 1000);
             this.sidebar.MinimumSize = new System.Drawing.Size(62, 692);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(235, 692);
+            this.sidebar.Size = new System.Drawing.Size(242, 998);
             this.sidebar.TabIndex = 1;
             // 
             // panel9
             // 
             this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel9.Controls.Add(this.accountBtn);
-            this.panel9.Location = new System.Drawing.Point(0, 635);
+            this.panel9.Location = new System.Drawing.Point(0, 941);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(235, 56);
+            this.panel9.Size = new System.Drawing.Size(242, 56);
             this.panel9.TabIndex = 3;
             // 
             // panel6
@@ -141,16 +161,17 @@
             this.panel6.Controls.Add(this.hocVienBtn);
             this.panel6.Location = new System.Drawing.Point(0, 113);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(235, 56);
+            this.panel6.Size = new System.Drawing.Size(242, 56);
             this.panel6.TabIndex = 3;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // panel8
             // 
             this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel8.Controls.Add(this.logoutBtn);
-            this.panel8.Location = new System.Drawing.Point(0, 568);
+            this.panel8.Location = new System.Drawing.Point(0, 874);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(235, 56);
+            this.panel8.Size = new System.Drawing.Size(242, 56);
             this.panel8.TabIndex = 3;
             // 
             // panel7
@@ -158,33 +179,36 @@
             this.panel7.Controls.Add(this.lopHocBtn);
             this.panel7.Location = new System.Drawing.Point(0, 175);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(235, 56);
+            this.panel7.Size = new System.Drawing.Size(242, 56);
             this.panel7.TabIndex = 3;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // panel3
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.dashboardBtn);
             this.panel3.Location = new System.Drawing.Point(0, 51);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(235, 56);
+            this.panel3.Size = new System.Drawing.Size(242, 56);
             this.panel3.TabIndex = 3;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.khoDeBtn);
             this.panel5.Location = new System.Drawing.Point(0, 301);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(235, 56);
+            this.panel5.Size = new System.Drawing.Size(242, 56);
             this.panel5.TabIndex = 3;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.congNoBtn);
             this.panel4.Location = new System.Drawing.Point(0, 238);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(235, 56);
+            this.panel4.Size = new System.Drawing.Size(242, 56);
             this.panel4.TabIndex = 3;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // bodyPanel
             // 
@@ -192,17 +216,62 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bodyPanel.AutoSize = true;
-            this.bodyPanel.Location = new System.Drawing.Point(231, 45);
+            this.bodyPanel.Location = new System.Drawing.Point(241, 45);
             this.bodyPanel.MinimumSize = new System.Drawing.Size(969, 647);
             this.bodyPanel.Name = "bodyPanel";
             this.bodyPanel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bodyPanel.Size = new System.Drawing.Size(969, 647);
+            this.bodyPanel.Size = new System.Drawing.Size(1457, 953);
             this.bodyPanel.TabIndex = 2;
             // 
             // sideBarTimer
             // 
             this.sideBarTimer.Interval = 10;
             this.sideBarTimer.Tick += new System.EventHandler(this.sideBarTimer_Tick);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.rjButton1);
+            this.panel1.Location = new System.Drawing.Point(0, 238);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(242, 56);
+            this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.rjButton2);
+            this.panel2.Location = new System.Drawing.Point(0, 301);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(242, 56);
+            this.panel2.TabIndex = 3;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.rjButton3);
+            this.panel10.Location = new System.Drawing.Point(0, 51);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(242, 56);
+            this.panel10.TabIndex = 3;
+            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.rjButton4);
+            this.panel11.Location = new System.Drawing.Point(0, 175);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(242, 56);
+            this.panel11.TabIndex = 3;
+            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.rjButton5);
+            this.panel12.Location = new System.Drawing.Point(0, 113);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(242, 56);
+            this.panel12.TabIndex = 3;
+            this.panel12.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // hiddenBtn
             // 
@@ -282,6 +351,31 @@
             this.accountBtn.TextColor = System.Drawing.Color.White;
             this.accountBtn.UseVisualStyleBackColor = false;
             // 
+            // rjButton5
+            // 
+            this.rjButton5.BackColor = System.Drawing.Color.MidnightBlue;
+            this.rjButton5.BackgroundColor = System.Drawing.Color.MidnightBlue;
+            this.rjButton5.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton5.BorderRadius = 0;
+            this.rjButton5.BorderSize = 0;
+            this.rjButton5.FlatAppearance.BorderSize = 0;
+            this.rjButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton5.ForeColor = System.Drawing.Color.White;
+            this.rjButton5.Image = ((System.Drawing.Image)(resources.GetObject("rjButton5.Image")));
+            this.rjButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rjButton5.Location = new System.Drawing.Point(-14, -6);
+            this.rjButton5.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton5.Name = "rjButton5";
+            this.rjButton5.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.rjButton5.Size = new System.Drawing.Size(270, 64);
+            this.rjButton5.TabIndex = 2;
+            this.rjButton5.Text = "       Học viên";
+            this.rjButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rjButton5.TextColor = System.Drawing.Color.White;
+            this.rjButton5.UseVisualStyleBackColor = false;
+            this.rjButton5.Click += new System.EventHandler(this.hocVienBtn_Click);
+            // 
             // hocVienBtn
             // 
             this.hocVienBtn.BackColor = System.Drawing.Color.MidnightBlue;
@@ -307,6 +401,31 @@
             this.hocVienBtn.UseVisualStyleBackColor = false;
             this.hocVienBtn.Click += new System.EventHandler(this.hocVienBtn_Click);
             // 
+            // rjButton4
+            // 
+            this.rjButton4.BackColor = System.Drawing.Color.MidnightBlue;
+            this.rjButton4.BackgroundColor = System.Drawing.Color.MidnightBlue;
+            this.rjButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton4.BorderRadius = 0;
+            this.rjButton4.BorderSize = 0;
+            this.rjButton4.FlatAppearance.BorderSize = 0;
+            this.rjButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton4.ForeColor = System.Drawing.Color.White;
+            this.rjButton4.Image = ((System.Drawing.Image)(resources.GetObject("rjButton4.Image")));
+            this.rjButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rjButton4.Location = new System.Drawing.Point(-14, -4);
+            this.rjButton4.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton4.Name = "rjButton4";
+            this.rjButton4.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.rjButton4.Size = new System.Drawing.Size(270, 64);
+            this.rjButton4.TabIndex = 2;
+            this.rjButton4.Text = "       Lớp học";
+            this.rjButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rjButton4.TextColor = System.Drawing.Color.White;
+            this.rjButton4.UseVisualStyleBackColor = false;
+            this.rjButton4.Click += new System.EventHandler(this.lopHocBtn_Click);
+            // 
             // logoutBtn
             // 
             this.logoutBtn.BackColor = System.Drawing.Color.MidnightBlue;
@@ -330,6 +449,31 @@
             this.logoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.logoutBtn.TextColor = System.Drawing.Color.White;
             this.logoutBtn.UseVisualStyleBackColor = false;
+            // 
+            // rjButton3
+            // 
+            this.rjButton3.BackColor = System.Drawing.Color.MidnightBlue;
+            this.rjButton3.BackgroundColor = System.Drawing.Color.MidnightBlue;
+            this.rjButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton3.BorderRadius = 0;
+            this.rjButton3.BorderSize = 0;
+            this.rjButton3.FlatAppearance.BorderSize = 0;
+            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton3.ForeColor = System.Drawing.Color.White;
+            this.rjButton3.Image = ((System.Drawing.Image)(resources.GetObject("rjButton3.Image")));
+            this.rjButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rjButton3.Location = new System.Drawing.Point(-15, -8);
+            this.rjButton3.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton3.Name = "rjButton3";
+            this.rjButton3.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.rjButton3.Size = new System.Drawing.Size(270, 64);
+            this.rjButton3.TabIndex = 2;
+            this.rjButton3.Text = "       Tổng quan";
+            this.rjButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rjButton3.TextColor = System.Drawing.Color.White;
+            this.rjButton3.UseVisualStyleBackColor = false;
+            this.rjButton3.Click += new System.EventHandler(this.dashboardBtn_Click);
             // 
             // lopHocBtn
             // 
@@ -356,6 +500,31 @@
             this.lopHocBtn.UseVisualStyleBackColor = false;
             this.lopHocBtn.Click += new System.EventHandler(this.lopHocBtn_Click);
             // 
+            // rjButton2
+            // 
+            this.rjButton2.BackColor = System.Drawing.Color.MidnightBlue;
+            this.rjButton2.BackgroundColor = System.Drawing.Color.MidnightBlue;
+            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton2.BorderRadius = 0;
+            this.rjButton2.BorderSize = 0;
+            this.rjButton2.FlatAppearance.BorderSize = 0;
+            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton2.ForeColor = System.Drawing.Color.White;
+            this.rjButton2.Image = ((System.Drawing.Image)(resources.GetObject("rjButton2.Image")));
+            this.rjButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rjButton2.Location = new System.Drawing.Point(-14, -4);
+            this.rjButton2.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton2.Name = "rjButton2";
+            this.rjButton2.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.rjButton2.Size = new System.Drawing.Size(270, 64);
+            this.rjButton2.TabIndex = 2;
+            this.rjButton2.Text = "       Kho đề";
+            this.rjButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rjButton2.TextColor = System.Drawing.Color.White;
+            this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Click += new System.EventHandler(this.khoDeBtn_Click);
+            // 
             // dashboardBtn
             // 
             this.dashboardBtn.BackColor = System.Drawing.Color.MidnightBlue;
@@ -380,6 +549,31 @@
             this.dashboardBtn.TextColor = System.Drawing.Color.White;
             this.dashboardBtn.UseVisualStyleBackColor = false;
             this.dashboardBtn.Click += new System.EventHandler(this.dashboardBtn_Click);
+            // 
+            // rjButton1
+            // 
+            this.rjButton1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.rjButton1.BackgroundColor = System.Drawing.Color.MidnightBlue;
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 0;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Image = ((System.Drawing.Image)(resources.GetObject("rjButton1.Image")));
+            this.rjButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rjButton1.Location = new System.Drawing.Point(-14, -8);
+            this.rjButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.rjButton1.Size = new System.Drawing.Size(270, 64);
+            this.rjButton1.TabIndex = 2;
+            this.rjButton1.Text = "       Thu phí";
+            this.rjButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.congNoBtn_Click);
             // 
             // khoDeBtn
             // 
@@ -435,7 +629,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.ClientSize = new System.Drawing.Size(1698, 998);
             this.ControlBox = false;
             this.Controls.Add(this.crossbar);
             this.Controls.Add(this.sidebar);
@@ -458,6 +652,11 @@
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -489,5 +688,15 @@
         private CustomControls.RJControls.RJButton accountBtn;
         private System.Windows.Forms.Panel bodyPanel;
         private System.Windows.Forms.Timer sideBarTimer;
+        private System.Windows.Forms.Panel panel12;
+        private CustomControls.RJControls.RJButton rjButton5;
+        private System.Windows.Forms.Panel panel11;
+        private CustomControls.RJControls.RJButton rjButton4;
+        private System.Windows.Forms.Panel panel10;
+        private CustomControls.RJControls.RJButton rjButton3;
+        private System.Windows.Forms.Panel panel2;
+        private CustomControls.RJControls.RJButton rjButton2;
+        private System.Windows.Forms.Panel panel1;
+        private CustomControls.RJControls.RJButton rjButton1;
     }
 }
