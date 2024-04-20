@@ -139,25 +139,21 @@ namespace Final_Exam {
                 sidebar.Width -= 10;
                 bodyPanel.Width += 10;
                 bodyPanel.Left -= 10;
-                if(bodyPanel.Width == bodyPanel.MaximumSize.Width) {
-                    OpenChildForm(currentFormChild);
-                }
-                if(sidebar.Width == sidebar.MinimumSize.Width) {
+                if(sidebar.Width <= 62) {
                     sideBarExpand = false;
                     sideBarTimer.Stop();
+                    OpenChildForm(currentFormChild);
                 }
             }
             else {
                 sidebar.Width += 10;
                 bodyPanel.Width -= 10;
                 bodyPanel.Left += 10;
-                if(bodyPanel.Width == bodyPanel.MinimumSize.Width) {
-                    OpenChildForm(currentFormChild);
-                }
                 if(this.WindowState == FormWindowState.Maximized) {
                     if(sidebar.Width >=242) {
                         sideBarExpand = true;
                         sideBarTimer.Stop();
+                        OpenChildForm(currentFormChild);
                     }
                 }else 
                     if(sidebar.Width == sidebar.MaximumSize.Width) {
