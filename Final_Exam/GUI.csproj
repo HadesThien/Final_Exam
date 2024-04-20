@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E20DA030-2468-4640-AF69-6A07D9C73594}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>Final_Exam</RootNamespace>
     <AssemblyName>Final_Exam</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,6 +50,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CongNoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CongNoForm.Designer.cs">
+      <DependentUpon>CongNoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashboardForm.Designer.cs">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhoForm.Designer.cs">
+      <DependentUpon>KhoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LophocForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +80,7 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MakeMovable.cs" />
     <Compile Include="SinhvienForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +97,15 @@
     <Compile Include="RJButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="CongNoForm.resx">
+      <DependentUpon>CongNoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashboardForm.resx">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhoForm.resx">
+      <DependentUpon>KhoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LophocForm.resx">
       <DependentUpon>LophocForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -102,6 +133,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{c6055de6-1945-4418-9a08-9a42eb8f8deb}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

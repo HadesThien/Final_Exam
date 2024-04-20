@@ -22,6 +22,22 @@ namespace Final_Exam {
         private void searchBtn_Click(object sender, EventArgs e) {
             searchTextBox.Visible = true;
         }
+
+        private void tatcaBtn_Click(object sender, EventArgs e) {
+
+        }
+
+        private void danghocBtn_Click(object sender, EventArgs e) {
+
+        }
+
+        private void hocthuBtn_Click(object sender, EventArgs e) {
+
+        }
+
+        private void createBtn_Click(object sender, EventArgs e) {
+
+        }
     }
 
 }
