@@ -14,12 +14,16 @@ namespace Final_Exam {
             InitializeComponent();
         }
 
-        private void settingPanelView() {
-            panel2.Location = new Point(3,panel1.Height + panel1.Location.Y +150);
-        }
 
         private void DashboardForm_Load(object sender, EventArgs e) {
-            settingPanelView();
+        }
+
+        private void dashboardLabel_Click(object sender, EventArgs e) {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e) {
+
         }
     }
 

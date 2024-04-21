@@ -13,5 +13,17 @@ namespace Final_Exam {
         public KhoForm() {
             InitializeComponent();
         }
+
+        private void dangMoBtn_Click(object sender, EventArgs e) {
+
+        }
+
+        private void daDongBtn_Click(object sender, EventArgs e) {
+
+        }
+
+        private void tatcaBtn_Click(object sender, EventArgs e) {
+
+        }
     }
 }

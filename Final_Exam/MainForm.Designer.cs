@@ -27,54 +27,54 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.crossbar = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.hiddenBtn = new CustomControls.RJControls.RJButton();
+            this.minimizeBtn = new CustomControls.RJControls.RJButton();
+            this.exitBtn = new CustomControls.RJControls.RJButton();
             this.label1 = new System.Windows.Forms.Label();
             this.menuBtn = new System.Windows.Forms.PictureBox();
             this.sidebar = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.accountBtn = new CustomControls.RJControls.RJButton();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.rjButton5 = new CustomControls.RJControls.RJButton();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.hocVienBtn = new CustomControls.RJControls.RJButton();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.rjButton4 = new CustomControls.RJControls.RJButton();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.logoutBtn = new CustomControls.RJControls.RJButton();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.rjButton3 = new CustomControls.RJControls.RJButton();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.lopHocBtn = new CustomControls.RJControls.RJButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dashboardBtn = new CustomControls.RJControls.RJButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.khoDeBtn = new CustomControls.RJControls.RJButton();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.congNoBtn = new CustomControls.RJControls.RJButton();
             this.bodyPanel = new System.Windows.Forms.Panel();
             this.sideBarTimer = new System.Windows.Forms.Timer(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.hiddenBtn = new CustomControls.RJControls.RJButton();
-            this.minimizeBtn = new CustomControls.RJControls.RJButton();
-            this.exitBtn = new CustomControls.RJControls.RJButton();
-            this.accountBtn = new CustomControls.RJControls.RJButton();
-            this.rjButton5 = new CustomControls.RJControls.RJButton();
-            this.hocVienBtn = new CustomControls.RJControls.RJButton();
-            this.rjButton4 = new CustomControls.RJControls.RJButton();
-            this.logoutBtn = new CustomControls.RJControls.RJButton();
-            this.rjButton3 = new CustomControls.RJControls.RJButton();
-            this.lopHocBtn = new CustomControls.RJControls.RJButton();
-            this.rjButton2 = new CustomControls.RJControls.RJButton();
-            this.dashboardBtn = new CustomControls.RJControls.RJButton();
-            this.rjButton1 = new CustomControls.RJControls.RJButton();
-            this.khoDeBtn = new CustomControls.RJControls.RJButton();
-            this.congNoBtn = new CustomControls.RJControls.RJButton();
             this.crossbar.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuBtn)).BeginInit();
             this.sidebar.SuspendLayout();
             this.panel9.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // crossbar
@@ -100,178 +100,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(87, 32);
             this.flowLayoutPanel1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(58, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 29);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Menu | Sidebar";
-            // 
-            // menuBtn
-            // 
-            this.menuBtn.Image = ((System.Drawing.Image)(resources.GetObject("menuBtn.Image")));
-            this.menuBtn.Location = new System.Drawing.Point(14, 8);
-            this.menuBtn.Name = "menuBtn";
-            this.menuBtn.Size = new System.Drawing.Size(35, 33);
-            this.menuBtn.TabIndex = 1;
-            this.menuBtn.TabStop = false;
-            this.menuBtn.Click += new System.EventHandler(this.menuBtn_Click);
-            this.menuBtn.MouseLeave += new System.EventHandler(this.menuBtn_MouseLeave);
-            this.menuBtn.MouseHover += new System.EventHandler(this.menuBtn_MouseHover);
-            // 
-            // sidebar
-            // 
-            this.sidebar.BackColor = System.Drawing.Color.MidnightBlue;
-            this.sidebar.Controls.Add(this.panel9);
-            this.sidebar.Controls.Add(this.panel12);
-            this.sidebar.Controls.Add(this.panel6);
-            this.sidebar.Controls.Add(this.panel11);
-            this.sidebar.Controls.Add(this.panel8);
-            this.sidebar.Controls.Add(this.panel10);
-            this.sidebar.Controls.Add(this.panel7);
-            this.sidebar.Controls.Add(this.panel2);
-            this.sidebar.Controls.Add(this.panel3);
-            this.sidebar.Controls.Add(this.panel1);
-            this.sidebar.Controls.Add(this.panel5);
-            this.sidebar.Controls.Add(this.panel4);
-            this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sidebar.Location = new System.Drawing.Point(0, 0);
-            this.sidebar.MaximumSize = new System.Drawing.Size(242, 1000);
-            this.sidebar.MinimumSize = new System.Drawing.Size(62, 692);
-            this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(242, 998);
-            this.sidebar.TabIndex = 1;
-            // 
-            // panel9
-            // 
-            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel9.Controls.Add(this.accountBtn);
-            this.panel9.Location = new System.Drawing.Point(0, 941);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(242, 56);
-            this.panel9.TabIndex = 3;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.hocVienBtn);
-            this.panel6.Location = new System.Drawing.Point(0, 113);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(242, 56);
-            this.panel6.TabIndex = 3;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
-            // 
-            // panel8
-            // 
-            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel8.Controls.Add(this.logoutBtn);
-            this.panel8.Location = new System.Drawing.Point(0, 874);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(242, 56);
-            this.panel8.TabIndex = 3;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.lopHocBtn);
-            this.panel7.Location = new System.Drawing.Point(0, 175);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(242, 56);
-            this.panel7.TabIndex = 3;
-            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.dashboardBtn);
-            this.panel3.Location = new System.Drawing.Point(0, 51);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(242, 56);
-            this.panel3.TabIndex = 3;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.khoDeBtn);
-            this.panel5.Location = new System.Drawing.Point(0, 301);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(242, 56);
-            this.panel5.TabIndex = 3;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.congNoBtn);
-            this.panel4.Location = new System.Drawing.Point(0, 238);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(242, 56);
-            this.panel4.TabIndex = 3;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
-            // 
-            // bodyPanel
-            // 
-            this.bodyPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bodyPanel.AutoSize = true;
-            this.bodyPanel.Location = new System.Drawing.Point(241, 45);
-            this.bodyPanel.MinimumSize = new System.Drawing.Size(969, 647);
-            this.bodyPanel.Name = "bodyPanel";
-            this.bodyPanel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bodyPanel.Size = new System.Drawing.Size(1457, 953);
-            this.bodyPanel.TabIndex = 2;
-            // 
-            // sideBarTimer
-            // 
-            this.sideBarTimer.Interval = 10;
-            this.sideBarTimer.Tick += new System.EventHandler(this.sideBarTimer_Tick);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.rjButton1);
-            this.panel1.Location = new System.Drawing.Point(0, 238);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(242, 56);
-            this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.rjButton2);
-            this.panel2.Location = new System.Drawing.Point(0, 301);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(242, 56);
-            this.panel2.TabIndex = 3;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.rjButton3);
-            this.panel10.Location = new System.Drawing.Point(0, 51);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(242, 56);
-            this.panel10.TabIndex = 3;
-            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.rjButton4);
-            this.panel11.Location = new System.Drawing.Point(0, 175);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(242, 56);
-            this.panel11.TabIndex = 3;
-            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.rjButton5);
-            this.panel12.Location = new System.Drawing.Point(0, 113);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(242, 56);
-            this.panel12.TabIndex = 3;
-            this.panel12.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // hiddenBtn
             // 
@@ -327,6 +155,61 @@
             this.exitBtn.UseVisualStyleBackColor = false;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label1.Location = new System.Drawing.Point(58, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(188, 32);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Menu | Sidebar";
+            // 
+            // menuBtn
+            // 
+            this.menuBtn.Image = ((System.Drawing.Image)(resources.GetObject("menuBtn.Image")));
+            this.menuBtn.Location = new System.Drawing.Point(14, 8);
+            this.menuBtn.Name = "menuBtn";
+            this.menuBtn.Size = new System.Drawing.Size(35, 33);
+            this.menuBtn.TabIndex = 1;
+            this.menuBtn.TabStop = false;
+            this.menuBtn.Click += new System.EventHandler(this.menuBtn_Click);
+            this.menuBtn.MouseLeave += new System.EventHandler(this.menuBtn_MouseLeave);
+            this.menuBtn.MouseHover += new System.EventHandler(this.menuBtn_MouseHover);
+            // 
+            // sidebar
+            // 
+            this.sidebar.BackColor = System.Drawing.Color.MidnightBlue;
+            this.sidebar.Controls.Add(this.panel9);
+            this.sidebar.Controls.Add(this.panel12);
+            this.sidebar.Controls.Add(this.panel6);
+            this.sidebar.Controls.Add(this.panel11);
+            this.sidebar.Controls.Add(this.panel8);
+            this.sidebar.Controls.Add(this.panel10);
+            this.sidebar.Controls.Add(this.panel7);
+            this.sidebar.Controls.Add(this.panel2);
+            this.sidebar.Controls.Add(this.panel3);
+            this.sidebar.Controls.Add(this.panel1);
+            this.sidebar.Controls.Add(this.panel5);
+            this.sidebar.Controls.Add(this.panel4);
+            this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sidebar.Location = new System.Drawing.Point(0, 0);
+            this.sidebar.MaximumSize = new System.Drawing.Size(242, 1000);
+            this.sidebar.MinimumSize = new System.Drawing.Size(62, 692);
+            this.sidebar.Name = "sidebar";
+            this.sidebar.Size = new System.Drawing.Size(242, 998);
+            this.sidebar.TabIndex = 1;
+            // 
+            // panel9
+            // 
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel9.Controls.Add(this.accountBtn);
+            this.panel9.Location = new System.Drawing.Point(0, 941);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(242, 56);
+            this.panel9.TabIndex = 3;
+            // 
             // accountBtn
             // 
             this.accountBtn.BackColor = System.Drawing.Color.MidnightBlue;
@@ -336,7 +219,7 @@
             this.accountBtn.BorderSize = 0;
             this.accountBtn.FlatAppearance.BorderSize = 0;
             this.accountBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.accountBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accountBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accountBtn.ForeColor = System.Drawing.Color.White;
             this.accountBtn.Image = ((System.Drawing.Image)(resources.GetObject("accountBtn.Image")));
             this.accountBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -346,10 +229,19 @@
             this.accountBtn.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.accountBtn.Size = new System.Drawing.Size(270, 64);
             this.accountBtn.TabIndex = 2;
-            this.accountBtn.Text = "       Tài khoản";
+            this.accountBtn.Text = "        Tài khoản";
             this.accountBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.accountBtn.TextColor = System.Drawing.Color.White;
             this.accountBtn.UseVisualStyleBackColor = false;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.rjButton5);
+            this.panel12.Location = new System.Drawing.Point(0, 113);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(242, 56);
+            this.panel12.TabIndex = 3;
+            this.panel12.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // rjButton5
             // 
@@ -360,7 +252,7 @@
             this.rjButton5.BorderSize = 0;
             this.rjButton5.FlatAppearance.BorderSize = 0;
             this.rjButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton5.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton5.ForeColor = System.Drawing.Color.White;
             this.rjButton5.Image = ((System.Drawing.Image)(resources.GetObject("rjButton5.Image")));
             this.rjButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -370,11 +262,20 @@
             this.rjButton5.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.rjButton5.Size = new System.Drawing.Size(270, 64);
             this.rjButton5.TabIndex = 2;
-            this.rjButton5.Text = "       Học viên";
+            this.rjButton5.Text = "        Học viên";
             this.rjButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.rjButton5.TextColor = System.Drawing.Color.White;
             this.rjButton5.UseVisualStyleBackColor = false;
             this.rjButton5.Click += new System.EventHandler(this.hocVienBtn_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.hocVienBtn);
+            this.panel6.Location = new System.Drawing.Point(0, 113);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(242, 56);
+            this.panel6.TabIndex = 3;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // hocVienBtn
             // 
@@ -401,6 +302,15 @@
             this.hocVienBtn.UseVisualStyleBackColor = false;
             this.hocVienBtn.Click += new System.EventHandler(this.hocVienBtn_Click);
             // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.rjButton4);
+            this.panel11.Location = new System.Drawing.Point(0, 175);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(242, 56);
+            this.panel11.TabIndex = 3;
+            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
+            // 
             // rjButton4
             // 
             this.rjButton4.BackColor = System.Drawing.Color.MidnightBlue;
@@ -410,7 +320,7 @@
             this.rjButton4.BorderSize = 0;
             this.rjButton4.FlatAppearance.BorderSize = 0;
             this.rjButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton4.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton4.ForeColor = System.Drawing.Color.White;
             this.rjButton4.Image = ((System.Drawing.Image)(resources.GetObject("rjButton4.Image")));
             this.rjButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -420,11 +330,20 @@
             this.rjButton4.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.rjButton4.Size = new System.Drawing.Size(270, 64);
             this.rjButton4.TabIndex = 2;
-            this.rjButton4.Text = "       Lớp học";
+            this.rjButton4.Text = "        Lớp học";
             this.rjButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.rjButton4.TextColor = System.Drawing.Color.White;
             this.rjButton4.UseVisualStyleBackColor = false;
             this.rjButton4.Click += new System.EventHandler(this.lopHocBtn_Click);
+            // 
+            // panel8
+            // 
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel8.Controls.Add(this.logoutBtn);
+            this.panel8.Location = new System.Drawing.Point(0, 874);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(242, 56);
+            this.panel8.TabIndex = 3;
             // 
             // logoutBtn
             // 
@@ -435,7 +354,7 @@
             this.logoutBtn.BorderSize = 0;
             this.logoutBtn.FlatAppearance.BorderSize = 0;
             this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutBtn.ForeColor = System.Drawing.Color.White;
             this.logoutBtn.Image = ((System.Drawing.Image)(resources.GetObject("logoutBtn.Image")));
             this.logoutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -445,10 +364,19 @@
             this.logoutBtn.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.logoutBtn.Size = new System.Drawing.Size(270, 64);
             this.logoutBtn.TabIndex = 2;
-            this.logoutBtn.Text = "       Đăng xuất";
+            this.logoutBtn.Text = "        Đăng xuất";
             this.logoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.logoutBtn.TextColor = System.Drawing.Color.White;
             this.logoutBtn.UseVisualStyleBackColor = false;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.rjButton3);
+            this.panel10.Location = new System.Drawing.Point(0, 51);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(242, 56);
+            this.panel10.TabIndex = 3;
+            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // rjButton3
             // 
@@ -459,7 +387,7 @@
             this.rjButton3.BorderSize = 0;
             this.rjButton3.FlatAppearance.BorderSize = 0;
             this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton3.ForeColor = System.Drawing.Color.White;
             this.rjButton3.Image = ((System.Drawing.Image)(resources.GetObject("rjButton3.Image")));
             this.rjButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -469,11 +397,20 @@
             this.rjButton3.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.rjButton3.Size = new System.Drawing.Size(270, 64);
             this.rjButton3.TabIndex = 2;
-            this.rjButton3.Text = "       Tổng quan";
+            this.rjButton3.Text = "        Tổng quan";
             this.rjButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.rjButton3.TextColor = System.Drawing.Color.White;
             this.rjButton3.UseVisualStyleBackColor = false;
             this.rjButton3.Click += new System.EventHandler(this.dashboardBtn_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.lopHocBtn);
+            this.panel7.Location = new System.Drawing.Point(0, 175);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(242, 56);
+            this.panel7.TabIndex = 3;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // lopHocBtn
             // 
@@ -500,6 +437,15 @@
             this.lopHocBtn.UseVisualStyleBackColor = false;
             this.lopHocBtn.Click += new System.EventHandler(this.lopHocBtn_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.rjButton2);
+            this.panel2.Location = new System.Drawing.Point(0, 301);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(242, 56);
+            this.panel2.TabIndex = 3;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
             // rjButton2
             // 
             this.rjButton2.BackColor = System.Drawing.Color.MidnightBlue;
@@ -509,7 +455,7 @@
             this.rjButton2.BorderSize = 0;
             this.rjButton2.FlatAppearance.BorderSize = 0;
             this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton2.ForeColor = System.Drawing.Color.White;
             this.rjButton2.Image = ((System.Drawing.Image)(resources.GetObject("rjButton2.Image")));
             this.rjButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -519,11 +465,20 @@
             this.rjButton2.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.rjButton2.Size = new System.Drawing.Size(270, 64);
             this.rjButton2.TabIndex = 2;
-            this.rjButton2.Text = "       Kho đề";
+            this.rjButton2.Text = "        Kho đề";
             this.rjButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.rjButton2.TextColor = System.Drawing.Color.White;
             this.rjButton2.UseVisualStyleBackColor = false;
             this.rjButton2.Click += new System.EventHandler(this.khoDeBtn_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.dashboardBtn);
+            this.panel3.Location = new System.Drawing.Point(0, 51);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(242, 56);
+            this.panel3.TabIndex = 3;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // dashboardBtn
             // 
@@ -550,6 +505,15 @@
             this.dashboardBtn.UseVisualStyleBackColor = false;
             this.dashboardBtn.Click += new System.EventHandler(this.dashboardBtn_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.rjButton1);
+            this.panel1.Location = new System.Drawing.Point(0, 238);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(242, 56);
+            this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
             // rjButton1
             // 
             this.rjButton1.BackColor = System.Drawing.Color.MidnightBlue;
@@ -559,7 +523,7 @@
             this.rjButton1.BorderSize = 0;
             this.rjButton1.FlatAppearance.BorderSize = 0;
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
             this.rjButton1.Image = ((System.Drawing.Image)(resources.GetObject("rjButton1.Image")));
             this.rjButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -569,11 +533,20 @@
             this.rjButton1.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.rjButton1.Size = new System.Drawing.Size(270, 64);
             this.rjButton1.TabIndex = 2;
-            this.rjButton1.Text = "       Thu phí";
+            this.rjButton1.Text = "        Thu phí";
             this.rjButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
             this.rjButton1.Click += new System.EventHandler(this.congNoBtn_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.khoDeBtn);
+            this.panel5.Location = new System.Drawing.Point(0, 301);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(242, 56);
+            this.panel5.TabIndex = 3;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // khoDeBtn
             // 
@@ -600,6 +573,15 @@
             this.khoDeBtn.UseVisualStyleBackColor = false;
             this.khoDeBtn.Click += new System.EventHandler(this.khoDeBtn_Click);
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.congNoBtn);
+            this.panel4.Location = new System.Drawing.Point(0, 238);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(242, 56);
+            this.panel4.TabIndex = 3;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
             // congNoBtn
             // 
             this.congNoBtn.BackColor = System.Drawing.Color.MidnightBlue;
@@ -625,6 +607,24 @@
             this.congNoBtn.UseVisualStyleBackColor = false;
             this.congNoBtn.Click += new System.EventHandler(this.congNoBtn_Click);
             // 
+            // bodyPanel
+            // 
+            this.bodyPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bodyPanel.AutoSize = true;
+            this.bodyPanel.Location = new System.Drawing.Point(241, 45);
+            this.bodyPanel.MinimumSize = new System.Drawing.Size(969, 647);
+            this.bodyPanel.Name = "bodyPanel";
+            this.bodyPanel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bodyPanel.Size = new System.Drawing.Size(1457, 953);
+            this.bodyPanel.TabIndex = 2;
+            // 
+            // sideBarTimer
+            // 
+            this.sideBarTimer.Interval = 1;
+            this.sideBarTimer.Tick += new System.EventHandler(this.sideBarTimer_Tick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -646,17 +646,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.menuBtn)).EndInit();
             this.sidebar.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
