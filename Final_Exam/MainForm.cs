@@ -14,7 +14,7 @@ namespace Final_Exam {
     public partial class MainForm : Form {
         //Properties
         private MakeMovable move;
-
+        public static bool isLogout = false;
         bool sideBarExpand = true;
         private Form currentFormChild;
 
@@ -166,6 +166,14 @@ namespace Final_Exam {
 
         private void panel4_Paint(object sender, PaintEventArgs e) {
 
+        }
+
+        private void logoutBtn_Click(object sender, EventArgs e) {
+            if(MessageBox.Show("Bạn muốn đăng xuất ?","Đăng xuất", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes) { 
+                isLogout = true;
+                DangNhapForm.isLogin = false;
+                this.Close();
+            }
         }
         //----------------Ends with all feature of menu Btn----------------
     }

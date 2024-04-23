@@ -13,9 +13,9 @@ using System.Runtime.InteropServices;
 namespace Final_Exam {
     public partial class DangNhapForm : Form {
         //Properties 
-        string account = "admin";
-        string password = "123";
-
+        static string account = "admin";
+        static string password = "123";
+        public static bool isLogin = false;
 
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -36,6 +36,7 @@ namespace Final_Exam {
         }
 
         private void exitBtn_Click(object sender, EventArgs e) {
+            MainForm.isLogout = false;
             this.Close();
         }
 
@@ -43,20 +44,18 @@ namespace Final_Exam {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private bool kiemTraTaiKhoan(string account, string password) {
-            if (account == this.account && password == this.password) {
-                return true;
-            }
-            return false;
+        public void kiemTraTaiKhoan(string account, string password) {
+            if (account == DangNhapForm.account && password == DangNhapForm.password) 
+                isLogin = true;
+            
         }
         
         private void dangNhapBtn_Click(object sender, EventArgs e) {
             string account = taiKhoanTextBox.Texts;
             string password = matKhauTextBox.Texts;
-            if (kiemTraTaiKhoan(account, password)) {
-                MainForm form = new MainForm();
-                form.ShowDialog();
-                this.WindowState = FormWindowState.Minimized;
+            kiemTraTaiKhoan(account, password);
+            if (isLogin) {
+                MainForm.isLogout = false;
                 this.Close();
             }
             else {

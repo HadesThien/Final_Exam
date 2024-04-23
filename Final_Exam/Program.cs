@@ -13,8 +13,14 @@ namespace Final_Exam {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DangNhapForm());    
-            //Application.Run(new MainForm());
+            Application.Run(new DangNhapForm());
+            while(DangNhapForm.isLogin != MainForm.isLogout) {
+                if(DangNhapForm.isLogin == true ) 
+                    Application.Run(new MainForm());
+                if(MainForm.isLogout == true ) 
+                    Application.Run(new DangNhapForm());
+                
+            }
         }
     }
 }
