@@ -14,7 +14,6 @@ namespace Final_Exam {
     public partial class MainForm : Form {
         //Properties
         private MakeMovable move;
-        private const int cGrip = 16;
 
         bool sideBarExpand = true;
         private Form currentFormChild;
@@ -42,25 +41,6 @@ namespace Final_Exam {
         }
         //Setting size Form 
 
-        //protected override void OnPaint(PaintEventArgs e)
-        //{
-        //    Rectangle rc = new Rectangle(ClientSize.Width - cGrip, ClientSize.Height - cGrip, cGrip, cGrip);
-        //    ControlPaint.DrawSizeGrip(e.Graphics, BackColor, rc);
-        //}
-        //protected override void WndProc(ref Message m)
-        //{
-        //    if (m.Msg == 0x84)
-        //    {
-        //        Point pos = new Point(m.LParam.ToInt32());
-        //        pos = this.PointToScreen(pos);
-        //        if (pos.X >= ClientSize.Width - cGrip && pos.Y >= ClientSize.Height - cGrip)
-        //        {
-        //            m.Result = (IntPtr)17;
-        //            return;
-        //        }
-        //    }
-        //    base.WndProc(ref m);
-        //}
         //Methods
         private void OpenChildForm(Form childForm) {
             //if(currentFormChild != null) {

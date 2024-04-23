@@ -57,6 +57,12 @@
     <Compile Include="CongNoForm.Designer.cs">
       <DependentUpon>CongNoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DangNhapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhapForm.Designer.cs">
+      <DependentUpon>DangNhapForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,10 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MakeMovable.cs" />
+    <Compile Include="RJTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RJTextBox.Designer.cs" />
     <Compile Include="RoundedGridView.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -107,6 +117,9 @@
     <EmbeddedResource Include="CongNoForm.resx">
       <DependentUpon>CongNoForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DangNhapForm.resx">
+      <DependentUpon>DangNhapForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DashboardForm.resx">
       <DependentUpon>DashboardForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +133,7 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RJTextBox.resx" />
     <EmbeddedResource Include="SinhvienForm.resx">
       <DependentUpon>SinhvienForm.cs</DependentUpon>
     </EmbeddedResource>
