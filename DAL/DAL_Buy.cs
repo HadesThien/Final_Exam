@@ -12,13 +12,13 @@ namespace DAL
     {
 
         private DTO_Buy buy;
-        public DAL_Buy(DTO_Student s, DTO_Document d, DateTime buyingDate, int n, int p) {
-            buy = new DTO_Buy(s, d, buyingDate, n, p);
+        public DAL_Buy(DTO_Student s, DTO_Document d, DateTime buyingDate, int n, int p, string status, string month, string note) {
+            buy = new DTO_Buy(s, d, buyingDate, n, p, status, month, note);
         }
         
         public void addQuery()
-        {
-            string query = "INSERT INTO Buy VALUES('" + buy.BuyingDate.ToString() + "', " + buy.Number + "', " + buy.Price + "', '" + buy.Student.Id + "', '" + buy.Document.DocumentId + "')";
+        { 
+            string query = "INSERT INTO Buy VALUES('" + buy.BuyingDate.ToString() + "', " + buy.Number + "', " + buy.Price + "', '" + buy.Status + "', '" + buy.Month + "', '" + buy.Note + "', '" + buy.Student.Id + "', '" + buy.Document.DocumentId + "')";
             Connection.actionQuery(query);
         }
         

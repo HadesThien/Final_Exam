@@ -17,7 +17,7 @@ namespace DAL
 
         public void addQuery()
         {
-            string query1 = "INSERT INTO Account VALUES('" + account.Password + "', '" + account.DateCreated.ToString() + "', '" + account.UserName + "', '" + account.LastLoginDate + "', '" + account.Role + "')";
+            string query1 = "INSERT INTO Account VALUES('" + account.Password + "', '" + account.DateCreated.ToString() + "', '" + account.UserName + "', '" + account.LastLoginDate.ToString() + "', '" + account.Role + "')";
             string query2 = "INSERT INTO Admin_Account VALUES('" + account.Email + "', '" + account.UserName + "')";
             Connection.actionQuery(query1);
             Connection.actionQuery(query2);

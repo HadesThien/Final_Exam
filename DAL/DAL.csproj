@@ -45,6 +45,10 @@
     <Compile Include="DAL_Account.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="DAL_AdminAccount.cs" />
+    <Compile Include="DAL_CenterAccount.cs" />
+    <Compile Include="DAL_Class.cs" />
+    <Compile Include="DAL_Document.cs" />
+    <Compile Include="DAL_Payment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

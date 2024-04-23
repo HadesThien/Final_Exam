@@ -18,13 +18,13 @@ namespace DAL
 
         public void addQuery()
         {
-            string query = "INSERT INTO Account VALUES('" + account.Password + "', '" + account.DateCreated.ToString() + "', '" + account.UserName + "', '" + account.LastLoginDate + "', '" + account.Role + "')";
+            string query = "INSERT INTO Account VALUES('" + account.Password + "', '" + account.DateCreated.ToString() + "', '" + account.UserName + "', '" + account.LastLoginDate.ToString() + "', '" + account.Role + "')";
             Connection.actionQuery(query);
         }
 
         public void updateQuery()
         {
-            string query = "UPDATE Account SET password = '" + account.Password + "', date_created =  '" + account.DateCreated.ToString() + "', lastLoginDate = '" + account.LastLoginDate + "', role_ = '" + account.Role + "' WHERE username = '" + account.UserName + "'";
+            string query = "UPDATE Account SET password = '" + account.Password + "', date_created =  '" + account.DateCreated.ToString() + "', lastLoginDate = '" + account.LastLoginDate.ToString() + "', role_ = '" + account.Role + "' WHERE username = '" + account.UserName + "'";
             Connection.actionQuery(query);
         }
 

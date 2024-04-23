@@ -32,6 +32,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.alert = new System.Windows.Forms.Label();
             this.matKhauTextBox = new CustomControls.RJControls.RJTextBox();
             this.taiKhoanTextBox = new CustomControls.RJControls.RJTextBox();
             this.dangNhapBtn = new CustomControls.RJControls.RJButton();
@@ -40,7 +41,6 @@
             this.hiddenBtn = new CustomControls.RJControls.RJButton();
             this.minimizeBtn = new CustomControls.RJControls.RJButton();
             this.exitBtn = new CustomControls.RJControls.RJButton();
-            this.alert = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,7 +75,7 @@
             this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label2.Location = new System.Drawing.Point(83, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(312, 37);
+            this.label2.Size = new System.Drawing.Size(391, 46);
             this.label2.TabIndex = 8;
             this.label2.Text = "Hệ thống giáo dục NQH";
             // 
@@ -96,7 +96,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(524, 222);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 25);
+            this.label3.Size = new System.Drawing.Size(119, 32);
             this.label3.TabIndex = 9;
             this.label3.Text = "Tài khoản";
             // 
@@ -106,7 +106,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(524, 288);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 25);
+            this.label4.Size = new System.Drawing.Size(119, 32);
             this.label4.TabIndex = 9;
             this.label4.Text = "Mật khẩu";
             // 
@@ -115,10 +115,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label5.Location = new System.Drawing.Point(808, 517);
+            this.label5.Location = new System.Drawing.Point(768, 525);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label5.Size = new System.Drawing.Size(173, 25);
+            this.label5.Size = new System.Drawing.Size(214, 32);
             this.label5.TabIndex = 9;
             this.label5.Text = "Liên hệ: 1800 9900";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -128,12 +128,23 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label6.Location = new System.Drawing.Point(722, 552);
+            this.label6.Location = new System.Drawing.Point(667, 557);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(254, 25);
+            this.label6.Size = new System.Drawing.Size(318, 32);
             this.label6.TabIndex = 9;
             this.label6.Text = "Email: nqh@edusystem.com";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // alert
+            // 
+            this.alert.AutoSize = true;
+            this.alert.ForeColor = System.Drawing.Color.Red;
+            this.alert.Location = new System.Drawing.Point(589, 415);
+            this.alert.Name = "alert";
+            this.alert.Size = new System.Drawing.Size(387, 25);
+            this.alert.TabIndex = 14;
+            this.alert.Text = "*Tài khoản hoặc mật khẩu không chính xác";
+            this.alert.Visible = false;
             // 
             // matKhauTextBox
             // 
@@ -152,7 +163,7 @@
             this.matKhauTextBox.PasswordChar = false;
             this.matKhauTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.matKhauTextBox.PlaceholderText = "Password";
-            this.matKhauTextBox.Size = new System.Drawing.Size(303, 40);
+            this.matKhauTextBox.Size = new System.Drawing.Size(303, 47);
             this.matKhauTextBox.TabIndex = 13;
             this.matKhauTextBox.Texts = "";
             this.matKhauTextBox.UnderlinedStyle = false;
@@ -175,7 +186,7 @@
             this.taiKhoanTextBox.PasswordChar = false;
             this.taiKhoanTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.taiKhoanTextBox.PlaceholderText = "Username";
-            this.taiKhoanTextBox.Size = new System.Drawing.Size(303, 40);
+            this.taiKhoanTextBox.Size = new System.Drawing.Size(303, 47);
             this.taiKhoanTextBox.TabIndex = 12;
             this.taiKhoanTextBox.Texts = "";
             this.taiKhoanTextBox.UnderlinedStyle = false;
@@ -218,7 +229,7 @@
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label1.Location = new System.Drawing.Point(169, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 45);
+            this.label1.Size = new System.Drawing.Size(230, 54);
             this.label1.TabIndex = 6;
             this.label1.Text = "Đăng nhập";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -276,20 +287,9 @@
             this.exitBtn.UseVisualStyleBackColor = false;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
-            // alert
-            // 
-            this.alert.AutoSize = true;
-            this.alert.ForeColor = System.Drawing.Color.Red;
-            this.alert.Location = new System.Drawing.Point(665, 413);
-            this.alert.Name = "alert";
-            this.alert.Size = new System.Drawing.Size(311, 20);
-            this.alert.TabIndex = 14;
-            this.alert.Text = "*Tài khoản hoặc mật khẩu không chính xác";
-            this.alert.Visible = false;
-            // 
             // DangNhapForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(998, 598);
