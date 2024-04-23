@@ -62,7 +62,8 @@ namespace Final_Exam {
 
         //Three buttons corner
         private void exitBtn_Click(object sender, EventArgs e) {
-            Application.Exit();
+            DangNhapForm.isLogin = false;
+            this.Close();
         }
 
         private void minimizeBtn_Click(object sender, EventArgs e) {
@@ -147,27 +148,6 @@ namespace Final_Exam {
         private void menuBtn_MouseLeave(object sender, EventArgs e) {
             this.Cursor = Cursors.Default;
         }
-
-        private void panel6_Paint(object sender, PaintEventArgs e) {
-
-        }
-
-        private void panel7_Paint(object sender, PaintEventArgs e) {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e) {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e) {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e) {
-
-        }
-
         private void logoutBtn_Click(object sender, EventArgs e) {
             if(MessageBox.Show("Bạn muốn đăng xuất ?","Đăng xuất", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes) { 
                 isLogout = true;

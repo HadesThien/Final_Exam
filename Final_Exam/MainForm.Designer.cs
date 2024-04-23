@@ -241,7 +241,6 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(242, 56);
             this.panel12.TabIndex = 3;
-            this.panel12.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // rjButton5
             // 
@@ -275,7 +274,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(242, 56);
             this.panel6.TabIndex = 3;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // hocVienBtn
             // 
@@ -309,7 +307,6 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(242, 56);
             this.panel11.TabIndex = 3;
-            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // rjButton4
             // 
@@ -377,7 +374,6 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(242, 56);
             this.panel10.TabIndex = 3;
-            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // rjButton3
             // 
@@ -411,7 +407,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(242, 56);
             this.panel7.TabIndex = 3;
-            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // lopHocBtn
             // 
@@ -445,7 +440,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(242, 56);
             this.panel2.TabIndex = 3;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // rjButton2
             // 
@@ -479,7 +473,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(242, 56);
             this.panel3.TabIndex = 3;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // dashboardBtn
             // 
@@ -513,7 +506,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(242, 56);
             this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // rjButton1
             // 
@@ -547,7 +539,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(242, 56);
             this.panel5.TabIndex = 3;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // khoDeBtn
             // 
@@ -581,7 +572,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(242, 56);
             this.panel4.TabIndex = 3;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // congNoBtn
             // 
