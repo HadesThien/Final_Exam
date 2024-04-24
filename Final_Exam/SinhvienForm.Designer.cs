@@ -45,6 +45,7 @@
             this.hocthuBtn = new CustomControls.RJControls.RJButton();
             this.filterBtn = new CustomControls.RJControls.RJButton();
             this.searchBtn = new CustomControls.RJControls.RJButton();
+            this.changeStatusBtn = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.studentGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,6 +119,7 @@
             this.studentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.studentGridView.Size = new System.Drawing.Size(1167, 523);
             this.studentGridView.TabIndex = 10;
+            this.studentGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentGridView_CellClick);
             // 
             // studentId
             // 
@@ -316,6 +318,30 @@
             this.searchBtn.UseVisualStyleBackColor = false;
             this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
+            // changeStatusBtn
+            // 
+            this.changeStatusBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.changeStatusBtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.changeStatusBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.changeStatusBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.changeStatusBtn.BorderRadius = 12;
+            this.changeStatusBtn.BorderSize = 0;
+            this.changeStatusBtn.FlatAppearance.BorderSize = 0;
+            this.changeStatusBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changeStatusBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeStatusBtn.ForeColor = System.Drawing.Color.White;
+            this.changeStatusBtn.Image = ((System.Drawing.Image)(resources.GetObject("changeStatusBtn.Image")));
+            this.changeStatusBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.changeStatusBtn.Location = new System.Drawing.Point(904, 12);
+            this.changeStatusBtn.Name = "changeStatusBtn";
+            this.changeStatusBtn.Size = new System.Drawing.Size(109, 40);
+            this.changeStatusBtn.TabIndex = 3;
+            this.changeStatusBtn.Text = "      Thôi học";
+            this.changeStatusBtn.TextColor = System.Drawing.Color.White;
+            this.changeStatusBtn.UseVisualStyleBackColor = false;
+            this.changeStatusBtn.Visible = false;
+            this.changeStatusBtn.Click += new System.EventHandler(this.createBtn_Click);
+            // 
             // QuanLySinhVienForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -327,6 +353,7 @@
             this.Controls.Add(this.thoihocBtn);
             this.Controls.Add(this.settingBtn);
             this.Controls.Add(this.danghocBtn);
+            this.Controls.Add(this.changeStatusBtn);
             this.Controls.Add(this.createBtn);
             this.Controls.Add(this.hocthuBtn);
             this.Controls.Add(this.filterBtn);
@@ -364,5 +391,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dob;
         private System.Windows.Forms.DataGridViewTextBoxColumn gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateCreated;
+        private CustomControls.RJControls.RJButton changeStatusBtn;
     }
 }

@@ -37,7 +37,17 @@ namespace Final_Exam {
         }
 
         private void createBtn_Click(object sender, EventArgs e) {
+            Form GhiDanhForm = new GhiDanhForm();
+            GhiDanhForm.ShowDialog();
+        }
 
+        private void studentGridView_CellClick(object sender, DataGridViewCellEventArgs e) {
+            changeStatusBtn.Visible = true;
+            int index = e.RowIndex;
+            DataGridViewRow row = studentGridView.Rows[index];
+            if(index == 0) {
+
+            }
         }
     }
 
