@@ -17,5 +17,9 @@ namespace Final_Exam {
         private void label9_Click(object sender, EventArgs e) {
 
         }
+
+        private void cancelBtn_Click(object sender, EventArgs e) {
+            this.Close();
+        }
     }
 }

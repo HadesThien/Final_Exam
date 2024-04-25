@@ -49,6 +49,29 @@ namespace Final_Exam {
 
             }
         }
+
+        private void studentGridView_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+            int colIndex = e.ColumnIndex;
+            if(colIndex==0) { Form chiTietSinhVien = new ChiTietSinhVienForm(); chiTietSinhVien.ShowDialog(); }
+
+        }
+
+        private void QuanLySinhVienForm_Load(object sender, EventArgs e) {
+
+        }
+
+        private void studentGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e) {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0) {
+                // Kiểm tra nếu không phải hàng đầu tiên và không phải là cột tiêu đề
+                if (e.ColumnIndex >= 0 && studentGridView.Columns[e.ColumnIndex].HeaderText != "") {
+                    // Kiểm tra nếu ô đầu tiên trong hàng
+                    if (e.ColumnIndex == 0) {
+                        e.CellStyle.Font = new Font(studentGridView.Font, FontStyle.Bold | FontStyle.Underline);
+                        e.CellStyle.ForeColor = Color.MediumSeaGreen;
+                    }
+                }
+            }
+        }
     }
 
 }

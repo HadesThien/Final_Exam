@@ -11,6 +11,11 @@ using System.Runtime.InteropServices;
 
 namespace Final_Exam {
     public partial class GhiDanhForm : Form {
+        //Properties 
+        List<string> selectedItems = new List<string>();
+        string classString = "";
+
+        //Constructor 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
                 (
@@ -29,6 +34,25 @@ namespace Final_Exam {
 
         private void cancelBtn_Click(object sender, EventArgs e) {
             this.Close();
+        }
+
+        private void classListBox_SelectedIndexChanged(object sender, EventArgs e) {
+            selectedItems.Clear();
+            foreach (var item in classListBox.SelectedItems) {
+                selectedItems.Add(item.ToString());
+            }
+            classString += selectedItems[0] + " ";
+            classTextBox.Texts = classString;
+            Console.WriteLine(classTextBox.Texts);
+            Console.WriteLine(classTextBox.Text);
+        }
+
+        private void GhiDanhForm_Load(object sender, EventArgs e) {
+            
+        }
+
+        private void buttonSelect_Click(object sender, EventArgs e) {
+            classListBox.Visible = !classListBox.Visible;
         }
     }
 }

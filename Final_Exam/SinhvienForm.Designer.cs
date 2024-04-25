@@ -26,6 +26,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLySinhVienForm));
             this.label1 = new System.Windows.Forms.Label();
             this.searchTextBox = new System.Windows.Forms.TextBox();
@@ -41,11 +43,11 @@
             this.thoihocBtn = new CustomControls.RJControls.RJButton();
             this.settingBtn = new CustomControls.RJControls.RJButton();
             this.danghocBtn = new CustomControls.RJControls.RJButton();
+            this.changeStatusBtn = new CustomControls.RJControls.RJButton();
             this.createBtn = new CustomControls.RJControls.RJButton();
             this.hocthuBtn = new CustomControls.RJControls.RJButton();
             this.filterBtn = new CustomControls.RJControls.RJButton();
             this.searchBtn = new CustomControls.RJControls.RJButton();
-            this.changeStatusBtn = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.studentGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,13 +115,25 @@
             this.studentGridView.GridColor = System.Drawing.Color.GhostWhite;
             this.studentGridView.Location = new System.Drawing.Point(17, 157);
             this.studentGridView.Name = "studentGridView";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.studentGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.studentGridView.RowHeadersVisible = false;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.studentGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.studentGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.studentGridView.RowTemplate.DividerHeight = 1;
             this.studentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.studentGridView.Size = new System.Drawing.Size(1167, 523);
             this.studentGridView.TabIndex = 10;
             this.studentGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentGridView_CellClick);
+            this.studentGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentGridView_CellContentClick);
+            this.studentGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.studentGridView_CellFormatting);
             // 
             // studentId
             // 
@@ -234,6 +248,30 @@
             this.danghocBtn.UseVisualStyleBackColor = false;
             this.danghocBtn.Click += new System.EventHandler(this.danghocBtn_Click);
             // 
+            // changeStatusBtn
+            // 
+            this.changeStatusBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.changeStatusBtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.changeStatusBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.changeStatusBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.changeStatusBtn.BorderRadius = 12;
+            this.changeStatusBtn.BorderSize = 0;
+            this.changeStatusBtn.FlatAppearance.BorderSize = 0;
+            this.changeStatusBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changeStatusBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeStatusBtn.ForeColor = System.Drawing.Color.White;
+            this.changeStatusBtn.Image = ((System.Drawing.Image)(resources.GetObject("changeStatusBtn.Image")));
+            this.changeStatusBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.changeStatusBtn.Location = new System.Drawing.Point(904, 12);
+            this.changeStatusBtn.Name = "changeStatusBtn";
+            this.changeStatusBtn.Size = new System.Drawing.Size(109, 40);
+            this.changeStatusBtn.TabIndex = 3;
+            this.changeStatusBtn.Text = "      Thôi học";
+            this.changeStatusBtn.TextColor = System.Drawing.Color.White;
+            this.changeStatusBtn.UseVisualStyleBackColor = false;
+            this.changeStatusBtn.Visible = false;
+            this.changeStatusBtn.Click += new System.EventHandler(this.createBtn_Click);
+            // 
             // createBtn
             // 
             this.createBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -318,30 +356,6 @@
             this.searchBtn.UseVisualStyleBackColor = false;
             this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
-            // changeStatusBtn
-            // 
-            this.changeStatusBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.changeStatusBtn.BackColor = System.Drawing.Color.RoyalBlue;
-            this.changeStatusBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.changeStatusBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.changeStatusBtn.BorderRadius = 12;
-            this.changeStatusBtn.BorderSize = 0;
-            this.changeStatusBtn.FlatAppearance.BorderSize = 0;
-            this.changeStatusBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.changeStatusBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeStatusBtn.ForeColor = System.Drawing.Color.White;
-            this.changeStatusBtn.Image = ((System.Drawing.Image)(resources.GetObject("changeStatusBtn.Image")));
-            this.changeStatusBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.changeStatusBtn.Location = new System.Drawing.Point(904, 12);
-            this.changeStatusBtn.Name = "changeStatusBtn";
-            this.changeStatusBtn.Size = new System.Drawing.Size(109, 40);
-            this.changeStatusBtn.TabIndex = 3;
-            this.changeStatusBtn.Text = "      Thôi học";
-            this.changeStatusBtn.TextColor = System.Drawing.Color.White;
-            this.changeStatusBtn.UseVisualStyleBackColor = false;
-            this.changeStatusBtn.Visible = false;
-            this.changeStatusBtn.Click += new System.EventHandler(this.createBtn_Click);
-            // 
             // QuanLySinhVienForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -366,6 +380,7 @@
             this.Name = "QuanLySinhVienForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý sinh viên";
+            this.Load += new System.EventHandler(this.QuanLySinhVienForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.studentGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

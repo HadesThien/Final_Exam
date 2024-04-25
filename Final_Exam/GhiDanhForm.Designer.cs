@@ -27,31 +27,37 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonSelect = new CustomControls.RJControls.RJButton();
+            this.classTextBox = new CustomControls.RJControls.RJTextBox();
+            this.dobTimePicker = new CustomControls.RJControls.RJDatePicker();
+            this.genderComboBox = new CustomControls.RJControls.RJComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.soDienThoaiTextbox = new CustomControls.RJControls.RJTextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.thanhPhoTextBox = new CustomControls.RJControls.RJComboBox();
+            this.rjComboBox3 = new CustomControls.RJControls.RJComboBox();
+            this.nameTextBox = new CustomControls.RJControls.RJTextBox();
+            this.diaChiTextBox = new CustomControls.RJControls.RJTextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.truongHocTextBox = new CustomControls.RJControls.RJTextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.tinhTrangComboBox = new CustomControls.RJControls.RJComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.cancelBtn = new CustomControls.RJControls.RJButton();
-            this.rjDatePicker1 = new CustomControls.RJControls.RJDatePicker();
-            this.rjComboBox1 = new CustomControls.RJControls.RJComboBox();
-            this.rjTextBox2 = new CustomControls.RJControls.RJTextBox();
-            this.rjComboBox4 = new CustomControls.RJControls.RJComboBox();
-            this.rjComboBox3 = new CustomControls.RJControls.RJComboBox();
-            this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox3 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox4 = new CustomControls.RJControls.RJTextBox();
-            this.rjComboBox2 = new CustomControls.RJControls.RJComboBox();
-            this.rjComboBox5 = new CustomControls.RJControls.RJComboBox();
             this.rjComboBox6 = new CustomControls.RJControls.RJComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.ghiChuTextBox = new System.Windows.Forms.RichTextBox();
+            this.classListBox = new System.Windows.Forms.ListBox();
+            this.cancelBtn = new CustomControls.RJControls.RJButton();
             this.saveBtn = new CustomControls.RJControls.RJButton();
+            this.idLabel = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -90,24 +96,24 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.32143F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.69643F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.07143F));
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 2, 5);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.rjDatePicker1, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.rjComboBox1, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.dobTimePicker, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.genderComboBox, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.rjTextBox2, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.soDienThoaiTextbox, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.label7, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.rjComboBox4, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.thanhPhoTextBox, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.rjComboBox3, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.rjTextBox1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.rjTextBox3, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.nameTextBox, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.diaChiTextBox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label8, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.rjTextBox4, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.truongHocTextBox, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.label9, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.rjComboBox2, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.tinhTrangComboBox, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.label10, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.rjComboBox5, 2, 5);
             this.tableLayoutPanel1.Controls.Add(this.label11, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label12, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.label13, 1, 6);
@@ -123,8 +129,99 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.75269F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.021505F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.70615F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1120, 341);
             this.tableLayoutPanel1.TabIndex = 5;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.buttonSelect);
+            this.panel1.Controls.Add(this.classTextBox);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(774, 198);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(343, 50);
+            this.panel1.TabIndex = 9;
+            // 
+            // buttonSelect
+            // 
+            this.buttonSelect.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.buttonSelect.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.buttonSelect.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonSelect.BorderRadius = 0;
+            this.buttonSelect.BorderSize = 0;
+            this.buttonSelect.Dock = System.Windows.Forms.DockStyle.Right;
+            this.buttonSelect.FlatAppearance.BorderSize = 0;
+            this.buttonSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSelect.ForeColor = System.Drawing.Color.White;
+            this.buttonSelect.Location = new System.Drawing.Point(320, 0);
+            this.buttonSelect.Name = "buttonSelect";
+            this.buttonSelect.Size = new System.Drawing.Size(23, 50);
+            this.buttonSelect.TabIndex = 7;
+            this.buttonSelect.Text = "V";
+            this.buttonSelect.TextColor = System.Drawing.Color.White;
+            this.buttonSelect.UseVisualStyleBackColor = false;
+            this.buttonSelect.Click += new System.EventHandler(this.buttonSelect_Click);
+            // 
+            // classTextBox
+            // 
+            this.classTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.classTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.classTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.classTextBox.BorderRadius = 0;
+            this.classTextBox.BorderSize = 2;
+            this.classTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.classTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classTextBox.ForeColor = System.Drawing.Color.Black;
+            this.classTextBox.Location = new System.Drawing.Point(0, 0);
+            this.classTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.classTextBox.Multiline = false;
+            this.classTextBox.Name = "classTextBox";
+            this.classTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.classTextBox.PasswordChar = false;
+            this.classTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.classTextBox.PlaceholderText = "";
+            this.classTextBox.Size = new System.Drawing.Size(343, 36);
+            this.classTextBox.TabIndex = 6;
+            this.classTextBox.Texts = "";
+            this.classTextBox.UnderlinedStyle = false;
+            // 
+            // dobTimePicker
+            // 
+            this.dobTimePicker.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dobTimePicker.BorderSize = 0;
+            this.dobTimePicker.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dobTimePicker.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dobTimePicker.Location = new System.Drawing.Point(3, 198);
+            this.dobTimePicker.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dobTimePicker.Name = "dobTimePicker";
+            this.dobTimePicker.Size = new System.Drawing.Size(355, 35);
+            this.dobTimePicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.dobTimePicker.TabIndex = 3;
+            this.dobTimePicker.TextColor = System.Drawing.Color.White;
+            // 
+            // genderComboBox
+            // 
+            this.genderComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.genderComboBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.genderComboBox.BorderSize = 1;
+            this.genderComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.genderComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.genderComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genderComboBox.ForeColor = System.Drawing.Color.DimGray;
+            this.genderComboBox.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.genderComboBox.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.genderComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.genderComboBox.ListTextColor = System.Drawing.Color.DimGray;
+            this.genderComboBox.Location = new System.Drawing.Point(3, 115);
+            this.genderComboBox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.genderComboBox.Name = "genderComboBox";
+            this.genderComboBox.Padding = new System.Windows.Forms.Padding(1);
+            this.genderComboBox.Size = new System.Drawing.Size(355, 42);
+            this.genderComboBox.TabIndex = 0;
+            this.genderComboBox.Texts = "";
             // 
             // label4
             // 
@@ -144,25 +241,28 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Số điện thoại";
             // 
-            // label6
+            // soDienThoaiTextbox
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 407);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 21);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Ghi chú";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.Location = new System.Drawing.Point(97, 407);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1030, 161);
-            this.richTextBox1.TabIndex = 7;
-            this.richTextBox1.Text = "";
+            this.soDienThoaiTextbox.BackColor = System.Drawing.SystemColors.Window;
+            this.soDienThoaiTextbox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.soDienThoaiTextbox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.soDienThoaiTextbox.BorderRadius = 0;
+            this.soDienThoaiTextbox.BorderSize = 2;
+            this.soDienThoaiTextbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.soDienThoaiTextbox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.soDienThoaiTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.soDienThoaiTextbox.Location = new System.Drawing.Point(4, 286);
+            this.soDienThoaiTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.soDienThoaiTextbox.Multiline = false;
+            this.soDienThoaiTextbox.Name = "soDienThoaiTextbox";
+            this.soDienThoaiTextbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.soDienThoaiTextbox.PasswordChar = false;
+            this.soDienThoaiTextbox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.soDienThoaiTextbox.PlaceholderText = "";
+            this.soDienThoaiTextbox.Size = new System.Drawing.Size(353, 40);
+            this.soDienThoaiTextbox.TabIndex = 1;
+            this.soDienThoaiTextbox.Texts = "";
+            this.soDienThoaiTextbox.UnderlinedStyle = false;
             // 
             // label7
             // 
@@ -173,6 +273,98 @@
             this.label7.TabIndex = 4;
             this.label7.Text = "Địa chỉ";
             // 
+            // thanhPhoTextBox
+            // 
+            this.thanhPhoTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.thanhPhoTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.thanhPhoTextBox.BorderSize = 1;
+            this.thanhPhoTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.thanhPhoTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.thanhPhoTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thanhPhoTextBox.ForeColor = System.Drawing.Color.DimGray;
+            this.thanhPhoTextBox.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.thanhPhoTextBox.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.thanhPhoTextBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.thanhPhoTextBox.ListTextColor = System.Drawing.Color.DimGray;
+            this.thanhPhoTextBox.Location = new System.Drawing.Point(364, 115);
+            this.thanhPhoTextBox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.thanhPhoTextBox.Name = "thanhPhoTextBox";
+            this.thanhPhoTextBox.Padding = new System.Windows.Forms.Padding(1);
+            this.thanhPhoTextBox.Size = new System.Drawing.Size(404, 42);
+            this.thanhPhoTextBox.TabIndex = 0;
+            this.thanhPhoTextBox.Texts = "";
+            // 
+            // rjComboBox3
+            // 
+            this.rjComboBox3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rjComboBox3.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjComboBox3.BorderSize = 1;
+            this.rjComboBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rjComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.rjComboBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjComboBox3.ForeColor = System.Drawing.Color.DimGray;
+            this.rjComboBox3.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjComboBox3.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.rjComboBox3.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.rjComboBox3.ListTextColor = System.Drawing.Color.DimGray;
+            this.rjComboBox3.Location = new System.Drawing.Point(364, 198);
+            this.rjComboBox3.MinimumSize = new System.Drawing.Size(200, 30);
+            this.rjComboBox3.Name = "rjComboBox3";
+            this.rjComboBox3.Padding = new System.Windows.Forms.Padding(1);
+            this.rjComboBox3.Size = new System.Drawing.Size(404, 50);
+            this.rjComboBox3.TabIndex = 0;
+            this.rjComboBox3.Texts = "";
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.nameTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.nameTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.nameTextBox.BorderRadius = 0;
+            this.nameTextBox.BorderSize = 2;
+            this.nameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nameTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.nameTextBox.Location = new System.Drawing.Point(4, 36);
+            this.nameTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.nameTextBox.Multiline = false;
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.nameTextBox.PasswordChar = false;
+            this.nameTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.nameTextBox.PlaceholderText = "";
+            this.nameTextBox.Size = new System.Drawing.Size(353, 40);
+            this.nameTextBox.TabIndex = 1;
+            this.nameTextBox.Texts = "";
+            this.nameTextBox.UnderlinedStyle = false;
+            // 
+            // diaChiTextBox
+            // 
+            this.diaChiTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.diaChiTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.diaChiTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.diaChiTextBox.BorderRadius = 0;
+            this.diaChiTextBox.BorderSize = 2;
+            this.diaChiTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.diaChiTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diaChiTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.diaChiTextBox.Location = new System.Drawing.Point(365, 36);
+            this.diaChiTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.diaChiTextBox.Multiline = false;
+            this.diaChiTextBox.Name = "diaChiTextBox";
+            this.diaChiTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.diaChiTextBox.PasswordChar = false;
+            this.diaChiTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.diaChiTextBox.PlaceholderText = "";
+            this.diaChiTextBox.Size = new System.Drawing.Size(402, 40);
+            this.diaChiTextBox.TabIndex = 1;
+            this.diaChiTextBox.Texts = "";
+            this.diaChiTextBox.UnderlinedStyle = false;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -182,6 +374,29 @@
             this.label8.TabIndex = 4;
             this.label8.Text = "Trường học";
             // 
+            // truongHocTextBox
+            // 
+            this.truongHocTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.truongHocTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.truongHocTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.truongHocTextBox.BorderRadius = 0;
+            this.truongHocTextBox.BorderSize = 2;
+            this.truongHocTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.truongHocTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truongHocTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.truongHocTextBox.Location = new System.Drawing.Point(775, 36);
+            this.truongHocTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.truongHocTextBox.Multiline = false;
+            this.truongHocTextBox.Name = "truongHocTextBox";
+            this.truongHocTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.truongHocTextBox.PasswordChar = false;
+            this.truongHocTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.truongHocTextBox.PlaceholderText = "";
+            this.truongHocTextBox.Size = new System.Drawing.Size(341, 40);
+            this.truongHocTextBox.TabIndex = 1;
+            this.truongHocTextBox.Texts = "";
+            this.truongHocTextBox.UnderlinedStyle = false;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -190,6 +405,29 @@
             this.label9.Size = new System.Drawing.Size(84, 21);
             this.label9.TabIndex = 4;
             this.label9.Text = "Tình trạng";
+            // 
+            // tinhTrangComboBox
+            // 
+            this.tinhTrangComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tinhTrangComboBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.tinhTrangComboBox.BorderSize = 1;
+            this.tinhTrangComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tinhTrangComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tinhTrangComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tinhTrangComboBox.ForeColor = System.Drawing.Color.DimGray;
+            this.tinhTrangComboBox.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.tinhTrangComboBox.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.tinhTrangComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.tinhTrangComboBox.ListTextColor = System.Drawing.Color.DimGray;
+            this.tinhTrangComboBox.Location = new System.Drawing.Point(774, 115);
+            this.tinhTrangComboBox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.tinhTrangComboBox.Name = "tinhTrangComboBox";
+            this.tinhTrangComboBox.Padding = new System.Windows.Forms.Padding(1);
+            this.tinhTrangComboBox.Size = new System.Drawing.Size(343, 42);
+            this.tinhTrangComboBox.TabIndex = 0;
+            this.tinhTrangComboBox.Texts = "";
             // 
             // label10
             // 
@@ -227,249 +465,6 @@
             this.label13.TabIndex = 4;
             this.label13.Text = "Phường / xã";
             // 
-            // cancelBtn
-            // 
-            this.cancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cancelBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cancelBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cancelBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cancelBtn.BorderRadius = 0;
-            this.cancelBtn.BorderSize = 0;
-            this.cancelBtn.FlatAppearance.BorderSize = 0;
-            this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelBtn.ForeColor = System.Drawing.Color.White;
-            this.cancelBtn.Location = new System.Drawing.Point(768, 597);
-            this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(150, 40);
-            this.cancelBtn.TabIndex = 8;
-            this.cancelBtn.Text = "Đóng";
-            this.cancelBtn.TextColor = System.Drawing.Color.White;
-            this.cancelBtn.UseVisualStyleBackColor = false;
-            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
-            // 
-            // rjDatePicker1
-            // 
-            this.rjDatePicker1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjDatePicker1.BorderSize = 0;
-            this.rjDatePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rjDatePicker1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjDatePicker1.Location = new System.Drawing.Point(3, 198);
-            this.rjDatePicker1.MinimumSize = new System.Drawing.Size(4, 35);
-            this.rjDatePicker1.Name = "rjDatePicker1";
-            this.rjDatePicker1.Size = new System.Drawing.Size(355, 35);
-            this.rjDatePicker1.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjDatePicker1.TabIndex = 3;
-            this.rjDatePicker1.TextColor = System.Drawing.Color.White;
-            // 
-            // rjComboBox1
-            // 
-            this.rjComboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox1.BorderSize = 1;
-            this.rjComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rjComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.rjComboBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjComboBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.rjComboBox1.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox1.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.rjComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox1.ListTextColor = System.Drawing.Color.DimGray;
-            this.rjComboBox1.Location = new System.Drawing.Point(3, 115);
-            this.rjComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
-            this.rjComboBox1.Name = "rjComboBox1";
-            this.rjComboBox1.Padding = new System.Windows.Forms.Padding(1);
-            this.rjComboBox1.Size = new System.Drawing.Size(355, 42);
-            this.rjComboBox1.TabIndex = 0;
-            this.rjComboBox1.Texts = "";
-            // 
-            // rjTextBox2
-            // 
-            this.rjTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox2.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox2.BorderRadius = 0;
-            this.rjTextBox2.BorderSize = 2;
-            this.rjTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rjTextBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox2.Location = new System.Drawing.Point(4, 286);
-            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox2.Multiline = false;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox2.PlaceholderText = "";
-            this.rjTextBox2.Size = new System.Drawing.Size(353, 40);
-            this.rjTextBox2.TabIndex = 1;
-            this.rjTextBox2.Texts = "";
-            this.rjTextBox2.UnderlinedStyle = false;
-            // 
-            // rjComboBox4
-            // 
-            this.rjComboBox4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox4.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox4.BorderSize = 1;
-            this.rjComboBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rjComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.rjComboBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjComboBox4.ForeColor = System.Drawing.Color.DimGray;
-            this.rjComboBox4.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox4.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.rjComboBox4.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox4.ListTextColor = System.Drawing.Color.DimGray;
-            this.rjComboBox4.Location = new System.Drawing.Point(364, 115);
-            this.rjComboBox4.MinimumSize = new System.Drawing.Size(200, 30);
-            this.rjComboBox4.Name = "rjComboBox4";
-            this.rjComboBox4.Padding = new System.Windows.Forms.Padding(1);
-            this.rjComboBox4.Size = new System.Drawing.Size(404, 42);
-            this.rjComboBox4.TabIndex = 0;
-            this.rjComboBox4.Texts = "";
-            // 
-            // rjComboBox3
-            // 
-            this.rjComboBox3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox3.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox3.BorderSize = 1;
-            this.rjComboBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rjComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.rjComboBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjComboBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.rjComboBox3.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox3.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.rjComboBox3.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox3.ListTextColor = System.Drawing.Color.DimGray;
-            this.rjComboBox3.Location = new System.Drawing.Point(364, 198);
-            this.rjComboBox3.MinimumSize = new System.Drawing.Size(200, 30);
-            this.rjComboBox3.Name = "rjComboBox3";
-            this.rjComboBox3.Padding = new System.Windows.Forms.Padding(1);
-            this.rjComboBox3.Size = new System.Drawing.Size(404, 50);
-            this.rjComboBox3.TabIndex = 0;
-            this.rjComboBox3.Texts = "";
-            // 
-            // rjTextBox1
-            // 
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rjTextBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(4, 36);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "";
-            this.rjTextBox1.Size = new System.Drawing.Size(353, 40);
-            this.rjTextBox1.TabIndex = 1;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
-            // 
-            // rjTextBox3
-            // 
-            this.rjTextBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox3.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox3.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox3.BorderRadius = 0;
-            this.rjTextBox3.BorderSize = 2;
-            this.rjTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rjTextBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox3.Location = new System.Drawing.Point(365, 36);
-            this.rjTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox3.Multiline = false;
-            this.rjTextBox3.Name = "rjTextBox3";
-            this.rjTextBox3.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox3.PasswordChar = false;
-            this.rjTextBox3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox3.PlaceholderText = "";
-            this.rjTextBox3.Size = new System.Drawing.Size(402, 40);
-            this.rjTextBox3.TabIndex = 1;
-            this.rjTextBox3.Texts = "";
-            this.rjTextBox3.UnderlinedStyle = false;
-            // 
-            // rjTextBox4
-            // 
-            this.rjTextBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox4.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox4.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox4.BorderRadius = 0;
-            this.rjTextBox4.BorderSize = 2;
-            this.rjTextBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rjTextBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox4.Location = new System.Drawing.Point(775, 36);
-            this.rjTextBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox4.Multiline = false;
-            this.rjTextBox4.Name = "rjTextBox4";
-            this.rjTextBox4.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox4.PasswordChar = false;
-            this.rjTextBox4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox4.PlaceholderText = "";
-            this.rjTextBox4.Size = new System.Drawing.Size(341, 40);
-            this.rjTextBox4.TabIndex = 1;
-            this.rjTextBox4.Texts = "";
-            this.rjTextBox4.UnderlinedStyle = false;
-            // 
-            // rjComboBox2
-            // 
-            this.rjComboBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox2.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox2.BorderSize = 1;
-            this.rjComboBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rjComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.rjComboBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjComboBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.rjComboBox2.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox2.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.rjComboBox2.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox2.ListTextColor = System.Drawing.Color.DimGray;
-            this.rjComboBox2.Location = new System.Drawing.Point(774, 115);
-            this.rjComboBox2.MinimumSize = new System.Drawing.Size(200, 30);
-            this.rjComboBox2.Name = "rjComboBox2";
-            this.rjComboBox2.Padding = new System.Windows.Forms.Padding(1);
-            this.rjComboBox2.Size = new System.Drawing.Size(343, 42);
-            this.rjComboBox2.TabIndex = 0;
-            this.rjComboBox2.Texts = "";
-            // 
-            // rjComboBox5
-            // 
-            this.rjComboBox5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox5.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox5.BorderSize = 1;
-            this.rjComboBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rjComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.rjComboBox5.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjComboBox5.ForeColor = System.Drawing.Color.DimGray;
-            this.rjComboBox5.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox5.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.rjComboBox5.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox5.ListTextColor = System.Drawing.Color.DimGray;
-            this.rjComboBox5.Location = new System.Drawing.Point(774, 198);
-            this.rjComboBox5.MinimumSize = new System.Drawing.Size(200, 30);
-            this.rjComboBox5.Name = "rjComboBox5";
-            this.rjComboBox5.Padding = new System.Windows.Forms.Padding(1);
-            this.rjComboBox5.Size = new System.Drawing.Size(343, 50);
-            this.rjComboBox5.TabIndex = 0;
-            this.rjComboBox5.Texts = "";
-            // 
             // rjComboBox6
             // 
             this.rjComboBox6.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -493,6 +488,73 @@
             this.rjComboBox6.TabIndex = 0;
             this.rjComboBox6.Texts = "";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(10, 407);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 21);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Ghi chú";
+            // 
+            // ghiChuTextBox
+            // 
+            this.ghiChuTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ghiChuTextBox.Location = new System.Drawing.Point(97, 407);
+            this.ghiChuTextBox.Name = "ghiChuTextBox";
+            this.ghiChuTextBox.Size = new System.Drawing.Size(1030, 161);
+            this.ghiChuTextBox.TabIndex = 7;
+            this.ghiChuTextBox.Text = "";
+            // 
+            // classListBox
+            // 
+            this.classListBox.FormattingEnabled = true;
+            this.classListBox.ItemHeight = 21;
+            this.classListBox.Items.AddRange(new object[] {
+            "Anh 9.3",
+            "Anh 9.2",
+            "Anh 9.1",
+            "Anh 9.4",
+            "Toán 9.1",
+            "Toán 9.2",
+            "Toán 9.3",
+            "Toán 9.4",
+            "Văn 9.1",
+            "Văn 9.2",
+            "Văn 9.3",
+            "Văn 9.4"});
+            this.classListBox.Location = new System.Drawing.Point(782, 300);
+            this.classListBox.Name = "classListBox";
+            this.classListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.classListBox.Size = new System.Drawing.Size(342, 109);
+            this.classListBox.TabIndex = 5;
+            this.classListBox.Visible = false;
+            this.classListBox.SelectedIndexChanged += new System.EventHandler(this.classListBox_SelectedIndexChanged);
+            // 
+            // cancelBtn
+            // 
+            this.cancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancelBtn.BackColor = System.Drawing.Color.Lavender;
+            this.cancelBtn.BackgroundColor = System.Drawing.Color.Lavender;
+            this.cancelBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cancelBtn.BorderRadius = 0;
+            this.cancelBtn.BorderSize = 0;
+            this.cancelBtn.FlatAppearance.BorderSize = 0;
+            this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelBtn.ForeColor = System.Drawing.Color.Black;
+            this.cancelBtn.Location = new System.Drawing.Point(768, 597);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(150, 40);
+            this.cancelBtn.TabIndex = 8;
+            this.cancelBtn.Text = "Đóng";
+            this.cancelBtn.TextColor = System.Drawing.Color.Black;
+            this.cancelBtn.UseVisualStyleBackColor = false;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            // 
             // saveBtn
             // 
             this.saveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -514,6 +576,25 @@
             this.saveBtn.TextColor = System.Drawing.Color.White;
             this.saveBtn.UseVisualStyleBackColor = false;
             // 
+            // idLabel
+            // 
+            this.idLabel.AutoSize = true;
+            this.idLabel.Location = new System.Drawing.Point(1019, 9);
+            this.idLabel.Name = "idLabel";
+            this.idLabel.Size = new System.Drawing.Size(16, 21);
+            this.idLabel.TabIndex = 11;
+            this.idLabel.Text = "-";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(779, 3);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(234, 30);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Mã phát sinh tự động:";
+            // 
             // GhiDanhForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -521,10 +602,13 @@
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 653);
             this.ControlBox = false;
+            this.Controls.Add(this.idLabel);
+            this.Controls.Add(this.classListBox);
             this.Controls.Add(this.cancelBtn);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.ghiChuTextBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.saveBtn);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -532,8 +616,10 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "GhiDanhForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.GhiDanhForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -541,11 +627,11 @@
 
         #endregion
 
-        private CustomControls.RJControls.RJComboBox rjComboBox1;
-        private CustomControls.RJControls.RJTextBox rjTextBox1;
+        private CustomControls.RJControls.RJComboBox genderComboBox;
+        private CustomControls.RJControls.RJTextBox nameTextBox;
         private System.Windows.Forms.Label label1;
-        private CustomControls.RJControls.RJTextBox rjTextBox2;
-        private CustomControls.RJControls.RJDatePicker rjDatePicker1;
+        private CustomControls.RJControls.RJTextBox soDienThoaiTextbox;
+        private CustomControls.RJControls.RJDatePicker dobTimePicker;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
@@ -553,21 +639,26 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox ghiChuTextBox;
         private CustomControls.RJControls.RJComboBox rjComboBox3;
-        private CustomControls.RJControls.RJComboBox rjComboBox4;
-        private CustomControls.RJControls.RJTextBox rjTextBox3;
+        private CustomControls.RJControls.RJComboBox thanhPhoTextBox;
+        private CustomControls.RJControls.RJTextBox diaChiTextBox;
         private System.Windows.Forms.Label label8;
-        private CustomControls.RJControls.RJTextBox rjTextBox4;
+        private CustomControls.RJControls.RJTextBox truongHocTextBox;
         private System.Windows.Forms.Label label9;
-        private CustomControls.RJControls.RJComboBox rjComboBox2;
+        private CustomControls.RJControls.RJComboBox tinhTrangComboBox;
         private System.Windows.Forms.Label label10;
-        private CustomControls.RJControls.RJComboBox rjComboBox5;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private CustomControls.RJControls.RJComboBox rjComboBox6;
         private CustomControls.RJControls.RJButton saveBtn;
         private CustomControls.RJControls.RJButton cancelBtn;
+        private CustomControls.RJControls.RJTextBox classTextBox;
+        private CustomControls.RJControls.RJButton buttonSelect;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ListBox classListBox;
+        private System.Windows.Forms.Label idLabel;
+        private System.Windows.Forms.Label label14;
     }
 }
