@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Final_Exam {
     public partial class CongNoForm : Form {
+
         public CongNoForm() {
             InitializeComponent();
         }
@@ -36,6 +37,15 @@ namespace Final_Exam {
 
         private void paidBtn_Click(object sender, EventArgs e) {
 
+        }
+
+        private void searchBtn_Click(object sender, EventArgs e) {
+            searchTextBox.Visible = true;
+        }
+
+        private void createBtn_Click(object sender, EventArgs e) {
+            Form form = new TaoCongNoForm();
+            form.ShowDialog();
         }
     }
 }

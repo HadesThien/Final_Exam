@@ -56,7 +56,7 @@
             // 
             this.searchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.searchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTextBox.Location = new System.Drawing.Point(521, 104);
+            this.searchTextBox.Location = new System.Drawing.Point(525, 101);
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(544, 31);
             this.searchTextBox.TabIndex = 15;
@@ -74,7 +74,7 @@
             this.searchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchBtn.ForeColor = System.Drawing.Color.White;
             this.searchBtn.Image = ((System.Drawing.Image)(resources.GetObject("searchBtn.Image")));
-            this.searchBtn.Location = new System.Drawing.Point(1086, 95);
+            this.searchBtn.Location = new System.Drawing.Point(1086, 98);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(46, 37);
             this.searchBtn.TabIndex = 3;
@@ -95,7 +95,7 @@
             this.filterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.filterBtn.ForeColor = System.Drawing.Color.White;
             this.filterBtn.Image = ((System.Drawing.Image)(resources.GetObject("filterBtn.Image")));
-            this.filterBtn.Location = new System.Drawing.Point(1138, 94);
+            this.filterBtn.Location = new System.Drawing.Point(1138, 98);
             this.filterBtn.Name = "filterBtn";
             this.filterBtn.Size = new System.Drawing.Size(46, 37);
             this.filterBtn.TabIndex = 3;

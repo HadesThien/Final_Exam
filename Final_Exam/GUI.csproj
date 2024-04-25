@@ -137,6 +137,12 @@
     <Compile Include="RJButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="TaoCongNoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaoCongNoForm.Designer.cs">
+      <DependentUpon>TaoCongNoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TaoLopForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaoCongNoForm.resx">
+      <DependentUpon>TaoCongNoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TaoLopForm.resx">
       <DependentUpon>TaoLopForm.cs</DependentUpon>

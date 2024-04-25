@@ -69,7 +69,7 @@
             this.searchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchBtn.ForeColor = System.Drawing.Color.White;
             this.searchBtn.Image = ((System.Drawing.Image)(resources.GetObject("searchBtn.Image")));
-            this.searchBtn.Location = new System.Drawing.Point(1086, 89);
+            this.searchBtn.Location = new System.Drawing.Point(1086, 98);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(46, 37);
             this.searchBtn.TabIndex = 3;
@@ -89,7 +89,7 @@
             this.filterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.filterBtn.ForeColor = System.Drawing.Color.White;
             this.filterBtn.Image = ((System.Drawing.Image)(resources.GetObject("filterBtn.Image")));
-            this.filterBtn.Location = new System.Drawing.Point(1138, 88);
+            this.filterBtn.Location = new System.Drawing.Point(1138, 98);
             this.filterBtn.Name = "filterBtn";
             this.filterBtn.Size = new System.Drawing.Size(46, 37);
             this.filterBtn.TabIndex = 3;
