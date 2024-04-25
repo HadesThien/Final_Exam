@@ -59,6 +59,5 @@ namespace Final_Exam {
         private void caHocTextBox_Leave(object sender, EventArgs e) {
             tenLopTextBox.Texts += caHocTextBox.Texts;
         }
-
     }
 }

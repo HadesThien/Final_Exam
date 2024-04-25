@@ -25,5 +25,10 @@ namespace Final_Exam {
         private void tatcaBtn_Click(object sender, EventArgs e) {
 
         }
+
+        private void createBtn_Click(object sender, EventArgs e) {
+            Form form= new NhapHangForm();
+            form.ShowDialog();
+        }
     }
 }

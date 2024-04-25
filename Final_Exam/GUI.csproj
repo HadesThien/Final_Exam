@@ -100,6 +100,12 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MakeMovable.cs" />
+    <Compile Include="NhapHangForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapHangForm.Designer.cs">
+      <DependentUpon>NhapHangForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RJComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapHangForm.resx">
+      <DependentUpon>NhapHangForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RJTextBox.resx">
       <Generator>ResXFileCodeGenerator</Generator>

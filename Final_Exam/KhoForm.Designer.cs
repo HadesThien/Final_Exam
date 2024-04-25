@@ -44,6 +44,7 @@
             this.dob = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateCreated = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rjButton1 = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.studentGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,13 +112,14 @@
             this.createBtn.ForeColor = System.Drawing.Color.White;
             this.createBtn.Image = ((System.Drawing.Image)(resources.GetObject("createBtn.Image")));
             this.createBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.createBtn.Location = new System.Drawing.Point(1023, 12);
+            this.createBtn.Location = new System.Drawing.Point(998, 12);
             this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(109, 40);
+            this.createBtn.Size = new System.Drawing.Size(134, 40);
             this.createBtn.TabIndex = 3;
-            this.createBtn.Text = "   Tạo mới";
+            this.createBtn.Text = "     Nhập hàng";
             this.createBtn.TextColor = System.Drawing.Color.White;
             this.createBtn.UseVisualStyleBackColor = false;
+            this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
             // settingBtn
             // 
@@ -293,6 +295,28 @@
             this.dateCreated.HeaderText = "Ngày tạo";
             this.dateCreated.Name = "dateCreated";
             // 
+            // rjButton1
+            // 
+            this.rjButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rjButton1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.rjButton1.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 12;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Image = ((System.Drawing.Image)(resources.GetObject("rjButton1.Image")));
+            this.rjButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rjButton1.Location = new System.Drawing.Point(847, 11);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(134, 40);
+            this.rjButton1.TabIndex = 3;
+            this.rjButton1.Text = "     Nhập kho";
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            // 
             // KhoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -301,6 +325,7 @@
             this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.tatcaBtn);
             this.Controls.Add(this.daDongBtn);
+            this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.createBtn);
             this.Controls.Add(this.dangMoBtn);
             this.Controls.Add(this.searchBtn);
@@ -339,5 +364,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dob;
         private System.Windows.Forms.DataGridViewTextBoxColumn gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateCreated;
+        private CustomControls.RJControls.RJButton rjButton1;
     }
 }
