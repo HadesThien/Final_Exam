@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Final_Exam {
     public partial class QuanLySinhVienForm : Form{
@@ -57,7 +59,7 @@ namespace Final_Exam {
         }
 
         private void studentGridView_CellClick(object sender, DataGridViewCellEventArgs e) {
-            changeStatusBtn.Visible = true;
+            adjustBtn.Visible = true;
             int index = e.RowIndex;
             DataGridViewRow row = studentGridView.Rows[index];
             if(index == 0) {
@@ -86,6 +88,26 @@ namespace Final_Exam {
                     }
                 }
             }
+        }
+        private void copyAlltoClipboard() {
+            studentGridView.SelectAll();
+            DataObject dataObj = studentGridView.GetClipboardContent();
+            if (dataObj != null)
+                Clipboard.SetDataObject(dataObj);
+        }
+        private void printBtn_Click(object sender, EventArgs e) {
+            copyAlltoClipboard();
+            Microsoft.Office.Interop.Excel.Application xlexcel;
+            Microsoft.Office.Interop.Excel.Workbook xlWorkBook;
+            Microsoft.Office.Interop.Excel.Worksheet xlWorkSheet;
+            object misValue = System.Reflection.Missing.Value;
+            xlexcel = new Excel.Application();
+            xlexcel.Visible = true;
+            xlWorkBook = xlexcel.Workbooks.Add(misValue);
+            xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+            Excel.Range CR = (Excel.Range)xlWorkSheet.Cells[1, 1];
+            CR.Select();
+            xlWorkSheet.PasteSpecial(CR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
         }
     }
 
