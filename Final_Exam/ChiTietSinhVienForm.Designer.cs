@@ -43,13 +43,13 @@
             this.label16 = new System.Windows.Forms.Label();
             this.giơiTinhLabel = new System.Windows.Forms.Label();
             this.tinhTrangLabel = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.ghiChuLabel = new System.Windows.Forms.Label();
-            this.roundedGridView1 = new Final_Exam.RoundedGridView();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.rjButton3 = new CustomControls.RJControls.RJButton();
             this.cancelBtn = new CustomControls.RJControls.RJButton();
+            this.roundedGridView1 = new Final_Exam.RoundedGridView();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -281,6 +281,15 @@
             this.tinhTrangLabel.Size = new System.Drawing.Size(0, 21);
             this.tinhTrangLabel.TabIndex = 0;
             // 
+            // ghiChuLabel
+            // 
+            this.ghiChuLabel.AutoSize = true;
+            this.ghiChuLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ghiChuLabel.Location = new System.Drawing.Point(619, 66);
+            this.ghiChuLabel.Name = "ghiChuLabel";
+            this.ghiChuLabel.Size = new System.Drawing.Size(0, 21);
+            this.ghiChuLabel.TabIndex = 0;
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -295,29 +304,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(238, 443);
             this.flowLayoutPanel1.TabIndex = 6;
-            // 
-            // ghiChuLabel
-            // 
-            this.ghiChuLabel.AutoSize = true;
-            this.ghiChuLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ghiChuLabel.Location = new System.Drawing.Point(619, 66);
-            this.ghiChuLabel.Name = "ghiChuLabel";
-            this.ghiChuLabel.Size = new System.Drawing.Size(0, 21);
-            this.ghiChuLabel.TabIndex = 0;
-            // 
-            // roundedGridView1
-            // 
-            this.roundedGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.roundedGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.roundedGridView1.BorderRadius = 10;
-            this.roundedGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.roundedGridView1.Location = new System.Drawing.Point(271, 221);
-            this.roundedGridView1.Name = "roundedGridView1";
-            this.roundedGridView1.Size = new System.Drawing.Size(862, 445);
-            this.roundedGridView1.TabIndex = 7;
-            this.roundedGridView1.Visible = false;
             // 
             // rjButton2
             // 
@@ -392,6 +378,20 @@
             this.cancelBtn.UseVisualStyleBackColor = false;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
+            // roundedGridView1
+            // 
+            this.roundedGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.roundedGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.roundedGridView1.BorderRadius = 10;
+            this.roundedGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.roundedGridView1.Location = new System.Drawing.Point(271, 221);
+            this.roundedGridView1.Name = "roundedGridView1";
+            this.roundedGridView1.Size = new System.Drawing.Size(862, 445);
+            this.roundedGridView1.TabIndex = 7;
+            this.roundedGridView1.Visible = false;
+            // 
             // ChiTietSinhVienForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -404,6 +404,7 @@
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ChiTietSinhVienForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

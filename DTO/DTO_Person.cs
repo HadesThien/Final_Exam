@@ -25,8 +25,5 @@ namespace DTO {
         public void addNumberPhone(string numberPhone) {
             Number_Phones.Add(numberPhone);
         }
-        
-        
-
     }
 }
