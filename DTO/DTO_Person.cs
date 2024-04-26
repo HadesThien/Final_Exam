@@ -11,7 +11,8 @@ namespace DTO {
         public string Name { get; set; }
         public string Gender { get; set; }
         public DateTime Dob { get; set; }
-        public List<string> Number_Phones { get; set; }
+
+        public string NumberPhone { get; set; }
 
         //Constructor
         public DTO_Person(string id, string name, string gender, DateTime dob, string numberPhone) {
@@ -19,14 +20,8 @@ namespace DTO {
             Name = name;
             Gender = gender;
             Dob = dob;
-            this.Number_Phones = new List<string>();
-            Number_Phones.Add(numberPhone);
+            NumberPhone = numberPhone;
         }
-        public void addNumberPhone(string numberPhone) {
-            Number_Phones.Add(numberPhone);
-        }
-        
-        
 
     }
 }

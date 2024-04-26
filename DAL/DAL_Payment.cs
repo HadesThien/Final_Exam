@@ -9,7 +9,7 @@ using DTO;
 
 namespace DAL
 {
-    internal class DAL_Payment
+    public class DAL_Payment
     {
         private DTO_Payment payment;
         public DAL_Payment( string paymentId, DateTime dateCreated, int month, string status, string note, float promotion, int n_session, string studentId)
@@ -31,7 +31,7 @@ namespace DAL
 
         public void deleteQuery()
         {
-            string query = "DELETE * FROM Payment";
+            string query = "DELETE FROM Payment WHERE paymentId = '" + payment.PaymentId + "'";
             Connection.actionQuery(query);
         }
 

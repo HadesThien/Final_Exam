@@ -16,10 +16,12 @@ namespace DTO {
         public string Status { get; set; }
         public string Month { get; set; }
         public string Note { get; set; }
+        public string Id { get; set; }
 
 
         //Constructor
-        public DTO_Buy(DTO_Student s, DTO_Document d, DateTime buyingDate, int n, int p, string status, string month, string note) {
+        public DTO_Buy(DTO_Student s, DTO_Document d, DateTime buyingDate, int n, int p, string status, string month, string note, string id)
+        {
             Student = s;
             Document = d;
             BuyingDate = buyingDate;
@@ -28,6 +30,7 @@ namespace DTO {
             Status = status;
             Month = month;
             Note = note;
+            Id = id;
         }
 
     }

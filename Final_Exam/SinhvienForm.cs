@@ -9,15 +9,30 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
 
 namespace Final_Exam {
-    public partial class QuanLySinhVienForm : Form{ 
+    public partial class QuanLySinhVienForm : Form{
+        private BUS_Student student;
         public QuanLySinhVienForm() {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e) {
+        }
 
+        public void updateGridView()
+        {
+            student = new BUS_Student("", "", "", DateTime.Now, "", "", "", "", "", "");
+            DataTable dt = student.selectQuery();
+            dt.Columns[0].ColumnName = "Mã học sinh";
+            dt.Columns[1].ColumnName = "Tên học sinh";
+            dt.Columns[2].ColumnName = "Số điện thoại";
+            dt.Columns[3].ColumnName = "Lớp học";
+            dt.Columns[4].ColumnName = "Ngày sinh";
+            dt.Columns[5].ColumnName = "Giới tính";
+            dt.Columns[6].ColumnName = "Ngày tạo";
+            studentGridView.DataSource = dt;
         }
 
         private void searchBtn_Click(object sender, EventArgs e) {
@@ -25,7 +40,7 @@ namespace Final_Exam {
         }
 
         private void tatcaBtn_Click(object sender, EventArgs e) {
-
+            updateGridView();
         }
 
         private void danghocBtn_Click(object sender, EventArgs e) {

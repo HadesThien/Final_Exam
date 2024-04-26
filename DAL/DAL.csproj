@@ -49,6 +49,9 @@
     <Compile Include="DAL_Class.cs" />
     <Compile Include="DAL_Document.cs" />
     <Compile Include="DAL_Payment.cs" />
+    <Compile Include="DAL_Person.cs" />
+    <Compile Include="DAL_Register.cs" />
+    <Compile Include="DAL_Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

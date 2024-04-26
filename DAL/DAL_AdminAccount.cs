@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using DTO;
+using System.Net.Http.Headers;
 
 namespace DAL
 {
@@ -39,8 +40,10 @@ namespace DAL
 
         public void deleteQuery()
         {
-            string query = "DELETE FROM Admin_Account WHERE username = '" + account.UserName + "'";
-            Connection.actionQuery(query);
+            string query1 = "DELETE FROM Account WHERE username = '" + account.UserName + "'";
+            string query2 = "DELETE FROM Admin_Account WHERE username = '" + account.UserName + "'";
+            Connection.actionQuery(query1);
+            Connection.actionQuery(query2);
         }
 
         public DataTable selectQuery()

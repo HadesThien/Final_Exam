@@ -12,19 +12,19 @@ namespace DAL
     {
 
         private DTO_Buy buy;
-        public DAL_Buy(DTO_Student s, DTO_Document d, DateTime buyingDate, int n, int p, string status, string month, string note) {
-            buy = new DTO_Buy(s, d, buyingDate, n, p, status, month, note);
+        public DAL_Buy(DTO_Student s, DTO_Document d, DateTime buyingDate, int n, int p, string status, string month, string note, string id) {
+            buy = new DTO_Buy(s, d, buyingDate, n, p, status, month, note, id);
         }
         
         public void addQuery()
         { 
-            string query = "INSERT INTO Buy VALUES('" + buy.BuyingDate.ToString() + "', " + buy.Number + "', " + buy.Price + "', '" + buy.Status + "', '" + buy.Month + "', '" + buy.Note + "', '" + buy.Student.Id + "', '" + buy.Document.DocumentId + "')";
+            string query = "INSERT INTO Buy VALUES('" + buy.BuyingDate.ToString() + "', " + buy.Number + "', " + buy.Price + "', '" + buy.Status + "', '" + buy.Month + "', '" + buy.Note + "', '" + buy.Id + "', '" + buy.Student.Id + "', '" + buy.Document.DocumentId + "')";
             Connection.actionQuery(query);
         }
         
         public void deleteQuery()
         {
-            string query = "DELETE * FROM Buy WHERE studentId = '" + buy.Student.Id + "', handoutId = '" + buy.Document.DocumentId + "'";
+            string query = "DELETE FROM Buy WHERE buyId = '" + buy.Id + "', studentId = '" + buy.Student.Id + "', handoutId = '" + buy.Document.DocumentId + "'";
             Connection.actionQuery(query);
         }
 
