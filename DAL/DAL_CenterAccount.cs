@@ -8,7 +8,7 @@ using DTO;
 
 namespace DAL
 {
-    internal class DAL_CenterAccount
+    public class DAL_CenterAccount
     {
         private DTO_CenterAccount centerAccount;
 
@@ -35,8 +35,10 @@ namespace DAL
 
         public void updateQuery()
         {
-            string query = "UPDATE Account SET password = '" + centerAccount.Password + "', WHERE username = '" + centerAccount.UserName + "'";
-            Connection.actionQuery(query);
+            string query1 = "UPDATE Account SET password = '" + centerAccount.Password + "', WHERE username = '" + centerAccount.UserName + "'";
+            string query2 = "UPDATE Center_Account SET number_phone = '" + centerAccount.NumberPhone + "' WHERE username = '" + centerAccount.UserName + "'";
+            Connection.actionQuery(query1);
+            Connection.actionQuery(query2);
         }
 
         public void updateLoginDate()
@@ -47,8 +49,10 @@ namespace DAL
 
         public void deleteQuery()
         {
-            string query = "DELETE FROM Center_Account WHERE username = '" + centerAccount.UserName + "'";
-            Connection.actionQuery(query);
+            string query1 = "DELETE FROM Center_Account WHERE username = '" + centerAccount.UserName + "'";
+            string query2 = "DELETE FROM Account WHERE username = '" + centerAccount.UserName + "'";
+            Connection.actionQuery(query1);
+            Connection.actionQuery(query2);
         }
 
         public DataTable selectQuery()

@@ -8,7 +8,7 @@ using DTO;
 
 namespace DAL
 {
-    internal class DAL_Class
+    public class DAL_Class
     {
         private DTO_Class dto_class;
         public DAL_Class(string classId, string subject, string shift,  int grade, int price, int n_Session, int n_Student, DateTime date_Created, string id)
@@ -30,7 +30,7 @@ namespace DAL
 
         public void deleteQuery()
         {
-            string query = "DELETE * FROM Class WHERE classId = '" + dto_class.ClassId + "'";
+            string query = "DELETE FROM Class WHERE classId = '" + dto_class.ClassId + "'";
             Connection.actionQuery(query);
         }
 

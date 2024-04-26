@@ -32,13 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.studentGridView = new Final_Exam.RoundedGridView();
-            this.studentId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numberPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Classes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dob = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateCreated = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tatcaBtn = new CustomControls.RJControls.RJButton();
             this.thoihocBtn = new CustomControls.RJControls.RJButton();
             this.settingBtn = new CustomControls.RJControls.RJButton();
@@ -57,7 +50,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(233, 32);
+            this.label1.Size = new System.Drawing.Size(285, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh sách học sinh";
             // 
@@ -68,7 +61,7 @@
             this.searchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchTextBox.Location = new System.Drawing.Point(521, 104);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(544, 31);
+            this.searchTextBox.Size = new System.Drawing.Size(544, 37);
             this.searchTextBox.TabIndex = 9;
             this.searchTextBox.Visible = false;
             // 
@@ -95,14 +88,6 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.studentGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.studentGridView.ColumnHeadersHeight = 50;
-            this.studentGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.studentId,
-            this.name,
-            this.numberPhone,
-            this.Classes,
-            this.dob,
-            this.gender,
-            this.dateCreated});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -114,7 +99,9 @@
             this.studentGridView.EnableHeadersVisualStyles = false;
             this.studentGridView.GridColor = System.Drawing.Color.GhostWhite;
             this.studentGridView.Location = new System.Drawing.Point(17, 157);
+            this.studentGridView.MultiSelect = false;
             this.studentGridView.Name = "studentGridView";
+            this.studentGridView.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -124,6 +111,8 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.studentGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.studentGridView.RowHeadersVisible = false;
+            this.studentGridView.RowHeadersWidth = 51;
+            this.studentGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.studentGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.studentGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
@@ -134,41 +123,6 @@
             this.studentGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentGridView_CellClick);
             this.studentGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentGridView_CellContentClick);
             this.studentGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.studentGridView_CellFormatting);
-            // 
-            // studentId
-            // 
-            this.studentId.HeaderText = "Mã học sinh";
-            this.studentId.Name = "studentId";
-            // 
-            // name
-            // 
-            this.name.HeaderText = "Họ và Tên";
-            this.name.Name = "name";
-            // 
-            // numberPhone
-            // 
-            this.numberPhone.HeaderText = "Số điện thoại";
-            this.numberPhone.Name = "numberPhone";
-            // 
-            // Classes
-            // 
-            this.Classes.HeaderText = "Lớp học";
-            this.Classes.Name = "Classes";
-            // 
-            // dob
-            // 
-            this.dob.HeaderText = "Ngày sinh";
-            this.dob.Name = "dob";
-            // 
-            // gender
-            // 
-            this.gender.HeaderText = "Giới tính";
-            this.gender.Name = "gender";
-            // 
-            // dateCreated
-            // 
-            this.dateCreated.HeaderText = "Ngày tạo";
-            this.dateCreated.Name = "dateCreated";
             // 
             // tatcaBtn
             // 
@@ -358,7 +312,7 @@
             // 
             // QuanLySinhVienForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1200, 692);
@@ -399,13 +353,6 @@
         private CustomControls.RJControls.RJButton filterBtn;
         private System.Windows.Forms.TextBox searchTextBox;
         private RoundedGridView studentGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studentId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numberPhone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Classes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dob;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateCreated;
         private CustomControls.RJControls.RJButton changeStatusBtn;
     }
 }

@@ -8,7 +8,7 @@ using DTO;
 
 namespace DAL
 {
-    internal class DAL_Document
+    public class DAL_Document
     {
         private DTO_Document doc;
 
