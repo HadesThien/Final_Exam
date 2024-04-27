@@ -17,5 +17,11 @@ namespace Final_Exam {
         private void cancelBtn_Click(object sender, EventArgs e) {
             this.Close();
         }
+
+        private void amountTextBox_KeyPress(object sender, KeyPressEventArgs e) {
+            if(!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar)){
+                e.Handled = true;
+            }
+        }
     }
 }
