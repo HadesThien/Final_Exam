@@ -155,6 +155,11 @@ namespace Final_Exam {
                 this.Close();
             }
         }
+
+        private void accountBtn_Click(object sender, EventArgs e) {
+            Form form = new AccountInfoForm();
+            OpenChildForm(form);
+        }
         //----------------Ends with all feature of menu Btn----------------
     }
 }

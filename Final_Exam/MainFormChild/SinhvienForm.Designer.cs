@@ -34,9 +34,9 @@
             this.studentGridView = new Final_Exam.RoundedGridView();
             this.tatcaBtn = new CustomControls.RJControls.RJButton();
             this.thoihocBtn = new CustomControls.RJControls.RJButton();
-            this.settingBtn = new CustomControls.RJControls.RJButton();
+            this.printBtn = new CustomControls.RJControls.RJButton();
             this.danghocBtn = new CustomControls.RJControls.RJButton();
-            this.changeStatusBtn = new CustomControls.RJControls.RJButton();
+            this.adjustBtn = new CustomControls.RJControls.RJButton();
             this.createBtn = new CustomControls.RJControls.RJButton();
             this.hocthuBtn = new CustomControls.RJControls.RJButton();
             this.filterBtn = new CustomControls.RJControls.RJButton();
@@ -50,7 +50,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 41);
+            this.label1.Size = new System.Drawing.Size(233, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh sách học sinh";
             // 
@@ -61,7 +61,7 @@
             this.searchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchTextBox.Location = new System.Drawing.Point(521, 104);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(544, 37);
+            this.searchTextBox.Size = new System.Drawing.Size(544, 31);
             this.searchTextBox.TabIndex = 9;
             this.searchTextBox.Visible = false;
             // 
@@ -99,7 +99,6 @@
             this.studentGridView.EnableHeadersVisualStyles = false;
             this.studentGridView.GridColor = System.Drawing.Color.GhostWhite;
             this.studentGridView.Location = new System.Drawing.Point(17, 157);
-            this.studentGridView.MultiSelect = false;
             this.studentGridView.Name = "studentGridView";
             this.studentGridView.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -163,24 +162,25 @@
             this.thoihocBtn.TextColor = System.Drawing.Color.White;
             this.thoihocBtn.UseVisualStyleBackColor = false;
             // 
-            // settingBtn
+            // printBtn
             // 
-            this.settingBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.settingBtn.BackColor = System.Drawing.Color.RoyalBlue;
-            this.settingBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.settingBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.settingBtn.BorderRadius = 12;
-            this.settingBtn.BorderSize = 0;
-            this.settingBtn.FlatAppearance.BorderSize = 0;
-            this.settingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingBtn.ForeColor = System.Drawing.Color.White;
-            this.settingBtn.Image = ((System.Drawing.Image)(resources.GetObject("settingBtn.Image")));
-            this.settingBtn.Location = new System.Drawing.Point(1134, 12);
-            this.settingBtn.Name = "settingBtn";
-            this.settingBtn.Size = new System.Drawing.Size(50, 40);
-            this.settingBtn.TabIndex = 3;
-            this.settingBtn.TextColor = System.Drawing.Color.White;
-            this.settingBtn.UseVisualStyleBackColor = false;
+            this.printBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.printBtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.printBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.printBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.printBtn.BorderRadius = 12;
+            this.printBtn.BorderSize = 0;
+            this.printBtn.FlatAppearance.BorderSize = 0;
+            this.printBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.printBtn.ForeColor = System.Drawing.Color.White;
+            this.printBtn.Image = ((System.Drawing.Image)(resources.GetObject("printBtn.Image")));
+            this.printBtn.Location = new System.Drawing.Point(1134, 12);
+            this.printBtn.Name = "printBtn";
+            this.printBtn.Size = new System.Drawing.Size(50, 40);
+            this.printBtn.TabIndex = 3;
+            this.printBtn.TextColor = System.Drawing.Color.White;
+            this.printBtn.UseVisualStyleBackColor = false;
+            this.printBtn.Click += new System.EventHandler(this.printBtn_Click);
             // 
             // danghocBtn
             // 
@@ -202,29 +202,29 @@
             this.danghocBtn.UseVisualStyleBackColor = false;
             this.danghocBtn.Click += new System.EventHandler(this.danghocBtn_Click);
             // 
-            // changeStatusBtn
+            // adjustBtn
             // 
-            this.changeStatusBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.changeStatusBtn.BackColor = System.Drawing.Color.RoyalBlue;
-            this.changeStatusBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.changeStatusBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.changeStatusBtn.BorderRadius = 12;
-            this.changeStatusBtn.BorderSize = 0;
-            this.changeStatusBtn.FlatAppearance.BorderSize = 0;
-            this.changeStatusBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.changeStatusBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeStatusBtn.ForeColor = System.Drawing.Color.White;
-            this.changeStatusBtn.Image = ((System.Drawing.Image)(resources.GetObject("changeStatusBtn.Image")));
-            this.changeStatusBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.changeStatusBtn.Location = new System.Drawing.Point(904, 12);
-            this.changeStatusBtn.Name = "changeStatusBtn";
-            this.changeStatusBtn.Size = new System.Drawing.Size(109, 40);
-            this.changeStatusBtn.TabIndex = 3;
-            this.changeStatusBtn.Text = "      Thôi học";
-            this.changeStatusBtn.TextColor = System.Drawing.Color.White;
-            this.changeStatusBtn.UseVisualStyleBackColor = false;
-            this.changeStatusBtn.Visible = false;
-            this.changeStatusBtn.Click += new System.EventHandler(this.createBtn_Click);
+            this.adjustBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.adjustBtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.adjustBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.adjustBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.adjustBtn.BorderRadius = 12;
+            this.adjustBtn.BorderSize = 0;
+            this.adjustBtn.FlatAppearance.BorderSize = 0;
+            this.adjustBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.adjustBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adjustBtn.ForeColor = System.Drawing.Color.White;
+            this.adjustBtn.Image = ((System.Drawing.Image)(resources.GetObject("adjustBtn.Image")));
+            this.adjustBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.adjustBtn.Location = new System.Drawing.Point(904, 12);
+            this.adjustBtn.Name = "adjustBtn";
+            this.adjustBtn.Size = new System.Drawing.Size(109, 40);
+            this.adjustBtn.TabIndex = 3;
+            this.adjustBtn.Text = "      Sửa";
+            this.adjustBtn.TextColor = System.Drawing.Color.White;
+            this.adjustBtn.UseVisualStyleBackColor = false;
+            this.adjustBtn.Visible = false;
+            this.adjustBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
             // createBtn
             // 
@@ -312,16 +312,16 @@
             // 
             // QuanLySinhVienForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.studentGridView);
             this.Controls.Add(this.tatcaBtn);
             this.Controls.Add(this.thoihocBtn);
-            this.Controls.Add(this.settingBtn);
+            this.Controls.Add(this.printBtn);
             this.Controls.Add(this.danghocBtn);
-            this.Controls.Add(this.changeStatusBtn);
+            this.Controls.Add(this.adjustBtn);
             this.Controls.Add(this.createBtn);
             this.Controls.Add(this.hocthuBtn);
             this.Controls.Add(this.filterBtn);
@@ -343,7 +343,7 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private CustomControls.RJControls.RJButton settingBtn;
+        private CustomControls.RJControls.RJButton printBtn;
         private CustomControls.RJControls.RJButton searchBtn;
         private CustomControls.RJControls.RJButton createBtn;
         private CustomControls.RJControls.RJButton thoihocBtn;
@@ -353,6 +353,6 @@
         private CustomControls.RJControls.RJButton filterBtn;
         private System.Windows.Forms.TextBox searchTextBox;
         private RoundedGridView studentGridView;
-        private CustomControls.RJControls.RJButton changeStatusBtn;
+        private CustomControls.RJControls.RJButton adjustBtn;
     }
 }

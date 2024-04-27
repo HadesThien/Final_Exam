@@ -12,8 +12,8 @@ namespace DAL
     public class DAL_Account
     {
         private DTO_Account account;
-        public DAL_Account(string userName, string password, DateTime dateCreated, DateTime lastLoginDate, string role) {
-            account = new DTO_Account(userName, password, dateCreated, lastLoginDate, role);
+        public DAL_Account(string userName, string password, DateTime dateCreated, DateTime lastLoginDate, string role,string email,string numberPhone,string name) {
+            account = new DTO_Account(userName, password, dateCreated, lastLoginDate, role, email, numberPhone,name);
         }
 
         public void addQuery()
@@ -24,7 +24,10 @@ namespace DAL
 
         public void updateQuery()
         {
-            string query = "UPDATE Account SET password = '" + account.Password + "', date_created =  '" + account.DateCreated.ToString() + "', lastLoginDate = '" + account.LastLoginDate.ToString() + "', role_ = '" + account.Role + "' WHERE username = '" + account.UserName + "'";
+            string query = "UPDATE Account SET password = '" + account.Password + "', date_created =  '" + account.DateCreated.ToString() 
+                + "', lastLoginDate = '" + account.LastLoginDate.ToString() 
+                +"', role_ = '" + account.Role + "', email = '" + account.Email +"', numberPhone = '"+ account.NumberPhone
+                + "',name = '"+account.Name+"'  WHERE username = '" + account.UserName + "'";
             Connection.actionQuery(query);
         }
 

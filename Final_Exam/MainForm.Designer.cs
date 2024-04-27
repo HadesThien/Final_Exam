@@ -233,6 +233,7 @@
             this.accountBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.accountBtn.TextColor = System.Drawing.Color.White;
             this.accountBtn.UseVisualStyleBackColor = false;
+            this.accountBtn.Click += new System.EventHandler(this.accountBtn_Click);
             // 
             // panel12
             // 
