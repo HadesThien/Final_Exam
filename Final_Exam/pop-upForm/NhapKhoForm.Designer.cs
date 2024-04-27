@@ -30,7 +30,7 @@
             this.roundedPanel1 = new Final_Exam.RoundedPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.rjTextBox2 = new CustomControls.RJControls.RJTextBox();
+            this.amountTextBox = new CustomControls.RJControls.RJTextBox();
             this.saveBtn = new CustomControls.RJControls.RJButton();
             this.cancelBtn = new CustomControls.RJControls.RJButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -121,27 +121,28 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Chọn đề cương cần nhập ở đây:";
             // 
-            // rjTextBox2
+            // amountTextBox
             // 
-            this.rjTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox2.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox2.BorderRadius = 20;
-            this.rjTextBox2.BorderSize = 2;
-            this.rjTextBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox2.Location = new System.Drawing.Point(680, 172);
-            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox2.Multiline = false;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox2.PlaceholderText = "";
-            this.rjTextBox2.Size = new System.Drawing.Size(385, 36);
-            this.rjTextBox2.TabIndex = 4;
-            this.rjTextBox2.Texts = "";
-            this.rjTextBox2.UnderlinedStyle = false;
+            this.amountTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.amountTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.amountTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.amountTextBox.BorderRadius = 20;
+            this.amountTextBox.BorderSize = 2;
+            this.amountTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.amountTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.amountTextBox.Location = new System.Drawing.Point(680, 172);
+            this.amountTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.amountTextBox.Multiline = false;
+            this.amountTextBox.Name = "amountTextBox";
+            this.amountTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.amountTextBox.PasswordChar = false;
+            this.amountTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.amountTextBox.PlaceholderText = "";
+            this.amountTextBox.Size = new System.Drawing.Size(385, 36);
+            this.amountTextBox.TabIndex = 4;
+            this.amountTextBox.Texts = "";
+            this.amountTextBox.UnderlinedStyle = false;
+            this.amountTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.amountTextBox_KeyPress);
             // 
             // saveBtn
             // 
@@ -217,7 +218,7 @@
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.saveBtn);
-            this.Controls.Add(this.rjTextBox2);
+            this.Controls.Add(this.amountTextBox);
             this.Controls.Add(this.roundedPanel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -243,7 +244,7 @@
         private RoundedPanel roundedPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private CustomControls.RJControls.RJTextBox rjTextBox2;
+        private CustomControls.RJControls.RJTextBox amountTextBox;
         private CustomControls.RJControls.RJButton saveBtn;
         private CustomControls.RJControls.RJButton cancelBtn;
         private System.Windows.Forms.Label label3;

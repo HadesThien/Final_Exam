@@ -29,9 +29,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.accountLabel = new System.Windows.Forms.Label();
             this.passwordLabel = new System.Windows.Forms.Label();
-            this.roundedGridView1 = new Final_Exam.RoundedGridView();
-            this.rjButton1 = new CustomControls.RJControls.RJButton();
-            this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
@@ -39,6 +36,9 @@
             this.emailLabel = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.roundedGridView1 = new Final_Exam.RoundedGridView();
+            this.registerBtn = new CustomControls.RJControls.RJButton();
+            this.changePwBtn = new CustomControls.RJControls.RJButton();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roundedGridView1)).BeginInit();
             this.SuspendLayout();
@@ -123,61 +123,6 @@
             this.passwordLabel.TabIndex = 0;
             this.passwordLabel.Text = "null";
             // 
-            // roundedGridView1
-            // 
-            this.roundedGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.roundedGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.roundedGridView1.BorderRadius = 10;
-            this.roundedGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.roundedGridView1.Location = new System.Drawing.Point(37, 228);
-            this.roundedGridView1.Name = "roundedGridView1";
-            this.roundedGridView1.Size = new System.Drawing.Size(1151, 487);
-            this.roundedGridView1.TabIndex = 3;
-            // 
-            // rjButton1
-            // 
-            this.rjButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 20;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(1004, 70);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.rjButton1.Size = new System.Drawing.Size(191, 51);
-            this.rjButton1.TabIndex = 4;
-            this.rjButton1.Text = "Đăng ký ";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            // 
-            // rjButton2
-            // 
-            this.rjButton2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton2.BorderRadius = 20;
-            this.rjButton2.BorderSize = 0;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(1004, 146);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.rjButton2.Size = new System.Drawing.Size(191, 51);
-            this.rjButton2.TabIndex = 5;
-            this.rjButton2.Text = "Đổi mật khẩu";
-            this.rjButton2.TextColor = System.Drawing.Color.White;
-            this.rjButton2.UseVisualStyleBackColor = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -248,6 +193,60 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "Role";
             // 
+            // roundedGridView1
+            // 
+            this.roundedGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.roundedGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.roundedGridView1.BorderRadius = 10;
+            this.roundedGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.roundedGridView1.Location = new System.Drawing.Point(37, 228);
+            this.roundedGridView1.Name = "roundedGridView1";
+            this.roundedGridView1.Size = new System.Drawing.Size(1151, 487);
+            this.roundedGridView1.TabIndex = 3;
+            // 
+            // registerBtn
+            // 
+            this.registerBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.registerBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.registerBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.registerBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.registerBtn.BorderRadius = 20;
+            this.registerBtn.BorderSize = 0;
+            this.registerBtn.FlatAppearance.BorderSize = 0;
+            this.registerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registerBtn.ForeColor = System.Drawing.Color.White;
+            this.registerBtn.Location = new System.Drawing.Point(1004, 70);
+            this.registerBtn.Name = "registerBtn";
+            this.registerBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.registerBtn.Size = new System.Drawing.Size(191, 51);
+            this.registerBtn.TabIndex = 4;
+            this.registerBtn.Text = "Đăng ký ";
+            this.registerBtn.TextColor = System.Drawing.Color.White;
+            this.registerBtn.UseVisualStyleBackColor = false;
+            this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
+            // 
+            // changePwBtn
+            // 
+            this.changePwBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.changePwBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.changePwBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.changePwBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.changePwBtn.BorderRadius = 20;
+            this.changePwBtn.BorderSize = 0;
+            this.changePwBtn.FlatAppearance.BorderSize = 0;
+            this.changePwBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changePwBtn.ForeColor = System.Drawing.Color.White;
+            this.changePwBtn.Location = new System.Drawing.Point(1004, 146);
+            this.changePwBtn.Name = "changePwBtn";
+            this.changePwBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.changePwBtn.Size = new System.Drawing.Size(191, 51);
+            this.changePwBtn.TabIndex = 5;
+            this.changePwBtn.Text = "Đổi mật khẩu";
+            this.changePwBtn.TextColor = System.Drawing.Color.White;
+            this.changePwBtn.UseVisualStyleBackColor = false;
+            // 
             // AccountInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -257,8 +256,8 @@
             this.Controls.Add(this.headerLabel);
             this.Controls.Add(this.roundedGridView1);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.rjButton1);
-            this.Controls.Add(this.rjButton2);
+            this.Controls.Add(this.registerBtn);
+            this.Controls.Add(this.changePwBtn);
             this.Controls.Add(this.label11);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -274,8 +273,8 @@
         }
 
         #endregion
-        private CustomControls.RJControls.RJButton rjButton1;
-        private CustomControls.RJControls.RJButton rjButton2;
+        private CustomControls.RJControls.RJButton registerBtn;
+        private CustomControls.RJControls.RJButton changePwBtn;
         private RoundedGridView roundedGridView1;
         private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.Label label2;

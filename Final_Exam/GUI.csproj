@@ -146,6 +146,12 @@
     <Compile Include="MainFormChild\SinhvienForm.Designer.cs">
       <DependentUpon>SinhvienForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="pop-upForm\RegisterAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pop-upForm\RegisterAccountForm.Designer.cs">
+      <DependentUpon>RegisterAccountForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -208,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainFormChild\SinhvienForm.resx">
       <DependentUpon>SinhvienForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop-upForm\RegisterAccountForm.resx">
+      <DependentUpon>RegisterAccountForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
