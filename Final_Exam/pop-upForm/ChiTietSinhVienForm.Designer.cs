@@ -41,17 +41,16 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.giơiTinhLabel = new System.Windows.Forms.Label();
+            this.gioiTinhLabel = new System.Windows.Forms.Label();
             this.tinhTrangLabel = new System.Windows.Forms.Label();
             this.ghiChuLabel = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.roundedGridView1 = new Final_Exam.RoundedGridView();
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
+            this.rjButton4 = new CustomControls.RJControls.RJButton();
             this.rjButton3 = new CustomControls.RJControls.RJButton();
             this.cancelBtn = new CustomControls.RJControls.RJButton();
-            this.roundedGridView1 = new Final_Exam.RoundedGridView();
-            this.rjButton4 = new CustomControls.RJControls.RJButton();
-            this.rjButton5 = new CustomControls.RJControls.RJButton();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -64,7 +63,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(10, -2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(349, 37);
+            this.label1.Size = new System.Drawing.Size(435, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin chi tiết học sinh";
             // 
@@ -74,7 +73,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 25);
+            this.label2.Size = new System.Drawing.Size(160, 32);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã học viên:";
             // 
@@ -82,9 +81,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 33);
+            this.label3.Location = new System.Drawing.Point(3, 37);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 25);
+            this.label3.Size = new System.Drawing.Size(131, 32);
             this.label3.TabIndex = 0;
             this.label3.Text = "Họ và tên:";
             // 
@@ -92,11 +91,12 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 66);
+            this.label4.Location = new System.Drawing.Point(3, 74);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 25);
+            this.label4.Size = new System.Drawing.Size(171, 32);
             this.label4.TabIndex = 0;
             this.label4.Text = "Số điện thoại:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -104,7 +104,7 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 25);
+            this.label5.Size = new System.Drawing.Size(99, 32);
             this.label5.TabIndex = 0;
             this.label5.Text = "Địa chỉ:";
             // 
@@ -112,9 +112,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(486, 33);
+            this.label6.Location = new System.Drawing.Point(506, 37);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 25);
+            this.label6.Size = new System.Drawing.Size(135, 32);
             this.label6.TabIndex = 0;
             this.label6.Text = "Ngày sinh:";
             // 
@@ -122,9 +122,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(486, 0);
+            this.label7.Location = new System.Drawing.Point(506, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 25);
+            this.label7.Size = new System.Drawing.Size(125, 32);
             this.label7.TabIndex = 0;
             this.label7.Text = "Ngày tạo:";
             // 
@@ -132,9 +132,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(486, 66);
+            this.label8.Location = new System.Drawing.Point(506, 74);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 25);
+            this.label8.Size = new System.Drawing.Size(107, 32);
             this.label8.TabIndex = 0;
             this.label8.Text = "Ghi chú:";
             // 
@@ -142,9 +142,9 @@
             // 
             this.maHocVienLabel.AutoSize = true;
             this.maHocVienLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maHocVienLabel.Location = new System.Drawing.Point(155, 0);
+            this.maHocVienLabel.Location = new System.Drawing.Point(184, 0);
             this.maHocVienLabel.Name = "maHocVienLabel";
-            this.maHocVienLabel.Size = new System.Drawing.Size(0, 21);
+            this.maHocVienLabel.Size = new System.Drawing.Size(0, 28);
             this.maHocVienLabel.TabIndex = 0;
             this.maHocVienLabel.Click += new System.EventHandler(this.label9_Click);
             // 
@@ -152,45 +152,45 @@
             // 
             this.hoTenLabel.AutoSize = true;
             this.hoTenLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hoTenLabel.Location = new System.Drawing.Point(155, 33);
+            this.hoTenLabel.Location = new System.Drawing.Point(184, 37);
             this.hoTenLabel.Name = "hoTenLabel";
-            this.hoTenLabel.Size = new System.Drawing.Size(0, 21);
+            this.hoTenLabel.Size = new System.Drawing.Size(0, 28);
             this.hoTenLabel.TabIndex = 0;
             // 
             // soDienThoaiLabel
             // 
             this.soDienThoaiLabel.AutoSize = true;
             this.soDienThoaiLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.soDienThoaiLabel.Location = new System.Drawing.Point(155, 66);
+            this.soDienThoaiLabel.Location = new System.Drawing.Point(184, 74);
             this.soDienThoaiLabel.Name = "soDienThoaiLabel";
-            this.soDienThoaiLabel.Size = new System.Drawing.Size(0, 21);
+            this.soDienThoaiLabel.Size = new System.Drawing.Size(0, 28);
             this.soDienThoaiLabel.TabIndex = 0;
             // 
             // addressLabel
             // 
             this.addressLabel.AutoSize = true;
             this.addressLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addressLabel.Location = new System.Drawing.Point(154, 0);
+            this.addressLabel.Location = new System.Drawing.Point(184, 0);
             this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(0, 21);
+            this.addressLabel.Size = new System.Drawing.Size(0, 28);
             this.addressLabel.TabIndex = 0;
             // 
             // ngayTaoLabel
             // 
             this.ngayTaoLabel.AutoSize = true;
             this.ngayTaoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ngayTaoLabel.Location = new System.Drawing.Point(619, 0);
+            this.ngayTaoLabel.Location = new System.Drawing.Point(655, 0);
             this.ngayTaoLabel.Name = "ngayTaoLabel";
-            this.ngayTaoLabel.Size = new System.Drawing.Size(0, 21);
+            this.ngayTaoLabel.Size = new System.Drawing.Size(0, 28);
             this.ngayTaoLabel.TabIndex = 0;
             // 
             // ngaySinhLabel
             // 
             this.ngaySinhLabel.AutoSize = true;
             this.ngaySinhLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ngaySinhLabel.Location = new System.Drawing.Point(619, 33);
+            this.ngaySinhLabel.Location = new System.Drawing.Point(655, 37);
             this.ngaySinhLabel.Name = "ngaySinhLabel";
-            this.ngaySinhLabel.Size = new System.Drawing.Size(0, 21);
+            this.ngaySinhLabel.Size = new System.Drawing.Size(0, 28);
             this.ngaySinhLabel.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -206,7 +206,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1117, 33);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1336, 33);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // tableLayoutPanel3
@@ -215,11 +215,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 6;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.59223F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.56752F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.91527F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.68049F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.76787F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.21183F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.17665F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.22754F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.18862F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.07784F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.00599F));
             this.tableLayoutPanel3.Controls.Add(this.ngaySinhLabel, 3, 1);
             this.tableLayoutPanel3.Controls.Add(this.label8, 2, 2);
             this.tableLayoutPanel3.Controls.Add(this.label2, 0, 0);
@@ -233,63 +233,63 @@
             this.tableLayoutPanel3.Controls.Add(this.label15, 4, 0);
             this.tableLayoutPanel3.Controls.Add(this.label16, 4, 1);
             this.tableLayoutPanel3.Controls.Add(this.ngayTaoLabel, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.giơiTinhLabel, 5, 0);
+            this.tableLayoutPanel3.Controls.Add(this.gioiTinhLabel, 5, 0);
             this.tableLayoutPanel3.Controls.Add(this.tinhTrangLabel, 5, 1);
             this.tableLayoutPanel3.Controls.Add(this.ghiChuLabel, 3, 2);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(17, 60);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(17, 47);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1117, 100);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1336, 113);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(772, 0);
+            this.label15.Location = new System.Drawing.Point(897, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(88, 25);
+            this.label15.Size = new System.Drawing.Size(119, 32);
             this.label15.TabIndex = 0;
-            this.label15.Text = "Giới tính";
+            this.label15.Text = "Giới tính:";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(772, 33);
+            this.label16.Location = new System.Drawing.Point(897, 37);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(105, 25);
+            this.label16.Size = new System.Drawing.Size(140, 32);
             this.label16.TabIndex = 0;
-            this.label16.Text = "Tình trạng";
+            this.label16.Text = "Tình trạng:";
             // 
-            // giơiTinhLabel
+            // gioiTinhLabel
             // 
-            this.giơiTinhLabel.AutoSize = true;
-            this.giơiTinhLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.giơiTinhLabel.Location = new System.Drawing.Point(892, 0);
-            this.giơiTinhLabel.Name = "giơiTinhLabel";
-            this.giơiTinhLabel.Size = new System.Drawing.Size(0, 21);
-            this.giơiTinhLabel.TabIndex = 0;
+            this.gioiTinhLabel.AutoSize = true;
+            this.gioiTinhLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gioiTinhLabel.Location = new System.Drawing.Point(1044, 0);
+            this.gioiTinhLabel.Name = "gioiTinhLabel";
+            this.gioiTinhLabel.Size = new System.Drawing.Size(0, 28);
+            this.gioiTinhLabel.TabIndex = 0;
             // 
             // tinhTrangLabel
             // 
             this.tinhTrangLabel.AutoSize = true;
             this.tinhTrangLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tinhTrangLabel.Location = new System.Drawing.Point(892, 33);
+            this.tinhTrangLabel.Location = new System.Drawing.Point(1044, 37);
             this.tinhTrangLabel.Name = "tinhTrangLabel";
-            this.tinhTrangLabel.Size = new System.Drawing.Size(0, 21);
+            this.tinhTrangLabel.Size = new System.Drawing.Size(0, 28);
             this.tinhTrangLabel.TabIndex = 0;
             // 
             // ghiChuLabel
             // 
             this.ghiChuLabel.AutoSize = true;
             this.ghiChuLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ghiChuLabel.Location = new System.Drawing.Point(619, 66);
+            this.ghiChuLabel.Location = new System.Drawing.Point(655, 74);
             this.ghiChuLabel.Name = "ghiChuLabel";
-            this.ghiChuLabel.Size = new System.Drawing.Size(0, 21);
+            this.ghiChuLabel.Size = new System.Drawing.Size(0, 28);
             this.ghiChuLabel.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -299,15 +299,29 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.flowLayoutPanel1.Controls.Add(this.rjButton2);
-            this.flowLayoutPanel1.Controls.Add(this.rjButton5);
             this.flowLayoutPanel1.Controls.Add(this.rjButton1);
             this.flowLayoutPanel1.Controls.Add(this.rjButton4);
             this.flowLayoutPanel1.Controls.Add(this.rjButton3);
             this.flowLayoutPanel1.Controls.Add(this.cancelBtn);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(17, 221);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(238, 443);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(234, 443);
             this.flowLayoutPanel1.TabIndex = 6;
+            // 
+            // roundedGridView1
+            // 
+            this.roundedGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.roundedGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.roundedGridView1.BorderRadius = 10;
+            this.roundedGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.roundedGridView1.Location = new System.Drawing.Point(257, 224);
+            this.roundedGridView1.Name = "roundedGridView1";
+            this.roundedGridView1.RowHeadersWidth = 51;
+            this.roundedGridView1.Size = new System.Drawing.Size(1096, 445);
+            this.roundedGridView1.TabIndex = 7;
+            this.roundedGridView1.Visible = false;
             // 
             // rjButton2
             // 
@@ -337,13 +351,33 @@
             this.rjButton1.FlatAppearance.BorderSize = 0;
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(3, 95);
+            this.rjButton1.Location = new System.Drawing.Point(3, 49);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(231, 40);
             this.rjButton1.TabIndex = 5;
             this.rjButton1.Text = "Thôi học";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
+            // 
+            // rjButton4
+            // 
+            this.rjButton4.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton4.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton4.BorderRadius = 0;
+            this.rjButton4.BorderSize = 0;
+            this.rjButton4.FlatAppearance.BorderSize = 0;
+            this.rjButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton4.ForeColor = System.Drawing.Color.White;
+            this.rjButton4.Location = new System.Drawing.Point(3, 95);
+            this.rjButton4.Name = "rjButton4";
+            this.rjButton4.Size = new System.Drawing.Size(231, 40);
+            this.rjButton4.TabIndex = 5;
+            this.rjButton4.Text = "Nhập học";
+            this.rjButton4.TextColor = System.Drawing.Color.White;
+            this.rjButton4.UseVisualStyleBackColor = false;
+            this.rjButton4.Click += new System.EventHandler(this.rjButton4_Click);
             // 
             // rjButton3
             // 
@@ -355,7 +389,7 @@
             this.rjButton3.FlatAppearance.BorderSize = 0;
             this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton3.ForeColor = System.Drawing.Color.White;
-            this.rjButton3.Location = new System.Drawing.Point(3, 187);
+            this.rjButton3.Location = new System.Drawing.Point(3, 141);
             this.rjButton3.Name = "rjButton3";
             this.rjButton3.Size = new System.Drawing.Size(231, 40);
             this.rjButton3.TabIndex = 5;
@@ -373,7 +407,7 @@
             this.cancelBtn.FlatAppearance.BorderSize = 0;
             this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelBtn.ForeColor = System.Drawing.Color.Black;
-            this.cancelBtn.Location = new System.Drawing.Point(3, 233);
+            this.cancelBtn.Location = new System.Drawing.Point(3, 187);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(231, 40);
             this.cancelBtn.TabIndex = 5;
@@ -382,61 +416,11 @@
             this.cancelBtn.UseVisualStyleBackColor = false;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
-            // roundedGridView1
-            // 
-            this.roundedGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.roundedGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.roundedGridView1.BorderRadius = 10;
-            this.roundedGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.roundedGridView1.Location = new System.Drawing.Point(271, 221);
-            this.roundedGridView1.Name = "roundedGridView1";
-            this.roundedGridView1.Size = new System.Drawing.Size(862, 445);
-            this.roundedGridView1.TabIndex = 7;
-            this.roundedGridView1.Visible = false;
-            // 
-            // rjButton4
-            // 
-            this.rjButton4.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton4.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton4.BorderRadius = 0;
-            this.rjButton4.BorderSize = 0;
-            this.rjButton4.FlatAppearance.BorderSize = 0;
-            this.rjButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton4.ForeColor = System.Drawing.Color.White;
-            this.rjButton4.Location = new System.Drawing.Point(3, 141);
-            this.rjButton4.Name = "rjButton4";
-            this.rjButton4.Size = new System.Drawing.Size(231, 40);
-            this.rjButton4.TabIndex = 5;
-            this.rjButton4.Text = "Nhập học";
-            this.rjButton4.TextColor = System.Drawing.Color.White;
-            this.rjButton4.UseVisualStyleBackColor = false;
-            // 
-            // rjButton5
-            // 
-            this.rjButton5.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton5.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton5.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton5.BorderRadius = 0;
-            this.rjButton5.BorderSize = 0;
-            this.rjButton5.FlatAppearance.BorderSize = 0;
-            this.rjButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton5.ForeColor = System.Drawing.Color.White;
-            this.rjButton5.Location = new System.Drawing.Point(3, 49);
-            this.rjButton5.Name = "rjButton5";
-            this.rjButton5.Size = new System.Drawing.Size(231, 40);
-            this.rjButton5.TabIndex = 5;
-            this.rjButton5.Text = "Mặc định";
-            this.rjButton5.TextColor = System.Drawing.Color.White;
-            this.rjButton5.UseVisualStyleBackColor = false;
-            // 
             // ChiTietSinhVienForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 676);
+            this.ClientSize = new System.Drawing.Size(1365, 676);
             this.ControlBox = false;
             this.Controls.Add(this.roundedGridView1);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -448,6 +432,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ChiTietSinhVienForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.ChiTietSinhVienForm_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -483,12 +468,11 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label giơiTinhLabel;
+        private System.Windows.Forms.Label gioiTinhLabel;
         private System.Windows.Forms.Label tinhTrangLabel;
         private RoundedGridView roundedGridView1;
         private CustomControls.RJControls.RJButton cancelBtn;
         private System.Windows.Forms.Label ghiChuLabel;
-        private CustomControls.RJControls.RJButton rjButton5;
         private CustomControls.RJControls.RJButton rjButton4;
     }
 }

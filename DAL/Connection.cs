@@ -14,7 +14,7 @@ namespace DAL
 
         public static void connect()
         {
-            string s = "Data Source=TRUONGNHATTHIEN;Initial Catalog=Final_SE;Integrated Security=True;";
+            string s = "Data Source=TAANS;Initial Catalog=Final_SE;Persist Security Info=True;User ID=ngphctn14;Password=nuttertools123";
             conn = new SqlConnection(s);
             conn.Open();
         }

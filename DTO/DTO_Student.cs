@@ -14,13 +14,15 @@ namespace DTO
         public string Street { get; set; }
         public string Ward { get; set; }
         public string District { get; set; }
-        public string DateCreated { get; set; }
+        public string Status { get; set; }
+        public string Note { get; set; }
+        public DateTime DateCreated { get; set; }
         public List<DTO_Register> Registers { get; set; }
         public List<DTO_Payment> Payments { get; set; }
         public List<DTO_Buy> Buys { get; set; }
 
         //Constructor
-        public DTO_Student(string id, string name, string gender, DateTime dob,string numberPhone, string school, string number, string street, string ward, string district, string dateCreated)
+        public DTO_Student(string id, string name, string gender, DateTime dob,string numberPhone, string school, string number, string street, string ward, string district, DateTime dateCreated, string status, string note)
             : base(id, name, gender, dob,numberPhone) {
             School = school;
             Number = number;
@@ -28,6 +30,8 @@ namespace DTO
             Ward = ward;
             District = district;
             DateCreated = dateCreated;
+            Status = status;
+            Note = note;
             Registers = new List<DTO_Register> ();
             Payments = new List<DTO_Payment>();
             Buys = new List<DTO_Buy>();

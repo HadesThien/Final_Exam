@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,24 +19,20 @@ namespace Final_Exam {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e) {
-        }
-
-        public void updateGridView()
+        public void updateGridView(DataTable data)
         {
-            student = new BUS_Student("", "", "", DateTime.Now, "", "", "", "", "", "");
-            DataTable dt = student.selectQuery();
+            DataTable dt = data;
             dt.Columns[0].ColumnName = "Mã học sinh";
             dt.Columns[1].ColumnName = "Tên học sinh";
             dt.Columns[2].ColumnName = "Số điện thoại";
             dt.Columns[3].ColumnName = "Ngày sinh";
             dt.Columns[4].ColumnName = "Giới tính";
             dt.Columns[5].ColumnName = "Ngày tạo";
+            studentGridView.DataSource = dt;
             foreach (DataGridViewColumn col in studentGridView.Columns)
             {
                 col.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
-            studentGridView.DataSource = dt;
         }
 
         private void searchBtn_Click(object sender, EventArgs e) {
@@ -45,15 +40,18 @@ namespace Final_Exam {
         }
 
         private void tatcaBtn_Click(object sender, EventArgs e) {
-            updateGridView();
+            student = new BUS_Student("", "", "", DateTime.Now, "", "", "", "", "", "", DateTime.Now, "", "");
+            updateGridView(student.basicSelectQuery());
         }
 
         private void danghocBtn_Click(object sender, EventArgs e) {
-
+            student = new BUS_Student("", "", "", DateTime.Now, "", "", "", "", "", "", DateTime.Now, "", "");
+            updateGridView(student.basicSelectQueryOfficial());
         }
 
         private void hocthuBtn_Click(object sender, EventArgs e) {
-
+            student = new BUS_Student("", "", "", DateTime.Now, "", "", "", "", "", "", DateTime.Now, "", "");
+            updateGridView(student.basicSelectQueryTrial());
         }
 
         private void createBtn_Click(object sender, EventArgs e) {
@@ -64,7 +62,6 @@ namespace Final_Exam {
         private void studentGridView_CellClick(object sender, DataGridViewCellEventArgs e) {
             adjustBtn.Visible = true;
             int index = e.RowIndex;
-            DataGridViewRow row = studentGridView.Rows[index];
             if(index == 0) {
 
             }
@@ -72,12 +69,14 @@ namespace Final_Exam {
 
         private void studentGridView_CellContentClick(object sender, DataGridViewCellEventArgs e) {
             int colIndex = e.ColumnIndex;
-            if(colIndex==0) { Form chiTietSinhVien = new ChiTietSinhVienForm(); chiTietSinhVien.ShowDialog(); }
+            int rowIndex = e.RowIndex;
+            if(colIndex==0 && rowIndex != -1) { Form chiTietSinhVien = new ChiTietSinhVienForm(studentGridView.Rows[rowIndex].Cells[0].Value.ToString()); chiTietSinhVien.ShowDialog(); }
 
         }
 
         private void QuanLySinhVienForm_Load(object sender, EventArgs e) {
-
+            student = new BUS_Student("", "", "", DateTime.Now, "", "", "", "", "", "", DateTime.Now, "", "");
+            updateGridView(student.basicSelectQuery());
         }
 
         private void studentGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e) {
@@ -111,6 +110,12 @@ namespace Final_Exam {
             Excel.Range CR = (Excel.Range)xlWorkSheet.Cells[1, 1];
             CR.Select();
             xlWorkSheet.PasteSpecial(CR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
+        }
+
+        private void thoihocBtn_Click(object sender, EventArgs e)
+        {
+            student = new BUS_Student("", "", "", DateTime.Now, "", "", "", "", "", "", DateTime.Now, "", "");
+            updateGridView(student.basicSelectQueryDropout());
         }
     }
 
