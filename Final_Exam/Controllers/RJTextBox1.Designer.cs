@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Final_Exam {
+namespace Final_Exam.Controllers {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Final_Exam {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Final_Exam.RJTextBox", typeof(RJTextBox).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Final_Exam.Controllers.RJTextBox", typeof(RJTextBox).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

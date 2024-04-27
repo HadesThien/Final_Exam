@@ -52,22 +52,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountInfoForm.cs">
+    <Compile Include="MainFormChild\AccountInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AccountInfoForm.Designer.cs">
+    <Compile Include="MainFormChild\AccountInfoForm.Designer.cs">
       <DependentUpon>AccountInfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChiTietSinhVienForm.cs">
+    <Compile Include="pop-upForm\ChiTietSinhVienForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChiTietSinhVienForm.Designer.cs">
+    <Compile Include="pop-upForm\ChiTietSinhVienForm.Designer.cs">
       <DependentUpon>ChiTietSinhVienForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CongNoForm.cs">
+    <Compile Include="MainFormChild\CongNoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CongNoForm.Designer.cs">
+    <Compile Include="MainFormChild\CongNoForm.Designer.cs">
       <DependentUpon>CongNoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DangNhapForm.cs">
@@ -76,28 +76,28 @@
     <Compile Include="DangNhapForm.Designer.cs">
       <DependentUpon>DangNhapForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DashboardForm.cs">
+    <Compile Include="MainFormChild\DashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DashboardForm.Designer.cs">
+    <Compile Include="MainFormChild\DashboardForm.Designer.cs">
       <DependentUpon>DashboardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GhiDanhForm.cs">
+    <Compile Include="pop-upForm\GhiDanhForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GhiDanhForm.Designer.cs">
+    <Compile Include="pop-upForm\GhiDanhForm.Designer.cs">
       <DependentUpon>GhiDanhForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="KhoForm.cs">
+    <Compile Include="MainFormChild\KhoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KhoForm.Designer.cs">
+    <Compile Include="MainFormChild\KhoForm.Designer.cs">
       <DependentUpon>KhoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LophocForm.cs">
+    <Compile Include="MainFormChild\LophocForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LophocForm.Designer.cs">
+    <Compile Include="MainFormChild\LophocForm.Designer.cs">
       <DependentUpon>LophocForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
@@ -106,44 +106,44 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MakeMovable.cs" />
-    <Compile Include="NhapHangForm.cs">
+    <Compile Include="Controllers\MakeMovable.cs" />
+    <Compile Include="pop-upForm\NhapHangForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NhapHangForm.Designer.cs">
+    <Compile Include="pop-upForm\NhapHangForm.Designer.cs">
       <DependentUpon>NhapHangForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhapKhoForm.cs">
+    <Compile Include="pop-upForm\NhapKhoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NhapKhoForm.Designer.cs">
+    <Compile Include="pop-upForm\NhapKhoForm.Designer.cs">
       <DependentUpon>NhapKhoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="RJComboBox.cs">
+    <Compile Include="Controllers\RJComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="RJDatePicker.cs">
+    <Compile Include="Controllers\RJDatePicker.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RJTextBox.cs">
+    <Compile Include="Controllers\RJTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="RJTextBox.Designer.cs" />
-    <Compile Include="RJTextBox1.Designer.cs">
+    <Compile Include="Controllers\RJTextBox.Designer.cs" />
+    <Compile Include="Controllers\RJTextBox1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RJTextBox.resx</DependentUpon>
     </Compile>
-    <Compile Include="RoundedGridView.cs">
+    <Compile Include="Controllers\RoundedGridView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RoundedPanel.cs">
+    <Compile Include="Controllers\RoundedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="SinhvienForm.cs">
+    <Compile Include="MainFormChild\SinhvienForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SinhvienForm.Designer.cs">
+    <Compile Include="MainFormChild\SinhvienForm.Designer.cs">
       <DependentUpon>SinhvienForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -153,60 +153,60 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="RJButton.cs">
+    <Compile Include="Controllers\RJButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TaoCongNoForm.cs">
+    <Compile Include="pop-upForm\TaoCongNoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TaoCongNoForm.Designer.cs">
+    <Compile Include="pop-upForm\TaoCongNoForm.Designer.cs">
       <DependentUpon>TaoCongNoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TaoLopForm.cs">
+    <Compile Include="pop-upForm\TaoLopForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TaoLopForm.Designer.cs">
+    <Compile Include="pop-upForm\TaoLopForm.Designer.cs">
       <DependentUpon>TaoLopForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AccountInfoForm.resx">
+    <EmbeddedResource Include="MainFormChild\AccountInfoForm.resx">
       <DependentUpon>AccountInfoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChiTietSinhVienForm.resx">
+    <EmbeddedResource Include="pop-upForm\ChiTietSinhVienForm.resx">
       <DependentUpon>ChiTietSinhVienForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CongNoForm.resx">
+    <EmbeddedResource Include="MainFormChild\CongNoForm.resx">
       <DependentUpon>CongNoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DangNhapForm.resx">
       <DependentUpon>DangNhapForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DashboardForm.resx">
+    <EmbeddedResource Include="MainFormChild\DashboardForm.resx">
       <DependentUpon>DashboardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GhiDanhForm.resx">
+    <EmbeddedResource Include="pop-upForm\GhiDanhForm.resx">
       <DependentUpon>GhiDanhForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KhoForm.resx">
+    <EmbeddedResource Include="MainFormChild\KhoForm.resx">
       <DependentUpon>KhoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LophocForm.resx">
+    <EmbeddedResource Include="MainFormChild\LophocForm.resx">
       <DependentUpon>LophocForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NhapHangForm.resx">
+    <EmbeddedResource Include="pop-upForm\NhapHangForm.resx">
       <DependentUpon>NhapHangForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NhapKhoForm.resx">
+    <EmbeddedResource Include="pop-upForm\NhapKhoForm.resx">
       <DependentUpon>NhapKhoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RJTextBox.resx">
+    <EmbeddedResource Include="Controllers\RJTextBox.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>RJTextBox1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="SinhvienForm.resx">
+    <EmbeddedResource Include="MainFormChild\SinhvienForm.resx">
       <DependentUpon>SinhvienForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -214,10 +214,10 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="TaoCongNoForm.resx">
+    <EmbeddedResource Include="pop-upForm\TaoCongNoForm.resx">
       <DependentUpon>TaoCongNoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TaoLopForm.resx">
+    <EmbeddedResource Include="pop-upForm\TaoLopForm.resx">
       <DependentUpon>TaoLopForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
