@@ -66,11 +66,9 @@ namespace DAL
 
         public DataTable basicSelectQuery()
         {
-            string s = "SELECT p.Id, p.name, p.numberphone, c.classId, p.dob, p.gender, r.admission_day " +
+            string s = "SELECT p.Id, p.name, p.numberphone, p.dob, p.gender, r.admission_day " +
                 "FROM Person p " +
-                "INNER JOIN Student s ON s.studentId = p.Id " +
-                "INNER JOIN Register r ON s.studentId = r.studentId " +
-                "INNER JOIN Class c ON c.classId = r.classId";
+                "INNER JOIN Student s ON s.studentId = p.Id";
             return Connection.selectQuery(s);
         }
     }

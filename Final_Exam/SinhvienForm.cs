@@ -28,10 +28,13 @@ namespace Final_Exam {
             dt.Columns[0].ColumnName = "Mã học sinh";
             dt.Columns[1].ColumnName = "Tên học sinh";
             dt.Columns[2].ColumnName = "Số điện thoại";
-            dt.Columns[3].ColumnName = "Lớp học";
-            dt.Columns[4].ColumnName = "Ngày sinh";
-            dt.Columns[5].ColumnName = "Giới tính";
-            dt.Columns[6].ColumnName = "Ngày tạo";
+            dt.Columns[3].ColumnName = "Ngày sinh";
+            dt.Columns[4].ColumnName = "Giới tính";
+            dt.Columns[5].ColumnName = "Ngày tạo";
+            foreach (DataGridViewColumn col in studentGridView.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
             studentGridView.DataSource = dt;
         }
 
