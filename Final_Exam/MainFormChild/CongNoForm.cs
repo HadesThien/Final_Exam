@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Final_Exam.pop_upForm;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -46,6 +47,15 @@ namespace Final_Exam {
         private void createBtn_Click(object sender, EventArgs e) {
             Form form = new TaoCongNoForm();
             form.ShowDialog();
+        }
+
+        private void studentGridView_CellClick(object sender, DataGridViewCellEventArgs e) {
+            xoaBtn.Visible = true;
+        }
+
+        private void xoaBtn_Click(object sender, EventArgs e) {
+            Form confirmForm = new ConfirmForm();
+            confirmForm.ShowDialog();
         }
     }
 }

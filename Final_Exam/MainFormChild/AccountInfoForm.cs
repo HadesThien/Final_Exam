@@ -19,5 +19,14 @@ namespace Final_Exam {
             Form form = new RegisterAccountForm();
             form.ShowDialog();
         }
+
+        private void changePwBtn_Click(object sender, EventArgs e) {
+            Form form = new RegisterAccountForm();
+            form.ShowDialog();
+        }
+
+        private void roundedGridView1_CellClick(object sender, DataGridViewCellEventArgs e) {
+            changePwBtn.Visible =!changePwBtn.Visible;
+        }
     }
 }

@@ -205,6 +205,7 @@
             this.roundedGridView1.Name = "roundedGridView1";
             this.roundedGridView1.Size = new System.Drawing.Size(1151, 487);
             this.roundedGridView1.TabIndex = 3;
+            this.roundedGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.roundedGridView1_CellClick);
             // 
             // registerBtn
             // 
@@ -246,6 +247,8 @@
             this.changePwBtn.Text = "Đổi mật khẩu";
             this.changePwBtn.TextColor = System.Drawing.Color.White;
             this.changePwBtn.UseVisualStyleBackColor = false;
+            this.changePwBtn.Visible = false;
+            this.changePwBtn.Click += new System.EventHandler(this.changePwBtn_Click);
             // 
             // AccountInfoForm
             // 
