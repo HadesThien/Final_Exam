@@ -12,9 +12,9 @@ namespace BUS
     {
         private DAL_Student student;
 
-        public BUS_Student(string id, string name, string gender, DateTime dob, string numberPhone, string school, string number, string street, string ward, string district)
+        public BUS_Student(string id, string name, string gender, DateTime dob, string numberPhone, string school, string number, string street, string ward, string district, DateTime dateCreated, string status, string note)
         {
-            student = new DAL_Student(id, name, gender, dob, numberPhone, school, number, street, ward, district);
+            student = new DAL_Student(id, name, gender, dob, numberPhone, school, number, street, ward, district, dateCreated, status, note);
         }
 
         public void addQuery()
@@ -31,9 +31,37 @@ namespace BUS
             student.deleteQuery();
         }
 
-        public DataTable selectQuery()
+        public DataTable basicSelectQuery()
         {
             return student.basicSelectQuery();
+        }
+
+        public DataTable basicSelectQueryOfficial()
+        {
+            return student.basicSelectQueryOfficial();
+        }
+        public DataTable basicSelectQueryTrial()
+        {
+            return student.basicSelectQueryTrial();
+        }
+        public DataTable basicSelectQueryDropout()
+        {
+            return student.basicSelectQueryDropout();
+        }
+
+        public DataTable findStudentBasic()
+        {
+            return student.findStudentBasic();
+        }
+
+        public DataTable findStudentDetailed()
+        {
+            return student.findStudentDetailed();
+        }
+
+        public DataTable detailedSelectQuery()
+        {
+            return student.detailedSelectQuery();
         }
     }
 }
