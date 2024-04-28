@@ -553,6 +553,7 @@
         private CustomControls.RJControls.RJButton rjButton1;
         private CustomControls.RJControls.RJButton rjButton2;
         private CustomControls.RJControls.RJButton rjButton3;
+        private CustomControls.RJControls.RJButton rjButton5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;

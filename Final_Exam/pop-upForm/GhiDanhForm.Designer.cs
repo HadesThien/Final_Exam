@@ -837,6 +837,7 @@
 
         private CustomControls.RJControls.RJComboBox genderComboBox;
         private CustomControls.RJControls.RJTextBox nameTextBox;
+        private CustomControls.RJControls.RJComboBox thanhPhoTextBox;
         private System.Windows.Forms.Label label1;
         private CustomControls.RJControls.RJTextBox soDienThoaiTextbox;
         private CustomControls.RJControls.RJDatePicker dobTimePicker;
