@@ -9,8 +9,8 @@ go
 CREATE TABLE Person
 (
   Id VARCHAR(10) NOT NULL,
-  name VARCHAR(50) NOT NULL,
-  gender VARCHAR(5) NOT NULL,
+  name NVARCHAR(50) NOT NULL,
+  gender NVARCHAR(5) NOT NULL,
   dob DATE NOT NULL,
   numberPhone VARCHAR(11) NOT NULL,
   PRIMARY KEY (Id)
@@ -18,7 +18,7 @@ CREATE TABLE Person
 
 CREATE TABLE Teacher
 (
-  subject VARCHAR(20) NOT NULL,
+  subject NVARCHAR(20) NOT NULL,
   teacherId VARCHAR(10) NOT NULL,
   PRIMARY KEY (teacherId),
   FOREIGN KEY (teacherId) REFERENCES Person(Id)
@@ -26,14 +26,14 @@ CREATE TABLE Teacher
 
 CREATE TABLE Student
 (
-  school VARCHAR(30) NOT NULL,
-  number VARCHAR(10) NOT NULL,
-  street VARCHAR(30) NOT NULL,
-  ward VARCHAR(20) NOT NULL,
-  district VARCHAR(20) NOT NULL,
+  school NVARCHAR(30) NOT NULL,
+  number NVARCHAR(10) NOT NULL,
+  street NVARCHAR(30) NOT NULL,
+  ward NVARCHAR(20) NOT NULL,
+  district NVARCHAR(20) NOT NULL,
   dateCreated DATE NOT NULL,
-  status VARCHAR(10) NOT NULL,
-  note VARCHAR(50) NOT NULL,
+  status NVARCHAR(10) NOT NULL,
+  note NVARCHAR(50) NOT NULL,
   studentId VARCHAR(10) NOT NULL,
   PRIMARY KEY (studentId),
   FOREIGN KEY (studentId) REFERENCES Person(Id)
@@ -42,8 +42,8 @@ CREATE TABLE Student
 CREATE TABLE Class
 (
   classId VARCHAR(10) NOT NULL,
-  subject VARCHAR(30) NOT NULL,
-  shift VARCHAR(10) NOT NULL,
+  subject NVARCHAR(30) NOT NULL,
+  shift NVARCHAR(10) NOT NULL,
   grade INT NOT NULL,
   price INT NOT NULL,
   numberOfSession INT NOT NULL,
@@ -58,8 +58,8 @@ CREATE TABLE Payment
 (
   dateCreated DATE NOT NULL,
   month INT NOT NULL,
-  status VARCHAR(10) NOT NULL,
-  note VARCHAR(100) NOT NULL,
+  status NVARCHAR(10) NOT NULL,
+  note NVARCHAR(100) NOT NULL,
   promotion FLOAT NOT NULL,
   numberOfSession INT NOT NULL,
   paymentId VARCHAR(10) NOT NULL,
@@ -74,7 +74,7 @@ CREATE TABLE Account
   dateCreated DATE NOT NULL,
   username VARCHAR(20) NOT NULL,
   lastLoginDate DATE NOT NULL,
-  role VARCHAR(20) NOT NULL,
+  role NVARCHAR(20) NOT NULL,
   email VARCHAR(50) NOT NULL,
   numberPhone VARCHAR(11) NOT NULL,
   name VARCHAR(50) NOT NULL,
@@ -85,7 +85,7 @@ CREATE TABLE Document
 (
   inventory INT NOT NULL,
   handoutId VARCHAR(10) NOT NULL,
-  name VARCHAR(50) NOT NULL,
+  name NVARCHAR(50) NOT NULL,
   dateCreated DATE NOT NULL,
   dateUpdated DATE NOT NULL,
   price INT NOT NULL,
@@ -107,9 +107,9 @@ CREATE TABLE Buy
   buyingDate DATE NOT NULL,
   number INT NOT NULL,
   price INT NOT NULL,
-  status VARCHAR(50) NOT NULL,
+  status NVARCHAR(50) NOT NULL,
   month INT NOT NULL,
-  note VARCHAR(50) NOT NULL,
+  note NVARCHAR(50) NOT NULL,
   buyId VARCHAR(10) NOT NULL,
   studentId VARCHAR(10) NOT NULL,
   handoutId VARCHAR(10) NOT NULL,
@@ -138,12 +138,11 @@ VALUES
 
 INSERT INTO Student (school, number, street, ward, district,dateCreated ,studentId, status, note)
 VALUES 
-(N'Trường THCS ABC', '123', N'Đường A', N'Phường 1', N'Quận Gò Vấp', 'HS001', N'Đang học', N''),
-(N'Trường THCS XYZ', '456', N'Đường B', N'Phường 2', N'Quận 1', 'HS002', N'Đang học', N''),
-(N'Trường THCS KLM', '789', N'Đường C', N'Phường 3', N'Quận Tân Bình', 'HS003', N'Đang học', N''),
-(N'Trường THCS NOP', '1011', N'Đường D', N'Phường 4', N'Quận 3', 'HS004', N'Đang học', N''),
-(N'Trường THCS QRS', '1213', N'Đường E', N'Phường 5', N'Quận 10', 'HS005', N'Đang học', N'');
-
+(N'Trường THCS ABC', '123', N'Đường A', N'Phường 1', N'Quận Gò Vấp','05-16-2024' ,'HS001', N'Đang học', N''),
+(N'Trường THCS XYZ', '456', N'Đường B', N'Phường 2', N'Quận 1', '07-14-2023','HS002', N'Đang học', N''),
+(N'Trường THCS KLM', '789', N'Đường C', N'Phường 3', N'Quận Tân Bình','01-02-2023' ,'HS003', N'Đang học', N''),
+(N'Trường THCS NOP', '1011', N'Đường D', N'Phường 4', N'Quận 3','05-08-2022' ,'HS004', N'Đang học', N''),
+(N'Trường THCS QRS', '1213', N'Đường E', N'Phường 5', N'Quận 10', '01-01-2022','HS005', N'Đang học', N'');
 INSERT INTO Teacher (subject, teacherId)
 VALUES 
 (N'Toán', 'GV001'),
@@ -209,6 +208,6 @@ VALUES	('password123', '2024-04-28', 'user1', '2024-04-28', 'user', 'user1@examp
 		('securepass', '2024-04-28', 'admin1', '2024-04-28', 'admin', 'admin1@example.com', '0987654321', 'Admin Smith'),
 		('pass1234', '2024-04-27', 'user2', '2024-04-27', 'user', 'user2@example.com', '1112223333', 'Jane Doe'),
 		('adminpass', '2024-04-26', 'admin2', '2024-04-26', 'admin', 'admin2@example.com', '4445556666', 'Admin Johnson'),
-		('123456', '2024-04-25', 'user3', '2024-04-25', 'user', 'user3@example.com', '7778889999', 'Max Smith'),
+		('123456', '2024-04-25', 'user3', '2024-04-25', 'user', 'user3@example.com', '7778889999', 'Max Smith');
 
 
