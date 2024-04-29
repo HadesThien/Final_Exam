@@ -39,6 +39,7 @@
             this.roundedGridView1 = new Final_Exam.RoundedGridView();
             this.registerBtn = new CustomControls.RJControls.RJButton();
             this.changePwBtn = new CustomControls.RJControls.RJButton();
+            this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roundedGridView1)).BeginInit();
             this.SuspendLayout();
@@ -250,12 +251,35 @@
             this.changePwBtn.Visible = false;
             this.changePwBtn.Click += new System.EventHandler(this.changePwBtn_Click);
             // 
+            // rjButton1
+            // 
+            this.rjButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 20;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Location = new System.Drawing.Point(685, 147);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.rjButton1.Size = new System.Drawing.Size(191, 51);
+            this.rjButton1.TabIndex = 4;
+            this.rjButton1.Text = "Xóa";
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Visible = false;
+            this.rjButton1.Click += new System.EventHandler(this.registerBtn_Click);
+            // 
             // AccountInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 727);
             this.ControlBox = false;
+            this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.headerLabel);
             this.Controls.Add(this.roundedGridView1);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -292,5 +316,6 @@
         private System.Windows.Forms.Label emailLabel;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private CustomControls.RJControls.RJButton rjButton1;
     }
 }
