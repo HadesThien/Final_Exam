@@ -27,7 +27,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.classListBox = new System.Windows.Forms.ListBox();
             this.wardComboBox = new CustomControls.RJControls.RJComboBox();
             this.districtComboBox = new CustomControls.RJControls.RJComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -49,26 +48,15 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.cityComboBox = new CustomControls.RJControls.RJComboBox();
-            this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
+            this.numberPhoneTextBox = new CustomControls.RJControls.RJTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.ghiChuTextBox = new System.Windows.Forms.RichTextBox();
-            this.idLabel = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.classListBox = new System.Windows.Forms.CheckedListBox();
             this.cancelBtn = new CustomControls.RJControls.RJButton();
-            this.wardComboBox = new CustomControls.RJControls.RJComboBox();
-            this.districtComboBox = new CustomControls.RJControls.RJComboBox();
-            this.buttonSelect = new CustomControls.RJControls.RJButton();
-            this.classTextBox = new CustomControls.RJControls.RJTextBox();
-            this.dobTimePicker = new CustomControls.RJControls.RJDatePicker();
-            this.genderComboBox = new CustomControls.RJControls.RJComboBox();
-            this.tinhTrangComboBox = new CustomControls.RJControls.RJComboBox();
-            this.nameTextBox = new CustomControls.RJControls.RJTextBox();
-            this.diaChiTextBox = new CustomControls.RJControls.RJTextBox();
-            this.truongHocTextBox = new CustomControls.RJControls.RJTextBox();
-            this.cityComboBox = new CustomControls.RJControls.RJComboBox();
-            this.numberPhoneTextBox = new CustomControls.RJControls.RJTextBox();
             this.saveBtn = new CustomControls.RJControls.RJButton();
+            this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
+            this.idLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -79,7 +67,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, -5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(311, 40);
+            this.label1.Size = new System.Drawing.Size(396, 50);
             this.label1.TabIndex = 2;
             this.label1.Text = "GHI DANH HỌC SINH";
             // 
@@ -88,7 +76,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 21);
+            this.label2.Size = new System.Drawing.Size(101, 28);
             this.label2.TabIndex = 4;
             this.label2.Text = "Họ và tên";
             // 
@@ -97,7 +85,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(3, 82);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 21);
+            this.label3.Size = new System.Drawing.Size(90, 28);
             this.label3.TabIndex = 4;
             this.label3.Text = "Giới tính";
             // 
@@ -145,193 +133,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1120, 341);
             this.tableLayoutPanel1.TabIndex = 5;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.buttonSelect);
-            this.panel1.Controls.Add(this.classTextBox);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(774, 198);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(343, 50);
-            this.panel1.TabIndex = 9;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 160);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 21);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Ngày sinh";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 251);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 21);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Số điện thoại";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(364, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 21);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Địa chỉ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(774, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 21);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Trường học";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(774, 82);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 21);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Tình trạng";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(774, 160);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 21);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Lớp học";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(364, 82);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(93, 21);
-            this.label11.TabIndex = 4;
-            this.label11.Text = "Tỉnh/ thành";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(364, 160);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(110, 21);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "Quận / Huyện";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(364, 251);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(98, 21);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "Phường / xã";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 407);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 21);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Ghi chú";
-            // 
-            // ghiChuTextBox
-            // 
-            this.ghiChuTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ghiChuTextBox.Location = new System.Drawing.Point(97, 407);
-            this.ghiChuTextBox.Name = "ghiChuTextBox";
-            this.ghiChuTextBox.Size = new System.Drawing.Size(1030, 161);
-            this.ghiChuTextBox.TabIndex = 7;
-            this.ghiChuTextBox.Text = "";
-            // 
-            // idLabel
-            // 
-            this.idLabel.AutoSize = true;
-            this.idLabel.Location = new System.Drawing.Point(1019, 9);
-            this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(16, 21);
-            this.idLabel.TabIndex = 11;
-            this.idLabel.Text = "-";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(779, 3);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(234, 30);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "Mã phát sinh tự động:";
-            // 
-            // classListBox
-            // 
-            this.classListBox.FormattingEnabled = true;
-            this.classListBox.Items.AddRange(new object[] {
-            "Anh 9.3",
-            "Anh 9.2",
-            "Anh 9.1",
-            "Anh 9.4",
-            "Toán 9.1",
-            "Toán 9.2",
-            "Toán 9.3",
-            "Toán 9.4",
-            "Văn 9.1",
-            "Văn 9.2",
-            "Văn 9.3",
-            "Văn 9.4",
-            "Anh 9.3",
-            "Anh 9.2",
-            "Anh 9.1",
-            "Anh 9.4",
-            "Toán 9.1",
-            "Toán 9.2",
-            "Toán 9.3",
-            "Toán 9.4",
-            "Văn 9.1",
-            "Văn 9.2",
-            "Văn 9.3",
-            "Văn 9.4"});
-            this.classListBox.Location = new System.Drawing.Point(782, 302);
-            this.classListBox.Name = "classListBox";
-            this.classListBox.Size = new System.Drawing.Size(342, 100);
-            this.classListBox.TabIndex = 12;
-            this.classListBox.Visible = false;
-            this.classListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.classListBox_ItemCheck);
-            // 
-            // cancelBtn
-            // 
-            this.cancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cancelBtn.BackColor = System.Drawing.Color.Lavender;
-            this.cancelBtn.BackgroundColor = System.Drawing.Color.Lavender;
-            this.cancelBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cancelBtn.BorderRadius = 0;
-            this.cancelBtn.BorderSize = 0;
-            this.cancelBtn.FlatAppearance.BorderSize = 0;
-            this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelBtn.ForeColor = System.Drawing.Color.Black;
-            this.cancelBtn.Location = new System.Drawing.Point(768, 597);
-            this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(150, 40);
-            this.cancelBtn.TabIndex = 8;
-            this.cancelBtn.Text = "Đóng";
-            this.cancelBtn.TextColor = System.Drawing.Color.Black;
-            this.cancelBtn.UseVisualStyleBackColor = false;
-            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // wardComboBox
             // 
@@ -424,7 +225,7 @@
             this.classTextBox.PasswordChar = false;
             this.classTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.classTextBox.PlaceholderText = "";
-            this.classTextBox.Size = new System.Drawing.Size(343, 36);
+            this.classTextBox.Size = new System.Drawing.Size(343, 43);
             this.classTextBox.TabIndex = 6;
             this.classTextBox.Texts = "";
             this.classTextBox.UnderlinedStyle = false;
@@ -535,7 +336,7 @@
             this.nameTextBox.PasswordChar = false;
             this.nameTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.nameTextBox.PlaceholderText = "";
-            this.nameTextBox.Size = new System.Drawing.Size(353, 40);
+            this.nameTextBox.Size = new System.Drawing.Size(353, 47);
             this.nameTextBox.TabIndex = 1;
             this.nameTextBox.Texts = "";
             this.nameTextBox.UnderlinedStyle = false;
@@ -558,7 +359,7 @@
             this.diaChiTextBox.PasswordChar = false;
             this.diaChiTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.diaChiTextBox.PlaceholderText = "";
-            this.diaChiTextBox.Size = new System.Drawing.Size(402, 40);
+            this.diaChiTextBox.Size = new System.Drawing.Size(402, 47);
             this.diaChiTextBox.TabIndex = 1;
             this.diaChiTextBox.Texts = "";
             this.diaChiTextBox.UnderlinedStyle = false;
@@ -590,7 +391,7 @@
             this.truongHocTextBox.PasswordChar = false;
             this.truongHocTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.truongHocTextBox.PlaceholderText = "";
-            this.truongHocTextBox.Size = new System.Drawing.Size(341, 40);
+            this.truongHocTextBox.Size = new System.Drawing.Size(341, 47);
             this.truongHocTextBox.TabIndex = 1;
             this.truongHocTextBox.Texts = "";
             this.truongHocTextBox.UnderlinedStyle = false;
@@ -679,7 +480,7 @@
             this.numberPhoneTextBox.PasswordChar = false;
             this.numberPhoneTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.numberPhoneTextBox.PlaceholderText = "";
-            this.numberPhoneTextBox.Size = new System.Drawing.Size(353, 36);
+            this.numberPhoneTextBox.Size = new System.Drawing.Size(353, 43);
             this.numberPhoneTextBox.TabIndex = 15;
             this.numberPhoneTextBox.Texts = "";
             this.numberPhoneTextBox.UnderlinedStyle = false;
@@ -704,15 +505,6 @@
             this.ghiChuTextBox.TabIndex = 7;
             this.ghiChuTextBox.Text = "";
             // 
-            // idLabel
-            // 
-            this.idLabel.AutoSize = true;
-            this.idLabel.Location = new System.Drawing.Point(1019, 9);
-            this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(20, 28);
-            this.idLabel.TabIndex = 11;
-            this.idLabel.Text = "-";
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -722,6 +514,41 @@
             this.label14.Size = new System.Drawing.Size(300, 37);
             this.label14.TabIndex = 2;
             this.label14.Text = "Mã phát sinh tự động:";
+            // 
+            // classListBox
+            // 
+            this.classListBox.FormattingEnabled = true;
+            this.classListBox.Items.AddRange(new object[] {
+            "Anh 9.3",
+            "Anh 9.2",
+            "Anh 9.1",
+            "Anh 9.4",
+            "Toán 9.1",
+            "Toán 9.2",
+            "Toán 9.3",
+            "Toán 9.4",
+            "Văn 9.1",
+            "Văn 9.2",
+            "Văn 9.3",
+            "Văn 9.4",
+            "Anh 9.3",
+            "Anh 9.2",
+            "Anh 9.1",
+            "Anh 9.4",
+            "Toán 9.1",
+            "Toán 9.2",
+            "Toán 9.3",
+            "Toán 9.4",
+            "Văn 9.1",
+            "Văn 9.2",
+            "Văn 9.3",
+            "Văn 9.4"});
+            this.classListBox.Location = new System.Drawing.Point(782, 302);
+            this.classListBox.Name = "classListBox";
+            this.classListBox.Size = new System.Drawing.Size(342, 91);
+            this.classListBox.TabIndex = 12;
+            this.classListBox.Visible = false;
+            this.classListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.classListBox_ItemCheck);
             // 
             // cancelBtn
             // 
@@ -765,10 +592,42 @@
             this.saveBtn.Text = "Lưu";
             this.saveBtn.TextColor = System.Drawing.Color.White;
             this.saveBtn.UseVisualStyleBackColor = false;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+            // 
+            // rjTextBox1
+            // 
+            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.rjTextBox1.BorderRadius = 0;
+            this.rjTextBox1.BorderSize = 2;
+            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjTextBox1.Location = new System.Drawing.Point(0, 0);
+            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox1.Multiline = false;
+            this.rjTextBox1.Name = "rjTextBox1";
+            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox1.PasswordChar = false;
+            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.rjTextBox1.PlaceholderText = "";
+            this.rjTextBox1.Size = new System.Drawing.Size(250, 35);
+            this.rjTextBox1.TabIndex = 0;
+            this.rjTextBox1.Texts = "";
+            this.rjTextBox1.UnderlinedStyle = false;
+            // 
+            // idLabel
+            // 
+            this.idLabel.AutoSize = true;
+            this.idLabel.Location = new System.Drawing.Point(1071, 9);
+            this.idLabel.Name = "idLabel";
+            this.idLabel.Size = new System.Drawing.Size(20, 28);
+            this.idLabel.TabIndex = 11;
+            this.idLabel.Text = "-";
             // 
             // ghiDanhForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 653);
@@ -813,6 +672,7 @@
         private CustomControls.RJControls.RJTextBox diaChiTextBox;
         private System.Windows.Forms.Label label8;
         private CustomControls.RJControls.RJTextBox truongHocTextBox;
+        private CustomControls.RJControls.RJTextBox rjTextBox1;
         private System.Windows.Forms.Label label9;
         private CustomControls.RJControls.RJComboBox tinhTrangComboBox;
         private System.Windows.Forms.Label label10;
@@ -824,12 +684,12 @@
         private CustomControls.RJControls.RJTextBox classTextBox;
         private CustomControls.RJControls.RJButton buttonSelect;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label idLabel;
         private System.Windows.Forms.Label label14;
         private CustomControls.RJControls.RJComboBox cityComboBox;
         private CustomControls.RJControls.RJComboBox wardComboBox;
         private CustomControls.RJControls.RJComboBox districtComboBox;
         private CustomControls.RJControls.RJTextBox numberPhoneTextBox;
         private System.Windows.Forms.CheckedListBox classListBox;
+        private System.Windows.Forms.Label idLabel;
     }
 }

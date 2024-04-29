@@ -10,7 +10,7 @@ namespace DTO
     {
         //Properties
         public string School { get; set; }
-        public string Number { get; set; }
+        public string City { get; set; }
         public string Street { get; set; }
         public string Ward { get; set; }
         public string District { get; set; }
@@ -22,10 +22,10 @@ namespace DTO
         public List<DTO_Buy> Buys { get; set; }
 
         //Constructor
-        public DTO_Student(string id, string name, string gender, DateTime dob,string numberPhone, string school, string number, string street, string ward, string district, DateTime dateCreated, string status, string note)
+        public DTO_Student(string id, string name, string gender, DateTime dob,string numberPhone, string school, string city, string street, string ward, string district, DateTime dateCreated, string status, string note)
             : base(id, name, gender, dob,numberPhone) {
             School = school;
-            Number = number;
+            City = city;
             Street = street;
             Ward = ward;
             District = district;

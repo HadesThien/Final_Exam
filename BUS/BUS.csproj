@@ -42,7 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS_Account.cs" />
+    <Compile Include="BUS_Buy.cs" />
+    <Compile Include="BUS_Class.cs" />
+    <Compile Include="BUS_Document.cs" />
+    <Compile Include="BUS_Payment.cs" />
+    <Compile Include="BUS_Person.cs" />
+    <Compile Include="BUS_Register.cs" />
     <Compile Include="BUS_Student.cs" />
+    <Compile Include="BUS_Teacher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

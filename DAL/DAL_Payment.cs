@@ -40,5 +40,11 @@ namespace DAL
             string s = "SELECT * FROM Payment";
             return Connection.selectQuery(s);
         }
+
+        public DataTable getLatestId()
+        {
+            string s = "SELECT TOP 1 paymentId FROM Payment ORDER BY paymentId DESC";
+            return Connection.selectQuery(s);
+        }
     }
 }

@@ -35,9 +35,15 @@ namespace DAL
             Connection.actionQuery(query);
         }
 
-        public DataTable selectQuery()
+        public DataTable detailedSelectQuery()
         {
             string s = "SELECT * FROM Document";
+            return Connection.selectQuery(s);
+        }
+
+        public DataTable getLatestId()
+        {
+            string s = "SELECT TOP 1 handoutId FROM Document ORDER BY handoutId DESC";
             return Connection.selectQuery(s);
         }
     }

@@ -8,7 +8,6 @@ namespace DTO {
     public class DTO_Teacher :DTO_Person{
         //Properties
         public string Subject { get; set; }
-        public List<DTO_Class> Classes { get; set; }
         //Constructor
         public DTO_Teacher(string id, string name, string gender, DateTime dob,string numberPhone, string subject)
             : base(id, name, gender, dob, numberPhone) {

@@ -34,7 +34,6 @@ namespace Final_Exam {
         public ghiDanhForm() {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 30, 30));
-            
         }
 
         private void cancelBtn_Click(object sender, EventArgs e) {
@@ -63,7 +62,6 @@ namespace Final_Exam {
 
         private void cityComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
         {
-
             DataRowView drv = (DataRowView)cityComboBox.SelectedItem;
             string valueOfItem = drv["full_name"].ToString();
 
@@ -74,7 +72,6 @@ namespace Final_Exam {
             districtComboBox.ValueMember = "full_name";
 
             districtComboBox.Enabled = true;
-
         }
 
         private void wardComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
@@ -111,13 +108,40 @@ namespace Final_Exam {
             // Nếu mục đó được chọn
             if (e.NewValue == CheckState.Checked) {
                 // Thêm giá trị của mục vào TextBox (đảm bảo không trùng lặp)
+                if (classTextBox.Texts.Equals(""))
+                {
+                    classTextBox.Texts += selectedItem;
+                }
                 if (!classTextBox.Texts.Contains(selectedItem)) {
-                    classTextBox.Texts += selectedItem + " ";
+                    classTextBox.Texts += ", " + selectedItem;
                 }
             }
             else 
             {
-                classTextBox.Texts  = classTextBox.Texts.Replace(selectedItem + " ", "");
+                int index = classTextBox.Texts.IndexOf(selectedItem);
+                if (index + selectedItem.Length < classTextBox.Texts.Length && classTextBox.Texts[index + selectedItem.Length] == ',')
+                {
+                    classTextBox.Texts = classTextBox.Texts.Replace(selectedItem + ", ", "");
+                }
+                else if (index - 1 > 0 && classTextBox.Texts[index - 1] == ' ')
+                {
+                    classTextBox.Texts = classTextBox.Texts.Replace(", " + selectedItem, "");
+                }
+                else
+                {
+                    classTextBox.Texts = classTextBox.Texts.Replace(selectedItem, "");
+                }
+
+            }
+        }
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+            bool flag = nameTextBox.Texts.Equals("") || diaChiTextBox.Texts.Equals("") || truongHocTextBox.Texts.Equals("") || genderComboBox.Texts.Equals("") || tinhTrangComboBox.Texts.Equals("") || numberPhoneTextBox.Texts.Equals("");
+            if (flag)
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin học sinh");
+                return;
             }
         }
     }

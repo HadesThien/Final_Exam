@@ -13,15 +13,15 @@ namespace DAL
     {
         private DTO_Student student;
 
-        public DAL_Student(string id, string name, string gender, DateTime dob, string numberPhone, string school, string number, string street, string ward, string district, DateTime dateCreated, string status, string note)
+        public DAL_Student(string id, string name, string gender, DateTime dob, string numberPhone, string school, string city, string street, string ward, string district, DateTime dateCreated, string status, string note)
         {
-            student = new DTO_Student(id, name, gender, dob, numberPhone, school, number, street, ward, district, dateCreated, status, note);
+            student = new DTO_Student(id, name, gender, dob, numberPhone, school, city, street, ward, district, dateCreated, status, note);
         }
 
         public void addQuery()
         {
             string query1 = "INSERT INTO Person VALUES('" + student.Id + "', N'" + student.Name + "', N'" + student.Gender + "', '" + student.Dob.ToString("d") + "', '" + student.NumberPhone + "')";
-            string query2 = "INSERT INTO Student VALUES('N" + student.School + "', '" + student.Number + "', N'" + student.Street + "', N'" + student.Ward + "', N'" + student.District + "', '" + student.DateCreated.ToString("d") + "', '" + student.Status + "', '" + student.Note + "', '" + student.Id + "')";
+            string query2 = "INSERT INTO Student VALUES('N" + student.School + "', N'" + student.Street + "', N'" + student.Ward + "', N'" + student.District + "', N'" + student.City + "', '" + student.DateCreated.ToString("d") + "', '" + student.Status + "', '" + student.Note + "', '" + student.Id + "')";
             Connection.actionQuery(query1);
             Connection.actionQuery(query2);
             //string query3 = "";
@@ -51,7 +51,7 @@ namespace DAL
         public void updateQuery()
         {
             string query1 = "UPDATE Person SET name = N'" + student.Name + "', N'" + student.Gender + "', dob = '" + student.Dob.ToString("d") + "' WHERE Id = '" + student.Id + "'";
-            string query2 = "UPDATE Student SET school = 'N" + student.School + "', number = '" + student.Number + "', street = N'" + student.Street + "', ward = N'" + student.Ward + "', district = N'" + student.District + "', status = '" + student.Status + "', note = '" + student.Note + "', WHERE studentId = '" + student.Id + "')";
+            string query2 = "UPDATE Student SET school = 'N" + student.School + "', street = N'" + student.Street + "', ward = N'" + student.Ward + "', district = N'" + student.District + "', city = '" + student.City + "', status = '" + student.Status + "', note = '" + student.Note + "', WHERE studentId = '" + student.Id + "')";
             Connection.actionQuery(query1);
             Connection.actionQuery(query2);
         }
@@ -119,6 +119,12 @@ namespace DAL
             string s = "SELECT p.*, s.* " +
                 "FROM Person p " +
                 "INNER JOIN Student s ON s.studentId = p.Id";
+            return Connection.selectQuery(s);
+        }
+
+        public DataTable getLatestId()
+        {
+            string s = "SELECT TOP 1 studentId FROM Student ORDER BY studentId DESC";
             return Connection.selectQuery(s);
         }
     }

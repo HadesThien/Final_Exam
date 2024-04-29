@@ -34,9 +34,22 @@ namespace DAL
             Connection.actionQuery(query);
         }
 
-        public DataTable selectQuery()
+        public DataTable detailedSelectQuery()
         {
             string s = "SELECT * FROM Class";
+            return Connection.selectQuery(s);
+        }
+
+        public DataTable basicSelectQuery()
+        {
+            string s = "SELECT subject + ' ' + cast(grade as varchar) + '.' + cast(shift as varchar) as name, numberOfSession, numberOfStudent, price, dateCreated " +
+                       "FROM Class";
+            return Connection.selectQuery(s);
+        }
+
+        public DataTable getLatestId()
+        {
+            string s = "SELECT TOP 1 classId FROM Class ORDER BY classId DESC";
             return Connection.selectQuery(s);
         }
     }
