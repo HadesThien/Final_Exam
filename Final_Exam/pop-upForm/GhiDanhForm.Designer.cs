@@ -1,5 +1,5 @@
 ﻿namespace Final_Exam {
-    partial class GhiDanhForm {
+    partial class ghiDanhForm {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -37,11 +37,11 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.classListBox = new System.Windows.Forms.ListBox();
             this.label6 = new System.Windows.Forms.Label();
             this.ghiChuTextBox = new System.Windows.Forms.RichTextBox();
             this.idLabel = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.classListBox = new System.Windows.Forms.CheckedListBox();
             this.cancelBtn = new CustomControls.RJControls.RJButton();
             this.wardComboBox = new CustomControls.RJControls.RJComboBox();
             this.districtComboBox = new CustomControls.RJControls.RJComboBox();
@@ -54,7 +54,7 @@
             this.diaChiTextBox = new CustomControls.RJControls.RJTextBox();
             this.truongHocTextBox = new CustomControls.RJControls.RJTextBox();
             this.cityComboBox = new CustomControls.RJControls.RJComboBox();
-            this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
+            this.numberPhoneTextBox = new CustomControls.RJControls.RJTextBox();
             this.saveBtn = new CustomControls.RJControls.RJButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -117,7 +117,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label12, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.label13, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.cityComboBox, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.rjTextBox1, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.numberPhoneTextBox, 0, 7);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(7, 52);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
@@ -224,43 +224,6 @@
             this.label13.TabIndex = 4;
             this.label13.Text = "Phường / xã";
             // 
-            // classListBox
-            // 
-            this.classListBox.FormattingEnabled = true;
-            this.classListBox.ItemHeight = 21;
-            this.classListBox.Items.AddRange(new object[] {
-            "Anh 9.3",
-            "Anh 9.2",
-            "Anh 9.1",
-            "Anh 9.4",
-            "Toán 9.1",
-            "Toán 9.2",
-            "Toán 9.3",
-            "Toán 9.4",
-            "Văn 9.1",
-            "Văn 9.2",
-            "Văn 9.3",
-            "Văn 9.4",
-            "Anh 9.3",
-            "Anh 9.2",
-            "Anh 9.1",
-            "Anh 9.4",
-            "Toán 9.1",
-            "Toán 9.2",
-            "Toán 9.3",
-            "Toán 9.4",
-            "Văn 9.1",
-            "Văn 9.2",
-            "Văn 9.3",
-            "Văn 9.4"});
-            this.classListBox.Location = new System.Drawing.Point(782, 301);
-            this.classListBox.Name = "classListBox";
-            this.classListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.classListBox.Size = new System.Drawing.Size(343, 130);
-            this.classListBox.TabIndex = 5;
-            this.classListBox.Visible = false;
-            this.classListBox.SelectedIndexChanged += new System.EventHandler(this.classListBox_SelectedIndexChanged);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -299,6 +262,41 @@
             this.label14.Size = new System.Drawing.Size(234, 30);
             this.label14.TabIndex = 2;
             this.label14.Text = "Mã phát sinh tự động:";
+            // 
+            // classListBox
+            // 
+            this.classListBox.FormattingEnabled = true;
+            this.classListBox.Items.AddRange(new object[] {
+            "Anh 9.3",
+            "Anh 9.2",
+            "Anh 9.1",
+            "Anh 9.4",
+            "Toán 9.1",
+            "Toán 9.2",
+            "Toán 9.3",
+            "Toán 9.4",
+            "Văn 9.1",
+            "Văn 9.2",
+            "Văn 9.3",
+            "Văn 9.4",
+            "Anh 9.3",
+            "Anh 9.2",
+            "Anh 9.1",
+            "Anh 9.4",
+            "Toán 9.1",
+            "Toán 9.2",
+            "Toán 9.3",
+            "Toán 9.4",
+            "Văn 9.1",
+            "Văn 9.2",
+            "Văn 9.3",
+            "Văn 9.4"});
+            this.classListBox.Location = new System.Drawing.Point(782, 302);
+            this.classListBox.Name = "classListBox";
+            this.classListBox.Size = new System.Drawing.Size(342, 100);
+            this.classListBox.TabIndex = 12;
+            this.classListBox.Visible = false;
+            this.classListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.classListBox_ItemCheck);
             // 
             // cancelBtn
             // 
@@ -392,6 +390,7 @@
             this.classTextBox.BorderRadius = 0;
             this.classTextBox.BorderSize = 2;
             this.classTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.classTextBox.Enabled = false;
             this.classTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.classTextBox.ForeColor = System.Drawing.Color.Black;
             this.classTextBox.Location = new System.Drawing.Point(0, 0);
@@ -558,28 +557,28 @@
             this.cityComboBox.Texts = "";
             this.cityComboBox.OnSelectedIndexChanged += new System.EventHandler(this.cityComboBox_OnSelectedIndexChanged);
             // 
-            // rjTextBox1
+            // numberPhoneTextBox
             // 
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rjTextBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(4, 286);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "";
-            this.rjTextBox1.Size = new System.Drawing.Size(353, 36);
-            this.rjTextBox1.TabIndex = 15;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
+            this.numberPhoneTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.numberPhoneTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.numberPhoneTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.numberPhoneTextBox.BorderRadius = 0;
+            this.numberPhoneTextBox.BorderSize = 2;
+            this.numberPhoneTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numberPhoneTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberPhoneTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.numberPhoneTextBox.Location = new System.Drawing.Point(4, 286);
+            this.numberPhoneTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.numberPhoneTextBox.Multiline = false;
+            this.numberPhoneTextBox.Name = "numberPhoneTextBox";
+            this.numberPhoneTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.numberPhoneTextBox.PasswordChar = false;
+            this.numberPhoneTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.numberPhoneTextBox.PlaceholderText = "";
+            this.numberPhoneTextBox.Size = new System.Drawing.Size(353, 36);
+            this.numberPhoneTextBox.TabIndex = 15;
+            this.numberPhoneTextBox.Texts = "";
+            this.numberPhoneTextBox.UnderlinedStyle = false;
             // 
             // saveBtn
             // 
@@ -602,7 +601,7 @@
             this.saveBtn.TextColor = System.Drawing.Color.White;
             this.saveBtn.UseVisualStyleBackColor = false;
             // 
-            // GhiDanhForm
+            // ghiDanhForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -621,7 +620,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "GhiDanhForm";
+            this.Name = "ghiDanhForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.GhiDanhForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -660,12 +659,12 @@
         private CustomControls.RJControls.RJTextBox classTextBox;
         private CustomControls.RJControls.RJButton buttonSelect;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ListBox classListBox;
         private System.Windows.Forms.Label idLabel;
         private System.Windows.Forms.Label label14;
         private CustomControls.RJControls.RJComboBox cityComboBox;
         private CustomControls.RJControls.RJComboBox wardComboBox;
         private CustomControls.RJControls.RJComboBox districtComboBox;
-        private CustomControls.RJControls.RJTextBox rjTextBox1;
+        private CustomControls.RJControls.RJTextBox numberPhoneTextBox;
+        private System.Windows.Forms.CheckedListBox classListBox;
     }
 }
