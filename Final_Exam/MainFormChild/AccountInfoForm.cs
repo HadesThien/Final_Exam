@@ -62,8 +62,9 @@ namespace Final_Exam {
             account = new BUS_Account(username,password,DateTime.Parse(dateCreated),DateTime.Parse(lastLoginDate),role,email,numberphone,name);
             Form confirmForm = new ConfirmForm();
             confirmForm.ShowDialog();
-            
-            account.remove();
+            if(Account.confirmPassword == true)
+                account.remove();
+            Account.confirmPassword = false;
             AccountInfoForm_Load(sender, e);
         }
 
