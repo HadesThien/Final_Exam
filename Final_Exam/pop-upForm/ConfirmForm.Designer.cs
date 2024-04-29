@@ -27,7 +27,7 @@
             this.saveBtn = new CustomControls.RJControls.RJButton();
             this.cancelBtn = new CustomControls.RJControls.RJButton();
             this.passwordTextBox = new CustomControls.RJControls.RJTextBox();
-            this.label = new System.Windows.Forms.Label();
+            this.alert = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // haederLabel
@@ -53,10 +53,11 @@
             this.saveBtn.Location = new System.Drawing.Point(292, 138);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(102, 40);
-            this.saveBtn.TabIndex = 1;
+            this.saveBtn.TabIndex = 2;
             this.saveBtn.Text = "Xác nhận";
             this.saveBtn.TextColor = System.Drawing.Color.White;
             this.saveBtn.UseVisualStyleBackColor = false;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // cancelBtn
             // 
@@ -95,20 +96,21 @@
             this.passwordTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.passwordTextBox.PlaceholderText = "";
             this.passwordTextBox.Size = new System.Drawing.Size(380, 31);
-            this.passwordTextBox.TabIndex = 2;
+            this.passwordTextBox.TabIndex = 0;
             this.passwordTextBox.Texts = "";
             this.passwordTextBox.UnderlinedStyle = false;
+            this.passwordTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.passwordTextBox_KeyDown);
             // 
-            // label
+            // alert
             // 
-            this.label.AutoSize = true;
-            this.label.ForeColor = System.Drawing.Color.Red;
-            this.label.Location = new System.Drawing.Point(119, 106);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(275, 21);
-            this.label.TabIndex = 3;
-            this.label.Text = "*Mật khẩu nhập vào không chính xác";
-            this.label.Visible = false;
+            this.alert.AutoSize = true;
+            this.alert.ForeColor = System.Drawing.Color.Red;
+            this.alert.Location = new System.Drawing.Point(119, 106);
+            this.alert.Name = "alert";
+            this.alert.Size = new System.Drawing.Size(275, 21);
+            this.alert.TabIndex = 3;
+            this.alert.Text = "*Mật khẩu nhập vào không chính xác";
+            this.alert.Visible = false;
             // 
             // ConfirmForm
             // 
@@ -116,7 +118,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(406, 190);
             this.ControlBox = false;
-            this.Controls.Add(this.label);
+            this.Controls.Add(this.alert);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.saveBtn);
@@ -125,6 +127,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ConfirmForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,6 +139,6 @@
         private CustomControls.RJControls.RJButton saveBtn;
         private CustomControls.RJControls.RJButton cancelBtn;
         private CustomControls.RJControls.RJTextBox passwordTextBox;
-        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Label alert;
     }
 }

@@ -9,5 +9,8 @@ namespace Final_Exam {
     public class Account {
         //Properties
         public static BUS_Account account;
+
+        public static bool confirmPassword;
+
     }
 }

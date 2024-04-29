@@ -127,5 +127,19 @@ namespace DAL
             string s = "SELECT TOP 1 studentId FROM Student ORDER BY studentId DESC";
             return Connection.selectQuery(s);
         }
+        public DataTable selectAllPayment() {
+            string s = $"Select p.paymentId, ConCat(c.subject,' ', c.grade, '.' , c.shift) as name, p.period,p.status,p.note,p.dateCreated " +
+                $"From Payment p " +
+                $"Join Register r On p.StudentId = r.studentId " +
+                $"Join Class c On r.classId = c.ClassId" +
+                $" Where p.studentId ='{student.Id}'" +
+                $"\r\nUnion all\r\n" +
+                $"Select b.buyId, d.name, b.period,b.status, b.note, b.buyingDate " +
+                $"from buy b " +
+                $"Join Document d On d.handoutId = b.handoutId " +
+                $"where b.studentId ='{student.Id}';";
+            Console.WriteLine(s);
+            return Connection.selectQuery(s);
+        }
     }
 }

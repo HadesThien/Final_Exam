@@ -57,7 +57,7 @@ CREATE TABLE Class
 CREATE TABLE Payment
 (
   dateCreated DATE NOT NULL,
-  month INT NOT NULL,
+  period date NOT NULL,
   status NVARCHAR(10) NOT NULL,
   note NVARCHAR(100) NOT NULL,
   promotion FLOAT NOT NULL,
@@ -108,7 +108,7 @@ CREATE TABLE Buy
   number INT NOT NULL,
   price INT NOT NULL,
   status NVARCHAR(50) NOT NULL,
-  month INT NOT NULL,
+  period date not null,
   note NVARCHAR(50) NOT NULL,
   buyId VARCHAR(10) NOT NULL,
   studentId VARCHAR(10) NOT NULL,
@@ -181,27 +181,26 @@ VALUES
 (25, 'TL004', N'Ôn luyện', '2024-04-27', '2024-04-27', 60000),
 (18, 'TL005', N'Tài liệu tham khảo', '2024-04-27', '2024-04-27', 70000);
 
-
-INSERT INTO Payment (paymentId, dateCreated, month, status, note, promotion, numberOfSession, studentId)
+INSERT INTO Payment (paymentId, dateCreated, period , status, note, promotion, numberOfSession, studentId)
 VALUES 
-('DK001', '2024-04-27', 4, N'Đăng ký', N'', 0, 12, 'HS001'),
-('DK002', '2024-04-27', 4, N'Đăng ký', N'', 0, 12, 'HS002'),
-('DK003', '2024-04-27', 4, N'Đăng ký', N'', 0, 12, 'HS003'),
-('DK004', '2024-04-27', 4, N'Đăng ký', N'', 0, 12, 'HS004'),
-('DK005', '2024-04-27', 4, N'Đăng ký', N'', 0, 12, 'HS005');
+('DK001', '2024-04-27',getDate() , N'Đăng ký', N'', 0, 12, 'HS001'),
+('DK002', '2024-04-27', getDate(), N'Đăng ký', N'', 0, 12, 'HS002'),
+('DK003', '2024-04-27', getDate(), N'Đăng ký', N'', 0, 12, 'HS003'),
+('DK004', '2024-04-27', getDate(), N'Đăng ký', N'', 0, 12, 'HS004'),
+('DK005', '2024-04-27', getDate(), N'Đăng ký', N'', 0, 12, 'HS005');
 
-INSERT INTO Buy (buyingDate, number, price, studentId, handoutId, status, month, note)
+INSERT INTO Buy (buyId,buyingDate, number, price, studentId, handoutId, status, period, note)
 VALUES 
-('2024-04-27', 1, 50000, 'HS001', 'TL001', N'Thanh toán', 4, N''),
-('2024-04-27', 1, 45000, 'HS002', 'TL002', N'Thanh toán', 4, N''),
-('2024-04-27', 1, 55000, 'HS003', 'TL003', N'Thanh toán', 4, N''),
-('2024-04-27', 1, 60000, 'HS004', 'TL004', N'Thanh toán', 4, N''),
-('2024-04-27', 1, 70000, 'HS005', 'TL005', N'Thanh toán', 4, N''),
-('2024-04-27', 1, 50000, 'HS001', 'TL002', N'Thanh toán', 4, N''),
-('2024-04-27', 1, 45000, 'HS002', 'TL003', N'Thanh toán', 4, N''),
-('2024-04-27', 1, 55000, 'HS003', 'TL004', N'Thanh toán', 4, N''),
-('2024-04-27', 1, 60000, 'HS004', 'TL005', N'Thanh toán', 4, N''),
-('2024-04-27', 1, 70000, 'HS005', 'TL001', N'Thanh toán', 4, N'');
+('DH001','2024-04-27', 1, 50000, 'HS001', 'TL001', N'Thanh toán', getDate(), N''),
+('DH002','2024-04-27', 1, 45000, 'HS002', 'TL002', N'Thanh toán', getDate(), N''),
+('DH003','2024-04-27', 1, 55000, 'HS003', 'TL003', N'Thanh toán', getDate(), N''),
+('DH004','2024-04-27', 1, 60000, 'HS004', 'TL004', N'Thanh toán', getDate(), N''),
+('DH005','2024-04-27', 1, 70000, 'HS005', 'TL005', N'Thanh toán', getDate(), N''),
+('DH006','2024-04-27', 1, 50000, 'HS001', 'TL002', N'Thanh toán', getDate(), N''),
+('DH007','2024-04-27', 1, 45000, 'HS002', 'TL003', N'Thanh toán', getDate(), N''),
+('DH008','2024-04-27', 1, 55000, 'HS003', 'TL004', N'Thanh toán', getDate(), N''),
+('DH009','2024-04-27', 1, 60000, 'HS004', 'TL005', N'Thanh toán', getDate(), N''),
+('DH010','2024-04-27', 1, 70000, 'HS005', 'TL001', N'Thanh toán', getDate(), N'');
 
 INSERT INTO Account (password, dateCreated, username, lastLoginDate, role, email, numberPhone, name)
 VALUES	('password123', '2024-04-28', 'user1', '2024-04-28', 'user', 'user1@example.com', '1234567890', 'John Doe'),

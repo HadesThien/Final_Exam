@@ -28,6 +28,15 @@ namespace DAL
             string query = "DELETE FROM Buy WHERE buyId = '" + buy.Id + "', studentId = '" + buy.StudentId + "', handoutId = '" + buy.DocumentId + "'";
             Connection.actionQuery(query);
         }
+        public DataTable selectQuery() {
+            string s = "Select * from Payment";
+            return Connection.selectQuery(s);
+        }
+
+        public DataTable showBuys() {
+            string s = "Select b.buyId, d.name, b.period, b.note, b.dateCreated from buy b Join Document d On d.handoutId = b.handoutId;";
+            return Connection.selectQuery(s);
+        }
 
         public DataTable getLatestId()
         {
