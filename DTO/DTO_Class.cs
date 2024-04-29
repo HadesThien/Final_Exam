@@ -24,6 +24,7 @@ namespace DTO {
             Grade = grade;
             Price = price;
             Number_Of_Session = n_Session;
+            Number_Of_Student = n_Student;
             Date_Created = date_Created;
             TeacherId = teacherId;
             Registers = new List<DTO_Register>();

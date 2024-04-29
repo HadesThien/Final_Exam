@@ -14,13 +14,13 @@ namespace DTO {
         public int Number { get; set; }
         public int Price { get; set; }
         public string Status { get; set; }
-        public string Month { get; set; }
+        public DateTime Period { get; set; }
         public string Note { get; set; }
         public string Id { get; set; }
 
 
         //Constructor
-        public DTO_Buy(string s, string d, DateTime buyingDate, int n, int p, string status, string month, string note, string id)
+        public DTO_Buy(string s, string d, DateTime buyingDate, int n, int p, string status, DateTime period, string note, string id)
         {
             StudentId = s;
             DocumentId = d;
@@ -28,7 +28,7 @@ namespace DTO {
             Number = n;
             Price = p;
             Status = status;
-            Month = month;
+            Period = period; 
             Note = note;
             Id = id;
         }

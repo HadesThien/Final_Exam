@@ -19,6 +19,15 @@ namespace Final_Exam {
         public ChiTietSinhVienForm(string id) {
             InitializeComponent();
             this.id = id;
+            student = new BUS_Student(id, "", "", DateTime.Now, "", "", "", "", "", "", DateTime.Now, "", "");
+            dt = student.selectAllPayment();
+            dt.Columns[0].ColumnName = "Mã";
+            dt.Columns[1].ColumnName = "Tên thu phí";
+            dt.Columns[2].ColumnName = "Kỳ thanh toán";
+            dt.Columns[3].ColumnName = "Trạng thái";
+            dt.Columns[4].ColumnName = "Ghi chú";
+            dt.Columns[5].ColumnName = "Ngày thanh toán";
+            paymentGridView.DataSource = dt;
         }
 
         private void label9_Click(object sender, EventArgs e) {
