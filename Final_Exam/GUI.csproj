@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs" />
     <Compile Include="MainFormChild\AccountInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +88,12 @@
     </Compile>
     <Compile Include="pop-upForm\ConfirmForm.Designer.cs">
       <DependentUpon>ConfirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pop-upForm\DoiMatKhauForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pop-upForm\DoiMatKhauForm.Designer.cs">
+      <DependentUpon>DoiMatKhauForm.cs</DependentUpon>
     </Compile>
     <Compile Include="pop-upForm\GhiDanhForm.cs">
       <SubType>Form</SubType>
@@ -198,6 +205,9 @@
     <EmbeddedResource Include="pop-upForm\ConfirmForm.resx">
       <DependentUpon>ConfirmForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pop-upForm\DoiMatKhauForm.resx">
+      <DependentUpon>DoiMatKhauForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pop-upForm\GhiDanhForm.resx">
       <DependentUpon>GhiDanhForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,6 +262,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{c6055de6-1945-4418-9a08-9a42eb8f8deb}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BUS_VN\BUS_VN.csproj">
       <Project>{c988f7c3-8c55-4033-9239-c6ced25776f9}</Project>
       <Name>BUS_VN</Name>

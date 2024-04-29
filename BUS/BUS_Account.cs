@@ -19,6 +19,37 @@ namespace BUS
         public DataTable showAccounts() {
             return account.selectQuery();
         }
-
+        public void remove() {
+            account.deleteQuery();
+        }
+        public void changePassword(string newPassword) {
+            account.setPassword(newPassword);
+            account.updateQuery();
+        }
+        public string getUsername() {
+            return account.getUsername();
+        }
+        public string getPassword() {
+            return account.getPassword();
+        }
+        public string getRole() {
+            return account.getRole();
+        }
+        public string getEmail() {
+            return account.getEmail();
+        }
+        public string getName() {
+            return account.getName();
+        }
+        public string getNumberphone() {
+            return account.getNumberphone();
+        }
+        public DateTime getLastLoginDate() {
+            return account.getLastLoginDate();
+        }
+        public DateTime getDateCreated() {
+            return account.getDateCreated();
+        }
+        
     }
 }
