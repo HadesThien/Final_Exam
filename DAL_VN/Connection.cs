@@ -13,7 +13,7 @@ namespace DAL_VN
         private static SqlConnection conn;
         public static void connect()
         {
-            string s = "Data Source=TAANS;Initial Catalog=Vietnam;User ID=ngphctn14;Password=nuttertools123;";
+            string s = "Data Source=TRUONGNHATTHIEN;Initial Catalog=VietNam;Integrated Security=True";
             conn = new SqlConnection(s);
             conn.Open();
         }
@@ -22,6 +22,7 @@ namespace DAL_VN
             connect();
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.ExecuteNonQuery();
+            Connection.conn.Close();
         }
         
         public static DataTable selectQuery(string sql)
@@ -30,6 +31,7 @@ namespace DAL_VN
             SqlDataAdapter adpt = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
+            Connection.conn.Close();
             return dt;
         }
 

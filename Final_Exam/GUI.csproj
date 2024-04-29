@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs" />
     <Compile Include="MainFormChild\AccountInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +88,12 @@
     </Compile>
     <Compile Include="pop-upForm\ConfirmForm.Designer.cs">
       <DependentUpon>ConfirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pop-upForm\DoiMatKhauForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pop-upForm\DoiMatKhauForm.Designer.cs">
+      <DependentUpon>DoiMatKhauForm.cs</DependentUpon>
     </Compile>
     <Compile Include="pop-upForm\GhiDanhForm.cs">
       <SubType>Form</SubType>
@@ -197,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pop-upForm\ConfirmForm.resx">
       <DependentUpon>ConfirmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop-upForm\DoiMatKhauForm.resx">
+      <DependentUpon>DoiMatKhauForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pop-upForm\GhiDanhForm.resx">
       <DependentUpon>GhiDanhForm.cs</DependentUpon>

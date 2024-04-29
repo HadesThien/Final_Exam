@@ -8,15 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using BUS;
 
 
 namespace Final_Exam {
     public partial class DangNhapForm : Form {
         //Properties 
-        static string account = "admin";
-        static string password = "123";
+        BUS_Account bus_Account;
+        DataTable tableAccount; 
         public static bool isLogin = false;
-
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -33,6 +33,8 @@ namespace Final_Exam {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 20, 20));
             matKhauTextBox.PasswordChar = true;
+            bus_Account = new BUS_Account("", "", DateTime.Now, DateTime.Now, "", "", "", "");
+            tableAccount = bus_Account.showAccounts();
         }
 
         private void exitBtn_Click(object sender, EventArgs e) {
@@ -45,9 +47,19 @@ namespace Final_Exam {
         }
 
         public void kiemTraTaiKhoan(string account, string password) {
-            if (account == DangNhapForm.account && password == DangNhapForm.password) 
-                isLogin = true;
-            
+            foreach(DataRow row in tableAccount.Rows) {
+                if (account == row[0].ToString() && password == row[1].ToString()) isLogin = true;
+                if (isLogin) { 
+                    DateTime lastLoginDate = DateTime.Parse(row[6].ToString());
+                    DateTime dateCreated = DateTime.Parse(row[7].ToString());
+                    string role = row[2].ToString();
+                    string email = row[3].ToString();
+                    string numberphone = row[4].ToString();
+                    string name = row[5].ToString();
+                    Account.account = new BUS_Account(account, password,lastLoginDate,dateCreated,role,email,numberphone,name);
+                    break; 
+                }
+            }
         }
         
         private void dangNhapBtn_Click(object sender, EventArgs e) {

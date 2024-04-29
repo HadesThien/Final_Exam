@@ -14,7 +14,7 @@ namespace DAL
 
         public static void connect()
         {
-            string s = "Data Source=TAANS;Initial Catalog=Final_SE;User ID=ngphctn14;Password=nuttertools123;";
+            string s = "Data Source=TRUONGNHATTHIEN;Initial Catalog=Final_SE;Integrated Security=True;";
             conn = new SqlConnection(s);
             conn.Open();
         }
@@ -24,6 +24,7 @@ namespace DAL
             connect();
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.ExecuteNonQuery();
+            Connection.conn.Close();
         }
         
         public static DataTable selectQuery(string sql)
@@ -32,6 +33,7 @@ namespace DAL
             SqlDataAdapter adpt = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
+            Connection.conn.Close();
             return dt;
         }
     }

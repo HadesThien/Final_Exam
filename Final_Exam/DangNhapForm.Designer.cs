@@ -155,6 +155,9 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(524, 288);
@@ -165,6 +168,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.AppWorkspace;
@@ -178,6 +182,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.AppWorkspace;
@@ -190,6 +195,9 @@
             // 
             // alert
             // 
+            this.alert.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.alert.AutoSize = true;
             this.alert.ForeColor = System.Drawing.Color.Red;
             this.alert.Location = new System.Drawing.Point(665, 413);
@@ -201,6 +209,8 @@
             // 
             // matKhauTextBox
             // 
+            this.matKhauTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.matKhauTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.matKhauTextBox.BorderColor = System.Drawing.Color.RoyalBlue;
             this.matKhauTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
@@ -224,6 +234,8 @@
             // 
             // taiKhoanTextBox
             // 
+            this.taiKhoanTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.taiKhoanTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.taiKhoanTextBox.BorderColor = System.Drawing.Color.RoyalBlue;
             this.taiKhoanTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
@@ -246,6 +258,8 @@
             // 
             // dangNhapBtn
             // 
+            this.dangNhapBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dangNhapBtn.BackColor = System.Drawing.Color.DodgerBlue;
             this.dangNhapBtn.BackgroundColor = System.Drawing.Color.DodgerBlue;
             this.dangNhapBtn.BorderColor = System.Drawing.SystemColors.Highlight;
@@ -266,6 +280,8 @@
             // 
             // roundedPanel1
             // 
+            this.roundedPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.roundedPanel1.BorderColor = System.Drawing.Color.White;
             this.roundedPanel1.Controls.Add(this.label1);
             this.roundedPanel1.Location = new System.Drawing.Point(496, 41);

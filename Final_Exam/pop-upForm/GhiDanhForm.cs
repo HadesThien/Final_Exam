@@ -12,7 +12,7 @@ using BUS_VN;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Final_Exam {
-    public partial class GhiDanhForm : Form {
+    public partial class ghiDanhForm : Form {
         //Properties 
         List<string> selectedItems = new List<string>();
         string classString = "";
@@ -31,26 +31,17 @@ namespace Final_Exam {
                     int nHeightEllipse // height of ellipse
                 );
 
-        public GhiDanhForm() {
+        public ghiDanhForm() {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 30, 30));
+            
         }
 
         private void cancelBtn_Click(object sender, EventArgs e) {
             this.Close();
         }
 
-        private void classListBox_SelectedIndexChanged(object sender, EventArgs e) {
-            selectedItems.Clear();
-            foreach (var item in classListBox.SelectedItems) {
-                selectedItems.Add(item.ToString());
-            }
-            classString += selectedItems[0] + " ";
-            classTextBox.Texts = classString;
-            Console.WriteLine(classTextBox.Texts);
-            Console.WriteLine(classTextBox.Text);
-        }
-
+   
         private void defaultForm()
         {
             districtComboBox.Enabled = false;
@@ -103,6 +94,31 @@ namespace Final_Exam {
             wardComboBox.ValueMember = "full_name";
 
             wardComboBox.Enabled = true;
+        }
+        private void UpdateTextBoxValue() {
+            StringBuilder selectedValues = new StringBuilder();
+            for (int i = 0; i < classListBox.CheckedItems.Count; i++) {
+                selectedValues.Append(classListBox.CheckedItems[i].ToString() + " ");
+                Console.WriteLine(classListBox.CheckedItems[i].ToString());
+            }
+            classTextBox.Texts = selectedValues.ToString().Trim(); 
+        }
+
+        private void classListBox_ItemCheck(object sender, ItemCheckEventArgs e) {
+            // Lấy ra giá trị của mục được chọn
+            string selectedItem = classListBox.Items[e.Index].ToString();
+
+            // Nếu mục đó được chọn
+            if (e.NewValue == CheckState.Checked) {
+                // Thêm giá trị của mục vào TextBox (đảm bảo không trùng lặp)
+                if (!classTextBox.Texts.Contains(selectedItem)) {
+                    classTextBox.Texts += selectedItem + " ";
+                }
+            }
+            else 
+            {
+                classTextBox.Texts  = classTextBox.Texts.Replace(selectedItem + " ", "");
+            }
         }
     }
 }
