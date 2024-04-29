@@ -77,7 +77,7 @@ CREATE TABLE Account
   role NVARCHAR(20) NOT NULL,
   email VARCHAR(50) NOT NULL,
   numberPhone VARCHAR(11) NOT NULL,
-  name VARCHAR(50) NOT NULL,
+  name NVARCHAR(50) NOT NULL,
   PRIMARY KEY (username)
 );
 
@@ -205,7 +205,7 @@ VALUES
 
 INSERT INTO Account (password, dateCreated, username, lastLoginDate, role, email, numberPhone, name)
 VALUES	('password123', '2024-04-28', 'user1', '2024-04-28', 'user', 'user1@example.com', '1234567890', 'John Doe'),
-		('securepass', '2024-04-28', 'admin1', '2024-04-28', 'admin', 'admin1@example.com', '0987654321', 'Admin Smith'),
+		('123', '2024-04-28', 'admin1', '2024-04-28', 'admin', 'admin1@example.com', '0987654321', 'Admin Smith'),
 		('pass1234', '2024-04-27', 'user2', '2024-04-27', 'user', 'user2@example.com', '1112223333', 'Jane Doe'),
 		('adminpass', '2024-04-26', 'admin2', '2024-04-26', 'admin', 'admin2@example.com', '4445556666', 'Admin Johnson'),
 		('123456', '2024-04-25', 'user3', '2024-04-25', 'user', 'user3@example.com', '7778889999', 'Max Smith');

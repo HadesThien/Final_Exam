@@ -39,7 +39,7 @@ namespace DAL
 
         public DataTable selectQuery()
         {
-            string s = "SELECT * FROM Account";
+            string s = "SELECT username,password,role,email,numberphone,lastLoginDate,dateCreated FROM Account";
             return Connection.selectQuery(s);
         }
     }
