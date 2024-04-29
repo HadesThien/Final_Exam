@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E20DA030-2468-4640-AF69-6A07D9C73594}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>Final_Exam</RootNamespace>
     <AssemblyName>Final_Exam</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -255,6 +255,10 @@
     <ProjectReference Include="..\BUS\BUS.csproj">
       <Project>{c6055de6-1945-4418-9a08-9a42eb8f8deb}</Project>
       <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BUS_VN\BUS_VN.csproj">
+      <Project>{c988f7c3-8c55-4033-9239-c6ced25776f9}</Project>
+      <Name>BUS_VN</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
