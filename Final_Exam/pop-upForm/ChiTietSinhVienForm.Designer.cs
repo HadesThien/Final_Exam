@@ -45,14 +45,15 @@
             this.tinhTrangLabel = new System.Windows.Forms.Label();
             this.ghiChuLabel = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.roundedGridView1 = new Final_Exam.RoundedGridView();
-            this.rjButton2 = new CustomControls.RJControls.RJButton();
-            this.rjButton5 = new CustomControls.RJControls.RJButton();
-            this.rjButton1 = new CustomControls.RJControls.RJButton();
-            this.rjButton4 = new CustomControls.RJControls.RJButton();
-            this.rjButton3 = new CustomControls.RJControls.RJButton();
+            this.hocPhiBtn = new CustomControls.RJControls.RJButton();
+            this.thoiHocBtn = new CustomControls.RJControls.RJButton();
+            this.nhapHocBtn = new CustomControls.RJControls.RJButton();
+            this.classBtn = new CustomControls.RJControls.RJButton();
             this.cancelBtn = new CustomControls.RJControls.RJButton();
             this.roundedGridView1 = new Final_Exam.RoundedGridView();
+            this.rjButton5 = new CustomControls.RJControls.RJButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.schoolLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -65,7 +66,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(10, -2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(435, 46);
+            this.label1.Size = new System.Drawing.Size(349, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin chi tiết học sinh";
             // 
@@ -75,7 +76,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 32);
+            this.label2.Size = new System.Drawing.Size(124, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã học viên:";
             // 
@@ -85,7 +86,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 37);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 32);
+            this.label3.Size = new System.Drawing.Size(103, 25);
             this.label3.TabIndex = 0;
             this.label3.Text = "Họ và tên:";
             // 
@@ -95,7 +96,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 74);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(171, 32);
+            this.label4.Size = new System.Drawing.Size(134, 25);
             this.label4.TabIndex = 0;
             this.label4.Text = "Số điện thoại:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -106,7 +107,7 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 32);
+            this.label5.Size = new System.Drawing.Size(76, 25);
             this.label5.TabIndex = 0;
             this.label5.Text = "Địa chỉ:";
             // 
@@ -116,7 +117,7 @@
             this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(506, 37);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(135, 32);
+            this.label6.Size = new System.Drawing.Size(105, 25);
             this.label6.TabIndex = 0;
             this.label6.Text = "Ngày sinh:";
             // 
@@ -126,7 +127,7 @@
             this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(506, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(125, 32);
+            this.label7.Size = new System.Drawing.Size(98, 25);
             this.label7.TabIndex = 0;
             this.label7.Text = "Ngày tạo:";
             // 
@@ -136,7 +137,7 @@
             this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(506, 74);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 32);
+            this.label8.Size = new System.Drawing.Size(84, 25);
             this.label8.TabIndex = 0;
             this.label8.Text = "Ghi chú:";
             // 
@@ -146,7 +147,7 @@
             this.maHocVienLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maHocVienLabel.Location = new System.Drawing.Point(184, 0);
             this.maHocVienLabel.Name = "maHocVienLabel";
-            this.maHocVienLabel.Size = new System.Drawing.Size(0, 28);
+            this.maHocVienLabel.Size = new System.Drawing.Size(0, 21);
             this.maHocVienLabel.TabIndex = 0;
             this.maHocVienLabel.Click += new System.EventHandler(this.label9_Click);
             // 
@@ -156,7 +157,7 @@
             this.hoTenLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hoTenLabel.Location = new System.Drawing.Point(184, 37);
             this.hoTenLabel.Name = "hoTenLabel";
-            this.hoTenLabel.Size = new System.Drawing.Size(0, 28);
+            this.hoTenLabel.Size = new System.Drawing.Size(0, 21);
             this.hoTenLabel.TabIndex = 0;
             // 
             // soDienThoaiLabel
@@ -165,7 +166,7 @@
             this.soDienThoaiLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.soDienThoaiLabel.Location = new System.Drawing.Point(184, 74);
             this.soDienThoaiLabel.Name = "soDienThoaiLabel";
-            this.soDienThoaiLabel.Size = new System.Drawing.Size(0, 28);
+            this.soDienThoaiLabel.Size = new System.Drawing.Size(0, 21);
             this.soDienThoaiLabel.TabIndex = 0;
             // 
             // addressLabel
@@ -174,7 +175,7 @@
             this.addressLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addressLabel.Location = new System.Drawing.Point(184, 0);
             this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(0, 28);
+            this.addressLabel.Size = new System.Drawing.Size(0, 21);
             this.addressLabel.TabIndex = 0;
             // 
             // ngayTaoLabel
@@ -183,7 +184,7 @@
             this.ngayTaoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ngayTaoLabel.Location = new System.Drawing.Point(655, 0);
             this.ngayTaoLabel.Name = "ngayTaoLabel";
-            this.ngayTaoLabel.Size = new System.Drawing.Size(0, 28);
+            this.ngayTaoLabel.Size = new System.Drawing.Size(0, 21);
             this.ngayTaoLabel.TabIndex = 0;
             // 
             // ngaySinhLabel
@@ -192,7 +193,7 @@
             this.ngaySinhLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ngaySinhLabel.Location = new System.Drawing.Point(655, 37);
             this.ngaySinhLabel.Name = "ngaySinhLabel";
-            this.ngaySinhLabel.Size = new System.Drawing.Size(0, 28);
+            this.ngaySinhLabel.Size = new System.Drawing.Size(0, 21);
             this.ngaySinhLabel.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -238,6 +239,8 @@
             this.tableLayoutPanel3.Controls.Add(this.gioiTinhLabel, 5, 0);
             this.tableLayoutPanel3.Controls.Add(this.tinhTrangLabel, 5, 1);
             this.tableLayoutPanel3.Controls.Add(this.ghiChuLabel, 3, 2);
+            this.tableLayoutPanel3.Controls.Add(this.label9, 4, 2);
+            this.tableLayoutPanel3.Controls.Add(this.schoolLabel, 5, 2);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(17, 47);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
@@ -253,7 +256,7 @@
             this.label15.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(897, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(119, 32);
+            this.label15.Size = new System.Drawing.Size(93, 25);
             this.label15.TabIndex = 0;
             this.label15.Text = "Giới tính:";
             // 
@@ -263,7 +266,7 @@
             this.label16.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(897, 37);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(140, 32);
+            this.label16.Size = new System.Drawing.Size(110, 25);
             this.label16.TabIndex = 0;
             this.label16.Text = "Tình trạng:";
             // 
@@ -273,7 +276,7 @@
             this.gioiTinhLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gioiTinhLabel.Location = new System.Drawing.Point(1044, 0);
             this.gioiTinhLabel.Name = "gioiTinhLabel";
-            this.gioiTinhLabel.Size = new System.Drawing.Size(0, 28);
+            this.gioiTinhLabel.Size = new System.Drawing.Size(0, 21);
             this.gioiTinhLabel.TabIndex = 0;
             // 
             // tinhTrangLabel
@@ -282,7 +285,7 @@
             this.tinhTrangLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tinhTrangLabel.Location = new System.Drawing.Point(1044, 37);
             this.tinhTrangLabel.Name = "tinhTrangLabel";
-            this.tinhTrangLabel.Size = new System.Drawing.Size(0, 28);
+            this.tinhTrangLabel.Size = new System.Drawing.Size(0, 21);
             this.tinhTrangLabel.TabIndex = 0;
             // 
             // ghiChuLabel
@@ -291,7 +294,7 @@
             this.ghiChuLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ghiChuLabel.Location = new System.Drawing.Point(655, 74);
             this.ghiChuLabel.Name = "ghiChuLabel";
-            this.ghiChuLabel.Size = new System.Drawing.Size(0, 28);
+            this.ghiChuLabel.Size = new System.Drawing.Size(0, 21);
             this.ghiChuLabel.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -300,140 +303,89 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.flowLayoutPanel1.Controls.Add(this.rjButton2);
-            this.flowLayoutPanel1.Controls.Add(this.rjButton1);
-            this.flowLayoutPanel1.Controls.Add(this.rjButton4);
-            this.flowLayoutPanel1.Controls.Add(this.rjButton3);
+            this.flowLayoutPanel1.Controls.Add(this.hocPhiBtn);
+            this.flowLayoutPanel1.Controls.Add(this.thoiHocBtn);
+            this.flowLayoutPanel1.Controls.Add(this.nhapHocBtn);
+            this.flowLayoutPanel1.Controls.Add(this.classBtn);
             this.flowLayoutPanel1.Controls.Add(this.cancelBtn);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(17, 221);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(234, 443);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
-            // roundedGridView1
+            // hocPhiBtn
             // 
-            this.roundedGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.roundedGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.roundedGridView1.BorderRadius = 10;
-            this.roundedGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.roundedGridView1.Location = new System.Drawing.Point(257, 224);
-            this.roundedGridView1.Name = "roundedGridView1";
-            this.roundedGridView1.RowHeadersWidth = 51;
-            this.roundedGridView1.Size = new System.Drawing.Size(1096, 445);
-            this.roundedGridView1.TabIndex = 7;
-            this.roundedGridView1.Visible = false;
+            this.hocPhiBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.hocPhiBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.hocPhiBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.hocPhiBtn.BorderRadius = 0;
+            this.hocPhiBtn.BorderSize = 0;
+            this.hocPhiBtn.FlatAppearance.BorderSize = 0;
+            this.hocPhiBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hocPhiBtn.ForeColor = System.Drawing.Color.White;
+            this.hocPhiBtn.Location = new System.Drawing.Point(3, 3);
+            this.hocPhiBtn.Name = "hocPhiBtn";
+            this.hocPhiBtn.Size = new System.Drawing.Size(231, 40);
+            this.hocPhiBtn.TabIndex = 5;
+            this.hocPhiBtn.Text = "Học phí";
+            this.hocPhiBtn.TextColor = System.Drawing.Color.White;
+            this.hocPhiBtn.UseVisualStyleBackColor = false;
             // 
-            // rjButton2
+            // thoiHocBtn
             // 
-            this.rjButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton2.BorderRadius = 0;
-            this.rjButton2.BorderSize = 0;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(3, 3);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(231, 40);
-            this.rjButton2.TabIndex = 5;
-            this.rjButton2.Text = "Học phí";
-            this.rjButton2.TextColor = System.Drawing.Color.White;
-            this.rjButton2.UseVisualStyleBackColor = false;
+            this.thoiHocBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.thoiHocBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.thoiHocBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.thoiHocBtn.BorderRadius = 0;
+            this.thoiHocBtn.BorderSize = 0;
+            this.thoiHocBtn.FlatAppearance.BorderSize = 0;
+            this.thoiHocBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.thoiHocBtn.ForeColor = System.Drawing.Color.White;
+            this.thoiHocBtn.Location = new System.Drawing.Point(3, 49);
+            this.thoiHocBtn.Name = "thoiHocBtn";
+            this.thoiHocBtn.Size = new System.Drawing.Size(231, 40);
+            this.thoiHocBtn.TabIndex = 5;
+            this.thoiHocBtn.Text = "Thôi học";
+            this.thoiHocBtn.TextColor = System.Drawing.Color.White;
+            this.thoiHocBtn.UseVisualStyleBackColor = false;
+            this.thoiHocBtn.Click += new System.EventHandler(this.thoiHocBtn_Click);
             // 
-            // rjButton5
+            // nhapHocBtn
             // 
-            this.rjButton5.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton5.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton5.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton5.BorderRadius = 0;
-            this.rjButton5.BorderSize = 0;
-            this.rjButton5.FlatAppearance.BorderSize = 0;
-            this.rjButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton5.ForeColor = System.Drawing.Color.White;
-            this.rjButton5.Location = new System.Drawing.Point(3, 49);
-            this.rjButton5.Name = "rjButton5";
-            this.rjButton5.Size = new System.Drawing.Size(231, 40);
-            this.rjButton5.TabIndex = 5;
-            this.rjButton5.Text = "Mặc định";
-            this.rjButton5.TextColor = System.Drawing.Color.White;
-            this.rjButton5.UseVisualStyleBackColor = false;
+            this.nhapHocBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.nhapHocBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.nhapHocBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.nhapHocBtn.BorderRadius = 0;
+            this.nhapHocBtn.BorderSize = 0;
+            this.nhapHocBtn.FlatAppearance.BorderSize = 0;
+            this.nhapHocBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nhapHocBtn.ForeColor = System.Drawing.Color.White;
+            this.nhapHocBtn.Location = new System.Drawing.Point(3, 95);
+            this.nhapHocBtn.Name = "nhapHocBtn";
+            this.nhapHocBtn.Size = new System.Drawing.Size(231, 40);
+            this.nhapHocBtn.TabIndex = 5;
+            this.nhapHocBtn.Text = "Nhập học";
+            this.nhapHocBtn.TextColor = System.Drawing.Color.White;
+            this.nhapHocBtn.UseVisualStyleBackColor = false;
+            this.nhapHocBtn.Click += new System.EventHandler(this.nhapHocBtn_Click);
             // 
-            // rjButton1
+            // classBtn
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 0;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(3, 49);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(231, 40);
-            this.rjButton1.TabIndex = 5;
-            this.rjButton1.Text = "Thôi học";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
-            // 
-            // rjButton4
-            // 
-            this.rjButton4.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton4.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton4.BorderRadius = 0;
-            this.rjButton4.BorderSize = 0;
-            this.rjButton4.FlatAppearance.BorderSize = 0;
-            this.rjButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton4.ForeColor = System.Drawing.Color.White;
-            this.rjButton4.Location = new System.Drawing.Point(3, 95);
-            this.rjButton4.Name = "rjButton4";
-            this.rjButton4.Size = new System.Drawing.Size(231, 40);
-            this.rjButton4.TabIndex = 5;
-            this.rjButton4.Text = "Nhập học";
-            this.rjButton4.TextColor = System.Drawing.Color.White;
-            this.rjButton4.UseVisualStyleBackColor = false;
-            this.rjButton4.Click += new System.EventHandler(this.rjButton4_Click);
-            // 
-            // rjButton4
-            // 
-            this.rjButton4.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton4.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton4.BorderRadius = 0;
-            this.rjButton4.BorderSize = 0;
-            this.rjButton4.FlatAppearance.BorderSize = 0;
-            this.rjButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton4.ForeColor = System.Drawing.Color.White;
-            this.rjButton4.Location = new System.Drawing.Point(3, 141);
-            this.rjButton4.Name = "rjButton4";
-            this.rjButton4.Size = new System.Drawing.Size(231, 40);
-            this.rjButton4.TabIndex = 5;
-            this.rjButton4.Text = "Nhập học";
-            this.rjButton4.TextColor = System.Drawing.Color.White;
-            this.rjButton4.UseVisualStyleBackColor = false;
-            // 
-            // rjButton3
-            // 
-            this.rjButton3.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton3.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton3.BorderRadius = 0;
-            this.rjButton3.BorderSize = 0;
-            this.rjButton3.FlatAppearance.BorderSize = 0;
-            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton3.ForeColor = System.Drawing.Color.White;
-            this.rjButton3.Location = new System.Drawing.Point(3, 141);
-            this.rjButton3.Name = "rjButton3";
-            this.rjButton3.Size = new System.Drawing.Size(231, 40);
-            this.rjButton3.TabIndex = 5;
-            this.rjButton3.Text = "Lớp học";
-            this.rjButton3.TextColor = System.Drawing.Color.White;
-            this.rjButton3.UseVisualStyleBackColor = false;
+            this.classBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.classBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.classBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.classBtn.BorderRadius = 0;
+            this.classBtn.BorderSize = 0;
+            this.classBtn.FlatAppearance.BorderSize = 0;
+            this.classBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.classBtn.ForeColor = System.Drawing.Color.White;
+            this.classBtn.Location = new System.Drawing.Point(3, 141);
+            this.classBtn.Name = "classBtn";
+            this.classBtn.Size = new System.Drawing.Size(231, 40);
+            this.classBtn.TabIndex = 5;
+            this.classBtn.Text = "Lớp học";
+            this.classBtn.TextColor = System.Drawing.Color.White;
+            this.classBtn.UseVisualStyleBackColor = false;
             // 
             // cancelBtn
             // 
@@ -464,27 +416,10 @@
             this.roundedGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.roundedGridView1.Location = new System.Drawing.Point(271, 221);
             this.roundedGridView1.Name = "roundedGridView1";
+            this.roundedGridView1.RowHeadersWidth = 51;
             this.roundedGridView1.Size = new System.Drawing.Size(862, 445);
             this.roundedGridView1.TabIndex = 7;
             this.roundedGridView1.Visible = false;
-            // 
-            // rjButton4
-            // 
-            this.rjButton4.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton4.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton4.BorderRadius = 0;
-            this.rjButton4.BorderSize = 0;
-            this.rjButton4.FlatAppearance.BorderSize = 0;
-            this.rjButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton4.ForeColor = System.Drawing.Color.White;
-            this.rjButton4.Location = new System.Drawing.Point(3, 141);
-            this.rjButton4.Name = "rjButton4";
-            this.rjButton4.Size = new System.Drawing.Size(231, 40);
-            this.rjButton4.TabIndex = 5;
-            this.rjButton4.Text = "Nhập học";
-            this.rjButton4.TextColor = System.Drawing.Color.White;
-            this.rjButton4.UseVisualStyleBackColor = false;
             // 
             // rjButton5
             // 
@@ -504,9 +439,28 @@
             this.rjButton5.TextColor = System.Drawing.Color.White;
             this.rjButton5.UseVisualStyleBackColor = false;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(897, 74);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(116, 25);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Trường học";
+            // 
+            // schoolLabel
+            // 
+            this.schoolLabel.AutoSize = true;
+            this.schoolLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.schoolLabel.Location = new System.Drawing.Point(1044, 74);
+            this.schoolLabel.Name = "schoolLabel";
+            this.schoolLabel.Size = new System.Drawing.Size(0, 21);
+            this.schoolLabel.TabIndex = 0;
+            // 
             // ChiTietSinhVienForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1365, 676);
             this.ControlBox = false;
@@ -550,9 +504,9 @@
         private System.Windows.Forms.Label ngaySinhLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private CustomControls.RJControls.RJButton rjButton1;
-        private CustomControls.RJControls.RJButton rjButton2;
-        private CustomControls.RJControls.RJButton rjButton3;
+        private CustomControls.RJControls.RJButton thoiHocBtn;
+        private CustomControls.RJControls.RJButton hocPhiBtn;
+        private CustomControls.RJControls.RJButton classBtn;
         private CustomControls.RJControls.RJButton rjButton5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label15;
@@ -562,6 +516,8 @@
         private RoundedGridView roundedGridView1;
         private CustomControls.RJControls.RJButton cancelBtn;
         private System.Windows.Forms.Label ghiChuLabel;
-        private CustomControls.RJControls.RJButton rjButton4;
+        private CustomControls.RJControls.RJButton nhapHocBtn;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label schoolLabel;
     }
 }

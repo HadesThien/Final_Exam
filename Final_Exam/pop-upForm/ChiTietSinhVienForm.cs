@@ -47,22 +47,19 @@ namespace Final_Exam {
             ngayTaoLabel.Text = dt.Rows[0][10].ToString().Split(' ')[0];
             tinhTrangLabel.Text = dt.Rows[0][11].ToString();
             ghiChuLabel.Text = dt.Rows[0][12].ToString();
+            schoolLabel.Text = dt.Rows[0][5].ToString();
         }
 
         private void ChiTietSinhVienForm_Load(object sender, EventArgs e)
         {
             update();
         }
-
-        // Thôi học
-        private void rjButton1_Click(object sender, EventArgs e)
-        {
+        //Thôi học 
+        private void nhapHocBtn_Click(object sender, EventArgs e) {
 
         }
-        
-        // Nhập học
-        private void rjButton4_Click(object sender, EventArgs e)
-        {
+        //Nhập học
+        private void thoiHocBtn_Click(object sender, EventArgs e) {
 
         }
     }

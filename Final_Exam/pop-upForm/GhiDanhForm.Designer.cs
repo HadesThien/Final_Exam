@@ -27,34 +27,34 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.wardComboBox = new CustomControls.RJControls.RJComboBox();
+            this.districtComboBox = new CustomControls.RJControls.RJComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonSelect = new CustomControls.RJControls.RJButton();
+            this.classTextBox = new CustomControls.RJControls.RJTextBox();
+            this.dobTimePicker = new CustomControls.RJControls.RJDatePicker();
+            this.genderComboBox = new CustomControls.RJControls.RJComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.tinhTrangComboBox = new CustomControls.RJControls.RJComboBox();
+            this.nameTextBox = new CustomControls.RJControls.RJTextBox();
+            this.diaChiTextBox = new CustomControls.RJControls.RJTextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.truongHocTextBox = new CustomControls.RJControls.RJTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.cityComboBox = new CustomControls.RJControls.RJComboBox();
+            this.numberPhoneTextBox = new CustomControls.RJControls.RJTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.ghiChuTextBox = new System.Windows.Forms.RichTextBox();
             this.idLabel = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.classListBox = new System.Windows.Forms.CheckedListBox();
             this.cancelBtn = new CustomControls.RJControls.RJButton();
-            this.wardComboBox = new CustomControls.RJControls.RJComboBox();
-            this.districtComboBox = new CustomControls.RJControls.RJComboBox();
-            this.buttonSelect = new CustomControls.RJControls.RJButton();
-            this.classTextBox = new CustomControls.RJControls.RJTextBox();
-            this.dobTimePicker = new CustomControls.RJControls.RJDatePicker();
-            this.genderComboBox = new CustomControls.RJControls.RJComboBox();
-            this.tinhTrangComboBox = new CustomControls.RJControls.RJComboBox();
-            this.nameTextBox = new CustomControls.RJControls.RJTextBox();
-            this.diaChiTextBox = new CustomControls.RJControls.RJTextBox();
-            this.truongHocTextBox = new CustomControls.RJControls.RJTextBox();
-            this.cityComboBox = new CustomControls.RJControls.RJComboBox();
-            this.numberPhoneTextBox = new CustomControls.RJControls.RJTextBox();
             this.saveBtn = new CustomControls.RJControls.RJButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -133,6 +133,48 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1120, 341);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
+            // wardComboBox
+            // 
+            this.wardComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.wardComboBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.wardComboBox.BorderSize = 1;
+            this.wardComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wardComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.wardComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wardComboBox.ForeColor = System.Drawing.Color.DimGray;
+            this.wardComboBox.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.wardComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.wardComboBox.ListTextColor = System.Drawing.Color.DimGray;
+            this.wardComboBox.Location = new System.Drawing.Point(364, 285);
+            this.wardComboBox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.wardComboBox.Name = "wardComboBox";
+            this.wardComboBox.Padding = new System.Windows.Forms.Padding(1);
+            this.wardComboBox.Size = new System.Drawing.Size(404, 53);
+            this.wardComboBox.TabIndex = 14;
+            this.wardComboBox.Texts = "";
+            this.wardComboBox.OnSelectedIndexChanged += new System.EventHandler(this.wardComboBox_OnSelectedIndexChanged);
+            // 
+            // districtComboBox
+            // 
+            this.districtComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.districtComboBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.districtComboBox.BorderSize = 1;
+            this.districtComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.districtComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.districtComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.districtComboBox.ForeColor = System.Drawing.Color.DimGray;
+            this.districtComboBox.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.districtComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.districtComboBox.ListTextColor = System.Drawing.Color.DimGray;
+            this.districtComboBox.Location = new System.Drawing.Point(364, 198);
+            this.districtComboBox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.districtComboBox.Name = "districtComboBox";
+            this.districtComboBox.Padding = new System.Windows.Forms.Padding(1);
+            this.districtComboBox.Size = new System.Drawing.Size(404, 50);
+            this.districtComboBox.TabIndex = 12;
+            this.districtComboBox.Texts = "";
+            this.districtComboBox.OnSelectedIndexChanged += new System.EventHandler(this.disctrictComboBox_OnSelectedIndexChanged);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.buttonSelect);
@@ -142,6 +184,87 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(343, 50);
             this.panel1.TabIndex = 9;
+            // 
+            // buttonSelect
+            // 
+            this.buttonSelect.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.buttonSelect.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.buttonSelect.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonSelect.BorderRadius = 0;
+            this.buttonSelect.BorderSize = 0;
+            this.buttonSelect.Dock = System.Windows.Forms.DockStyle.Right;
+            this.buttonSelect.FlatAppearance.BorderSize = 0;
+            this.buttonSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSelect.ForeColor = System.Drawing.Color.White;
+            this.buttonSelect.Location = new System.Drawing.Point(320, 0);
+            this.buttonSelect.Name = "buttonSelect";
+            this.buttonSelect.Size = new System.Drawing.Size(23, 50);
+            this.buttonSelect.TabIndex = 7;
+            this.buttonSelect.Text = "V";
+            this.buttonSelect.TextColor = System.Drawing.Color.White;
+            this.buttonSelect.UseVisualStyleBackColor = false;
+            this.buttonSelect.Click += new System.EventHandler(this.buttonSelect_Click);
+            // 
+            // classTextBox
+            // 
+            this.classTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.classTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.classTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.classTextBox.BorderRadius = 0;
+            this.classTextBox.BorderSize = 2;
+            this.classTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.classTextBox.Enabled = false;
+            this.classTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classTextBox.ForeColor = System.Drawing.Color.Black;
+            this.classTextBox.Location = new System.Drawing.Point(0, 0);
+            this.classTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.classTextBox.Multiline = false;
+            this.classTextBox.Name = "classTextBox";
+            this.classTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.classTextBox.PasswordChar = false;
+            this.classTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.classTextBox.PlaceholderText = "";
+            this.classTextBox.Size = new System.Drawing.Size(343, 36);
+            this.classTextBox.TabIndex = 6;
+            this.classTextBox.Texts = "";
+            this.classTextBox.UnderlinedStyle = false;
+            // 
+            // dobTimePicker
+            // 
+            this.dobTimePicker.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dobTimePicker.BorderSize = 0;
+            this.dobTimePicker.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dobTimePicker.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dobTimePicker.Location = new System.Drawing.Point(3, 198);
+            this.dobTimePicker.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dobTimePicker.Name = "dobTimePicker";
+            this.dobTimePicker.Size = new System.Drawing.Size(355, 35);
+            this.dobTimePicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.dobTimePicker.TabIndex = 3;
+            this.dobTimePicker.TextColor = System.Drawing.Color.White;
+            // 
+            // genderComboBox
+            // 
+            this.genderComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.genderComboBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.genderComboBox.BorderSize = 1;
+            this.genderComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.genderComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.genderComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genderComboBox.ForeColor = System.Drawing.Color.DimGray;
+            this.genderComboBox.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.genderComboBox.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.genderComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.genderComboBox.ListTextColor = System.Drawing.Color.DimGray;
+            this.genderComboBox.Location = new System.Drawing.Point(3, 115);
+            this.genderComboBox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.genderComboBox.Name = "genderComboBox";
+            this.genderComboBox.Padding = new System.Windows.Forms.Padding(1);
+            this.genderComboBox.Size = new System.Drawing.Size(355, 42);
+            this.genderComboBox.TabIndex = 0;
+            this.genderComboBox.Texts = "";
             // 
             // label4
             // 
@@ -170,6 +293,76 @@
             this.label7.TabIndex = 4;
             this.label7.Text = "Địa chỉ";
             // 
+            // tinhTrangComboBox
+            // 
+            this.tinhTrangComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tinhTrangComboBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.tinhTrangComboBox.BorderSize = 1;
+            this.tinhTrangComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tinhTrangComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tinhTrangComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tinhTrangComboBox.ForeColor = System.Drawing.Color.DimGray;
+            this.tinhTrangComboBox.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.tinhTrangComboBox.Items.AddRange(new object[] {
+            "Đang học",
+            "Học thử",
+            "Mặc định"});
+            this.tinhTrangComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.tinhTrangComboBox.ListTextColor = System.Drawing.Color.DimGray;
+            this.tinhTrangComboBox.Location = new System.Drawing.Point(774, 115);
+            this.tinhTrangComboBox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.tinhTrangComboBox.Name = "tinhTrangComboBox";
+            this.tinhTrangComboBox.Padding = new System.Windows.Forms.Padding(1);
+            this.tinhTrangComboBox.Size = new System.Drawing.Size(343, 42);
+            this.tinhTrangComboBox.TabIndex = 0;
+            this.tinhTrangComboBox.Texts = "";
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.nameTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.nameTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.nameTextBox.BorderRadius = 0;
+            this.nameTextBox.BorderSize = 2;
+            this.nameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nameTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.nameTextBox.Location = new System.Drawing.Point(4, 36);
+            this.nameTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.nameTextBox.Multiline = false;
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.nameTextBox.PasswordChar = false;
+            this.nameTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.nameTextBox.PlaceholderText = "";
+            this.nameTextBox.Size = new System.Drawing.Size(353, 40);
+            this.nameTextBox.TabIndex = 1;
+            this.nameTextBox.Texts = "";
+            this.nameTextBox.UnderlinedStyle = false;
+            // 
+            // diaChiTextBox
+            // 
+            this.diaChiTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.diaChiTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.diaChiTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.diaChiTextBox.BorderRadius = 0;
+            this.diaChiTextBox.BorderSize = 2;
+            this.diaChiTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.diaChiTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diaChiTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.diaChiTextBox.Location = new System.Drawing.Point(365, 36);
+            this.diaChiTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.diaChiTextBox.Multiline = false;
+            this.diaChiTextBox.Name = "diaChiTextBox";
+            this.diaChiTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.diaChiTextBox.PasswordChar = false;
+            this.diaChiTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.diaChiTextBox.PlaceholderText = "";
+            this.diaChiTextBox.Size = new System.Drawing.Size(402, 40);
+            this.diaChiTextBox.TabIndex = 1;
+            this.diaChiTextBox.Texts = "";
+            this.diaChiTextBox.UnderlinedStyle = false;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -178,6 +371,29 @@
             this.label8.Size = new System.Drawing.Size(94, 21);
             this.label8.TabIndex = 4;
             this.label8.Text = "Trường học";
+            // 
+            // truongHocTextBox
+            // 
+            this.truongHocTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.truongHocTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.truongHocTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.truongHocTextBox.BorderRadius = 0;
+            this.truongHocTextBox.BorderSize = 2;
+            this.truongHocTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.truongHocTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truongHocTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.truongHocTextBox.Location = new System.Drawing.Point(775, 36);
+            this.truongHocTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.truongHocTextBox.Multiline = false;
+            this.truongHocTextBox.Name = "truongHocTextBox";
+            this.truongHocTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.truongHocTextBox.PasswordChar = false;
+            this.truongHocTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.truongHocTextBox.PlaceholderText = "";
+            this.truongHocTextBox.Size = new System.Drawing.Size(341, 40);
+            this.truongHocTextBox.TabIndex = 1;
+            this.truongHocTextBox.Texts = "";
+            this.truongHocTextBox.UnderlinedStyle = false;
             // 
             // label9
             // 
@@ -223,6 +439,50 @@
             this.label13.Size = new System.Drawing.Size(98, 21);
             this.label13.TabIndex = 4;
             this.label13.Text = "Phường / xã";
+            // 
+            // cityComboBox
+            // 
+            this.cityComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cityComboBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cityComboBox.BorderSize = 1;
+            this.cityComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cityComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cityComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cityComboBox.ForeColor = System.Drawing.Color.DimGray;
+            this.cityComboBox.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cityComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cityComboBox.ListTextColor = System.Drawing.Color.DimGray;
+            this.cityComboBox.Location = new System.Drawing.Point(364, 115);
+            this.cityComboBox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cityComboBox.Name = "cityComboBox";
+            this.cityComboBox.Padding = new System.Windows.Forms.Padding(1);
+            this.cityComboBox.Size = new System.Drawing.Size(404, 42);
+            this.cityComboBox.TabIndex = 11;
+            this.cityComboBox.Texts = "";
+            this.cityComboBox.OnSelectedIndexChanged += new System.EventHandler(this.cityComboBox_OnSelectedIndexChanged);
+            // 
+            // numberPhoneTextBox
+            // 
+            this.numberPhoneTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.numberPhoneTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.numberPhoneTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.numberPhoneTextBox.BorderRadius = 0;
+            this.numberPhoneTextBox.BorderSize = 2;
+            this.numberPhoneTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numberPhoneTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberPhoneTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.numberPhoneTextBox.Location = new System.Drawing.Point(4, 286);
+            this.numberPhoneTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.numberPhoneTextBox.Multiline = false;
+            this.numberPhoneTextBox.Name = "numberPhoneTextBox";
+            this.numberPhoneTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.numberPhoneTextBox.PasswordChar = false;
+            this.numberPhoneTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.numberPhoneTextBox.PlaceholderText = "";
+            this.numberPhoneTextBox.Size = new System.Drawing.Size(353, 36);
+            this.numberPhoneTextBox.TabIndex = 15;
+            this.numberPhoneTextBox.Texts = "";
+            this.numberPhoneTextBox.UnderlinedStyle = false;
             // 
             // label6
             // 
@@ -319,266 +579,6 @@
             this.cancelBtn.TextColor = System.Drawing.Color.Black;
             this.cancelBtn.UseVisualStyleBackColor = false;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
-            // 
-            // wardComboBox
-            // 
-            this.wardComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.wardComboBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.wardComboBox.BorderSize = 1;
-            this.wardComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wardComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.wardComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wardComboBox.ForeColor = System.Drawing.Color.DimGray;
-            this.wardComboBox.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.wardComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.wardComboBox.ListTextColor = System.Drawing.Color.DimGray;
-            this.wardComboBox.Location = new System.Drawing.Point(364, 285);
-            this.wardComboBox.MinimumSize = new System.Drawing.Size(200, 30);
-            this.wardComboBox.Name = "wardComboBox";
-            this.wardComboBox.Padding = new System.Windows.Forms.Padding(1);
-            this.wardComboBox.Size = new System.Drawing.Size(404, 53);
-            this.wardComboBox.TabIndex = 14;
-            this.wardComboBox.Texts = "";
-            this.wardComboBox.OnSelectedIndexChanged += new System.EventHandler(this.wardComboBox_OnSelectedIndexChanged);
-            // 
-            // districtComboBox
-            // 
-            this.districtComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.districtComboBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.districtComboBox.BorderSize = 1;
-            this.districtComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.districtComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.districtComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.districtComboBox.ForeColor = System.Drawing.Color.DimGray;
-            this.districtComboBox.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.districtComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.districtComboBox.ListTextColor = System.Drawing.Color.DimGray;
-            this.districtComboBox.Location = new System.Drawing.Point(364, 198);
-            this.districtComboBox.MinimumSize = new System.Drawing.Size(200, 30);
-            this.districtComboBox.Name = "districtComboBox";
-            this.districtComboBox.Padding = new System.Windows.Forms.Padding(1);
-            this.districtComboBox.Size = new System.Drawing.Size(404, 50);
-            this.districtComboBox.TabIndex = 12;
-            this.districtComboBox.Texts = "";
-            this.districtComboBox.OnSelectedIndexChanged += new System.EventHandler(this.disctrictComboBox_OnSelectedIndexChanged);
-            // 
-            // buttonSelect
-            // 
-            this.buttonSelect.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.buttonSelect.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.buttonSelect.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonSelect.BorderRadius = 0;
-            this.buttonSelect.BorderSize = 0;
-            this.buttonSelect.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonSelect.FlatAppearance.BorderSize = 0;
-            this.buttonSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSelect.ForeColor = System.Drawing.Color.White;
-            this.buttonSelect.Location = new System.Drawing.Point(320, 0);
-            this.buttonSelect.Name = "buttonSelect";
-            this.buttonSelect.Size = new System.Drawing.Size(23, 50);
-            this.buttonSelect.TabIndex = 7;
-            this.buttonSelect.Text = "V";
-            this.buttonSelect.TextColor = System.Drawing.Color.White;
-            this.buttonSelect.UseVisualStyleBackColor = false;
-            this.buttonSelect.Click += new System.EventHandler(this.buttonSelect_Click);
-            // 
-            // classTextBox
-            // 
-            this.classTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.classTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.classTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.classTextBox.BorderRadius = 0;
-            this.classTextBox.BorderSize = 2;
-            this.classTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.classTextBox.Enabled = false;
-            this.classTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.classTextBox.ForeColor = System.Drawing.Color.Black;
-            this.classTextBox.Location = new System.Drawing.Point(0, 0);
-            this.classTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.classTextBox.Multiline = false;
-            this.classTextBox.Name = "classTextBox";
-            this.classTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.classTextBox.PasswordChar = false;
-            this.classTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.classTextBox.PlaceholderText = "";
-            this.classTextBox.Size = new System.Drawing.Size(343, 36);
-            this.classTextBox.TabIndex = 6;
-            this.classTextBox.Texts = "";
-            this.classTextBox.UnderlinedStyle = false;
-            // 
-            // dobTimePicker
-            // 
-            this.dobTimePicker.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dobTimePicker.BorderSize = 0;
-            this.dobTimePicker.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dobTimePicker.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dobTimePicker.Location = new System.Drawing.Point(3, 198);
-            this.dobTimePicker.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dobTimePicker.Name = "dobTimePicker";
-            this.dobTimePicker.Size = new System.Drawing.Size(355, 35);
-            this.dobTimePicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.dobTimePicker.TabIndex = 3;
-            this.dobTimePicker.TextColor = System.Drawing.Color.White;
-            // 
-            // genderComboBox
-            // 
-            this.genderComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.genderComboBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.genderComboBox.BorderSize = 1;
-            this.genderComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.genderComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.genderComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genderComboBox.ForeColor = System.Drawing.Color.DimGray;
-            this.genderComboBox.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.genderComboBox.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.genderComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.genderComboBox.ListTextColor = System.Drawing.Color.DimGray;
-            this.genderComboBox.Location = new System.Drawing.Point(3, 115);
-            this.genderComboBox.MinimumSize = new System.Drawing.Size(200, 30);
-            this.genderComboBox.Name = "genderComboBox";
-            this.genderComboBox.Padding = new System.Windows.Forms.Padding(1);
-            this.genderComboBox.Size = new System.Drawing.Size(355, 42);
-            this.genderComboBox.TabIndex = 0;
-            this.genderComboBox.Texts = "";
-            // 
-            // tinhTrangComboBox
-            // 
-            this.tinhTrangComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tinhTrangComboBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.tinhTrangComboBox.BorderSize = 1;
-            this.tinhTrangComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tinhTrangComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.tinhTrangComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tinhTrangComboBox.ForeColor = System.Drawing.Color.DimGray;
-            this.tinhTrangComboBox.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.tinhTrangComboBox.Items.AddRange(new object[] {
-            "Đang học",
-            "Học thử",
-            "Mặc định"});
-            this.tinhTrangComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.tinhTrangComboBox.ListTextColor = System.Drawing.Color.DimGray;
-            this.tinhTrangComboBox.Location = new System.Drawing.Point(774, 115);
-            this.tinhTrangComboBox.MinimumSize = new System.Drawing.Size(200, 30);
-            this.tinhTrangComboBox.Name = "tinhTrangComboBox";
-            this.tinhTrangComboBox.Padding = new System.Windows.Forms.Padding(1);
-            this.tinhTrangComboBox.Size = new System.Drawing.Size(343, 42);
-            this.tinhTrangComboBox.TabIndex = 0;
-            this.tinhTrangComboBox.Texts = "";
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.nameTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.nameTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.nameTextBox.BorderRadius = 0;
-            this.nameTextBox.BorderSize = 2;
-            this.nameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nameTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.nameTextBox.Location = new System.Drawing.Point(4, 36);
-            this.nameTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.nameTextBox.Multiline = false;
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.nameTextBox.PasswordChar = false;
-            this.nameTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.nameTextBox.PlaceholderText = "";
-            this.nameTextBox.Size = new System.Drawing.Size(353, 40);
-            this.nameTextBox.TabIndex = 1;
-            this.nameTextBox.Texts = "";
-            this.nameTextBox.UnderlinedStyle = false;
-            // 
-            // diaChiTextBox
-            // 
-            this.diaChiTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.diaChiTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.diaChiTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.diaChiTextBox.BorderRadius = 0;
-            this.diaChiTextBox.BorderSize = 2;
-            this.diaChiTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.diaChiTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.diaChiTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.diaChiTextBox.Location = new System.Drawing.Point(365, 36);
-            this.diaChiTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.diaChiTextBox.Multiline = false;
-            this.diaChiTextBox.Name = "diaChiTextBox";
-            this.diaChiTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.diaChiTextBox.PasswordChar = false;
-            this.diaChiTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.diaChiTextBox.PlaceholderText = "";
-            this.diaChiTextBox.Size = new System.Drawing.Size(402, 40);
-            this.diaChiTextBox.TabIndex = 1;
-            this.diaChiTextBox.Texts = "";
-            this.diaChiTextBox.UnderlinedStyle = false;
-            // 
-            // truongHocTextBox
-            // 
-            this.truongHocTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.truongHocTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.truongHocTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.truongHocTextBox.BorderRadius = 0;
-            this.truongHocTextBox.BorderSize = 2;
-            this.truongHocTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truongHocTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.truongHocTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.truongHocTextBox.Location = new System.Drawing.Point(775, 36);
-            this.truongHocTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.truongHocTextBox.Multiline = false;
-            this.truongHocTextBox.Name = "truongHocTextBox";
-            this.truongHocTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.truongHocTextBox.PasswordChar = false;
-            this.truongHocTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.truongHocTextBox.PlaceholderText = "";
-            this.truongHocTextBox.Size = new System.Drawing.Size(341, 40);
-            this.truongHocTextBox.TabIndex = 1;
-            this.truongHocTextBox.Texts = "";
-            this.truongHocTextBox.UnderlinedStyle = false;
-            // 
-            // cityComboBox
-            // 
-            this.cityComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cityComboBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cityComboBox.BorderSize = 1;
-            this.cityComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cityComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cityComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cityComboBox.ForeColor = System.Drawing.Color.DimGray;
-            this.cityComboBox.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cityComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cityComboBox.ListTextColor = System.Drawing.Color.DimGray;
-            this.cityComboBox.Location = new System.Drawing.Point(364, 115);
-            this.cityComboBox.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cityComboBox.Name = "cityComboBox";
-            this.cityComboBox.Padding = new System.Windows.Forms.Padding(1);
-            this.cityComboBox.Size = new System.Drawing.Size(404, 42);
-            this.cityComboBox.TabIndex = 11;
-            this.cityComboBox.Texts = "";
-            this.cityComboBox.OnSelectedIndexChanged += new System.EventHandler(this.cityComboBox_OnSelectedIndexChanged);
-            // 
-            // numberPhoneTextBox
-            // 
-            this.numberPhoneTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.numberPhoneTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.numberPhoneTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.numberPhoneTextBox.BorderRadius = 0;
-            this.numberPhoneTextBox.BorderSize = 2;
-            this.numberPhoneTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numberPhoneTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numberPhoneTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.numberPhoneTextBox.Location = new System.Drawing.Point(4, 286);
-            this.numberPhoneTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.numberPhoneTextBox.Multiline = false;
-            this.numberPhoneTextBox.Name = "numberPhoneTextBox";
-            this.numberPhoneTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.numberPhoneTextBox.PasswordChar = false;
-            this.numberPhoneTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.numberPhoneTextBox.PlaceholderText = "";
-            this.numberPhoneTextBox.Size = new System.Drawing.Size(353, 36);
-            this.numberPhoneTextBox.TabIndex = 15;
-            this.numberPhoneTextBox.Texts = "";
-            this.numberPhoneTextBox.UnderlinedStyle = false;
             // 
             // saveBtn
             // 

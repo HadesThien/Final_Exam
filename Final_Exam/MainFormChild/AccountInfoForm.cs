@@ -60,9 +60,10 @@ namespace Final_Exam {
             string lastLoginDate= accountGridView.Rows[currentIndex].Cells["lastLoginDate"].Value.ToString();
             string dateCreated = accountGridView.Rows[currentIndex].Cells["dateCreated"].Value.ToString();
             account = new BUS_Account(username,password,DateTime.Parse(dateCreated),DateTime.Parse(lastLoginDate),role,email,numberphone,name);
-            account.remove();
             Form confirmForm = new ConfirmForm();
             confirmForm.ShowDialog();
+            
+            account.remove();
             AccountInfoForm_Load(sender, e);
         }
 

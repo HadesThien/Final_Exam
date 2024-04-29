@@ -112,12 +112,12 @@ namespace Final_Exam {
             if (e.NewValue == CheckState.Checked) {
                 // Thêm giá trị của mục vào TextBox (đảm bảo không trùng lặp)
                 if (!classTextBox.Texts.Contains(selectedItem)) {
-                    classTextBox.Texts += selectedItem + " ";
+                    classTextBox.Texts += selectedItem + ",";
                 }
             }
             else 
             {
-                classTextBox.Texts  = classTextBox.Texts.Replace(selectedItem + " ", "");
+                classTextBox.Texts  = classTextBox.Texts.Replace(selectedItem + ",", "");
             }
         }
     }
