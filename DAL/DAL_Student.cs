@@ -20,8 +20,8 @@ namespace DAL
 
         public void addQuery()
         {
-            string query1 = "INSERT INTO Person VALUES('" + student.Id + "', N'" + student.Name + "', N'" + student.Gender + "', '" + student.Dob.ToString("d") + "')";
-            string query2 = "INSERT INTO Student VALUES('N" + student.School + "', '" + student.Number + "', N'" + student.Street + "', N'" + student.Ward + "', N'" + student.District + "', '" + student.Id + "', '" + student.DateCreated.ToString("d") + "', '" + student.Status + "', '" + student.Note + "')";
+            string query1 = "INSERT INTO Person VALUES('" + student.Id + "', N'" + student.Name + "', N'" + student.Gender + "', '" + student.Dob.ToString("d") + "', '" + student.NumberPhone + "')";
+            string query2 = "INSERT INTO Student VALUES('N" + student.School + "', '" + student.Number + "', N'" + student.Street + "', N'" + student.Ward + "', N'" + student.District + "', '" + student.DateCreated.ToString("d") + "', '" + student.Status + "', '" + student.Note + "', '" + student.Id + "')";
             Connection.actionQuery(query1);
             Connection.actionQuery(query2);
             //string query3 = "";

@@ -18,13 +18,13 @@ namespace DAL
 
         public void addQuery()
         {
-            string query = "INSERT INTO Register VALUES('" + register.AddmissionDay.ToString("d") + "', '" + register.State + "', '" + register.Student.Id + "', '" + register.Class.ClassId + "')";
+            string query = "INSERT INTO Register VALUES('" + register.AddmissionDay.ToString("d") + "', '" + register.Student.Id + "', '" + register.Class.ClassId + "')";
             Connection.actionQuery(query);
         }
 
         public void updateQuery()
         {
-            string query = "UPDATE Register SET admission_day = '" + register.AddmissionDay.ToString("d") + "', state = '" + register.State + "' WHERE studentId = '" + register.Student.Id + "', classId = '" + register.Class.ClassId + "'";
+            string query = "UPDATE Register SET admissionDay = '" + register.AddmissionDay.ToString("d") + "', state = '" + register.State + "' WHERE studentId = '" + register.Student.Id + "', classId = '" + register.Class.ClassId + "'";
             Connection.actionQuery(query);
         }
 

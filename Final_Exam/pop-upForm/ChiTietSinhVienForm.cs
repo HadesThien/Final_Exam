@@ -43,10 +43,10 @@ namespace Final_Exam {
             gioiTinhLabel.Text = dt.Rows[0][2].ToString();
             ngaySinhLabel.Text = dt.Rows[0][3].ToString().Split(' ')[0];
             soDienThoaiLabel.Text = dt.Rows[0][4].ToString();
-            addressLabel.Text = dt.Rows[0][6].ToString() + ", " + dt.Rows[0][7].ToString() + ", " + dt.Rows[0][8].ToString() + ", " + dt.Rows[0][9].ToString() + ", TP.HCM";
-            ngayTaoLabel.Text = dt.Rows[0][11].ToString().Split(' ')[0];
-            tinhTrangLabel.Text = dt.Rows[0][12].ToString();
-            ghiChuLabel.Text = dt.Rows[0][13].ToString();
+            addressLabel.Text = dt.Rows[0][6].ToString() + ", " + dt.Rows[0][7].ToString() + ", " + dt.Rows[0][8].ToString() + ", " + dt.Rows[0][9].ToString();
+            ngayTaoLabel.Text = dt.Rows[0][10].ToString().Split(' ')[0];
+            tinhTrangLabel.Text = dt.Rows[0][11].ToString();
+            ghiChuLabel.Text = dt.Rows[0][12].ToString();
         }
 
         private void ChiTietSinhVienForm_Load(object sender, EventArgs e)

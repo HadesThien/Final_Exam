@@ -8,8 +8,8 @@ namespace DTO {
     public class DTO_Buy {
 
         //Properties
-        public DTO_Student Student {  get; set; }
-        public DTO_Document Document { get; set; }
+        public string StudentId {  get; set; }
+        public string DocumentId { get; set; }
         public DateTime BuyingDate { get; set; }
         public int Number { get; set; }
         public int Price { get; set; }
@@ -20,10 +20,10 @@ namespace DTO {
 
 
         //Constructor
-        public DTO_Buy(DTO_Student s, DTO_Document d, DateTime buyingDate, int n, int p, string status, string month, string note, string id)
+        public DTO_Buy(string s, string d, DateTime buyingDate, int n, int p, string status, string month, string note, string id)
         {
-            Student = s;
-            Document = d;
+            StudentId = s;
+            DocumentId = d;
             BuyingDate = buyingDate;
             Number = n;
             Price = p;

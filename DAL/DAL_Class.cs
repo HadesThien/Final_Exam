@@ -18,13 +18,13 @@ namespace DAL
 
         public void addQuery()
         {
-            string query = "INSERT INTO Class VALUES('" + dto_class.ClassId + "', '" + dto_class.Subject + "', '" + dto_class.Shift + "', " + dto_class.Grade + ", " + dto_class.Price + ", " + dto_class.Number_Of_Session + ", " + dto_class.Number_Of_Student + ", " + dto_class.Date_Created.ToString() + ", '" + dto_class.Id + "')";
+            string query = "INSERT INTO Class VALUES('" + dto_class.ClassId + "', '" + dto_class.Subject + "', '" + dto_class.Shift + "', " + dto_class.Grade + ", " + dto_class.Price + ", " + dto_class.Number_Of_Session + ", " + dto_class.Number_Of_Student + ", " + dto_class.Date_Created.ToString() + ", '" + dto_class.TeacherId + "')";
             Connection.actionQuery(query);
         }
 
         public void updateQuery()
         {
-            string query = "UPDATE Class SET subject = '" + dto_class.Subject + "', shift = '" + dto_class.Shift + "', grade = " + dto_class.Grade + ", price = " + dto_class.Price + ", number_of_session = " + dto_class.Number_Of_Session + ", number_of_student = " + dto_class.Number_Of_Student + ", date_created = " + dto_class.Date_Created.ToString() + ", Id = '" + dto_class.Id + "' WHERE classId = '" + dto_class.ClassId + "'";
+            string query = "UPDATE Class SET subject = '" + dto_class.Subject + "', shift = '" + dto_class.Shift + "', grade = " + dto_class.Grade + ", price = " + dto_class.Price + ", numberOfSession = " + dto_class.Number_Of_Session + ", numberOfStudent = " + dto_class.Number_Of_Student + ", dateCreated = " + dto_class.Date_Created.ToString() + ", teacherId = '" + dto_class.TeacherId + "' WHERE classId = '" + dto_class.ClassId + "'";
             Connection.actionQuery(query);
         }
 

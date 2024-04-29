@@ -11,7 +11,6 @@ namespace DTO {
         public string Name { get; set; }
         public string Gender { get; set; }
         public DateTime Dob { get; set; }
-
         public string NumberPhone { get; set; }
 
         //Constructor

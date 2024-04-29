@@ -8,12 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using BUS_VN;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Final_Exam {
     public partial class GhiDanhForm : Form {
         //Properties 
         List<string> selectedItems = new List<string>();
         string classString = "";
+
+        private BUS_Address address;
 
         //Constructor 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -47,12 +51,58 @@ namespace Final_Exam {
             Console.WriteLine(classTextBox.Text);
         }
 
+        private void defaultForm()
+        {
+            districtComboBox.Enabled = false;
+            wardComboBox.Enabled = false;
+
+            address = new BUS_Address("", "", "");
+            DataTable dt = address.selectCities();
+            cityComboBox.DataSource = dt;
+            cityComboBox.ValueMember = "full_name";
+        }
+
         private void GhiDanhForm_Load(object sender, EventArgs e) {
-            
+            defaultForm();
         }
 
         private void buttonSelect_Click(object sender, EventArgs e) {
             classListBox.Visible = !classListBox.Visible;
+        }
+
+        private void cityComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            DataRowView drv = (DataRowView)cityComboBox.SelectedItem;
+            string valueOfItem = drv["full_name"].ToString();
+
+            address = new BUS_Address(valueOfItem, "", "");
+
+            DataTable dt = address.selectDistricts();
+            districtComboBox.DataSource = dt;
+            districtComboBox.ValueMember = "full_name";
+
+            districtComboBox.Enabled = true;
+
+        }
+
+        private void wardComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void disctrictComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataRowView drv = (DataRowView)districtComboBox.SelectedItem;
+            string valueOfItem = drv["full_name"].ToString();
+
+            address = new BUS_Address("", valueOfItem, "");
+
+            DataTable dt = address.selectWards();
+            wardComboBox.DataSource = dt;
+            wardComboBox.ValueMember = "full_name";
+
+            wardComboBox.Enabled = true;
         }
     }
 }
