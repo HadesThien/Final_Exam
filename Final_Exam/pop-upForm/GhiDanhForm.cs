@@ -10,14 +10,19 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using BUS_VN;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using BUS;
+using System.Windows.Forms.VisualStyles;
 
 namespace Final_Exam {
     public partial class ghiDanhForm : Form {
-        //Properties 
-        List<string> selectedItems = new List<string>();
-        string classString = "";
+        //Properties
 
         private BUS_Address address;
+        private BUS_Student student;
+        private BUS_Class bus_class;
+        private BUS_Register register;
+        private QuanLySinhVienForm svForm;
+        private string id;
 
         //Constructor 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -31,8 +36,9 @@ namespace Final_Exam {
                     int nHeightEllipse // height of ellipse
                 );
 
-        public ghiDanhForm() {
+        public ghiDanhForm(QuanLySinhVienForm svForm) {
             InitializeComponent();
+            this.svForm = svForm;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 30, 30));
         }
 
@@ -54,6 +60,14 @@ namespace Final_Exam {
 
         private void GhiDanhForm_Load(object sender, EventArgs e) {
             defaultForm();
+            student = new BUS_Student("", "", "", DateTime.Now, "", "", "", "", "", "", DateTime.Now, "", "");
+            bus_class = new BUS_Class("", "", "", 0, 0, 0, 0, DateTime.Now, "");
+            foreach (DataRow row in bus_class.getNames().Rows)
+            {
+                classListBox.Items.Add(row[0].ToString());
+            }
+            id = student.getId();
+            idLabel.Text = student.getId();
         }
 
         private void buttonSelect_Click(object sender, EventArgs e) {
@@ -143,6 +157,68 @@ namespace Final_Exam {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin học sinh");
                 return;
             }
+            string[] classes = classTextBox.Texts.Split(new string[] { ", " }, StringSplitOptions.None);
+            if (classes.Length > 4) {
+                MessageBox.Show("Chỉ có thể đăng ký từ 0-4 lớp");
+            }
+            List<string> subjects = new List<string>();
+            List<string> shifts = new List<string>();
+            List<int> grades = new List<int>();
+            foreach (string s in classes)
+            {
+                string[] list = s.Split(' ');
+                subjects.Add(list[0]);
+                string[] list1 = list[1].Split('.');
+                shifts.Add(list1[1]);
+                grades.Add(int.Parse(list1[0]));
+            }
+            foreach (string s in subjects)
+            {
+                Console.WriteLine(s);
+            }
+            foreach (string s in shifts)
+            {
+                Console.WriteLine(s);
+            }
+            foreach (int s in grades)
+            {
+                Console.WriteLine(s);
+            }
+            student = new BUS_Student(id, nameTextBox.Texts, genderComboBox.Texts, dobTimePicker.Value, numberPhoneTextBox.Texts, truongHocTextBox.Texts, diaChiTextBox.Texts, wardComboBox.Texts, districtComboBox.Texts, cityComboBox.Texts, DateTime.Now, tinhTrangComboBox.Texts, ghiChuTextBox.Text);
+            student.addQuery();
+            List<string> ids = new List<string>();
+            for (int i = 0; i < subjects.Count; i++)
+            {
+                bus_class = new BUS_Class("", subjects[i], shifts[i], grades[i], 0, 0, 0, DateTime.Now, "");
+                ids.Add(bus_class.getClassId());
+            }
+            foreach (string s in ids)
+            {
+                register = new BUS_Register(id, s, DateTime.Now);
+                register.addQuery();
+            }
+            svForm.updateGridView(student.basicSelectQuery());
+            this.Close();
+        
+        }
+
+        private void tinhTrangComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            string valueOfItem = tinhTrangComboBox.SelectedItem.ToString();
+
+            if (!valueOfItem.Equals("Đang học"))
+            {
+                classListBox.Enabled = false;
+            }
+            else
+            {
+                classListBox.Enabled = true;
+            }
+        }
+
+        private void classListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

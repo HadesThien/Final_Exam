@@ -47,9 +47,25 @@ namespace DAL
             return Connection.selectQuery(s);
         }
 
+        public DataTable selectId()
+        {
+            string s = "SELECT classId " +
+                       "FROM Class " +
+                       "WHERE subject = N'" + dto_class.Subject + "' AND shift = N'" + dto_class.Shift + "' AND grade = " + dto_class.Grade;
+            Console.WriteLine(s);
+            return Connection.selectQuery(s);
+        }
+
         public DataTable getLatestId()
         {
             string s = "SELECT TOP 1 classId FROM Class ORDER BY classId DESC";
+            return Connection.selectQuery(s);
+        }
+
+        public DataTable getNames()
+        {
+            string s = "SELECT subject + ' ' + cast(grade as varchar) + '.' + shift as name " +
+                       "FROM Class";
             return Connection.selectQuery(s);
         }
     }

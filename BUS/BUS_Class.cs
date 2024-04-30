@@ -41,6 +41,7 @@ namespace BUS
         {
             return dal_class.detailedSelectQuery();
         }
+
         public string getId()
         {
             DataTable tb = dal_class.getLatestId();
@@ -60,6 +61,17 @@ namespace BUS
             {
                 return "LH001";
             }
+        }
+
+        public string getClassId()
+        {
+            DataTable tb = dal_class.selectId();
+            return tb.Rows[0][0].ToString();
+        }
+
+        public DataTable getNames()
+        {
+            return dal_class.getNames();
         }
 
     }
