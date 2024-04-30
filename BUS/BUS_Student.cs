@@ -64,6 +64,11 @@ namespace BUS
             return student.detailedSelectQuery();
         }
 
+        public DataTable selectAllPayment()
+        {
+            return student.selectAllPayment();
+        }
+
         public string getId()
         {
             DataTable tb = student.getLatestId();

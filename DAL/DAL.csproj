@@ -41,9 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL_Buy.cs" />
     <Compile Include="DAL_Account.cs" />
     <Compile Include="Connection.cs" />
+    <Compile Include="DAL_Buy.cs" />
     <Compile Include="DAL_Class.cs" />
     <Compile Include="DAL_Document.cs" />
     <Compile Include="DAL_Payment.cs" />

@@ -11,8 +11,8 @@ namespace BUS
     public class BUS_Buy
     {
         private DAL_Buy buy;
-        public BUS_Buy(DateTime buyingDate, int n, int p, string status, string month, string note, string id, string s, string d) { 
-            buy = new DAL_Buy(s, d, buyingDate, n, p, status, month, note, id);
+        public BUS_Buy(DateTime buyingDate, int n, int p, string status, DateTime period, string note, string id, string s, string d) { 
+            buy = new DAL_Buy(s, d, buyingDate, n, p, status, period, note, id);
         }
 
         public void addQuery()

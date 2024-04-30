@@ -128,7 +128,7 @@ namespace DAL
             return Connection.selectQuery(s);
         }
         public DataTable selectAllPayment() {
-            string s = $"Select p.paymentId, ConCat(c.subject,' ', c.grade, '.' , c.shift) as name, p.period,p.status,p.note,p.dateCreated " +
+            string s = $"Select p.paymentId, c.subject + ' ' + cast(c.grade as varchar) + '.' + cast(c.shift as varchar) as name, p.period,p.status,p.note,p.dateCreated " +
                 $"From Payment p " +
                 $"Join Register r On p.StudentId = r.studentId " +
                 $"Join Class c On r.classId = c.ClassId" +
