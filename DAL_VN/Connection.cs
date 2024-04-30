@@ -13,7 +13,7 @@ namespace DAL_VN
         private static SqlConnection conn;
         public static void connect()
         {
-            string s = "Data Source=TAANS;Initial Catalog=Vietnam;Persist Security Info=True;User ID=ngphctn14;Password=nuttertools123;";
+            string s = "Data Source=TRUONGNHATTHIEN;Initial Catalog=VietNam;Integrated Security=True;";
             conn = new SqlConnection(s);
             conn.Open();
         }

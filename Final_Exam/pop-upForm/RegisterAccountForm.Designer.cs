@@ -38,12 +38,12 @@
             this.numberPhoneTextBox = new CustomControls.RJControls.RJTextBox();
             this.nameTextBox = new CustomControls.RJControls.RJTextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.rjComboBox1 = new CustomControls.RJControls.RJComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.confirmPasswordTextBox = new CustomControls.RJControls.RJTextBox();
             this.alertEmail = new System.Windows.Forms.Label();
             this.alertAccount = new System.Windows.Forms.Label();
             this.alertPassword = new System.Windows.Forms.Label();
-            this.rjComboBox1 = new CustomControls.RJControls.RJComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +51,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(263, 37);
@@ -61,8 +61,8 @@
             // saveBtn
             // 
             this.saveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.saveBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.saveBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.saveBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
             this.saveBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.saveBtn.BorderRadius = 0;
             this.saveBtn.BorderSize = 0;
@@ -81,20 +81,20 @@
             // cancelBtn
             // 
             this.cancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cancelBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cancelBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(241)))));
+            this.cancelBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(241)))));
             this.cancelBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.cancelBtn.BorderRadius = 0;
             this.cancelBtn.BorderSize = 0;
             this.cancelBtn.FlatAppearance.BorderSize = 0;
             this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelBtn.ForeColor = System.Drawing.Color.White;
+            this.cancelBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(91)))), ((int)(((byte)(147)))));
             this.cancelBtn.Location = new System.Drawing.Point(860, 660);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(150, 40);
             this.cancelBtn.TabIndex = 7;
             this.cancelBtn.Text = "Thoát";
-            this.cancelBtn.TextColor = System.Drawing.Color.White;
+            this.cancelBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(91)))), ((int)(((byte)(147)))));
             this.cancelBtn.UseVisualStyleBackColor = false;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
@@ -103,7 +103,7 @@
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(56)))), ((int)(((byte)(144)))));
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -159,7 +159,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(196, 37);
@@ -170,7 +170,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
             this.label3.Location = new System.Drawing.Point(3, 258);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 37);
@@ -181,7 +181,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
             this.label5.Location = new System.Drawing.Point(389, 258);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(193, 37);
@@ -192,7 +192,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
             this.label6.Location = new System.Drawing.Point(775, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 37);
@@ -203,7 +203,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
             this.label7.Location = new System.Drawing.Point(775, 258);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(225, 37);
@@ -304,12 +304,35 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
             this.label4.Location = new System.Drawing.Point(389, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(145, 37);
             this.label4.TabIndex = 0;
             this.label4.Text = "Mật khẩu:";
+            // 
+            // rjComboBox1
+            // 
+            this.rjComboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rjComboBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjComboBox1.BorderSize = 1;
+            this.rjComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.rjComboBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjComboBox1.ForeColor = System.Drawing.Color.DimGray;
+            this.rjComboBox1.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjComboBox1.Items.AddRange(new object[] {
+            "Quản lý ",
+            "Nhân viên",
+            "Giáo viên"});
+            this.rjComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.rjComboBox1.ListTextColor = System.Drawing.Color.DimGray;
+            this.rjComboBox1.Location = new System.Drawing.Point(775, 89);
+            this.rjComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
+            this.rjComboBox1.Name = "rjComboBox1";
+            this.rjComboBox1.Padding = new System.Windows.Forms.Padding(1);
+            this.rjComboBox1.Size = new System.Drawing.Size(380, 30);
+            this.rjComboBox1.TabIndex = 2;
+            this.rjComboBox1.Texts = "";
             // 
             // label8
             // 
@@ -317,7 +340,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(22, 657);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(267, 37);
@@ -352,6 +375,7 @@
             // alertEmail
             // 
             this.alertEmail.AutoSize = true;
+            this.alertEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(56)))), ((int)(((byte)(144)))));
             this.alertEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alertEmail.ForeColor = System.Drawing.Color.Red;
             this.alertEmail.Location = new System.Drawing.Point(178, 503);
@@ -364,6 +388,7 @@
             // alertAccount
             // 
             this.alertAccount.AutoSize = true;
+            this.alertAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(56)))), ((int)(((byte)(144)))));
             this.alertAccount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alertAccount.ForeColor = System.Drawing.Color.Red;
             this.alertAccount.Location = new System.Drawing.Point(232, 243);
@@ -385,34 +410,11 @@
             this.alertPassword.Text = "*Mật khẩu xác nhận không khớp";
             this.alertPassword.Visible = false;
             // 
-            // rjComboBox1
-            // 
-            this.rjComboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox1.BorderSize = 1;
-            this.rjComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.rjComboBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjComboBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.rjComboBox1.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox1.Items.AddRange(new object[] {
-            "Quản lý ",
-            "Nhân viên",
-            "Giáo viên"});
-            this.rjComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox1.ListTextColor = System.Drawing.Color.DimGray;
-            this.rjComboBox1.Location = new System.Drawing.Point(775, 89);
-            this.rjComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
-            this.rjComboBox1.Name = "rjComboBox1";
-            this.rjComboBox1.Padding = new System.Windows.Forms.Padding(1);
-            this.rjComboBox1.Size = new System.Drawing.Size(380, 30);
-            this.rjComboBox1.TabIndex = 6;
-            this.rjComboBox1.Texts = "";
-            // 
             // RegisterAccountForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(56)))), ((int)(((byte)(144)))));
             this.ClientSize = new System.Drawing.Size(1200, 727);
             this.ControlBox = false;
             this.Controls.Add(this.alertAccount);

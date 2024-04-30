@@ -10,8 +10,14 @@ using System.Windows.Forms;
 
 namespace Final_Exam.pop_upForm {
     public partial class RegisterAccountForm : Form {
+        //Properties
+
+
+        //Contructor
         public RegisterAccountForm() {
             InitializeComponent();
+            passwordTextBox.PasswordChar = true;
+            confirmPasswordTextBox.PasswordChar = true;
         }
 
         private void cancelBtn_Click(object sender, EventArgs e) {
