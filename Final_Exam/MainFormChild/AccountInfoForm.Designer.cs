@@ -40,10 +40,11 @@
             this.emailLabel = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.roleLabel = new System.Windows.Forms.Label();
+            this.accountGridView = new Final_Exam.RoundedGridView();
             this.xoaBtn = new CustomControls.RJControls.RJButton();
             this.registerBtn = new CustomControls.RJControls.RJButton();
+            this.updateBtn = new CustomControls.RJControls.RJButton();
             this.changePwBtn = new CustomControls.RJControls.RJButton();
-            this.accountGridView = new Final_Exam.RoundedGridView();
             ((System.ComponentModel.ISupportInitialize)(this.accountGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -199,71 +200,6 @@
             this.roleLabel.TabIndex = 0;
             this.roleLabel.Text = "Role";
             // 
-            // xoaBtn
-            // 
-            this.xoaBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.xoaBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
-            this.xoaBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
-            this.xoaBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.xoaBtn.BorderRadius = 20;
-            this.xoaBtn.BorderSize = 0;
-            this.xoaBtn.FlatAppearance.BorderSize = 0;
-            this.xoaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.xoaBtn.ForeColor = System.Drawing.Color.White;
-            this.xoaBtn.Location = new System.Drawing.Point(1004, 171);
-            this.xoaBtn.Name = "xoaBtn";
-            this.xoaBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.xoaBtn.Size = new System.Drawing.Size(191, 51);
-            this.xoaBtn.TabIndex = 4;
-            this.xoaBtn.Text = "Xóa";
-            this.xoaBtn.TextColor = System.Drawing.Color.White;
-            this.xoaBtn.UseVisualStyleBackColor = false;
-            this.xoaBtn.Visible = false;
-            this.xoaBtn.Click += new System.EventHandler(this.xoaBtn_Click);
-            // 
-            // registerBtn
-            // 
-            this.registerBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.registerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
-            this.registerBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
-            this.registerBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.registerBtn.BorderRadius = 20;
-            this.registerBtn.BorderSize = 0;
-            this.registerBtn.FlatAppearance.BorderSize = 0;
-            this.registerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registerBtn.ForeColor = System.Drawing.Color.White;
-            this.registerBtn.Location = new System.Drawing.Point(1004, 56);
-            this.registerBtn.Name = "registerBtn";
-            this.registerBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.registerBtn.Size = new System.Drawing.Size(191, 51);
-            this.registerBtn.TabIndex = 4;
-            this.registerBtn.Text = "Đăng ký ";
-            this.registerBtn.TextColor = System.Drawing.Color.White;
-            this.registerBtn.UseVisualStyleBackColor = false;
-            this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
-            // 
-            // changePwBtn
-            // 
-            this.changePwBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.changePwBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
-            this.changePwBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
-            this.changePwBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.changePwBtn.BorderRadius = 20;
-            this.changePwBtn.BorderSize = 0;
-            this.changePwBtn.FlatAppearance.BorderSize = 0;
-            this.changePwBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.changePwBtn.ForeColor = System.Drawing.Color.White;
-            this.changePwBtn.Location = new System.Drawing.Point(1004, 113);
-            this.changePwBtn.Name = "changePwBtn";
-            this.changePwBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.changePwBtn.Size = new System.Drawing.Size(191, 51);
-            this.changePwBtn.TabIndex = 5;
-            this.changePwBtn.Text = "Đổi mật khẩu";
-            this.changePwBtn.TextColor = System.Drawing.Color.White;
-            this.changePwBtn.UseVisualStyleBackColor = false;
-            this.changePwBtn.Visible = false;
-            this.changePwBtn.Click += new System.EventHandler(this.changePwBtn_Click);
-            // 
             // accountGridView
             // 
             this.accountGridView.AllowUserToAddRows = false;
@@ -324,6 +260,94 @@
             this.accountGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.accountGridView.Size = new System.Drawing.Size(1167, 523);
             this.accountGridView.TabIndex = 11;
+            this.accountGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.accountGridView_CellClick);
+            // 
+            // xoaBtn
+            // 
+            this.xoaBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.xoaBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.xoaBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.xoaBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.xoaBtn.BorderRadius = 20;
+            this.xoaBtn.BorderSize = 0;
+            this.xoaBtn.FlatAppearance.BorderSize = 0;
+            this.xoaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.xoaBtn.ForeColor = System.Drawing.Color.White;
+            this.xoaBtn.Location = new System.Drawing.Point(800, 132);
+            this.xoaBtn.Name = "xoaBtn";
+            this.xoaBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.xoaBtn.Size = new System.Drawing.Size(191, 51);
+            this.xoaBtn.TabIndex = 4;
+            this.xoaBtn.Text = "Xóa";
+            this.xoaBtn.TextColor = System.Drawing.Color.White;
+            this.xoaBtn.UseVisualStyleBackColor = false;
+            this.xoaBtn.Visible = false;
+            this.xoaBtn.Click += new System.EventHandler(this.xoaBtn_Click);
+            // 
+            // registerBtn
+            // 
+            this.registerBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.registerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.registerBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.registerBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.registerBtn.BorderRadius = 20;
+            this.registerBtn.BorderSize = 0;
+            this.registerBtn.FlatAppearance.BorderSize = 0;
+            this.registerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registerBtn.ForeColor = System.Drawing.Color.White;
+            this.registerBtn.Location = new System.Drawing.Point(997, 132);
+            this.registerBtn.Name = "registerBtn";
+            this.registerBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.registerBtn.Size = new System.Drawing.Size(191, 51);
+            this.registerBtn.TabIndex = 4;
+            this.registerBtn.Text = "Đăng ký ";
+            this.registerBtn.TextColor = System.Drawing.Color.White;
+            this.registerBtn.UseVisualStyleBackColor = false;
+            this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
+            // 
+            // updateBtn
+            // 
+            this.updateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.updateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.updateBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.updateBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.updateBtn.BorderRadius = 20;
+            this.updateBtn.BorderSize = 0;
+            this.updateBtn.FlatAppearance.BorderSize = 0;
+            this.updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateBtn.ForeColor = System.Drawing.Color.White;
+            this.updateBtn.Location = new System.Drawing.Point(603, 132);
+            this.updateBtn.Name = "updateBtn";
+            this.updateBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.updateBtn.Size = new System.Drawing.Size(191, 51);
+            this.updateBtn.TabIndex = 5;
+            this.updateBtn.Text = "Sửa thông tin";
+            this.updateBtn.TextColor = System.Drawing.Color.White;
+            this.updateBtn.UseVisualStyleBackColor = false;
+            this.updateBtn.Visible = false;
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
+            // 
+            // changePwBtn
+            // 
+            this.changePwBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.changePwBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.changePwBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.changePwBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.changePwBtn.BorderRadius = 20;
+            this.changePwBtn.BorderSize = 0;
+            this.changePwBtn.FlatAppearance.BorderSize = 0;
+            this.changePwBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changePwBtn.ForeColor = System.Drawing.Color.White;
+            this.changePwBtn.Location = new System.Drawing.Point(406, 132);
+            this.changePwBtn.Name = "changePwBtn";
+            this.changePwBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.changePwBtn.Size = new System.Drawing.Size(191, 51);
+            this.changePwBtn.TabIndex = 5;
+            this.changePwBtn.Text = "Đổi mật khẩu";
+            this.changePwBtn.TextColor = System.Drawing.Color.White;
+            this.changePwBtn.UseVisualStyleBackColor = false;
+            this.changePwBtn.Visible = false;
+            this.changePwBtn.Click += new System.EventHandler(this.changePwBtn_Click);
             // 
             // AccountInfoForm
             // 
@@ -345,6 +369,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.registerBtn);
+            this.Controls.Add(this.updateBtn);
             this.Controls.Add(this.changePwBtn);
             this.Controls.Add(this.roleLabel);
             this.Controls.Add(this.label10);
@@ -377,5 +402,6 @@
         private System.Windows.Forms.Label roleLabel;
         private CustomControls.RJControls.RJButton xoaBtn;
         private RoundedGridView accountGridView;
+        private CustomControls.RJControls.RJButton updateBtn;
     }
 }

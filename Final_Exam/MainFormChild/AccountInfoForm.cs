@@ -46,6 +46,7 @@ namespace Final_Exam {
             if(Account.account.getRole() == "admin") {
                 changePwBtn.Visible = true;
                 xoaBtn.Visible = true;
+                updateBtn.Visible = true;
                 currentIndex = e.RowIndex;
             }
         }
@@ -82,7 +83,23 @@ namespace Final_Exam {
             if(Account.account.getRole()  != "admin") {
                 registerBtn.Visible = false;
                 accountGridView.Visible = false;    
+                updateBtn.Visible = false;
             }
          }
+
+        private void updateBtn_Click(object sender, EventArgs e) {
+            string username = accountGridView.Rows[currentIndex].Cells["username"].Value.ToString();
+            string password = accountGridView.Rows[currentIndex].Cells["password"].Value.ToString();
+            string role = accountGridView.Rows[currentIndex].Cells["role"].Value.ToString();
+            string numberphone = accountGridView.Rows[currentIndex].Cells["numberPhone"].Value.ToString();
+            string email = accountGridView.Rows[currentIndex].Cells["email"].Value.ToString();
+            string name = accountGridView.Rows[currentIndex].Cells["name"].Value.ToString();
+            string lastLoginDate= accountGridView.Rows[currentIndex].Cells["lastLoginDate"].Value.ToString();
+            string dateCreated = accountGridView.Rows[currentIndex].Cells["dateCreated"].Value.ToString();
+            account = new BUS_Account(username,password,DateTime.Parse(dateCreated),DateTime.Parse(lastLoginDate),role,email,numberphone,name);
+            Form form = new RegisterAccountForm(account);
+            form.ShowDialog();
+            AccountInfoForm_Load(sender, e);
+        }
     }
 }

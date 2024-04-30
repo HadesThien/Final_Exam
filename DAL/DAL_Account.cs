@@ -27,7 +27,7 @@ namespace DAL
             string query = "UPDATE Account SET password = '" + account.Password + "', dateCreated =  '" + account.DateCreated.ToString("yyyy/MM/dd")
                 + "', lastLoginDate = '" + account.LastLoginDate.ToString("yyyy/MM/dd")
                 +"', role = '" + account.Role + "', email = '" + account.Email +"', numberPhone = '"+ account.NumberPhone
-                + "',name = '"+account.Name+"'  WHERE username = '" + account.UserName + "'";
+                + "',name = N'"+account.Name+"'  WHERE username = '" + account.UserName + "'";
             Connection.actionQuery(query);
         }
 

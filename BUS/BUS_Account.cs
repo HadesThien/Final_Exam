@@ -29,6 +29,9 @@ namespace BUS
         public void addAccount() {
             account.addQuery();
         }
+        public void updateAccount() {
+            account.updateQuery();
+        }
         
 
         //Get set methods

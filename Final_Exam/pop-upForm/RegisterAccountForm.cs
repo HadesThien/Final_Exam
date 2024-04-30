@@ -20,6 +20,22 @@ namespace Final_Exam.pop_upForm {
             passwordTextBox.PasswordChar = true;
             confirmPasswordTextBox.PasswordChar = true;
         }
+        public RegisterAccountForm( BUS_Account account ) {
+            InitializeComponent();
+            this.account = account;
+            passwordTextBox.PasswordChar = true;
+            confirmPasswordTextBox.PasswordChar = true;
+            accountTextBox.Texts = account.getUsername();
+            accountTextBox.Enabled = false;
+            passwordTextBox.Texts= account.getPassword();
+            passwordTextBox.Enabled = false;
+            roleComboBox.Texts = account.getRole();
+            emailTextBox.Texts = account.getEmail();
+            numberPhoneTextBox.Texts = account.getNumberphone();
+            nameTextBox.Texts = account.getName();
+            confirmPasswordTextBox.Enabled = false;
+            saveBtn.Text = "Cập nhật";
+        }
 
         private void cancelBtn_Click(object sender, EventArgs e) {
             this.Close();
@@ -37,7 +53,7 @@ namespace Final_Exam.pop_upForm {
 
 
         private void saveBtn_Click(object sender, EventArgs e) {
-            if(alertPassword.Visible && alertEmail.Visible && alertEmail.Visible && alertNumberphone.Visible && alertName.Visible ) 
+            if(alertPassword.Visible || alertEmail.Visible || alertEmail.Visible || alertNumberphone.Visible || alertName.Visible  && saveBtn.Text =="Lưu") 
             {
                 MessageBox.Show("Không thể tạo tại khoản, vui lòng điền thông tin hợp lệ", "Thông báo tài khoản đang tạo!", MessageBoxButtons.OK);
             }else
@@ -50,7 +66,8 @@ namespace Final_Exam.pop_upForm {
                 string numberphone =numberPhoneTextBox.Texts.Trim();
                 string name = nameTextBox.Texts.Trim();
                 account = new BUS_Account(username,password,DateTime.Now,DateTime.Now, role, email, numberphone, name);
-                account.addAccount();
+                if(saveBtn.Text == "Lưu") account.addAccount();
+                if (saveBtn.Text == "Cập nhật") account.updateAccount();
                 this.Close();
             }
         }
