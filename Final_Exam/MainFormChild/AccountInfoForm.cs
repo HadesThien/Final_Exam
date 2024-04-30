@@ -15,12 +15,12 @@ namespace Final_Exam {
         //Properties 
         BUS_Account account;
         private int currentIndex;
-
+        DataTable dt; 
 
         //Contructors 
         public AccountInfoForm() {
             InitializeComponent();
-
+            
         }
 
         private void registerBtn_Click(object sender, EventArgs e) {
@@ -71,7 +71,17 @@ namespace Final_Exam {
 
         private void AccountInfoForm_Load(object sender, EventArgs e) {
             account = new BUS_Account("", "",DateTime.Now,DateTime.Now,"","","","") ;
-            accountGridView.DataSource = account.showAccounts();
+            dt = account.showAccounts();
+            dt.Columns[0].ColumnName = "Tên đăng nhập";
+            dt.Columns[1].ColumnName = "Mật khẩu";
+            dt.Columns[2].ColumnName = "Quyền";
+            dt.Columns[3].ColumnName = "Email";
+            dt.Columns[4].ColumnName = "Số điện thoại";
+            dt.Columns[5].ColumnName = "Tên người dùng";
+            dt.Columns[6].ColumnName = "Sử dụng gần đây";
+            dt.Columns[7].ColumnName = "Ngày tạo";
+
+            accountGridView.DataSource = dt;
             accountGridView.ClearSelection();
             //Set information of Account 
             accountLabel.Text = Account.account.getUsername();

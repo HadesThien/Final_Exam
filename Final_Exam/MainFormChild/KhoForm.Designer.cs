@@ -252,7 +252,7 @@
             this.studentGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.studentGridView.EnableHeadersVisualStyles = false;
             this.studentGridView.GridColor = System.Drawing.Color.GhostWhite;
-            this.studentGridView.Location = new System.Drawing.Point(17, 148);
+            this.studentGridView.Location = new System.Drawing.Point(17, 157);
             this.studentGridView.Name = "studentGridView";
             this.studentGridView.RowHeadersVisible = false;
             this.studentGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;

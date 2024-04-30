@@ -152,7 +152,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(234)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(558, 286);
             this.ControlBox = false;
             this.Controls.Add(this.alert);

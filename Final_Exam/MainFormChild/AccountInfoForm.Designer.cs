@@ -238,7 +238,7 @@
             this.accountGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.accountGridView.EnableHeadersVisualStyles = false;
             this.accountGridView.GridColor = System.Drawing.Color.GhostWhite;
-            this.accountGridView.Location = new System.Drawing.Point(21, 228);
+            this.accountGridView.Location = new System.Drawing.Point(20, 228);
             this.accountGridView.MultiSelect = false;
             this.accountGridView.Name = "accountGridView";
             this.accountGridView.ReadOnly = true;
@@ -258,7 +258,7 @@
             this.accountGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.accountGridView.RowTemplate.DividerHeight = 1;
             this.accountGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.accountGridView.Size = new System.Drawing.Size(1167, 523);
+            this.accountGridView.Size = new System.Drawing.Size(1167, 487);
             this.accountGridView.TabIndex = 11;
             this.accountGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.accountGridView_CellClick);
             // 

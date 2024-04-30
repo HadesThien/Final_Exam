@@ -73,7 +73,7 @@ CREATE TABLE Account
   password VARCHAR(20) NOT NULL,
   dateCreated DATE NOT NULL,
   username VARCHAR(20) NOT NULL,
-  lastLoginDate DATE NOT NULL,
+  lastLoginDate DATETIME NOT NULL,
   role NVARCHAR(20) NOT NULL,
   email VARCHAR(50) NOT NULL,
   numberPhone VARCHAR(11) NOT NULL,
