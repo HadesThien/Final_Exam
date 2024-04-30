@@ -67,7 +67,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, -5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(396, 50);
+            this.label1.Size = new System.Drawing.Size(311, 40);
             this.label1.TabIndex = 2;
             this.label1.Text = "GHI DANH HỌC SINH";
             // 
@@ -76,7 +76,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 28);
+            this.label2.Size = new System.Drawing.Size(80, 21);
             this.label2.TabIndex = 4;
             this.label2.Text = "Họ và tên";
             // 
@@ -85,7 +85,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(3, 82);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 28);
+            this.label3.Size = new System.Drawing.Size(71, 21);
             this.label3.TabIndex = 4;
             this.label3.Text = "Giới tính";
             // 
@@ -314,7 +314,7 @@
             this.wardComboBox.Name = "wardComboBox";
             this.wardComboBox.Padding = new System.Windows.Forms.Padding(1);
             this.wardComboBox.Size = new System.Drawing.Size(404, 53);
-            this.wardComboBox.TabIndex = 14;
+            this.wardComboBox.TabIndex = 10;
             this.wardComboBox.Texts = "";
             this.wardComboBox.OnSelectedIndexChanged += new System.EventHandler(this.wardComboBox_OnSelectedIndexChanged);
             // 
@@ -335,7 +335,7 @@
             this.districtComboBox.Name = "districtComboBox";
             this.districtComboBox.Padding = new System.Windows.Forms.Padding(1);
             this.districtComboBox.Size = new System.Drawing.Size(404, 50);
-            this.districtComboBox.TabIndex = 12;
+            this.districtComboBox.TabIndex = 7;
             this.districtComboBox.Texts = "";
             this.districtComboBox.OnSelectedIndexChanged += new System.EventHandler(this.disctrictComboBox_OnSelectedIndexChanged);
             // 
@@ -378,8 +378,8 @@
             this.classTextBox.PasswordChar = false;
             this.classTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.classTextBox.PlaceholderText = "";
-            this.classTextBox.Size = new System.Drawing.Size(343, 43);
-            this.classTextBox.TabIndex = 6;
+            this.classTextBox.Size = new System.Drawing.Size(343, 36);
+            this.classTextBox.TabIndex = 8;
             this.classTextBox.Texts = "";
             this.classTextBox.UnderlinedStyle = false;
             // 
@@ -394,7 +394,7 @@
             this.dobTimePicker.Name = "dobTimePicker";
             this.dobTimePicker.Size = new System.Drawing.Size(355, 35);
             this.dobTimePicker.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.dobTimePicker.TabIndex = 3;
+            this.dobTimePicker.TabIndex = 6;
             this.dobTimePicker.TextColor = System.Drawing.Color.White;
             // 
             // genderComboBox
@@ -417,7 +417,7 @@
             this.genderComboBox.Name = "genderComboBox";
             this.genderComboBox.Padding = new System.Windows.Forms.Padding(1);
             this.genderComboBox.Size = new System.Drawing.Size(355, 42);
-            this.genderComboBox.TabIndex = 0;
+            this.genderComboBox.TabIndex = 3;
             this.genderComboBox.Texts = "";
             // 
             // tinhTrangComboBox
@@ -441,7 +441,7 @@
             this.tinhTrangComboBox.Name = "tinhTrangComboBox";
             this.tinhTrangComboBox.Padding = new System.Windows.Forms.Padding(1);
             this.tinhTrangComboBox.Size = new System.Drawing.Size(343, 42);
-            this.tinhTrangComboBox.TabIndex = 0;
+            this.tinhTrangComboBox.TabIndex = 5;
             this.tinhTrangComboBox.Texts = "";
             this.tinhTrangComboBox.OnSelectedIndexChanged += new System.EventHandler(this.tinhTrangComboBox_OnSelectedIndexChanged);
             // 
@@ -463,8 +463,8 @@
             this.nameTextBox.PasswordChar = false;
             this.nameTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.nameTextBox.PlaceholderText = "";
-            this.nameTextBox.Size = new System.Drawing.Size(353, 47);
-            this.nameTextBox.TabIndex = 1;
+            this.nameTextBox.Size = new System.Drawing.Size(353, 40);
+            this.nameTextBox.TabIndex = 0;
             this.nameTextBox.Texts = "";
             this.nameTextBox.UnderlinedStyle = false;
             // 
@@ -486,7 +486,7 @@
             this.diaChiTextBox.PasswordChar = false;
             this.diaChiTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.diaChiTextBox.PlaceholderText = "";
-            this.diaChiTextBox.Size = new System.Drawing.Size(402, 47);
+            this.diaChiTextBox.Size = new System.Drawing.Size(402, 40);
             this.diaChiTextBox.TabIndex = 1;
             this.diaChiTextBox.Texts = "";
             this.diaChiTextBox.UnderlinedStyle = false;
@@ -509,8 +509,8 @@
             this.truongHocTextBox.PasswordChar = false;
             this.truongHocTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.truongHocTextBox.PlaceholderText = "";
-            this.truongHocTextBox.Size = new System.Drawing.Size(341, 47);
-            this.truongHocTextBox.TabIndex = 1;
+            this.truongHocTextBox.Size = new System.Drawing.Size(341, 40);
+            this.truongHocTextBox.TabIndex = 2;
             this.truongHocTextBox.Texts = "";
             this.truongHocTextBox.UnderlinedStyle = false;
             // 
@@ -531,7 +531,7 @@
             this.cityComboBox.Name = "cityComboBox";
             this.cityComboBox.Padding = new System.Windows.Forms.Padding(1);
             this.cityComboBox.Size = new System.Drawing.Size(404, 42);
-            this.cityComboBox.TabIndex = 11;
+            this.cityComboBox.TabIndex = 4;
             this.cityComboBox.Texts = "";
             this.cityComboBox.OnSelectedIndexChanged += new System.EventHandler(this.cityComboBox_OnSelectedIndexChanged);
             // 
@@ -553,8 +553,8 @@
             this.numberPhoneTextBox.PasswordChar = false;
             this.numberPhoneTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.numberPhoneTextBox.PlaceholderText = "";
-            this.numberPhoneTextBox.Size = new System.Drawing.Size(353, 43);
-            this.numberPhoneTextBox.TabIndex = 15;
+            this.numberPhoneTextBox.Size = new System.Drawing.Size(353, 36);
+            this.numberPhoneTextBox.TabIndex = 9;
             this.numberPhoneTextBox.Texts = "";
             this.numberPhoneTextBox.UnderlinedStyle = false;
             // 
@@ -574,7 +574,7 @@
             this.saveBtn.Location = new System.Drawing.Point(951, 597);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(150, 40);
-            this.saveBtn.TabIndex = 5;
+            this.saveBtn.TabIndex = 12;
             this.saveBtn.Text = "Lưu";
             this.saveBtn.TextColor = System.Drawing.Color.White;
             this.saveBtn.UseVisualStyleBackColor = false;
@@ -597,14 +597,14 @@
             this.rjTextBox1.PasswordChar = false;
             this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.rjTextBox1.PlaceholderText = "";
-            this.rjTextBox1.Size = new System.Drawing.Size(250, 35);
+            this.rjTextBox1.Size = new System.Drawing.Size(250, 31);
             this.rjTextBox1.TabIndex = 0;
             this.rjTextBox1.Texts = "";
             this.rjTextBox1.UnderlinedStyle = false;
             // 
             // ghiDanhForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 653);

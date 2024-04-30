@@ -61,8 +61,8 @@
             // searchBtn
             // 
             this.searchBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchBtn.BackColor = System.Drawing.Color.RoyalBlue;
-            this.searchBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.searchBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.searchBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
             this.searchBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.searchBtn.BorderRadius = 12;
             this.searchBtn.BorderSize = 0;
@@ -81,8 +81,8 @@
             // filterBtn
             // 
             this.filterBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.filterBtn.BackColor = System.Drawing.Color.RoyalBlue;
-            this.filterBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.filterBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.filterBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
             this.filterBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.filterBtn.BorderRadius = 12;
             this.filterBtn.BorderSize = 0;
@@ -101,8 +101,8 @@
             // createBtn
             // 
             this.createBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.createBtn.BackColor = System.Drawing.Color.RoyalBlue;
-            this.createBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.createBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.createBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
             this.createBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.createBtn.BorderRadius = 12;
             this.createBtn.BorderSize = 0;
@@ -124,8 +124,8 @@
             // settingBtn
             // 
             this.settingBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.settingBtn.BackColor = System.Drawing.Color.RoyalBlue;
-            this.settingBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.settingBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.settingBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
             this.settingBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.settingBtn.BorderRadius = 12;
             this.settingBtn.BorderSize = 0;
@@ -203,10 +203,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
             this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 32);
+            this.label1.Size = new System.Drawing.Size(149, 40);
             this.label1.TabIndex = 16;
             this.label1.Text = "Đề cương";
             // 
@@ -251,7 +252,7 @@
             this.studentGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.studentGridView.EnableHeadersVisualStyles = false;
             this.studentGridView.GridColor = System.Drawing.Color.GhostWhite;
-            this.studentGridView.Location = new System.Drawing.Point(17, 148);
+            this.studentGridView.Location = new System.Drawing.Point(17, 157);
             this.studentGridView.Name = "studentGridView";
             this.studentGridView.RowHeadersVisible = false;
             this.studentGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
@@ -298,8 +299,8 @@
             // rjButton1
             // 
             this.rjButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjButton1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
             this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.rjButton1.BorderRadius = 12;
             this.rjButton1.BorderSize = 0;
@@ -321,7 +322,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.tatcaBtn);
             this.Controls.Add(this.daDongBtn);

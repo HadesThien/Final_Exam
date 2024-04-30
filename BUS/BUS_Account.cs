@@ -26,6 +26,15 @@ namespace BUS
             account.setPassword(newPassword);
             account.updateQuery();
         }
+        public void addAccount() {
+            account.addQuery();
+        }
+        public void updateAccount() {
+            account.updateQuery();
+        }
+        
+
+        //Get set methods
         public string getUsername() {
             return account.getUsername();
         }

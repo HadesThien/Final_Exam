@@ -65,8 +65,8 @@
             // searchBtn
             // 
             this.searchBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchBtn.BackColor = System.Drawing.Color.RoyalBlue;
-            this.searchBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.searchBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.searchBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
             this.searchBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.searchBtn.BorderRadius = 12;
             this.searchBtn.BorderSize = 0;
@@ -86,8 +86,8 @@
             // filterBtn
             // 
             this.filterBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.filterBtn.BackColor = System.Drawing.Color.RoyalBlue;
-            this.filterBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.filterBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.filterBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
             this.filterBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.filterBtn.BorderRadius = 12;
             this.filterBtn.BorderSize = 0;
@@ -107,8 +107,8 @@
             // createBtn
             // 
             this.createBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.createBtn.BackColor = System.Drawing.Color.RoyalBlue;
-            this.createBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.createBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.createBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
             this.createBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.createBtn.BorderRadius = 12;
             this.createBtn.BorderSize = 0;
@@ -130,8 +130,8 @@
             // settingBtn
             // 
             this.settingBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.settingBtn.BackColor = System.Drawing.Color.RoyalBlue;
-            this.settingBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.settingBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.settingBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
             this.settingBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.settingBtn.BorderRadius = 12;
             this.settingBtn.BorderSize = 0;
@@ -207,10 +207,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
             this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 32);
+            this.label1.Size = new System.Drawing.Size(266, 40);
             this.label1.TabIndex = 10;
             this.label1.Text = "Danh sách lớp học";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -304,7 +305,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(91)))), ((int)(((byte)(147)))));
             this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.createBtn);
             this.Controls.Add(this.searchBtn);

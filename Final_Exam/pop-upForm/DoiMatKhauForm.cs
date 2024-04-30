@@ -26,5 +26,25 @@ namespace Final_Exam.pop_upForm {
             account.changePassword(newPassword);
             this.Close();
         }
+
+        private void DoiMatKhauForm_Load(object sender, EventArgs e) {
+            passwordTextbox.PasswordChar = true;
+            confirmTextBox.PasswordChar = true;
+            alert.Visible = false;
+        }
+
+        private void confirmTextBox_Leave(object sender, EventArgs e) {
+            if(confirmTextBox.Texts != passwordTextbox.Texts) {
+                alert.Visible = true;
+            }
+        }
+
+        private void confirmTextBox_KeyPress(object sender, KeyPressEventArgs e) {
+            alert.Visible = false;
+        }
+
+        private void confirmTextBox_KeyDown(object sender, KeyEventArgs e) {
+            if(e.KeyCode == Keys.Enter) saveBtn_Click(sender, e);
+        }
     }
 }

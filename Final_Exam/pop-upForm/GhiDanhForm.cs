@@ -97,9 +97,7 @@ namespace Final_Exam {
         {
             DataRowView drv = (DataRowView)districtComboBox.SelectedItem;
             string valueOfItem = drv["full_name"].ToString();
-
             address = new BUS_Address("", valueOfItem, "");
-
             DataTable dt = address.selectWards();
             wardComboBox.DataSource = dt;
             wardComboBox.ValueMember = "full_name";
@@ -116,12 +114,8 @@ namespace Final_Exam {
         }
 
         private void classListBox_ItemCheck(object sender, ItemCheckEventArgs e) {
-            // Lấy ra giá trị của mục được chọn
             string selectedItem = classListBox.Items[e.Index].ToString();
-
-            // Nếu mục đó được chọn
             if (e.NewValue == CheckState.Checked) {
-                // Thêm giá trị của mục vào TextBox (đảm bảo không trùng lặp)
                 if (classTextBox.Texts.Equals(""))
                 {
                     classTextBox.Texts += selectedItem;

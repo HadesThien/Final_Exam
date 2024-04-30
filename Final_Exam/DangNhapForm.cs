@@ -49,14 +49,15 @@ namespace Final_Exam {
         public void kiemTraTaiKhoan(string account, string password) {
             foreach(DataRow row in tableAccount.Rows) {
                 if (account == row[0].ToString() && password == row[1].ToString()) isLogin = true;
-                if (isLogin) { 
-                    DateTime lastLoginDate = DateTime.Parse(row[6].ToString());
+                if (isLogin) {
+                    DateTime lastLoginDate = DateTime.Now;
                     DateTime dateCreated = DateTime.Parse(row[7].ToString());
                     string role = row[2].ToString();
                     string email = row[3].ToString();
                     string numberphone = row[4].ToString();
                     string name = row[5].ToString();
-                    Account.account = new BUS_Account(account, password,lastLoginDate,dateCreated,role,email,numberphone,name);
+                    Account.account = new BUS_Account(account, password,dateCreated,lastLoginDate,role,email,numberphone,name);
+                    Account.account.updateAccount();
                     break; 
                 }
             }
@@ -81,6 +82,18 @@ namespace Final_Exam {
                 e.Handled = true;
                 dangNhapBtn_Click(sender, e);
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e) {
+
+        }
+
+        private void DangNhapForm_Load(object sender, EventArgs e) {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e) {
+
         }
     }
 }

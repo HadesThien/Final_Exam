@@ -15,12 +15,12 @@ namespace Final_Exam {
         //Properties 
         BUS_Account account;
         private int currentIndex;
-
+        DataTable dt; 
 
         //Contructors 
         public AccountInfoForm() {
             InitializeComponent();
-
+            
         }
 
         private void registerBtn_Click(object sender, EventArgs e) {
@@ -46,6 +46,7 @@ namespace Final_Exam {
             if(Account.account.getRole() == "admin") {
                 changePwBtn.Visible = true;
                 xoaBtn.Visible = true;
+                updateBtn.Visible = true;
                 currentIndex = e.RowIndex;
             }
         }
@@ -70,7 +71,17 @@ namespace Final_Exam {
 
         private void AccountInfoForm_Load(object sender, EventArgs e) {
             account = new BUS_Account("", "",DateTime.Now,DateTime.Now,"","","","") ;
-            accountGridView.DataSource = account.showAccounts();
+            dt = account.showAccounts();
+            dt.Columns[0].ColumnName = "Tên đăng nhập";
+            dt.Columns[1].ColumnName = "Mật khẩu";
+            dt.Columns[2].ColumnName = "Quyền";
+            dt.Columns[3].ColumnName = "Email";
+            dt.Columns[4].ColumnName = "Số điện thoại";
+            dt.Columns[5].ColumnName = "Tên người dùng";
+            dt.Columns[6].ColumnName = "Sử dụng gần đây";
+            dt.Columns[7].ColumnName = "Ngày tạo";
+
+            accountGridView.DataSource = dt;
             accountGridView.ClearSelection();
             //Set information of Account 
             accountLabel.Text = Account.account.getUsername();
@@ -82,7 +93,23 @@ namespace Final_Exam {
             if(Account.account.getRole()  != "admin") {
                 registerBtn.Visible = false;
                 accountGridView.Visible = false;    
+                updateBtn.Visible = false;
             }
          }
+
+        private void updateBtn_Click(object sender, EventArgs e) {
+            string username = accountGridView.Rows[currentIndex].Cells["username"].Value.ToString();
+            string password = accountGridView.Rows[currentIndex].Cells["password"].Value.ToString();
+            string role = accountGridView.Rows[currentIndex].Cells["role"].Value.ToString();
+            string numberphone = accountGridView.Rows[currentIndex].Cells["numberPhone"].Value.ToString();
+            string email = accountGridView.Rows[currentIndex].Cells["email"].Value.ToString();
+            string name = accountGridView.Rows[currentIndex].Cells["name"].Value.ToString();
+            string lastLoginDate= accountGridView.Rows[currentIndex].Cells["lastLoginDate"].Value.ToString();
+            string dateCreated = accountGridView.Rows[currentIndex].Cells["dateCreated"].Value.ToString();
+            account = new BUS_Account(username,password,DateTime.Parse(dateCreated),DateTime.Parse(lastLoginDate),role,email,numberphone,name);
+            Form form = new RegisterAccountForm(account);
+            form.ShowDialog();
+            AccountInfoForm_Load(sender, e);
+        }
     }
 }

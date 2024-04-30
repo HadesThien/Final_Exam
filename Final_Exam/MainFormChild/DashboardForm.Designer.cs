@@ -34,7 +34,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.roundedPanel5 = new Final_Exam.RoundedPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.header1 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.roundedPanel6 = new Final_Exam.RoundedPanel();
@@ -42,57 +42,58 @@
             this.label13 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.roundedPanel7 = new Final_Exam.RoundedPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.header2 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.roundedPanel1 = new Final_Exam.RoundedPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.studentLabel = new System.Windows.Forms.Label();
-            this.roundedPanel4 = new Final_Exam.RoundedPanel();
+            this.debtPanel = new Final_Exam.RoundedPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.roundedPanel2 = new Final_Exam.RoundedPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.roundedPanel3 = new Final_Exam.RoundedPanel();
+            this.revenuePanel = new Final_Exam.RoundedPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.dobPanel = new Final_Exam.RoundedPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.newStudentPanel = new Final_Exam.RoundedPanel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.dashboardPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.roundedPanel5.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.header1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.roundedPanel6.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.roundedPanel7.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.header2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.roundedPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.roundedPanel4.SuspendLayout();
+            this.debtPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.roundedPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.roundedPanel3.SuspendLayout();
+            this.revenuePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.dobPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.newStudentPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // dashboardLabel
             // 
             this.dashboardLabel.AutoSize = true;
             this.dashboardLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboardLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
             this.dashboardLabel.Location = new System.Drawing.Point(23, 9);
             this.dashboardLabel.Name = "dashboardLabel";
             this.dashboardLabel.Size = new System.Drawing.Size(138, 29);
@@ -102,28 +103,30 @@
             // 
             // dashboardPanel
             // 
-            this.dashboardPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dashboardPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(220)))));
             this.dashboardPanel.Controls.Add(this.dashboardLabel);
             this.dashboardPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.dashboardPanel.Location = new System.Drawing.Point(0, 0);
             this.dashboardPanel.Name = "dashboardPanel";
             this.dashboardPanel.Size = new System.Drawing.Size(1200, 44);
             this.dashboardPanel.TabIndex = 25;
+            this.dashboardPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.dashboardPanel_Paint);
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(220)))));
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.roundedPanel4, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.roundedPanel2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.roundedPanel3, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.debtPanel, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.revenuePanel, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dobPanel, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.newStudentPanel, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 55);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -134,9 +137,8 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(220)))));
             this.panel5.Controls.Add(this.tableLayoutPanel2);
-            this.panel5.Controls.Add(this.roundedPanel1);
             this.panel5.Controls.Add(this.tableLayoutPanel1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
@@ -150,6 +152,7 @@
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(220)))));
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -185,24 +188,26 @@
             // 
             this.roundedPanel5.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.roundedPanel5.BorderColor = System.Drawing.Color.White;
-            this.roundedPanel5.Controls.Add(this.panel1);
+            this.roundedPanel5.Controls.Add(this.header1);
             this.roundedPanel5.Controls.Add(this.dataGridView1);
             this.roundedPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.roundedPanel5.Location = new System.Drawing.Point(587, 3);
             this.roundedPanel5.Name = "roundedPanel5";
             this.roundedPanel5.Radius = 20;
+            this.roundedPanel5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.roundedPanel5.Size = new System.Drawing.Size(579, 226);
             this.roundedPanel5.TabIndex = 30;
             this.roundedPanel5.Thickness = 5F;
             // 
-            // panel1
+            // header1
             // 
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(579, 27);
-            this.panel1.TabIndex = 31;
+            this.header1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.header1.Controls.Add(this.label12);
+            this.header1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.header1.Location = new System.Drawing.Point(0, 0);
+            this.header1.Name = "header1";
+            this.header1.Size = new System.Drawing.Size(579, 27);
+            this.header1.TabIndex = 31;
             // 
             // label12
             // 
@@ -216,16 +221,15 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(5, 30);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(569, 190);
+            this.dataGridView1.Size = new System.Drawing.Size(579, 226);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // roundedPanel6
             // 
@@ -243,6 +247,7 @@
             // 
             // panel2
             // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label13);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -262,39 +267,39 @@
             // 
             // dataGridView2
             // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(5, 30);
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(568, 191);
+            this.dataGridView2.Size = new System.Drawing.Size(578, 227);
             this.dataGridView2.TabIndex = 1;
             // 
             // roundedPanel7
             // 
             this.roundedPanel7.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.roundedPanel7.BorderColor = System.Drawing.Color.White;
-            this.roundedPanel7.Controls.Add(this.panel3);
+            this.roundedPanel7.Controls.Add(this.header2);
             this.roundedPanel7.Controls.Add(this.dataGridView3);
             this.roundedPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.roundedPanel7.Location = new System.Drawing.Point(587, 235);
             this.roundedPanel7.Name = "roundedPanel7";
             this.roundedPanel7.Radius = 20;
+            this.roundedPanel7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.roundedPanel7.Size = new System.Drawing.Size(579, 227);
             this.roundedPanel7.TabIndex = 30;
             this.roundedPanel7.Thickness = 5F;
             // 
-            // panel3
+            // header2
             // 
-            this.panel3.Controls.Add(this.label14);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(579, 27);
-            this.panel3.TabIndex = 31;
+            this.header2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.header2.Controls.Add(this.label14);
+            this.header2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.header2.Location = new System.Drawing.Point(0, 0);
+            this.header2.Name = "header2";
+            this.header2.Size = new System.Drawing.Size(579, 27);
+            this.header2.TabIndex = 31;
             // 
             // label14
             // 
@@ -308,101 +313,32 @@
             // 
             // dataGridView3
             // 
-            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(5, 30);
+            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView3.Location = new System.Drawing.Point(0, 0);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(569, 191);
+            this.dataGridView3.Size = new System.Drawing.Size(579, 227);
             this.dataGridView3.TabIndex = 1;
             // 
-            // roundedPanel1
+            // debtPanel
             // 
-            this.roundedPanel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.roundedPanel1.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.roundedPanel1.Controls.Add(this.label2);
-            this.roundedPanel1.Controls.Add(this.pictureBox1);
-            this.roundedPanel1.Controls.Add(this.label1);
-            this.roundedPanel1.Controls.Add(this.studentLabel);
-            this.roundedPanel1.Location = new System.Drawing.Point(10, 59);
-            this.roundedPanel1.Name = "roundedPanel1";
-            this.roundedPanel1.Radius = 30;
-            this.roundedPanel1.Size = new System.Drawing.Size(289, 125);
-            this.roundedPanel1.TabIndex = 28;
-            this.roundedPanel1.Thickness = 10F;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.debtPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(37, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(244, 21);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "---------------------------------------";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(8, 50);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 29);
-            this.pictureBox1.TabIndex = 28;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(39, 75);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 21);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "Học viên mới";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // studentLabel
-            // 
-            this.studentLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.studentLabel.AutoSize = true;
-            this.studentLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.studentLabel.Location = new System.Drawing.Point(39, 35);
-            this.studentLabel.Name = "studentLabel";
-            this.studentLabel.Size = new System.Drawing.Size(19, 21);
-            this.studentLabel.TabIndex = 28;
-            this.studentLabel.Text = "0";
-            // 
-            // roundedPanel4
-            // 
-            this.roundedPanel4.BackColor = System.Drawing.Color.IndianRed;
-            this.roundedPanel4.BorderColor = System.Drawing.Color.IndianRed;
-            this.roundedPanel4.Controls.Add(this.label11);
-            this.roundedPanel4.Controls.Add(this.pictureBox4);
-            this.roundedPanel4.Controls.Add(this.label10);
-            this.roundedPanel4.Controls.Add(this.label9);
-            this.roundedPanel4.Location = new System.Drawing.Point(888, 3);
-            this.roundedPanel4.Name = "roundedPanel4";
-            this.roundedPanel4.Radius = 30;
-            this.roundedPanel4.Size = new System.Drawing.Size(289, 125);
-            this.roundedPanel4.TabIndex = 28;
-            this.roundedPanel4.Thickness = 10F;
+            this.debtPanel.BackColor = System.Drawing.Color.IndianRed;
+            this.debtPanel.BorderColor = System.Drawing.Color.IndianRed;
+            this.debtPanel.Controls.Add(this.label11);
+            this.debtPanel.Controls.Add(this.pictureBox4);
+            this.debtPanel.Controls.Add(this.label10);
+            this.debtPanel.Controls.Add(this.label9);
+            this.debtPanel.Location = new System.Drawing.Point(888, 3);
+            this.debtPanel.Name = "debtPanel";
+            this.debtPanel.Radius = 30;
+            this.debtPanel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.debtPanel.Size = new System.Drawing.Size(289, 125);
+            this.debtPanel.TabIndex = 28;
+            this.debtPanel.Thickness = 10F;
             // 
             // label11
             // 
@@ -438,7 +374,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(36, 34);
+            this.label10.Location = new System.Drawing.Point(40, 30);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(19, 21);
             this.label10.TabIndex = 28;
@@ -458,89 +394,22 @@
             this.label9.TabIndex = 28;
             this.label9.Text = "Công nợ";
             // 
-            // roundedPanel2
+            // revenuePanel
             // 
-            this.roundedPanel2.BackColor = System.Drawing.Color.Chocolate;
-            this.roundedPanel2.BorderColor = System.Drawing.Color.Chocolate;
-            this.roundedPanel2.Controls.Add(this.label3);
-            this.roundedPanel2.Controls.Add(this.pictureBox2);
-            this.roundedPanel2.Controls.Add(this.label5);
-            this.roundedPanel2.Controls.Add(this.label4);
-            this.roundedPanel2.Location = new System.Drawing.Point(298, 3);
-            this.roundedPanel2.Name = "roundedPanel2";
-            this.roundedPanel2.Radius = 30;
-            this.roundedPanel2.Size = new System.Drawing.Size(289, 125);
-            this.roundedPanel2.TabIndex = 28;
-            this.roundedPanel2.Thickness = 10F;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.revenuePanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(37, 55);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(244, 21);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "---------------------------------------";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(8, 50);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(26, 29);
-            this.pictureBox2.TabIndex = 28;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(39, 35);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(19, 21);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "0";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(39, 75);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(201, 21);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "Sinh nhật trong tháng này ";
-            // 
-            // roundedPanel3
-            // 
-            this.roundedPanel3.BackColor = System.Drawing.Color.BlueViolet;
-            this.roundedPanel3.BorderColor = System.Drawing.Color.BlueViolet;
-            this.roundedPanel3.Controls.Add(this.label8);
-            this.roundedPanel3.Controls.Add(this.pictureBox3);
-            this.roundedPanel3.Controls.Add(this.label7);
-            this.roundedPanel3.Controls.Add(this.label6);
-            this.roundedPanel3.Location = new System.Drawing.Point(593, 3);
-            this.roundedPanel3.Name = "roundedPanel3";
-            this.roundedPanel3.Radius = 30;
-            this.roundedPanel3.Size = new System.Drawing.Size(289, 125);
-            this.roundedPanel3.TabIndex = 28;
-            this.roundedPanel3.Thickness = 10F;
+            this.revenuePanel.BackColor = System.Drawing.Color.BlueViolet;
+            this.revenuePanel.BorderColor = System.Drawing.Color.BlueViolet;
+            this.revenuePanel.Controls.Add(this.label8);
+            this.revenuePanel.Controls.Add(this.pictureBox3);
+            this.revenuePanel.Controls.Add(this.label7);
+            this.revenuePanel.Controls.Add(this.label6);
+            this.revenuePanel.Location = new System.Drawing.Point(593, 3);
+            this.revenuePanel.Name = "revenuePanel";
+            this.revenuePanel.Radius = 30;
+            this.revenuePanel.Size = new System.Drawing.Size(289, 125);
+            this.revenuePanel.TabIndex = 28;
+            this.revenuePanel.Thickness = 10F;
             // 
             // label8
             // 
@@ -590,11 +459,153 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(36, 35);
+            this.label6.Location = new System.Drawing.Point(40, 31);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(19, 21);
             this.label6.TabIndex = 28;
             this.label6.Text = "0";
+            // 
+            // dobPanel
+            // 
+            this.dobPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dobPanel.BackColor = System.Drawing.Color.Chocolate;
+            this.dobPanel.BorderColor = System.Drawing.Color.Chocolate;
+            this.dobPanel.Controls.Add(this.label3);
+            this.dobPanel.Controls.Add(this.pictureBox2);
+            this.dobPanel.Controls.Add(this.label5);
+            this.dobPanel.Controls.Add(this.label4);
+            this.dobPanel.Location = new System.Drawing.Point(298, 3);
+            this.dobPanel.Name = "dobPanel";
+            this.dobPanel.Radius = 30;
+            this.dobPanel.Size = new System.Drawing.Size(289, 125);
+            this.dobPanel.TabIndex = 28;
+            this.dobPanel.Thickness = 10F;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(37, 55);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(244, 21);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "---------------------------------------";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(8, 50);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(26, 29);
+            this.pictureBox2.TabIndex = 28;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(43, 31);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(19, 21);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "0";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(39, 75);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(201, 21);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Sinh nhật trong tháng này ";
+            // 
+            // newStudentPanel
+            // 
+            this.newStudentPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.newStudentPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(48)))));
+            this.newStudentPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(48)))));
+            this.newStudentPanel.Controls.Add(this.label17);
+            this.newStudentPanel.Controls.Add(this.label15);
+            this.newStudentPanel.Controls.Add(this.pictureBox5);
+            this.newStudentPanel.Controls.Add(this.label16);
+            this.newStudentPanel.Location = new System.Drawing.Point(3, 3);
+            this.newStudentPanel.Name = "newStudentPanel";
+            this.newStudentPanel.Radius = 30;
+            this.newStudentPanel.Size = new System.Drawing.Size(289, 125);
+            this.newStudentPanel.TabIndex = 28;
+            this.newStudentPanel.Thickness = 10F;
+            // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label17.Location = new System.Drawing.Point(42, 74);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(106, 21);
+            this.label17.TabIndex = 32;
+            this.label17.Text = "Học viên mới";
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label15.Location = new System.Drawing.Point(37, 60);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(244, 21);
+            this.label15.TabIndex = 29;
+            this.label15.Text = "---------------------------------------";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(8, 55);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(31, 29);
+            this.pictureBox5.TabIndex = 30;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label16.Location = new System.Drawing.Point(43, 36);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(19, 21);
+            this.label16.TabIndex = 31;
+            this.label16.Text = "0";
             // 
             // DashboardForm
             // 
@@ -616,29 +627,29 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.roundedPanel5.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.header1.ResumeLayout(false);
+            this.header1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.roundedPanel6.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.roundedPanel7.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.header2.ResumeLayout(false);
+            this.header2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.roundedPanel1.ResumeLayout(false);
-            this.roundedPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.roundedPanel4.ResumeLayout(false);
-            this.roundedPanel4.PerformLayout();
+            this.debtPanel.ResumeLayout(false);
+            this.debtPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.roundedPanel2.ResumeLayout(false);
-            this.roundedPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.roundedPanel3.ResumeLayout(false);
-            this.roundedPanel3.PerformLayout();
+            this.revenuePanel.ResumeLayout(false);
+            this.revenuePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.dobPanel.ResumeLayout(false);
+            this.dobPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.newStudentPanel.ResumeLayout(false);
+            this.newStudentPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -660,28 +671,28 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
-        private RoundedPanel roundedPanel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label studentLabel;
-        private RoundedPanel roundedPanel2;
+        private RoundedPanel dobPanel;
         private System.Windows.Forms.Panel panel5;
-        private RoundedPanel roundedPanel4;
-        private RoundedPanel roundedPanel3;
+        private RoundedPanel debtPanel;
+        private RoundedPanel revenuePanel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private RoundedPanel roundedPanel5;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel header1;
         private System.Windows.Forms.Label label12;
         private RoundedPanel roundedPanel6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridView dataGridView2;
         private RoundedPanel roundedPanel7;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel header2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridView dataGridView3;
+        private RoundedPanel newStudentPanel;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label16;
     }
 }

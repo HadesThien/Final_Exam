@@ -131,16 +131,6 @@
         dFqO4UraAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAQVJREFUSEvtlk0OAUEQhSfWboAFp2HHdRwHESsbnMYO8XcJ3pvpSjr039S0RMKX
-        fEl3V9XrZGbTxbcygeNq+Ya2FqUNT0aubbS1JKbwYeTaRltLYg8lgGsbbS2JI5SAAw8stLUkRpAhHB7y
-        wEJb++NE/pNoo60lEQrQ1pIIBWhrSYQCtLUgfTiDrwFamcXMIAN4ha6AJl5g8PIVZOMGdnjQEGZsITOX
-        PPBxh2zKcanQg8y8lTsP/CRs6pa7ipZRqLuXi8/lzsMCsomfh5dzaG3kuu6eGTvIzDn0wmY2fUJmB3EN
-        5TCKayiHUVxDOYziGsphFPvpksukJ5A8XVwBGv9PoJ+kKJ7yvjcXvNHC2QAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -155,7 +145,17 @@
         QgE6PfaML7AAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAQVJREFUSEvtlk0OAUEQhSfWboAFp2HHdRwHESsbnMYO8XcJ3pvpSjr039S0RMKX
+        fEl3V9XrZGbTxbcygeNq+Ya2FqUNT0aubbS1JKbwYeTaRltLYg8lgGsbbS2JI5SAAw8stLUkRpAhHB7y
+        wEJb++NE/pNoo60lEQrQ1pIIBWhrSYQCtLUgfTiDrwFamcXMIAN4ha6AJl5g8PIVZOMGdnjQEGZsITOX
+        PPBxh2zKcanQg8y8lTsP/CRs6pa7ipZRqLuXi8/lzsMCsomfh5dzaG3kuu6eGTvIzDn0wmY2fUJmB3EN
+        5TCKayiHUVxDOYziGsphFPvpksukJ5A8XVwBGv9PoJ+kKJ7yvjcXvNHC2QAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="pictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAWRJREFUSEvtlUtKxEAQhgff4A08j1vFjUvdqRvFrUcQD+BFBA+gMN7ANz4QRG/g
