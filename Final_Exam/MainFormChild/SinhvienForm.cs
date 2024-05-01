@@ -15,13 +15,14 @@ using Excel = Microsoft.Office.Interop.Excel;
 namespace Final_Exam {
     public partial class QuanLySinhVienForm : Form{
         private BUS_Student student;
+        DataTable dt; 
         public QuanLySinhVienForm() {
             InitializeComponent();
         }
 
         public void updateGridView(DataTable data)
         {
-            DataTable dt = data;
+            dt = data;
             dt.Columns[0].ColumnName = "Mã học sinh";
             dt.Columns[1].ColumnName = "Tên học sinh";
             dt.Columns[2].ColumnName = "Số điện thoại";
@@ -116,6 +117,18 @@ namespace Final_Exam {
         {
             student = new BUS_Student("", "", "", DateTime.Now, "", "", "", "", "", "", DateTime.Now, "", "");
             updateGridView(student.basicSelectQueryDropout());
+        }
+
+        private void searchTextBox_KeyDown(object sender, KeyEventArgs e) {
+           if(e.KeyCode == Keys.Enter) {
+                string name = searchTextBox.Text;
+                showSearchedStudent(name);
+            }
+        }
+        private void showSearchedStudent(string name) {
+            student = new BUS_Student("", name, "", DateTime.Now, "", "", "", "", "", "", DateTime.Now, "", "");
+            dt = student.search();
+            studentGridView.DataSource = dt;    
         }
     }
 

@@ -75,6 +75,14 @@ namespace DAL
                 "INNER JOIN Student s ON s.studentId = p.Id";
             return Connection.selectQuery(s);
         }
+        public DataTable searchedStudentQuery() {
+            string s = "Select p.Id,p.name,p.numberphone, p.dob, p.gender, s.dateCreated " +
+                "From Person p " +
+                "INNER JOIN Student s ON s.studentId = p.Id " +
+                $"Where p.name like N'%{student.Name}%'";
+
+            return Connection.selectQuery(s);
+        }
         public DataTable basicSelectQueryOfficial()
         {
             string s = "SELECT p.Id, p.name, p.numberphone, p.dob, p.gender, s.dateCreated " +

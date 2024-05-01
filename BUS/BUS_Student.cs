@@ -33,6 +33,9 @@ namespace BUS
         public void updateStatus() {
             student.updateStatus();
         }
+        public DataTable search() {
+            return student.searchedStudentQuery();
+        }
 
         public DataTable basicSelectQuery()
         {
