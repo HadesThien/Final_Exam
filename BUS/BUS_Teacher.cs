@@ -56,5 +56,8 @@ namespace BUS
                 return "GV001";
             }
         }
+        public string getTeacherName() {
+            return teacher.getName();
+        }
     }
 }

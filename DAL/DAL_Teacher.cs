@@ -51,5 +51,13 @@ namespace DAL
             string s = "SELECT TOP 1 teacherId FROM Teacher ORDER BY teacherId DESC";
             return Connection.selectQuery(s);
         }
+
+
+        //get and set methods
+        public string getName() {
+            string s = $"Select p.name from Person p Inner Join Teacher t On p.Id = t.teacherId Where TeacherId = '{teacher.Id}'";
+            DataTable dt =  Connection.selectQuery(s);
+            return dt.Rows[0][0].ToString();
+        }
     }
 }

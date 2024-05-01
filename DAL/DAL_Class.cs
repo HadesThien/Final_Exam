@@ -39,11 +39,20 @@ namespace DAL
             string s = "SELECT * FROM Class";
             return Connection.selectQuery(s);
         }
+        public DataTable getClass() {
+            string s = $"Select * From Class Where classId = '{dto_class.ClassId}'";
+            return Connection.selectQuery(s);
+        }
 
         public DataTable basicSelectQuery()
         {
             string s = "SELECT subject + ' ' + cast(grade as varchar) + '.' + cast(shift as varchar) as name, numberOfSession, numberOfStudent, price, dateCreated " +
                        "FROM Class";
+            return Connection.selectQuery(s);
+        }
+        public DataTable selectOptionalClass() {
+            string s = "SELECT subject + ' ' + cast(grade as varchar) + '.' + cast(shift as varchar) as name, numberOfSession, numberOfStudent, price, dateCreated " +
+                       $"FROM Class Where status = N'{dto_class.Status}'";
             return Connection.selectQuery(s);
         }
 
@@ -52,7 +61,6 @@ namespace DAL
             string s = "SELECT classId " +
                        "FROM Class " +
                        "WHERE subject = N'" + dto_class.Subject + "' AND shift = N'" + dto_class.Shift + "' AND grade = " + dto_class.Grade;
-            Console.WriteLine(s);
             return Connection.selectQuery(s);
         }
 
@@ -68,6 +76,37 @@ namespace DAL
                        $"FROM Class Where status = N'{dto_class.Status}'";
             
             return Connection.selectQuery(s);
+        }
+        public DataTable getRegisteredStudent() {
+            string s = $"Select p.Id, p.Name, p.gender,p.dob,p.numberPhone, s.note,s.dateCreated from Student s \r\nINNER JOIN Person p On p.Id = s.studentId\r\nINNER JOIN Register r On r.studentId = s.studentId \r\nINNER JOIN Class c On c.classId = r.classId \r\nWHERE c.classId = '{dto_class.ClassId}';";
+            return Connection.selectQuery(s);
+        }
+
+
+        //Get set method
+        public string getname() {
+            return dto_class.Subject + " " + dto_class.Grade + "." + dto_class.Shift;
+        }
+        public string getSubject() {
+            return dto_class.Subject;
+        }
+        public int getGrade() {
+            return dto_class.Grade;
+        }
+        public string getShift() {
+            return dto_class.Shift;
+        }
+        public int getPrice() {
+            return dto_class.Price;
+        }
+        public int getNumberOfSession() {
+            return dto_class.Number_Of_Session;
+        }
+        public int getNumberOfStudent() {
+            return dto_class.Number_Of_Student;
+        }
+        public string getStatus() {
+            return dto_class.Status;
         }
     }
 }

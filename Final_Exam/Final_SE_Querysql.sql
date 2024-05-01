@@ -142,13 +142,15 @@ VALUES
 ('GV004', N'Phạm Thị T', N'Nữ', '1978-04-20', '0654321987'),
 ('GV005', N'Hoàng Văn S', N'Nam', '1985-10-15', '0398765432');
 
-INSERT INTO Student (school, number, street, ward, district,dateCreated ,studentId, status, note)
+SELECT * From Student
+
+INSERT INTO Student (school, street, ward, district,city,dateCreated ,studentId, status, note)
 VALUES 
-(N'Trường THCS ABC', '123', N'Đường A', N'Phường 1', N'Quận Gò Vấp','05-16-2024' ,'HS001', N'Đang học', N''),
-(N'Trường THCS XYZ', '456', N'Đường B', N'Phường 2', N'Quận 1', '07-14-2023','HS002', N'Đang học', N''),
-(N'Trường THCS KLM', '789', N'Đường C', N'Phường 3', N'Quận Tân Bình','01-02-2023' ,'HS003', N'Đang học', N''),
-(N'Trường THCS NOP', '1011', N'Đường D', N'Phường 4', N'Quận 3','05-08-2022' ,'HS004', N'Đang học', N''),
-(N'Trường THCS QRS', '1213', N'Đường E', N'Phường 5', N'Quận 10', '01-01-2022','HS005', N'Đang học', N'');
+(N'Trường THCS ABC',  N'Đường A', N'Phường 1', N'Quận Gò Vấp',N'TP.Hồ Chí Minh','05-16-2024' ,'HS001', N'Đang học', N''),
+(N'Trường THCS XYZ',  N'Đường B', N'Phường 2', N'Quận 1',N'TP.Hồ Chí Minh', '07-14-2023','HS002', N'Đang học', N''),
+(N'Trường THCS KLM',  N'Đường C', N'Phường 3', N'Quận Tân Bình',N'TP.Hồ Chí Minh','01-02-2023' ,'HS003', N'Đang học', N''),
+(N'Trường THCS NOP',  N'Đường D', N'Phường 4', N'Quận 3',N'TP.Hồ Chí Minh','05-08-2022' ,'HS004', N'Đang học', N''),
+(N'Trường THCS QRS',  N'Đường E', N'Phường 5', N'Quận 10', N'TP.Hồ Chí Minh','01-01-2022','HS005', N'Đang học', N'');
 INSERT INTO Teacher (subject, teacherId)
 VALUES 
 (N'Toán', 'GV001'),
@@ -156,7 +158,11 @@ VALUES
 (N'Anh', 'GV003'),
 (N'KHTN', 'GV004'),
 (N'Toán','GV005');
-
+Select p.Id p.Name, p.gender,p.dob,p.numberPhone, s.note,s.dateCreated from Student s 
+INNER JOIN Person p On p.Id = s.studentId
+INNER JOIN Register r On r.studentId = s.studentId 
+INNER JOIN Class c On c.classId = r.classId 
+WHERE c.classId = 'LH001';
 INSERT INTO Class (classId, subject, shift, grade, price, numberOfSession, numberOfStudent, dateCreated, teacherId, status)
 VALUES 
 ('LH001', N'Toán', '1', 6, 550000, 12, 15, '2024-04-27', 'GV001',N'Đang mở'),

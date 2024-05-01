@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
@@ -41,6 +42,9 @@ namespace BUS
         {
             return dal_class.detailedSelectQuery();
         }
+        public DataTable selectOptionalClass() {
+            return dal_class.selectOptionalClass();
+        }
 
         public string getId()
         {
@@ -68,11 +72,43 @@ namespace BUS
             DataTable tb = dal_class.selectId();
             return tb.Rows[0][0].ToString();
         }
+        public DataTable getClass() {
+            return dal_class.getClass();
+        }
 
         public DataTable getNames()
         {
             return dal_class.getNames();
         }
+        public DataTable getRegisteredStudent() {
+            return dal_class.getRegisteredStudent();
+        }
 
+
+        //Get and set methods
+        public string getName() {
+            return dal_class.getname();
+        }
+        public string getShift() {
+            return dal_class.getShift();
+        }
+        public int getGrade() {
+            return dal_class.getGrade();
+        }
+        public int getNumberOfSession() {
+            return dal_class.getNumberOfSession();
+        }
+        public int getNumberOfStudent() {
+            return dal_class.getNumberOfStudent();
+        }
+        public string getStatus() {
+            return dal_class.getStatus();
+        }
+        public int getPrice() {
+            return dal_class.getPrice();
+        }
+        public string getSubject() {
+            return dal_class.getSubject();
+        }
     }
 }

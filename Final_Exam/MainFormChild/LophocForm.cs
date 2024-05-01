@@ -1,4 +1,5 @@
 ﻿using BUS;
+using Final_Exam.pop_upForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -97,11 +98,40 @@ namespace Final_Exam
         }
 
         private void daDongBtn_Click(object sender, EventArgs e) {
-
+            classes = new BUS_Class("", "", "", 0, 0, 0, 0, DateTime.Now,"Đã đóng", "");
+            dt = classes.selectOptionalClass();
+            dt.Columns[0].ColumnName = "Tên lớp";
+            dt.Columns[1].ColumnName = "Số buổi ";
+            dt.Columns[2].ColumnName = "Số học sinh";
+            dt.Columns[3].ColumnName = "Học phí";
+            dt.Columns[4].ColumnName = "Ngày tạo";
+            classGridView.DataSource = dt;
         }
 
         private void dangMoBtn_Click(object sender, EventArgs e) {
+            classes = new BUS_Class("", "", "", 0, 0, 0, 0, DateTime.Now,"Đang mở", "");
+            dt = classes.selectOptionalClass();
+            dt.Columns[0].ColumnName = "Tên lớp";
+            dt.Columns[1].ColumnName = "Số buổi ";
+            dt.Columns[2].ColumnName = "Số học sinh";
+            dt.Columns[3].ColumnName = "Học phí";
+            dt.Columns[4].ColumnName = "Ngày tạo";
+            classGridView.DataSource = dt;
+        }
 
+        private void updateBtn_Click(object sender, EventArgs e) {
+            Form form = new TaoLopForm();
+            form.ShowDialog();
+
+        }
+
+        private void classGridView_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+            int colIndex = e.ColumnIndex;
+            int rowIndex = e.RowIndex;
+            if(colIndex==0 && rowIndex != -1) {
+                Form form= new ChiTietLopHocForm(classGridView.Rows[rowIndex].Cells[0].Value.ToString());
+                form.ShowDialog();
+            }
         }
     }
 }
