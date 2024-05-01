@@ -61,7 +61,7 @@ namespace Final_Exam {
         private void GhiDanhForm_Load(object sender, EventArgs e) {
             defaultForm();
             student = new BUS_Student("", "", "", DateTime.Now, "", "", "", "", "", "", DateTime.Now, "", "");
-            bus_class = new BUS_Class("", "", "", 0, 0, 0, 0, DateTime.Now, "");
+            bus_class = new BUS_Class("", "", "", 0, 0, 0, 0, DateTime.Now,"Đang mở", "");
             foreach (DataRow row in bus_class.getNames().Rows)
             {
                 classListBox.Items.Add(row[0].ToString());
@@ -190,7 +190,7 @@ namespace Final_Exam {
             List<string> ids = new List<string>();
             for (int i = 0; i < subjects.Count; i++)
             {
-                bus_class = new BUS_Class("", subjects[i], shifts[i], grades[i], 0, 0, 0, DateTime.Now, "");
+                bus_class = new BUS_Class("", subjects[i], shifts[i], grades[i], 0, 0, 0, DateTime.Now,"Đang mở", "");
                 ids.Add(bus_class.getClassId());
             }
             foreach (string s in ids)
