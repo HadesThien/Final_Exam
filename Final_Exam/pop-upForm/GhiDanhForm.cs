@@ -178,7 +178,14 @@ namespace Final_Exam {
             {
                 Console.WriteLine(s);
             }
-            student = new BUS_Student(id, nameTextBox.Texts, genderComboBox.Texts, dobTimePicker.Value, numberPhoneTextBox.Texts, truongHocTextBox.Texts, diaChiTextBox.Texts, wardComboBox.Texts, districtComboBox.Texts, cityComboBox.Texts, DateTime.Now, tinhTrangComboBox.Texts, ghiChuTextBox.Text);
+            // Tình trạng trong ghi danh Form là để cho người dùng hiểu
+            // Thực tế có 3 tình trạng chính là Nếu học sinh nhập học thì tình trạng  là "Đang học" 
+            // Nếu Ô tình trạng là mặc định là "Mặc định" thì tình trạng là "Thôi học" tức chỉ những học sinh không có học tại trung tâm
+            // Nếu tình trạng là học thử thì vẫn là như vậy nhưng không có nút chuyển tình trạng thành học thử.
+            string status = tinhTrangComboBox.Texts;
+
+            if (status == "Mặc định") status = "Thôi học"; else if (status == "Nhập học") status = "Đang học";
+            student = new BUS_Student(id, nameTextBox.Texts, genderComboBox.Texts, dobTimePicker.Value, numberPhoneTextBox.Texts, truongHocTextBox.Texts, diaChiTextBox.Texts, wardComboBox.Texts, districtComboBox.Texts, cityComboBox.Texts, DateTime.Now, status, ghiChuTextBox.Text);
             student.addQuery();
             List<string> ids = new List<string>();
             for (int i = 0; i < subjects.Count; i++)

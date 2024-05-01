@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Odbc;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Text;
@@ -59,8 +60,10 @@ namespace DAL
 
         public void deleteQuery()
         {
-            string query1 = "DELETE FROM Student WHERE Id = '" + student.Id + "'";
+            string query1 = "DELETE FROM Student WHERE studentId = '" + student.Id + "'";
             string query2 = "DELETE FROM Person WHERE Id = '" + student.Id + "'";
+            string s = "Delete From Register Where StudentId = '" + student.Id + "'";
+            Connection.actionQuery(s);
             Connection.actionQuery(query1);
             Connection.actionQuery(query2);
         }
@@ -139,8 +142,11 @@ namespace DAL
                 $"from buy b " +
                 $"Join Document d On d.handoutId = b.handoutId " +
                 $"where b.studentId ='{student.Id}';";
-            Console.WriteLine(s);
             return Connection.selectQuery(s);
+        }
+        public void updateStatus() {
+            string s = $"Update Student set status = N'{student.Status}' where StudentId = '{student.Id}'";
+            Connection.actionQuery(s);
         }
     }
 }

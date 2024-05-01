@@ -30,6 +30,9 @@ namespace BUS
         {
             student.deleteQuery();
         }
+        public void updateStatus() {
+            student.updateStatus();
+        }
 
         public DataTable basicSelectQuery()
         {
