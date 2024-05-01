@@ -117,6 +117,13 @@ namespace Final_Exam {
             student = new BUS_Student("", "", "", DateTime.Now, "", "", "", "", "", "", DateTime.Now, "", "");
             updateGridView(student.basicSelectQueryDropout());
         }
+
+        private void adjustBtn_Click(object sender, EventArgs e)
+        {
+            int row = studentGridView.CurrentCell.RowIndex;
+            Form GhiDanhForm = new ghiDanhForm(this, studentGridView.Rows[row].Cells[0].Value.ToString());
+            GhiDanhForm.ShowDialog();
+        }
     }
 
 }

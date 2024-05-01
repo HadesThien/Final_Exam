@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +33,17 @@ namespace DAL
         {
             string query = "DELETE FROM Register WHERE studentId = '" + register.StudentId + "', classId = '" + register.ClassId + "'";
             Connection.actionQuery(query);
+        }
+        public void deleteAStudentFromAllClasses()
+        {
+            string s = "DELETE FROM Register WHERE studentId = '" + register.StudentId + "'";
+            Connection.actionQuery(s);
+        }
+
+        public DataTable getClassesOfAStudent()
+        {
+            string s = "SELECT classId FROM Register WHERE studentId = '" + register.StudentId + "'";
+            return Connection.selectQuery(s);
         }
     }
 }

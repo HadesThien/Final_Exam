@@ -51,7 +51,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
             this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(233, 32);
+            this.label1.Size = new System.Drawing.Size(285, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh sách học sinh";
             // 
@@ -62,7 +62,7 @@
             this.searchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchTextBox.Location = new System.Drawing.Point(521, 104);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(544, 31);
+            this.searchTextBox.Size = new System.Drawing.Size(544, 37);
             this.searchTextBox.TabIndex = 9;
             this.searchTextBox.Visible = false;
             // 
@@ -232,7 +232,7 @@
             this.adjustBtn.TextColor = System.Drawing.Color.White;
             this.adjustBtn.UseVisualStyleBackColor = false;
             this.adjustBtn.Visible = false;
-            this.adjustBtn.Click += new System.EventHandler(this.createBtn_Click);
+            this.adjustBtn.Click += new System.EventHandler(this.adjustBtn_Click);
             // 
             // createBtn
             // 
@@ -320,7 +320,7 @@
             // 
             // QuanLySinhVienForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(1200, 692);

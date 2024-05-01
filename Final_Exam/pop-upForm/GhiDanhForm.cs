@@ -12,6 +12,7 @@ using BUS_VN;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using BUS;
 using System.Windows.Forms.VisualStyles;
+using System.Reflection.Emit;
 
 namespace Final_Exam {
     public partial class ghiDanhForm : Form {
@@ -23,6 +24,7 @@ namespace Final_Exam {
         private BUS_Register register;
         private QuanLySinhVienForm svForm;
         private string id;
+        private string aId;
 
         //Constructor 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -38,7 +40,20 @@ namespace Final_Exam {
 
         public ghiDanhForm(QuanLySinhVienForm svForm) {
             InitializeComponent();
+            classListBox.Enabled = false;
             this.svForm = svForm;
+            student = new BUS_Student("", "", "", DateTime.Now, "", "", "", "", "", "", DateTime.Now, "", "");
+            idLabel.Text = student.getId();
+            id = student.getId();
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 30, 30));
+        }
+        public ghiDanhForm(QuanLySinhVienForm form, string aId) {
+            InitializeComponent();
+            this.aId = aId;
+            this.svForm = form;
+            saveBtn.Text = "Cập nhật";
+            label14.Text = "Mã học sinh cập nhật:";
+            idLabel.Text = aId;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 30, 30));
         }
 
@@ -49,25 +64,125 @@ namespace Final_Exam {
    
         private void defaultForm()
         {
-            districtComboBox.Enabled = false;
-            wardComboBox.Enabled = false;
-
             address = new BUS_Address("", "", "");
             DataTable dt = address.selectCities();
             cityComboBox.DataSource = dt;
             cityComboBox.ValueMember = "full_name";
         }
 
-        private void GhiDanhForm_Load(object sender, EventArgs e) {
+        private int findStringExactCity(string str)
+        {
+            for (int i = 0; i < cityComboBox.Items.Count; i++)
+            {
+                string s = ((DataRowView)cityComboBox.Items[i])["full_name"].ToString();
+
+                if (s.Equals(str))
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+        private int findStringExactDistrict(string str)
+        {
+            for (int i = 0; i < districtComboBox.Items.Count; i++)
+            {
+                string s = ((DataRowView)districtComboBox.Items[i])["full_name"].ToString();
+
+                if (s.Equals(str))
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+        private int findStringExactWard(string str)
+        {
+            for (int i = 0; i < wardComboBox.Items.Count; i++)
+            {
+                string s = ((DataRowView)wardComboBox.Items[i])["full_name"].ToString();
+
+                if (s.Equals(str))
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        private void defaultForm1()
+        {
             defaultForm();
-            student = new BUS_Student("", "", "", DateTime.Now, "", "", "", "", "", "", DateTime.Now, "", "");
+            student = new BUS_Student(this.aId, "", "", DateTime.Now, "", "", "", "", "", "", DateTime.Now, "", "");
+            DataTable dt = student.findStudentDetailed();         
+            nameTextBox.Texts = dt.Rows[0][1].ToString();
+            genderComboBox.Texts = dt.Rows[0][2].ToString();
+            dobTimePicker.Text = dt.Rows[0][3].ToString().Split(' ')[0];
+            numberPhoneTextBox.Texts = dt.Rows[0][4].ToString();
+            diaChiTextBox.Texts = dt.Rows[0][6].ToString();
+            cityComboBox.SelectedIndex = findStringExactCity(dt.Rows[0][9].ToString());
+            districtComboBox.SelectedIndex = findStringExactDistrict(dt.Rows[0][8].ToString());
+            wardComboBox.SelectedIndex = findStringExactWard(dt.Rows[0][7].ToString());
+            tinhTrangComboBox.Texts = dt.Rows[0][11].ToString();
+            ghiChuTextBox.Text = dt.Rows[0][12].ToString();
+            truongHocTextBox.Texts = dt.Rows[0][5].ToString();
+            register = new BUS_Register(aId, "", DateTime.Now);
+            tinhTrangComboBox.Enabled = false;
+            if (tinhTrangComboBox.Texts.Equals("Đang học"))
+            {
+                classListBox.Enabled = true;
+            } else
+            {
+                classListBox.Enabled = false;
+            }
+            List<string> classList = new List<string>();
+            DataTable c = register.getClassesOfAStudent();
+
+            foreach (DataRow row in c.Rows)
+            {
+                bus_class = new BUS_Class(row[0].ToString(), "", "", 0, 0, 0, 0, DateTime.Now, "");
+                classList.Add(bus_class.getName());
+            }
+
+            classTextBox.Texts = "";
+            for (int i = 0; i < classList.Count; i++)
+            {
+                if (i == classList.Count - 1)
+                {
+                    classTextBox.Texts += classList[i];
+                }
+                else
+                {
+                    classTextBox.Texts += classList[i] + ", ";
+                }
+            }
+
+            if (classListBox.Enabled)
+            {
+                for (int i = 0; i < classListBox.Items.Count; i++)
+                {
+                    if (classList.Contains(classListBox.Items[i]))
+                    {
+                        classListBox.SetItemCheckState(i, CheckState.Checked);
+                    }
+                }
+            }
+        }
+
+        private void GhiDanhForm_Load(object sender, EventArgs e) {
             bus_class = new BUS_Class("", "", "", 0, 0, 0, 0, DateTime.Now, "");
             foreach (DataRow row in bus_class.getNames().Rows)
             {
                 classListBox.Items.Add(row[0].ToString());
             }
-            id = student.getId();
-            idLabel.Text = student.getId();
+            if (String.IsNullOrEmpty(aId))
+            {
+                defaultForm();
+            }
+            else
+            {
+                defaultForm1();
+            }
         }
 
         private void buttonSelect_Click(object sender, EventArgs e) {
@@ -103,14 +218,6 @@ namespace Final_Exam {
             wardComboBox.ValueMember = "full_name";
 
             wardComboBox.Enabled = true;
-        }
-        private void UpdateTextBoxValue() {
-            StringBuilder selectedValues = new StringBuilder();
-            for (int i = 0; i < classListBox.CheckedItems.Count; i++) {
-                selectedValues.Append(classListBox.CheckedItems[i].ToString() + " ");
-                Console.WriteLine(classListBox.CheckedItems[i].ToString());
-            }
-            classTextBox.Texts = selectedValues.ToString().Trim(); 
         }
 
         private void classListBox_ItemCheck(object sender, ItemCheckEventArgs e) {
@@ -154,6 +261,33 @@ namespace Final_Exam {
             string[] classes = classTextBox.Texts.Split(new string[] { ", " }, StringSplitOptions.None);
             if (classes.Length > 4) {
                 MessageBox.Show("Chỉ có thể đăng ký từ 0-4 lớp");
+                return;
+            }
+            if (String.IsNullOrEmpty(this.id))
+            {
+                //bool flag1 = nameTextBox.Texts.Equals("") || diaChiTextBox.Texts.Equals("") || truongHocTextBox.Texts.Equals("") || genderComboBox.Texts.Equals("") || tinhTrangComboBox.Texts.Equals("") || numberPhoneTextBox.Texts.Equals("");
+                //if (flag1)
+                //{
+                //    MessageBox.Show("Vui lòng điền đầy đủ thông tin học sinh");
+                //    return;
+                //}
+                //string[] classes1 = classTextBox.Texts.Split(new string[] { ", " }, StringSplitOptions.None);
+                //if (classes1.Length > 4) {
+                //    MessageBox.Show("Chỉ có thể đăng ký từ 0-4 lớp");
+                //}
+                register = new BUS_Register(aId, "", DateTime.Now);
+                DataTable c = register.getClassesOfAStudent();
+
+                student = new BUS_Student(aId, nameTextBox.Texts, genderComboBox.Texts, dobTimePicker.Value, numberPhoneTextBox.Texts, truongHocTextBox.Texts, diaChiTextBox.Texts, wardComboBox.Texts, districtComboBox.Texts, cityComboBox.Texts, DateTime.Now, tinhTrangComboBox.Texts, ghiChuTextBox.Text);
+                student.updateQuery();
+
+                register.deleteAStudentFromAllClasses();
+                Console.WriteLine("UPDATE");
+            }
+            else
+            {
+                student = new BUS_Student(id, nameTextBox.Texts, genderComboBox.Texts, dobTimePicker.Value, numberPhoneTextBox.Texts, truongHocTextBox.Texts, diaChiTextBox.Texts, wardComboBox.Texts, districtComboBox.Texts, cityComboBox.Texts, DateTime.Now, tinhTrangComboBox.Texts, ghiChuTextBox.Text);
+                student.addQuery();
             }
             List<string> subjects = new List<string>();
             List<string> shifts = new List<string>();
@@ -178,18 +312,27 @@ namespace Final_Exam {
             {
                 Console.WriteLine(s);
             }
-            student = new BUS_Student(id, nameTextBox.Texts, genderComboBox.Texts, dobTimePicker.Value, numberPhoneTextBox.Texts, truongHocTextBox.Texts, diaChiTextBox.Texts, wardComboBox.Texts, districtComboBox.Texts, cityComboBox.Texts, DateTime.Now, tinhTrangComboBox.Texts, ghiChuTextBox.Text);
-            student.addQuery();
             List<string> ids = new List<string>();
             for (int i = 0; i < subjects.Count; i++)
             {
                 bus_class = new BUS_Class("", subjects[i], shifts[i], grades[i], 0, 0, 0, DateTime.Now, "");
                 ids.Add(bus_class.getClassId());
             }
-            foreach (string s in ids)
+            if (String.IsNullOrEmpty(this.id))
             {
-                register = new BUS_Register(id, s, DateTime.Now);
-                register.addQuery();
+                foreach (string s in ids)
+                {
+                    register = new BUS_Register(aId, s, DateTime.Now);
+                    register.addQuery();
+                }
+            } 
+            else
+            {
+                foreach (string s in ids)
+                {
+                    register = new BUS_Register(id, s, DateTime.Now);
+                    register.addQuery();
+                }
             }
             svForm.updateGridView(student.basicSelectQuery());
             this.Close();

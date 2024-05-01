@@ -74,5 +74,11 @@ namespace BUS
             return dal_class.getNames();
         }
 
+        public string getName()
+        {
+            DataTable tb = dal_class.getName();
+            return tb.Rows[0][0].ToString();
+        }
+
     }
 }
