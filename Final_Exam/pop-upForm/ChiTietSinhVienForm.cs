@@ -14,13 +14,21 @@ namespace Final_Exam {
     public partial class ChiTietSinhVienForm : Form {
 
         private BUS_Student student;
+        private BUS_Register register;
+        private BUS_Payment payment;
+        private BUS_Buy buy;
+        private QuanLySinhVienForm form;
         private string id;
         private DataTable dt;
 
-        public ChiTietSinhVienForm(string id) {
+        public ChiTietSinhVienForm(QuanLySinhVienForm form, string id) {
             InitializeComponent();
             this.id = id;
+            this.form = form;
             student = new BUS_Student(id, "", "", DateTime.Now, "", "", "", "", "", "", DateTime.Now, "", "");
+            register = new BUS_Register(id, "", DateTime.Now);
+            payment = new BUS_Payment("", DateTime.Now, DateTime.Now, "", "", 0.0f, 0, id);
+            buy = new BUS_Buy(DateTime.Now, 0, 0, "", DateTime.Now, "", "", id, "");
             dt = student.selectAllPayment();
             dt.Columns[0].ColumnName = "Mã";
             dt.Columns[1].ColumnName = "Tên thu phí";
@@ -77,10 +85,15 @@ namespace Final_Exam {
         private void removeBtn_Click(object sender, EventArgs e) {
             Form form = new ConfirmForm();
             form.ShowDialog();
-            if(Account.confirmPassword == true)
+            if (Account.confirmPassword == true)
+            {
+                register.deleteAStudentFromAllClasses();
+                payment.deletePaymentsOfAStudent();
+                buy.deleteFromAStudent();
                 student.deleteQuery();
+            }
             Account.confirmPassword = false;
-            ChiTietSinhVienForm_Load(sender, e);
+            this.form.updateGridView(student.basicSelectQuery());
             this.Close();
         }
     }

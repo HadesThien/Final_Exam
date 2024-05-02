@@ -52,7 +52,11 @@ namespace BUS
                 return "TT001";
             }
         }
-
+        
+        public void deletePaymentsOfAStudent()
+        {
+            payment.deletePaymentsOfAStudent();
+        }
 
     }
 }

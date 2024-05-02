@@ -71,7 +71,7 @@ namespace Final_Exam {
         private void studentGridView_CellContentClick(object sender, DataGridViewCellEventArgs e) {
             int colIndex = e.ColumnIndex;
             int rowIndex = e.RowIndex;
-            if(colIndex==0 && rowIndex != -1) { Form chiTietSinhVien = new ChiTietSinhVienForm(studentGridView.Rows[rowIndex].Cells[0].Value.ToString()); chiTietSinhVien.ShowDialog(); }
+            if(colIndex==0 && rowIndex != -1) { Form chiTietSinhVien = new ChiTietSinhVienForm(this, studentGridView.Rows[rowIndex].Cells[0].Value.ToString()); chiTietSinhVien.ShowDialog(); }
 
         }
 

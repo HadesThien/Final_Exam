@@ -45,5 +45,11 @@ namespace DAL
             return Connection.selectQuery(s);
         }
 
+        public void deleteFromAStudent()
+        {
+            string s = "DELETE FROM Buy WHERE studentId = '" + buy.StudentId + "'";
+            Connection.actionQuery(s);
+        }
+
     }
 }

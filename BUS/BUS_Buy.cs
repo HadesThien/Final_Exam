@@ -45,6 +45,11 @@ namespace BUS
             }
         }
 
+        public void deleteFromAStudent()
+        {
+            buy.deleteFromAStudent();
+        }
+
 
     }
 }

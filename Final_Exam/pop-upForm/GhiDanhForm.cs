@@ -140,7 +140,7 @@ namespace Final_Exam {
 
             foreach (DataRow row in c.Rows)
             {
-                bus_class = new BUS_Class(row[0].ToString(), "", "", 0, 0, 0, 0, DateTime.Now, "");
+                bus_class = new BUS_Class(row[0].ToString(), "", "", 0, 0, 0, 0, DateTime.Now, "", "");
                 classList.Add(bus_class.getName());
             }
 
@@ -170,9 +170,10 @@ namespace Final_Exam {
         }
 
         private void GhiDanhForm_Load(object sender, EventArgs e) {
-            bus_class = new BUS_Class("", "", "", 0, 0, 0, 0, DateTime.Now, "");
+            bus_class = new BUS_Class("", "", "", 0, 0, 0, 0, DateTime.Now, "Đang mở", "");
             foreach (DataRow row in bus_class.getNames().Rows)
             {
+                Console.WriteLine(row[0].ToString());
                 classListBox.Items.Add(row[0].ToString());
             }
             if (String.IsNullOrEmpty(aId))

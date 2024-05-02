@@ -51,5 +51,11 @@ namespace DAL
             string s = "SELECT TOP 1 paymentId FROM Payment ORDER BY paymentId DESC";
             return Connection.selectQuery(s);
         }
+
+        public void deletePaymentsOfAStudent()
+        {
+            string s = "DELETE FROM Payment WHERE studentId = '" + payment.StudentId + "'";
+            Connection.actionQuery(s);
+        }
     }
 }
