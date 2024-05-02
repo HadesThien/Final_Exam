@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using Final_Exam.pop_upForm;
 
 namespace Final_Exam {
     public partial class ChiTietSinhVienForm : Form {
@@ -30,17 +31,9 @@ namespace Final_Exam {
             paymentGridView.DataSource = dt;
         }
 
-        private void label9_Click(object sender, EventArgs e) {
-
-        }
 
         private void cancelBtn_Click(object sender, EventArgs e) {
             this.Close();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void update()
@@ -55,21 +48,40 @@ namespace Final_Exam {
             addressLabel.Text = dt.Rows[0][6].ToString() + ", " + dt.Rows[0][7].ToString() + ", " + dt.Rows[0][8].ToString() + ", " + dt.Rows[0][9].ToString();
             ngayTaoLabel.Text = dt.Rows[0][10].ToString().Split(' ')[0];
             tinhTrangLabel.Text = dt.Rows[0][11].ToString();
+            if (tinhTrangLabel.Text == "Thôi học") tinhTrangLabel.ForeColor = Color.Red; else tinhTrangLabel.ForeColor = Color.FromArgb(0, 192, 0);
             ghiChuLabel.Text = dt.Rows[0][12].ToString();
             schoolLabel.Text = dt.Rows[0][5].ToString();
         }
 
         private void ChiTietSinhVienForm_Load(object sender, EventArgs e)
         {
+            if(Account.account.getRole() != "admin") removeBtn.Enabled = false;
             update();
         }
         //Thôi học 
         private void nhapHocBtn_Click(object sender, EventArgs e) {
-
+            setStatus("Đang học", sender, e);
         }
         //Nhập học
         private void thoiHocBtn_Click(object sender, EventArgs e) {
+            setStatus("Thôi học",sender,e);
+        }
+        public void setStatus(string status,object sender, EventArgs e) {
+            string studentId = maHocVienLabel.Text;
+            student = new BUS_Student(studentId,"","",DateTime.Now,"","","","","","",DateTime.Now,status,"");
+            if(MessageBox.Show("Bạn muốn đổi tình trạng của học sinh này ?","Chuyển tình trạng học sinh", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+                student.updateStatus();
+            ChiTietSinhVienForm_Load(sender,e);
+        }
 
+        private void removeBtn_Click(object sender, EventArgs e) {
+            Form form = new ConfirmForm();
+            form.ShowDialog();
+            if(Account.confirmPassword == true)
+                student.deleteQuery();
+            Account.confirmPassword = false;
+            ChiTietSinhVienForm_Load(sender, e);
+            this.Close();
         }
     }
 }

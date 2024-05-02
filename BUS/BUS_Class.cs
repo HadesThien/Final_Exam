@@ -12,9 +12,9 @@ namespace BUS
     {
 
         private DAL_Class dal_class;
-        public BUS_Class(string classId, string subject, string shift,  int grade, int price, int n_Session, int n_Student, DateTime date_Created, string id)
+        public BUS_Class(string classId, string subject, string shift,  int grade, int price, int n_Session, int n_Student, DateTime date_Created,string status, string id)
         {
-            dal_class = new DAL_Class(classId, subject, shift, grade, price, n_Session, n_Student, date_Created, id);
+            dal_class = new DAL_Class(classId, subject, shift, grade, price, n_Session, n_Student, date_Created,status, id);
         }
 
         public void addQuery()

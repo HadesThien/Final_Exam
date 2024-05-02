@@ -11,9 +11,9 @@ namespace DAL
     public class DAL_Class
     {
         private DTO_Class dto_class;
-        public DAL_Class(string classId, string subject, string shift,  int grade, int price, int n_Session, int n_Student, DateTime date_Created, string id)
+        public DAL_Class(string classId, string subject, string shift,  int grade, int price, int n_Session, int n_Student, DateTime date_Created, string status,string id)
         {
-            dto_class = new DTO_Class(classId, subject, shift, grade, price, n_Session, n_Student, date_Created, id);
+            dto_class = new DTO_Class(classId, subject, shift, grade, price, n_Session, n_Student, date_Created,status, id);
         }
 
         public void addQuery()
@@ -65,7 +65,8 @@ namespace DAL
         public DataTable getNames()
         {
             string s = "SELECT subject + ' ' + cast(grade as varchar) + '.' + shift as name " +
-                       "FROM Class";
+                       $"FROM Class Where status = N'{dto_class.Status}'";
+            
             return Connection.selectQuery(s);
         }
         public DataTable getName()

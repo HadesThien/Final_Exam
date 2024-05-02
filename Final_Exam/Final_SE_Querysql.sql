@@ -27,10 +27,10 @@ CREATE TABLE Teacher
 CREATE TABLE Student
 (
   school NVARCHAR(30) NOT NULL,
-  number NVARCHAR(10) NOT NULL,
   street NVARCHAR(30) NOT NULL,
   ward NVARCHAR(20) NOT NULL,
   district NVARCHAR(20) NOT NULL,
+  city NVARCHAR(30) NOT NULL,
   dateCreated DATE NOT NULL,
   status NVARCHAR(10) NOT NULL,
   note NVARCHAR(50) NOT NULL,
@@ -53,6 +53,12 @@ CREATE TABLE Class
   PRIMARY KEY (classId),
   FOREIGN KEY (teacherId) REFERENCES Teacher(teacherId)
 );
+Alter Table Class 
+ALTER COLUMN status NVARCHAR(50)
+
+SELECT * From Class 
+DELETE From Class
+
 
 CREATE TABLE Payment
 (
@@ -151,13 +157,13 @@ VALUES
 (N'KHTN', 'GV004'),
 (N'Toán','GV005');
 
-INSERT INTO Class (classId, subject, shift, grade, price, numberOfSession, numberOfStudent, date_created, teacherId)
+INSERT INTO Class (classId, subject, shift, grade, price, numberOfSession, numberOfStudent, dateCreated, teacherId, status)
 VALUES 
-('LH001', N'Toán', '1', 6, 550000, 12, 15, '2024-04-27', 'GV001'),
-('LH002', N'Văn', '2', 7, 550000, 12, 18, '2024-04-27', 'GV002'),
-('LH003', N'Anh', '1', 8, 550000, 12, 12, '2024-04-27', 'GV003'),
-('LH004', N'KHTN', '2', 9, 650000, 12, 10, '2024-04-27', 'GV004'),
-('LH005', N'Toán', '2', 10, 550000, 12, 17, '2024-04-27', 'GV005');
+('LH001', N'Toán', '1', 6, 550000, 12, 15, '2024-04-27', 'GV001',N'Đang mở'),
+('LH002', N'Văn', '2', 7, 550000, 12, 18, '2024-04-27', 'GV002',N'Đang mở'),
+('LH003', N'Anh', '1', 8, 550000, 12, 12, '2024-04-27', 'GV003',N'Đang mở'),
+('LH004', N'KHTN', '2', 9, 650000, 12, 10, '2024-04-27', 'GV004',N'Đang mở'),
+('LH005', N'Toán', '2', 10, 550000, 12, 17, '2024-04-27', 'GV005',N'Đang mở');
 
 INSERT INTO Register (admissionDay, studentId, classId)
 VALUES 
