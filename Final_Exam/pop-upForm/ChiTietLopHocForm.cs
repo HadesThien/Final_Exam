@@ -78,6 +78,7 @@ namespace Final_Exam.pop_upForm {
                     classes = new BUS_Class(classId, "", "", 0, 0, 0, 0, DateTime.Now, "", "");
                     classes.deleteQuery();
                     Account.confirmPassword = false;
+                    ChiTietLopHocForm_Load(sender, e);
                 }
             }
             this.Close();

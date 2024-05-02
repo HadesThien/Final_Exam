@@ -158,11 +158,8 @@ VALUES
 (N'Anh', 'GV003'),
 (N'KHTN', 'GV004'),
 (N'Toán','GV005');
-Select p.Id p.Name, p.gender,p.dob,p.numberPhone, s.note,s.dateCreated from Student s 
-INNER JOIN Person p On p.Id = s.studentId
-INNER JOIN Register r On r.studentId = s.studentId 
-INNER JOIN Class c On c.classId = r.classId 
-WHERE c.classId = 'LH001';
+
+
 INSERT INTO Class (classId, subject, shift, grade, price, numberOfSession, numberOfStudent, dateCreated, teacherId, status)
 VALUES 
 ('LH001', N'Toán', '1', 6, 550000, 12, 15, '2024-04-27', 'GV001',N'Đang mở'),

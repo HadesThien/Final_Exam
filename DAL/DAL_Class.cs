@@ -31,6 +31,8 @@ namespace DAL
         public void deleteQuery()
         {
             string query = "DELETE FROM Class WHERE classId = '" + dto_class.ClassId + "'";
+            string s = $"Delete From Register Where classId = '{dto_class.ClassId}'";
+            Connection.actionQuery(s);
             Connection.actionQuery(query);
         }
 
