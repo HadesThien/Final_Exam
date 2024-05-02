@@ -59,6 +59,12 @@
     <Compile Include="MainFormChild\AccountInfoForm.Designer.cs">
       <DependentUpon>AccountInfoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="pop-upForm\ChiTietLopHocForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pop-upForm\ChiTietLopHocForm.Designer.cs">
+      <DependentUpon>ChiTietLopHocForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="pop-upForm\ChiTietSinhVienForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,9 @@
     </Compile>
     <EmbeddedResource Include="MainFormChild\AccountInfoForm.resx">
       <DependentUpon>AccountInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop-upForm\ChiTietLopHocForm.resx">
+      <DependentUpon>ChiTietLopHocForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pop-upForm\ChiTietSinhVienForm.resx">
       <DependentUpon>ChiTietSinhVienForm.cs</DependentUpon>
