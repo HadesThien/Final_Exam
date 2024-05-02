@@ -12,11 +12,13 @@ namespace BUS
     {
         private DAL_Payment payment;
 
-        public BUS_Payment(string paymentId, DateTime dateCreated, DateTime period, string status, string note, float promotion, int n_session, string studentId)
+        public BUS_Payment(string paymentId, DateTime dateCreated, DateTime period, string status, string note, float promotion, int n_session, string studentId,string classId)
         {
-            payment = new DAL_Payment(paymentId, dateCreated, period, status, note, promotion, n_session, studentId);
+            payment = new DAL_Payment(paymentId, dateCreated, period, status, note, promotion, n_session, studentId,classId);
         }
-
+        public DataTable selectQuery() {
+            return payment.selectQuery();
+        }
         public void addQuery()
         {
             payment.addQuery();
@@ -52,7 +54,6 @@ namespace BUS
                 return "TT001";
             }
         }
-
-
     }
+
 }

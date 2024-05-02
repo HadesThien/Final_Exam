@@ -58,11 +58,11 @@ namespace Final_Exam {
         private void searchClassTextBox__TextChanged(object sender, EventArgs e) {
             string searchText = searchClassTextBox.Text;
             List<string> relatedClasses = FindRelatedClasses(searchText);
-            classListBox.Items.Clear();
+            classCheckedListBox.Items.Clear();
             foreach(string Class in relatedClasses) {
-                classListBox.Items.Add(Class);
+                classCheckedListBox.Items.Add(Class);
             }
-            classListBox.Visible = true;
+            classCheckedListBox.Visible = true;
         }
         private List<string> FindRelatedClasses(string searchText) {
             List<string> relatedClasses = new List<string>();
@@ -75,11 +75,11 @@ namespace Final_Exam {
         private void searchStudentTextBox_TextChanged(object sender, EventArgs e) {
             string searchText = searchStudentTextBox.Text;
             List<string> relatedStudents = FindRelatedStudents(searchText);
-            studentListBox.Items.Clear();
+            studentCheckedListBox.Items.Clear();
             foreach(string student in relatedStudents) {
-                studentListBox.Items.Add(student);
+                studentCheckedListBox.Items.Add(student);
             }
-            studentListBox.Visible = true;
+            studentCheckedListBox.Visible = true;
 
         }
     }

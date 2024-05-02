@@ -45,6 +45,7 @@
             this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateCreated = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
+            this.payBtn = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.studentGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -310,13 +311,35 @@
             this.rjButton1.ForeColor = System.Drawing.Color.White;
             this.rjButton1.Image = ((System.Drawing.Image)(resources.GetObject("rjButton1.Image")));
             this.rjButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rjButton1.Location = new System.Drawing.Point(847, 11);
+            this.rjButton1.Location = new System.Drawing.Point(858, 11);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(134, 40);
             this.rjButton1.TabIndex = 3;
             this.rjButton1.Text = "     Nhập kho";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
+            // 
+            // payBtn
+            // 
+            this.payBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.payBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.payBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.payBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.payBtn.BorderRadius = 12;
+            this.payBtn.BorderSize = 0;
+            this.payBtn.FlatAppearance.BorderSize = 0;
+            this.payBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.payBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.payBtn.ForeColor = System.Drawing.Color.White;
+            this.payBtn.Image = ((System.Drawing.Image)(resources.GetObject("payBtn.Image")));
+            this.payBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.payBtn.Location = new System.Drawing.Point(718, 11);
+            this.payBtn.Name = "payBtn";
+            this.payBtn.Size = new System.Drawing.Size(134, 40);
+            this.payBtn.TabIndex = 3;
+            this.payBtn.Text = "     Thanh Toán";
+            this.payBtn.TextColor = System.Drawing.Color.White;
+            this.payBtn.UseVisualStyleBackColor = false;
             // 
             // KhoForm
             // 
@@ -326,6 +349,7 @@
             this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.tatcaBtn);
             this.Controls.Add(this.daDongBtn);
+            this.Controls.Add(this.payBtn);
             this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.createBtn);
             this.Controls.Add(this.dangMoBtn);
@@ -366,5 +390,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateCreated;
         private CustomControls.RJControls.RJButton rjButton1;
+        private CustomControls.RJControls.RJButton payBtn;
     }
 }

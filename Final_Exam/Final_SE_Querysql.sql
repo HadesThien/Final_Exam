@@ -27,10 +27,10 @@ CREATE TABLE Teacher
 CREATE TABLE Student
 (
   school NVARCHAR(30) NOT NULL,
-  street NVARCHAR(30) NOT NULL,
-  ward NVARCHAR(20) NOT NULL,
-  district NVARCHAR(20) NOT NULL,
-  city NVARCHAR(30) NOT NULL,
+  street NVARCHAR(50) NOT NULL,
+  ward NVARCHAR(50) NOT NULL,
+  district NVARCHAR(50) NOT NULL,
+  city NVARCHAR(50) NOT NULL,
   dateCreated DATE NOT NULL,
   status NVARCHAR(10) NOT NULL,
   note NVARCHAR(50) NOT NULL,
@@ -38,6 +38,7 @@ CREATE TABLE Student
   PRIMARY KEY (studentId),
   FOREIGN KEY (studentId) REFERENCES Person(Id)
 );
+
 
 CREATE TABLE Class
 (
@@ -53,12 +54,6 @@ CREATE TABLE Class
   PRIMARY KEY (classId),
   FOREIGN KEY (teacherId) REFERENCES Teacher(teacherId)
 );
-Alter Table Class 
-ALTER COLUMN status NVARCHAR(50)
-
-SELECT * From Class 
-DELETE From Class
-
 
 CREATE TABLE Payment
 (
@@ -70,8 +65,9 @@ CREATE TABLE Payment
   numberOfSession INT NOT NULL,
   paymentId VARCHAR(10) NOT NULL,
   studentId VARCHAR(10) NOT NULL,
+  classId VARCHAR(10) NOT NULL, 
   PRIMARY KEY (paymentId),
-  FOREIGN KEY (studentId) REFERENCES Student(studentId)
+  FOREIGN KEY (studentId, classId) REFERENCES Register(studentId, classId)
 );
 
 CREATE TABLE Account
@@ -109,7 +105,7 @@ CREATE TABLE Register
 );
 
 CREATE TABLE Buy
-(
+( 
   buyingDate DATE NOT NULL,
   number INT NOT NULL,
   price INT NOT NULL,
@@ -142,7 +138,6 @@ VALUES
 ('GV004', N'Phạm Thị T', N'Nữ', '1978-04-20', '0654321987'),
 ('GV005', N'Hoàng Văn S', N'Nam', '1985-10-15', '0398765432');
 
-SELECT * From Student
 
 INSERT INTO Student (school, street, ward, district,city,dateCreated ,studentId, status, note)
 VALUES 
@@ -170,16 +165,23 @@ VALUES
 
 INSERT INTO Register (admissionDay, studentId, classId)
 VALUES 
-('2024-04-27', 'HS001', 'LH001'),
-('2024-04-27', 'HS002', 'LH002'),
+('2024-04-29', 'HS001', 'LH001'),
+('2024-04-28', 'HS002', 'LH002'),
 ('2024-04-27', 'HS003', 'LH003'),
-('2024-04-27', 'HS004', 'LH004'),
-('2024-04-27', 'HS005', 'LH005'),
-('2024-04-27', 'HS001', 'LH002'),
-('2024-04-27', 'HS002', 'LH003'),
-('2024-04-27', 'HS003', 'LH004'),
-('2024-04-27', 'HS004', 'LH005'),
-('2024-04-27', 'HS005', 'LH001');
+('2024-04-26', 'HS004', 'LH004'),
+('2024-04-25', 'HS005', 'LH005'),
+('2024-04-24', 'HS001', 'LH002'),
+('2024-04-23', 'HS002', 'LH003'),
+('2024-04-22', 'HS003', 'LH004'),
+('2024-04-21', 'HS004', 'LH005'),
+('2024-04-20', 'HS005', 'LH001'),
+('2024-04-19', 'HS001', 'LH003'),
+('2024-04-18', 'HS002', 'LH004'),
+('2024-04-17', 'HS003', 'LH005'),
+('2024-04-16', 'HS004', 'LH001'),
+('2024-04-15', 'HS005', 'LH002');
+
+
 
 -- Dữ liệu cho các tài liệu
 INSERT INTO Document (inventory, handoutId, name, dateCreated, dateUpdated, price)
@@ -190,13 +192,26 @@ VALUES
 (25, 'TL004', N'Ôn luyện', '2024-04-27', '2024-04-27', 60000),
 (18, 'TL005', N'Tài liệu tham khảo', '2024-04-27', '2024-04-27', 70000);
 
-INSERT INTO Payment (paymentId, dateCreated, period , status, note, promotion, numberOfSession, studentId)
+
+INSERT INTO Payment (dateCreated, period, status, note, promotion, numberOfSession, paymentId, studentId, classId)
 VALUES 
-('DK001', '2024-04-27',getDate() , N'Đăng ký', N'', 0, 12, 'HS001'),
-('DK002', '2024-04-27', getDate(), N'Đăng ký', N'', 0, 12, 'HS002'),
-('DK003', '2024-04-27', getDate(), N'Đăng ký', N'', 0, 12, 'HS003'),
-('DK004', '2024-04-27', getDate(), N'Đăng ký', N'', 0, 12, 'HS004'),
-('DK005', '2024-04-27', getDate(), N'Đăng ký', N'', 0, 12, 'HS005');
+('2024-04-29', '2024-04-01', N'Thanh toán', N'', 0, 12, 'DK001', 'HS001', 'LH001'),
+('2024-04-28', '2024-04-01', N'Đăng ký', N'', 0, 12, 'DK002', 'HS002', 'LH002'),
+('2024-04-27', '2024-04-01', N'Thanh toán', N'', 0, 12, 'DK003', 'HS003', 'LH003'),
+('2024-04-26', '2024-04-01', N'Thanh toán', N'', 0, 12, 'DK004', 'HS004', 'LH004'),
+('2024-04-25', '2024-04-01', N'Đăng ký', N'', 0, 12, 'DK005', 'HS005', 'LH005'),
+('2024-04-24', '2024-04-01', N'Thanh toán', N'', 0, 12, 'DK006', 'HS001', 'LH002'),
+('2024-04-23', '2024-04-01', N'Đăng ký', N'', 0, 12, 'DK007', 'HS002', 'LH003'),
+('2024-04-22', '2024-04-01', N'Thanh toán', N'', 0, 12, 'DK008', 'HS003', 'LH004'),
+('2024-04-21', '2024-04-01', N'Đăng ký', N'', 0, 12, 'DK009', 'HS004', 'LH005'),
+('2024-04-20', '2024-04-01', N'Đăng ký', N'', 0, 12, 'DK010', 'HS005', 'LH001'),
+('2024-04-19', '2024-04-01', N'Thanh toán', N'', 0, 12, 'DK011', 'HS001', 'LH003'),
+('2024-04-18', '2024-04-01', N'Đăng ký', N'', 0, 12, 'DK012', 'HS002', 'LH004'),
+('2024-04-17', '2024-04-01', N'Thanh toán', N'', 0, 12, 'DK013', 'HS003', 'LH005'),
+('2024-04-16', '2024-04-01', N'Thanh toán', N'', 0, 12, 'DK014', 'HS004', 'LH001'),
+('2024-04-15', '2024-04-01', N'Đăng ký', N'', 0, 12, 'DK015', 'HS005', 'LH002');
+
+
 
 INSERT INTO Buy (buyId,buyingDate, number, price, studentId, handoutId, status, period, note)
 VALUES 

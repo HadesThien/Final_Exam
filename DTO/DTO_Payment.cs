@@ -14,8 +14,9 @@ namespace DTO {
         public float Promotion {  get; set; }
         public int Number_Of_Session {  get; set; }
         public string StudentId { get; set; }
+        public string ClassId { get; set; }
 
-        public DTO_Payment( string paymentId, DateTime dateCreated, DateTime period , string status, string note, float promotion, int n_session, string studentId) { 
+        public DTO_Payment( string paymentId, DateTime dateCreated, DateTime period, string status, string note, float promotion, int n_session, string studentId, string classId) {
             PaymentId = paymentId;
             DateCreated = dateCreated;
             Period = period;
@@ -24,6 +25,7 @@ namespace DTO {
             Promotion = promotion;
             Number_Of_Session = n_session;
             StudentId = studentId;
+            ClassId = classId;
         }
 
     }

@@ -52,13 +52,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.schoolLabel = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.paymentGridView = new Final_Exam.RoundedGridView();
             this.hocPhiBtn = new CustomControls.RJControls.RJButton();
             this.thoiHocBtn = new CustomControls.RJControls.RJButton();
             this.nhapHocBtn = new CustomControls.RJControls.RJButton();
             this.classBtn = new CustomControls.RJControls.RJButton();
             this.removeBtn = new CustomControls.RJControls.RJButton();
             this.cancelBtn = new CustomControls.RJControls.RJButton();
+            this.paymentGridView = new Final_Exam.RoundedGridView();
             this.rjButton5 = new CustomControls.RJControls.RJButton();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -338,67 +338,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(234, 443);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
-            // paymentGridView
-            // 
-            this.paymentGridView.AllowUserToAddRows = false;
-            this.paymentGridView.AllowUserToDeleteRows = false;
-            this.paymentGridView.AllowUserToResizeColumns = false;
-            this.paymentGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            this.paymentGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.paymentGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.paymentGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.paymentGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.paymentGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.paymentGridView.BorderRadius = 7;
-            this.paymentGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.paymentGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.paymentGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.paymentGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.paymentGridView.ColumnHeadersHeight = 50;
-            this.paymentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.paymentGridView.DefaultCellStyle = dataGridViewCellStyle3;
-            this.paymentGridView.EnableHeadersVisualStyles = false;
-            this.paymentGridView.GridColor = System.Drawing.Color.GhostWhite;
-            this.paymentGridView.Location = new System.Drawing.Point(275, 224);
-            this.paymentGridView.MultiSelect = false;
-            this.paymentGridView.Name = "paymentGridView";
-            this.paymentGridView.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.paymentGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.paymentGridView.RowHeadersVisible = false;
-            this.paymentGridView.RowHeadersWidth = 51;
-            this.paymentGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.paymentGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.paymentGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.paymentGridView.RowTemplate.DividerHeight = 1;
-            this.paymentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.paymentGridView.Size = new System.Drawing.Size(1078, 440);
-            this.paymentGridView.TabIndex = 11;
-            // 
             // hocPhiBtn
             // 
             this.hocPhiBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
@@ -472,6 +411,7 @@
             this.classBtn.Text = "Lớp học";
             this.classBtn.TextColor = System.Drawing.Color.White;
             this.classBtn.UseVisualStyleBackColor = false;
+            this.classBtn.Click += new System.EventHandler(this.classBtn_Click);
             // 
             // removeBtn
             // 
@@ -510,6 +450,67 @@
             this.cancelBtn.TextColor = System.Drawing.Color.Black;
             this.cancelBtn.UseVisualStyleBackColor = false;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            // 
+            // paymentGridView
+            // 
+            this.paymentGridView.AllowUserToAddRows = false;
+            this.paymentGridView.AllowUserToDeleteRows = false;
+            this.paymentGridView.AllowUserToResizeColumns = false;
+            this.paymentGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            this.paymentGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.paymentGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.paymentGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.paymentGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.paymentGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.paymentGridView.BorderRadius = 7;
+            this.paymentGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.paymentGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.paymentGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.paymentGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.paymentGridView.ColumnHeadersHeight = 50;
+            this.paymentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.paymentGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.paymentGridView.EnableHeadersVisualStyles = false;
+            this.paymentGridView.GridColor = System.Drawing.Color.GhostWhite;
+            this.paymentGridView.Location = new System.Drawing.Point(275, 224);
+            this.paymentGridView.MultiSelect = false;
+            this.paymentGridView.Name = "paymentGridView";
+            this.paymentGridView.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.paymentGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.paymentGridView.RowHeadersVisible = false;
+            this.paymentGridView.RowHeadersWidth = 51;
+            this.paymentGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.paymentGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.paymentGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.paymentGridView.RowTemplate.DividerHeight = 1;
+            this.paymentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.paymentGridView.Size = new System.Drawing.Size(1078, 440);
+            this.paymentGridView.TabIndex = 11;
             // 
             // rjButton5
             // 

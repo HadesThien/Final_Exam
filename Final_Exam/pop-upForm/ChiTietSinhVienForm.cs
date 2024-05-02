@@ -83,5 +83,9 @@ namespace Final_Exam {
             ChiTietSinhVienForm_Load(sender, e);
             this.Close();
         }
+
+        private void classBtn_Click(object sender, EventArgs e) {
+            student = new BUS_Student(id,hoTenLabel.Text,gioiTinhLabel.Text,DateTime.Parse(ngaySinhLabel.Text),soDienThoaiLabel.Text,schoolLabel.Text,);
+        }
     }
 }

@@ -12,14 +12,14 @@ namespace DAL
     public class DAL_Payment
     {
         private DTO_Payment payment;
-        public DAL_Payment( string paymentId, DateTime dateCreated, DateTime period, string status, string note, float promotion, int n_session, string studentId)
+        public DAL_Payment( string paymentId, DateTime dateCreated, DateTime period, string status, string note, float promotion, int n_session, string studentId,string classId)
         {
-            payment = new DTO_Payment(paymentId, dateCreated,period, status, note, promotion, n_session, studentId);
+            payment = new DTO_Payment(paymentId, dateCreated,period, status, note, promotion, n_session, studentId,classId);
         }
 
         public void addQuery()
         {
-            string query = "INSERT INTO Payment VALUES('" + payment.DateCreated + "', " + payment.Period.ToString("MM/yyyy") + ", '" + payment.Status + "', '" + payment.Note + "', " + payment.Promotion + ", " + payment.Number_Of_Session + ", '" + payment.PaymentId + "', '" + payment.StudentId + "')";
+            string query = "INSERT INTO Payment VALUES('" + payment.DateCreated + "', " + payment.Period.ToString("MM/yyyy") + ", '" + payment.Status + "', '" + payment.Note + "', " + payment.Promotion + ", " + payment.Number_Of_Session + ", '" + payment.PaymentId + "', '" + payment.StudentId + "', " + payment.ClassId+ "')";
             Connection.actionQuery(query);
         }
 
@@ -37,9 +37,13 @@ namespace DAL
 
         public DataTable selectQuery()
         {
-            string s = "SELECT * FROM Payment";
-            
-            return Connection.selectQuery(s);
+            string s = $"SELECT \r\n    p.paymentId,\r\n    pe.name AS TenHocSinh,\r\n    CONCAT(c.subject, ' ', c.grade, '.', c.shift) AS TenLop,c.Price,\r\n    FORMAT(p.period, 'MM/yyyy') AS Period,\r\n    p.status,\r\n    p.promotion,\r\n    p.numberOfSession,\r\n    p.dateCreated\r\n" +
+                $"FROM \r\n    Payment p\r\n" +
+                $"JOIN \r\n    Student s ON p.studentId = s.studentId\r\n" +
+                $"JOIN \r\n    Person pe ON s.studentId = pe.Id\r\n" +
+                $"JOIN \r\n    Register r ON s.studentId = r.studentId\r\n" +
+                $"JOIN \r\n    Class c ON c.classId = r.classId;";
+               return Connection.selectQuery(s);
         }
         public DataTable showPayments() {
             string s ="Select p.paymentId, ConCat(c.subject,' ', c.grade, '.' , c.shift) as name, p.period,p.note,p.dateCreated From Payment p Join Register r On p.StudentId = r.registerId Join Class c On r.classId = c.ClassId;";

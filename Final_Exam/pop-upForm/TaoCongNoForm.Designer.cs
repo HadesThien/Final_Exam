@@ -36,8 +36,6 @@
             this.cancelBtn = new CustomControls.RJControls.RJButton();
             this.saveBtn = new CustomControls.RJControls.RJButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.classListBox = new System.Windows.Forms.ListBox();
-            this.studentListBox = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -48,6 +46,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.classCheckedListBox = new System.Windows.Forms.CheckedListBox();
+            this.studentCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,6 +57,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.studentCheckedListBox);
+            this.panel1.Controls.Add(this.classCheckedListBox);
             this.panel1.Controls.Add(this.paymentCheckedBox);
             this.panel1.Controls.Add(this.payCheckedBox);
             this.panel1.Controls.Add(this.label8);
@@ -68,8 +70,6 @@
             this.panel1.Controls.Add(this.cancelBtn);
             this.panel1.Controls.Add(this.saveBtn);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.classListBox);
-            this.panel1.Controls.Add(this.studentListBox);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -208,26 +208,6 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Lớp học:";
             // 
-            // classListBox
-            // 
-            this.classListBox.FormattingEnabled = true;
-            this.classListBox.ItemHeight = 21;
-            this.classListBox.Location = new System.Drawing.Point(21, 333);
-            this.classListBox.Name = "classListBox";
-            this.classListBox.Size = new System.Drawing.Size(290, 172);
-            this.classListBox.TabIndex = 3;
-            this.classListBox.Visible = false;
-            // 
-            // studentListBox
-            // 
-            this.studentListBox.FormattingEnabled = true;
-            this.studentListBox.ItemHeight = 21;
-            this.studentListBox.Location = new System.Drawing.Point(21, 87);
-            this.studentListBox.Name = "studentListBox";
-            this.studentListBox.Size = new System.Drawing.Size(290, 172);
-            this.studentListBox.TabIndex = 3;
-            this.studentListBox.Visible = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -355,6 +335,22 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Đăng ký mới:";
             // 
+            // classCheckedListBox
+            // 
+            this.classCheckedListBox.FormattingEnabled = true;
+            this.classCheckedListBox.Location = new System.Drawing.Point(21, 333);
+            this.classCheckedListBox.Name = "classCheckedListBox";
+            this.classCheckedListBox.Size = new System.Drawing.Size(291, 172);
+            this.classCheckedListBox.TabIndex = 11;
+            // 
+            // studentCheckedListBox
+            // 
+            this.studentCheckedListBox.FormattingEnabled = true;
+            this.studentCheckedListBox.Location = new System.Drawing.Point(21, 88);
+            this.studentCheckedListBox.Name = "studentCheckedListBox";
+            this.studentCheckedListBox.Size = new System.Drawing.Size(291, 172);
+            this.studentCheckedListBox.TabIndex = 11;
+            // 
             // TaoCongNoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -388,7 +384,6 @@
         private CustomControls.RJControls.RJTextBox searchStudentTextBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox studentListBox;
         private RoundedGridView roundedGridView1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox richTextBox1;
@@ -398,7 +393,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
         private CustomControls.RJControls.RJTextBox searchClassTextBox;
-        private System.Windows.Forms.ListBox classListBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
@@ -407,5 +401,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckedListBox paymentCheckedBox;
         private System.Windows.Forms.CheckBox payCheckedBox;
+        private System.Windows.Forms.CheckedListBox studentCheckedListBox;
+        private System.Windows.Forms.CheckedListBox classCheckedListBox;
     }
 }

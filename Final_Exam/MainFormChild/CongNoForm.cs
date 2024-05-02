@@ -1,4 +1,5 @@
-﻿using Final_Exam.pop_upForm;
+﻿using BUS;
+using Final_Exam.pop_upForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,21 +12,18 @@ using System.Windows.Forms;
 
 namespace Final_Exam {
     public partial class CongNoForm : Form {
+        //Properties 
+        BUS_Payment payment;
+        DataTable dt;
 
+        //Constructor
         public CongNoForm() {
             InitializeComponent();
         }
-
-        private void panel2_Paint(object sender, PaintEventArgs e) {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e) {
-
-        }
-
         private void CongNoForm_Load(object sender, EventArgs e) {
-
+            payment = new BUS_Payment("", DateTime.Now, DateTime.Now, "", "", 0, 0, "");
+            dt = payment.selectQuery();
+            paymentGridView.DataSource = dt;
         }
 
         private void tatcaBtn_Click(object sender, EventArgs e) {

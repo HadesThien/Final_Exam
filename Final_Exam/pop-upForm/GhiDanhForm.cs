@@ -68,6 +68,8 @@ namespace Final_Exam {
             }
             id = student.getId();
             idLabel.Text = student.getId();
+            classTextBox.Visible = false;
+            buttonSelect.Visible = false;
         }
 
         private void buttonSelect_Click(object sender, EventArgs e) {
@@ -200,20 +202,18 @@ namespace Final_Exam {
             }
             svForm.updateGridView(student.basicSelectQuery());
             this.Close();
-        
         }
 
         private void tinhTrangComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             string valueOfItem = tinhTrangComboBox.SelectedItem.ToString();
-
-            if (!valueOfItem.Equals("Đang học"))
-            {
-                classListBox.Enabled = false;
+            if (valueOfItem.Equals("Nhập học") || valueOfItem.Equals("Học thử")) {
+                classTextBox.Visible = true;
+                buttonSelect.Visible = true;
             }
-            else
-            {
-                classListBox.Enabled = true;
+            else {
+                classTextBox.Visible = false;
+                buttonSelect.Visible =false;
             }
         }
 
