@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,9 +12,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Final_Exam {
     public partial class TaoLopForm : Form {
+
         public TaoLopForm() {
             InitializeComponent();
-            
+            BUS_Teacher teacher = new BUS_Teacher("", "", "", DateTime.Now, "", "");
         }
 
         private void cancelBtn_Click(object sender, EventArgs e) {
@@ -21,7 +23,7 @@ namespace Final_Exam {
         }
 
 
-        private void khoiHocTextBox_KeyPress(object sender, KeyPressEventArgs e) {
+        private void gradeComboBox_KeyPress(object sender, KeyPressEventArgs e) {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.') {
                 e.Handled = true;
             }
@@ -44,20 +46,20 @@ namespace Final_Exam {
                 e.Handled = true;
         }
 
-        private void monHocTextBox_Leave(object sender, EventArgs e) {
-            tenLopTextBox.Texts += monHocTextBox.Texts + " ";
+        private void subjectComboBox_Leave(object sender, EventArgs e) {
+            tenLopTextBox.Texts += subjectComboBox.Texts + " ";
         }
 
         private void giaTienTextBox_Leave(object sender, EventArgs e) {
             if (giaTienTextBox.Texts.Length < 5) alert.Visible = true;
         }
 
-        private void khoiHocTextBox_Leave(object sender, EventArgs e) {
-            tenLopTextBox.Texts += khoiHocTextBox.Texts + ".";
+        private void gradeComboBox_Leave(object sender, EventArgs e) {
+            tenLopTextBox.Texts += gradeComboBox.Texts + ".";
         }
 
-        private void caHocTextBox_Leave(object sender, EventArgs e) {
-            tenLopTextBox.Texts += caHocTextBox.Texts;
+        private void shiftComboBox_Leave(object sender, EventArgs e) {
+            tenLopTextBox.Texts += shiftComboBox.Texts;
         }
     }
 }
