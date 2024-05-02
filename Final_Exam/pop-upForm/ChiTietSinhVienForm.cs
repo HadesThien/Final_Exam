@@ -85,7 +85,9 @@ namespace Final_Exam {
         }
 
         private void classBtn_Click(object sender, EventArgs e) {
-            student = new BUS_Student(id,hoTenLabel.Text,gioiTinhLabel.Text,DateTime.Parse(ngaySinhLabel.Text),soDienThoaiLabel.Text,schoolLabel.Text,);
+            //addressLabel.Text =
+            student = new BUS_Student(id, hoTenLabel.Text, gioiTinhLabel.Text, DateTime.Parse(ngaySinhLabel.Text), soDienThoaiLabel.Text, schoolLabel.Text, "", "","","", DateTime.Parse(ngayTaoLabel.Text), tinhTrangLabel.Text, ghiChuLabel.Text);
+
         }
     }
 }

@@ -39,10 +39,10 @@ namespace DAL
         {
             string s = $"SELECT \r\n    p.paymentId,\r\n    pe.name AS TenHocSinh,\r\n    CONCAT(c.subject, ' ', c.grade, '.', c.shift) AS TenLop,c.Price,\r\n    FORMAT(p.period, 'MM/yyyy') AS Period,\r\n    p.status,\r\n    p.promotion,\r\n    p.numberOfSession,\r\n    p.dateCreated\r\n" +
                 $"FROM \r\n    Payment p\r\n" +
-                $"JOIN \r\n    Student s ON p.studentId = s.studentId\r\n" +
-                $"JOIN \r\n    Person pe ON s.studentId = pe.Id\r\n" +
-                $"JOIN \r\n    Register r ON s.studentId = r.studentId\r\n" +
-                $"JOIN \r\n    Class c ON c.classId = r.classId;";
+                $"JOIN Register r ON r.studentId = p.studentId and r.classId = p.classId\r\n" +
+                $"JOIN Student s ON s.studentId = r.studentId\r\n" +
+                $"JOIN Person pe ON s.studentId = pe.Id\r\n" +
+                $"JOIN Class c ON c.classId = r.classId\r\n";
                return Connection.selectQuery(s);
         }
         public DataTable showPayments() {

@@ -21,7 +21,7 @@ namespace Final_Exam {
             InitializeComponent();
         }
         private void CongNoForm_Load(object sender, EventArgs e) {
-            payment = new BUS_Payment("", DateTime.Now, DateTime.Now, "", "", 0, 0, "");
+            payment = new BUS_Payment("", DateTime.Now, DateTime.Now, "", "", 0, 0, "","");
             dt = payment.selectQuery();
             paymentGridView.DataSource = dt;
         }
