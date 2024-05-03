@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using Final_Exam.pop_upForm;
 
 namespace Final_Exam {
     public partial class NhapHangForm : Form {
@@ -138,10 +139,16 @@ namespace Final_Exam {
 
         private void delBtn_Click(object sender, EventArgs e)
         {
-            doc = new BUS_Document(0, id, "", DateTime.Now, DateTime.Now, 0);
-            buy = new BUS_Buy(DateTime.Now, 0, 0, "", DateTime.Now, "", "", "", id);
-            buy.deleteFromADocument();
-            doc.deleteQuery();
+            ConfirmForm confirmForm = new ConfirmForm();
+            confirmForm.ShowDialog();
+            if (Account.confirmPassword == true)
+            {
+                doc = new BUS_Document(0, id, "", DateTime.Now, DateTime.Now, 0);
+                buy = new BUS_Buy(DateTime.Now, 0, 0, "", DateTime.Now, "", "", "", id);
+                buy.deleteFromADocument();
+                doc.deleteQuery();
+            }
+            Account.confirmPassword = false;
             form.updateGridView();
             this.Close();
         }

@@ -24,20 +24,22 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KhoForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.searchBtn = new CustomControls.RJControls.RJButton();
             this.filterBtn = new CustomControls.RJControls.RJButton();
             this.createBtn = new CustomControls.RJControls.RJButton();
+            this.payBtn = new CustomControls.RJControls.RJButton();
             this.settingBtn = new CustomControls.RJControls.RJButton();
             this.label1 = new System.Windows.Forms.Label();
             this.importBtn = new CustomControls.RJControls.RJButton();
             this.documentGridView = new Final_Exam.RoundedGridView();
             this.updateBtn = new CustomControls.RJControls.RJButton();
+            this.buyBtn = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.documentGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,6 +116,28 @@
             this.createBtn.UseVisualStyleBackColor = false;
             this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
+            // payBtn
+            // 
+            this.payBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.payBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.payBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.payBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.payBtn.BorderRadius = 12;
+            this.payBtn.BorderSize = 0;
+            this.payBtn.FlatAppearance.BorderSize = 0;
+            this.payBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.payBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.payBtn.ForeColor = System.Drawing.Color.White;
+            this.payBtn.Image = ((System.Drawing.Image)(resources.GetObject("payBtn.Image")));
+            this.payBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.payBtn.Location = new System.Drawing.Point(718, 11);
+            this.payBtn.Name = "payBtn";
+            this.payBtn.Size = new System.Drawing.Size(134, 40);
+            this.payBtn.TabIndex = 3;
+            this.payBtn.Text = "     Thanh Toán";
+            this.payBtn.TextColor = System.Drawing.Color.White;
+            this.payBtn.UseVisualStyleBackColor = false;
+            // 
             // settingBtn
             // 
             this.settingBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -173,8 +197,8 @@
             this.documentGridView.AllowUserToDeleteRows = false;
             this.documentGridView.AllowUserToResizeColumns = false;
             this.documentGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            this.documentGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            this.documentGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.documentGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -185,43 +209,43 @@
             this.documentGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.documentGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.documentGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.documentGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.documentGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.documentGridView.ColumnHeadersHeight = 50;
             this.documentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.documentGridView.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.documentGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.documentGridView.EnableHeadersVisualStyles = false;
             this.documentGridView.GridColor = System.Drawing.Color.GhostWhite;
             this.documentGridView.Location = new System.Drawing.Point(17, 157);
             this.documentGridView.MultiSelect = false;
             this.documentGridView.Name = "documentGridView";
             this.documentGridView.ReadOnly = true;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.documentGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.documentGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.documentGridView.RowHeadersVisible = false;
             this.documentGridView.RowHeadersWidth = 51;
             this.documentGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.documentGridView.RowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.documentGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.documentGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.documentGridView.RowTemplate.DividerHeight = 1;
             this.documentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -251,27 +275,28 @@
             this.updateBtn.UseVisualStyleBackColor = false;
             this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
-            // payBtn
+            // buyBtn
             // 
-            this.payBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.payBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
-            this.payBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
-            this.payBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.payBtn.BorderRadius = 12;
-            this.payBtn.BorderSize = 0;
-            this.payBtn.FlatAppearance.BorderSize = 0;
-            this.payBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.payBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.payBtn.ForeColor = System.Drawing.Color.White;
-            this.payBtn.Image = ((System.Drawing.Image)(resources.GetObject("payBtn.Image")));
-            this.payBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.payBtn.Location = new System.Drawing.Point(718, 11);
-            this.payBtn.Name = "payBtn";
-            this.payBtn.Size = new System.Drawing.Size(134, 40);
-            this.payBtn.TabIndex = 3;
-            this.payBtn.Text = "     Thanh Toán";
-            this.payBtn.TextColor = System.Drawing.Color.White;
-            this.payBtn.UseVisualStyleBackColor = false;
+            this.buyBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buyBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.buyBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.buyBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buyBtn.BorderRadius = 12;
+            this.buyBtn.BorderSize = 0;
+            this.buyBtn.FlatAppearance.BorderSize = 0;
+            this.buyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buyBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buyBtn.ForeColor = System.Drawing.Color.White;
+            this.buyBtn.Image = ((System.Drawing.Image)(resources.GetObject("buyBtn.Image")));
+            this.buyBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buyBtn.Location = new System.Drawing.Point(578, 11);
+            this.buyBtn.Name = "buyBtn";
+            this.buyBtn.Size = new System.Drawing.Size(134, 40);
+            this.buyBtn.TabIndex = 23;
+            this.buyBtn.Text = "     Mua";
+            this.buyBtn.TextColor = System.Drawing.Color.White;
+            this.buyBtn.UseVisualStyleBackColor = false;
+            this.buyBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
             // KhoForm
             // 
@@ -279,6 +304,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.buyBtn);
             this.Controls.Add(this.updateBtn);
             this.Controls.Add(this.documentGridView);
             this.Controls.Add(this.importBtn);
@@ -304,6 +330,7 @@
 
         private System.Windows.Forms.TextBox searchTextBox;
         private CustomControls.RJControls.RJButton searchBtn;
+        private CustomControls.RJControls.RJButton payBtn;
         private CustomControls.RJControls.RJButton filterBtn;
         private CustomControls.RJControls.RJButton createBtn;
         private CustomControls.RJControls.RJButton settingBtn;
@@ -311,5 +338,6 @@
         private CustomControls.RJControls.RJButton importBtn;
         private RoundedGridView documentGridView;
         private CustomControls.RJControls.RJButton updateBtn;
+        private CustomControls.RJControls.RJButton buyBtn;
     }
 }

@@ -132,12 +132,6 @@
     <Compile Include="pop-upForm\NhapHangForm.Designer.cs">
       <DependentUpon>NhapHangForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="pop-upForm\NhapKhoForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="pop-upForm\NhapKhoForm.Designer.cs">
-      <DependentUpon>NhapKhoForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\RJComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -232,9 +226,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pop-upForm\NhapHangForm.resx">
       <DependentUpon>NhapHangForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="pop-upForm\NhapKhoForm.resx">
-      <DependentUpon>NhapKhoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controllers\RJTextBox.resx">
       <Generator>ResXFileCodeGenerator</Generator>
