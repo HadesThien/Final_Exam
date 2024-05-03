@@ -37,7 +37,7 @@ namespace DAL
 
         public DataTable selectQuery()
         {
-            string s = $"SELECT \r\n    p.paymentId,\r\n    pe.name AS TenHocSinh,\r\n    CONCAT(c.subject, ' ', c.grade, '.', c.shift) AS TenLop,c.Price,\r\n    FORMAT(p.period, 'MM/yyyy') AS Period,\r\n    p.status,\r\n    p.promotion,\r\n    p.numberOfSession,\r\n    p.dateCreated\r\n" +
+            string s = $"SELECT p.paymentId,pe.name AS TenHocSinh,CONCAT(c.subject, ' ', c.grade, '.', c.shift) AS TenLop,c.Price, FORMAT(p.period, 'MM/yyyy') AS Period,p.status,p.promotion,p.numberOfSession,p.dateCreated\r\n" +
                 $"FROM \r\n    Payment p\r\n" +
                 $"JOIN Register r ON r.studentId = p.studentId and r.classId = p.classId\r\n" +
                 $"JOIN Student s ON s.studentId = r.studentId\r\n" +

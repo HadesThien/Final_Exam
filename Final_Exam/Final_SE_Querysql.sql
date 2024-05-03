@@ -1,8 +1,7 @@
 ﻿use master 
 go 
 
-create Database Final_SE
-go
+
 
 use Final_SE
 go
@@ -51,9 +50,11 @@ CREATE TABLE Class
   numberOfStudent INT NOT NULL,
   dateCreated DATE NOT NULL,
   teacherId VARCHAR(10) NOT NULL,
+  status VARCHAR(10),
   PRIMARY KEY (classId),
   FOREIGN KEY (teacherId) REFERENCES Teacher(teacherId)
 );
+
 
 CREATE TABLE Payment
 (
@@ -234,3 +235,9 @@ VALUES	('password123', '2024-04-28', 'user1', '2024-04-28', 'user', 'user1@examp
 		('123456', '2024-04-25', 'user3', '2024-04-25', 'user', 'user3@example.com', '7778889999', 'Max Smith');
 
 
+SELECT p.paymentId,pe.name AS TenHocSinh,CONCAT(c.subject, ' ', c.grade, '.', c.shift) AS TenLop,c.Price, FORMAT(p.period, 'MM/yyyy') AS Period,p.status,p.promotion,p.numberOfSession,p.dateCreated
+FROM Payment p
+JOIN Register r ON r.studentId = p.studentId and r.classId = p.classId
+JOIN Student s ON s.studentId = r.studentId
+JOIN Person pe ON s.studentId = pe.Id
+JOIN Class c ON c.classId = r.classId
