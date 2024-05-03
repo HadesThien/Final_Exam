@@ -17,7 +17,7 @@ namespace Final_Exam {
         public static bool isLogout = false;
         bool sideBarExpand = true;
         private Form currentFormChild;
-
+        List<Button> btns = new List<Button>();
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
                 (
@@ -38,14 +38,20 @@ namespace Final_Exam {
             move.SetMovable(crossbar);
             this.DoubleBuffered = true;
             this.SetStyle(ControlStyles.ResizeRedraw, true);
+            btns.Add(dashboardBtn);
+            btns.Add(studentBtn);
+            btns.Add(classBtn);
+            btns.Add(storeBtn);
+            btns.Add(paidBtn);
+            btns.Add(paymentBtn);
+            btns.Add(accountBtn);
+            dashboardBtn.BackColor = Color.FromArgb(17, 21, 83);
+            dashboardBtn.ForeColor = Color.GhostWhite;
         }
         //Setting size Form 
 
         //Methods
         private void OpenChildForm(Form childForm) {
-            //if(currentFormChild != null) {
-            //    currentFormChild.Close();
-            //}
             currentFormChild = childForm;
             childForm.TopLevel = false;
             childForm.Dock = DockStyle.Fill;
@@ -88,9 +94,15 @@ namespace Final_Exam {
         //------------------------
 
         private void changeBtn(Button btn) {
-
-            btn.BackColor = Color.FromArgb(27, 31, 136);
-            btn.ForeColor = Color.Black;
+            foreach(Button b in btns) {
+                if(b == btn) {
+                    b.BackColor = Color.FromArgb(17, 21, 83);
+                    b.ForeColor = Color.GhostWhite;
+                }else {
+                    b.BackColor = Color.MidnightBlue;
+                    b.ForeColor = Color.White;
+                }
+            }
         }
         //Buttons at sidebar
         private void hocVienBtn_Click(object sender, EventArgs e) {
@@ -121,7 +133,7 @@ namespace Final_Exam {
         }
         private void paidBtn_Click(object sender, EventArgs e) {
             changeBtn(paidBtn);
-            OpenChildForm(new TaoCongNoForm());
+            OpenChildForm(new ThanhToanForm());
         }
 
         //-----------------------------------

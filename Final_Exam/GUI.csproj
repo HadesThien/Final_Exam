@@ -175,11 +175,11 @@
     <Compile Include="Controllers\RJButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="pop-upForm\TaoCongNoForm.cs">
+    <Compile Include="pop-upForm\ThanhToanForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="pop-upForm\TaoCongNoForm.Designer.cs">
-      <DependentUpon>TaoCongNoForm.cs</DependentUpon>
+    <Compile Include="pop-upForm\ThanhToanForm.Designer.cs">
+      <DependentUpon>ThanhToanForm.cs</DependentUpon>
     </Compile>
     <Compile Include="pop-upForm\TaoLopForm.cs">
       <SubType>Form</SubType>
@@ -242,8 +242,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="pop-upForm\TaoCongNoForm.resx">
-      <DependentUpon>TaoCongNoForm.cs</DependentUpon>
+    <EmbeddedResource Include="pop-upForm\ThanhToanForm.resx">
+      <DependentUpon>ThanhToanForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pop-upForm\TaoLopForm.resx">
       <DependentUpon>TaoLopForm.cs</DependentUpon>

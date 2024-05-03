@@ -43,7 +43,7 @@ namespace Final_Exam {
         }
 
         private void createBtn_Click(object sender, EventArgs e) {
-            Form form = new TaoCongNoForm();
+            Form form = new ThanhToanForm();
             form.ShowDialog();
         }
 
