@@ -251,6 +251,28 @@
             this.updateBtn.UseVisualStyleBackColor = false;
             this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
+            // payBtn
+            // 
+            this.payBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.payBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.payBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.payBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.payBtn.BorderRadius = 12;
+            this.payBtn.BorderSize = 0;
+            this.payBtn.FlatAppearance.BorderSize = 0;
+            this.payBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.payBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.payBtn.ForeColor = System.Drawing.Color.White;
+            this.payBtn.Image = ((System.Drawing.Image)(resources.GetObject("payBtn.Image")));
+            this.payBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.payBtn.Location = new System.Drawing.Point(718, 11);
+            this.payBtn.Name = "payBtn";
+            this.payBtn.Size = new System.Drawing.Size(134, 40);
+            this.payBtn.TabIndex = 3;
+            this.payBtn.Text = "     Thanh Toán";
+            this.payBtn.TextColor = System.Drawing.Color.White;
+            this.payBtn.UseVisualStyleBackColor = false;
+            // 
             // KhoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);

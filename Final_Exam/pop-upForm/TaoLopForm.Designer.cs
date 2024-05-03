@@ -31,11 +31,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.monHocTextBox = new CustomControls.RJControls.RJTextBox();
             this.soBuoiTextBox = new CustomControls.RJControls.RJTextBox();
             this.soHocSinhTextBox = new CustomControls.RJControls.RJTextBox();
-            this.caHocTextBox = new CustomControls.RJControls.RJTextBox();
-            this.khoiHocTextBox = new CustomControls.RJControls.RJTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.alert = new System.Windows.Forms.Label();
@@ -45,6 +42,11 @@
             this.tenLopTextBox = new CustomControls.RJControls.RJTextBox();
             this.cancelBtn = new CustomControls.RJControls.RJButton();
             this.saveBtn = new CustomControls.RJControls.RJButton();
+            this.teacherLabel = new System.Windows.Forms.Label();
+            this.teacherComboBox = new CustomControls.RJControls.RJComboBox();
+            this.subjectComboBox = new CustomControls.RJControls.RJComboBox();
+            this.gradeComboBox = new CustomControls.RJControls.RJComboBox();
+            this.shiftComboBox = new CustomControls.RJControls.RJComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +67,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(707, 259);
+            this.label2.Location = new System.Drawing.Point(707, 303);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 37);
             this.label2.TabIndex = 1;
@@ -127,7 +129,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.monHocTextBox, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.subjectComboBox, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 3);
@@ -135,8 +137,8 @@
             this.tableLayoutPanel1.Controls.Add(this.soHocSinhTextBox, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.caHocTextBox, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.khoiHocTextBox, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.gradeComboBox, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.shiftComboBox, 1, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(24, 89);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -148,31 +150,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(657, 538);
             this.tableLayoutPanel1.TabIndex = 2;
-            // 
-            // monHocTextBox
-            // 
-            this.monHocTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.monHocTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.monHocTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.monHocTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.monHocTextBox.BorderRadius = 0;
-            this.monHocTextBox.BorderSize = 2;
-            this.monHocTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monHocTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.monHocTextBox.Location = new System.Drawing.Point(332, 4);
-            this.monHocTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.monHocTextBox.Multiline = false;
-            this.monHocTextBox.Name = "monHocTextBox";
-            this.monHocTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.monHocTextBox.PasswordChar = false;
-            this.monHocTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.monHocTextBox.PlaceholderText = "";
-            this.monHocTextBox.Size = new System.Drawing.Size(321, 36);
-            this.monHocTextBox.TabIndex = 0;
-            this.monHocTextBox.Texts = "";
-            this.monHocTextBox.UnderlinedStyle = false;
-            this.monHocTextBox.Leave += new System.EventHandler(this.monHocTextBox_Leave);
             // 
             // soBuoiTextBox
             // 
@@ -224,57 +201,6 @@
             this.soHocSinhTextBox.UnderlinedStyle = false;
             this.soHocSinhTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soHocSinhTextBox_KeyPress);
             // 
-            // caHocTextBox
-            // 
-            this.caHocTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.caHocTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.caHocTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.caHocTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.caHocTextBox.BorderRadius = 0;
-            this.caHocTextBox.BorderSize = 2;
-            this.caHocTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.caHocTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.caHocTextBox.Location = new System.Drawing.Point(332, 218);
-            this.caHocTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.caHocTextBox.Multiline = false;
-            this.caHocTextBox.Name = "caHocTextBox";
-            this.caHocTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.caHocTextBox.PasswordChar = false;
-            this.caHocTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.caHocTextBox.PlaceholderText = "";
-            this.caHocTextBox.Size = new System.Drawing.Size(321, 36);
-            this.caHocTextBox.TabIndex = 2;
-            this.caHocTextBox.Texts = "";
-            this.caHocTextBox.UnderlinedStyle = false;
-            this.caHocTextBox.Leave += new System.EventHandler(this.caHocTextBox_Leave);
-            // 
-            // khoiHocTextBox
-            // 
-            this.khoiHocTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.khoiHocTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.khoiHocTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.khoiHocTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.khoiHocTextBox.BorderRadius = 0;
-            this.khoiHocTextBox.BorderSize = 2;
-            this.khoiHocTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.khoiHocTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.khoiHocTextBox.Location = new System.Drawing.Point(332, 111);
-            this.khoiHocTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.khoiHocTextBox.Multiline = false;
-            this.khoiHocTextBox.Name = "khoiHocTextBox";
-            this.khoiHocTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.khoiHocTextBox.PasswordChar = false;
-            this.khoiHocTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.khoiHocTextBox.PlaceholderText = "";
-            this.khoiHocTextBox.Size = new System.Drawing.Size(321, 36);
-            this.khoiHocTextBox.TabIndex = 1;
-            this.khoiHocTextBox.Texts = "";
-            this.khoiHocTextBox.UnderlinedStyle = false;
-            this.khoiHocTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.khoiHocTextBox_KeyPress);
-            this.khoiHocTextBox.Leave += new System.EventHandler(this.khoiHocTextBox_Leave);
-            // 
             // label8
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -282,7 +208,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(707, 94);
+            this.label8.Location = new System.Drawing.Point(707, 196);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(376, 37);
             this.label8.TabIndex = 1;
@@ -336,7 +262,7 @@
             this.maLopTextBox.Enabled = false;
             this.maLopTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maLopTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.maLopTextBox.Location = new System.Drawing.Point(712, 147);
+            this.maLopTextBox.Location = new System.Drawing.Point(714, 259);
             this.maLopTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.maLopTextBox.Multiline = false;
             this.maLopTextBox.Name = "maLopTextBox";
@@ -389,7 +315,7 @@
             this.tenLopTextBox.Enabled = false;
             this.tenLopTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tenLopTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tenLopTextBox.Location = new System.Drawing.Point(712, 320);
+            this.tenLopTextBox.Location = new System.Drawing.Point(712, 366);
             this.tenLopTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.tenLopTextBox.Multiline = false;
             this.tenLopTextBox.Name = "tenLopTextBox";
@@ -445,6 +371,95 @@
             this.saveBtn.TextColor = System.Drawing.Color.White;
             this.saveBtn.UseVisualStyleBackColor = false;
             // 
+            // teacherLabel
+            // 
+            this.teacherLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.teacherLabel.AutoSize = true;
+            this.teacherLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teacherLabel.Location = new System.Drawing.Point(812, 89);
+            this.teacherLabel.Name = "teacherLabel";
+            this.teacherLabel.Size = new System.Drawing.Size(208, 37);
+            this.teacherLabel.TabIndex = 1;
+            this.teacherLabel.Text = "Chọn giáo viên";
+            // 
+            // teacherComboBox
+            // 
+            this.teacherComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.teacherComboBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.teacherComboBox.BorderSize = 1;
+            this.teacherComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.teacherComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teacherComboBox.ForeColor = System.Drawing.Color.DimGray;
+            this.teacherComboBox.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.teacherComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.teacherComboBox.ListTextColor = System.Drawing.Color.DimGray;
+            this.teacherComboBox.Location = new System.Drawing.Point(712, 154);
+            this.teacherComboBox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.teacherComboBox.Name = "teacherComboBox";
+            this.teacherComboBox.Padding = new System.Windows.Forms.Padding(1);
+            this.teacherComboBox.Size = new System.Drawing.Size(434, 39);
+            this.teacherComboBox.TabIndex = 10;
+            this.teacherComboBox.Texts = "";
+            // 
+            // subjectComboBox
+            // 
+            this.subjectComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.subjectComboBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.subjectComboBox.BorderSize = 1;
+            this.subjectComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.subjectComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subjectComboBox.ForeColor = System.Drawing.Color.DimGray;
+            this.subjectComboBox.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.subjectComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.subjectComboBox.ListTextColor = System.Drawing.Color.DimGray;
+            this.subjectComboBox.Location = new System.Drawing.Point(331, 3);
+            this.subjectComboBox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.subjectComboBox.Name = "subjectComboBox";
+            this.subjectComboBox.Padding = new System.Windows.Forms.Padding(1);
+            this.subjectComboBox.Size = new System.Drawing.Size(323, 39);
+            this.subjectComboBox.TabIndex = 10;
+            this.subjectComboBox.Texts = "";
+            // 
+            // gradeComboBox
+            // 
+            this.gradeComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.gradeComboBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.gradeComboBox.BorderSize = 1;
+            this.gradeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gradeComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gradeComboBox.ForeColor = System.Drawing.Color.DimGray;
+            this.gradeComboBox.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.gradeComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.gradeComboBox.ListTextColor = System.Drawing.Color.DimGray;
+            this.gradeComboBox.Location = new System.Drawing.Point(331, 110);
+            this.gradeComboBox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.gradeComboBox.Name = "gradeComboBox";
+            this.gradeComboBox.Padding = new System.Windows.Forms.Padding(1);
+            this.gradeComboBox.Size = new System.Drawing.Size(323, 39);
+            this.gradeComboBox.TabIndex = 10;
+            this.gradeComboBox.Texts = "";
+            // 
+            // shiftComboBox
+            // 
+            this.shiftComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.shiftComboBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.shiftComboBox.BorderSize = 1;
+            this.shiftComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.shiftComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shiftComboBox.ForeColor = System.Drawing.Color.DimGray;
+            this.shiftComboBox.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.shiftComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.shiftComboBox.ListTextColor = System.Drawing.Color.DimGray;
+            this.shiftComboBox.Location = new System.Drawing.Point(331, 217);
+            this.shiftComboBox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.shiftComboBox.Name = "shiftComboBox";
+            this.shiftComboBox.Padding = new System.Windows.Forms.Padding(1);
+            this.shiftComboBox.Size = new System.Drawing.Size(323, 39);
+            this.shiftComboBox.TabIndex = 10;
+            this.shiftComboBox.Texts = "";
+            // 
             // TaoLopForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -452,6 +467,7 @@
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1170, 639);
             this.ControlBox = false;
+            this.Controls.Add(this.teacherComboBox);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.alert);
             this.Controls.Add(this.maLopTextBox);
@@ -460,6 +476,7 @@
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.teacherLabel);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label2);
@@ -487,9 +504,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label8;
-        private CustomControls.RJControls.RJTextBox monHocTextBox;
-        private CustomControls.RJControls.RJTextBox caHocTextBox;
-        private CustomControls.RJControls.RJTextBox khoiHocTextBox;
         private CustomControls.RJControls.RJTextBox soBuoiTextBox;
         private CustomControls.RJControls.RJTextBox soHocSinhTextBox;
         private CustomControls.RJControls.RJButton saveBtn;
@@ -500,5 +514,10 @@
         private CustomControls.RJControls.RJTextBox giaTienTextBox;
         private System.Windows.Forms.Label alert;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label teacherLabel;
+        private CustomControls.RJControls.RJComboBox teacherComboBox;
+        private CustomControls.RJControls.RJComboBox subjectComboBox;
+        private CustomControls.RJControls.RJComboBox gradeComboBox;
+        private CustomControls.RJControls.RJComboBox shiftComboBox;
     }
 }
