@@ -12,20 +12,20 @@ namespace DAL
     {
         private DTO_Document doc;
 
-        public DAL_Document(string id, int inventory, string name, DateTime dateCreated, DateTime dateUpdate)
+        public DAL_Document(string id, int inventory, string name, DateTime dateCreated, DateTime dateUpdate, int price)
         {
-            doc = new DTO_Document(id, inventory, name, dateCreated, dateUpdate);
+            doc = new DTO_Document(id, inventory, name, dateCreated, dateUpdate, price);
         }
 
         public void addQuery()
         {
-            string query = "INSERT INTO Document VALUES(" + doc.Inventory + ", '" + doc.DocumentId + "', '" + doc.Name + "', '" + doc.DateCreated.ToString() + "', '" + doc.DateUpdated.ToString() + "')";
+            string query = "INSERT INTO Document VALUES(" + doc.Inventory + ", '" + doc.DocumentId + "', N'" + doc.Name + "', '" + doc.DateCreated.ToString("yyyy/MM/dd") + "', '" + doc.DateUpdated.ToString("yyyy/MM/dd") + "', " + doc.Price + ")";
             Connection.actionQuery(query);
         }      
 
         public void updateQuery()
         {
-            string query = "UPDATE Document SET inventory = " + doc.Inventory + ", name = '" + doc.Name + "', dateCreated = '" + doc.DateCreated.ToString() + "', dateUpdated = '" + doc.DateUpdated.ToString() + "' WHERE handoutId = '" + doc.DocumentId + "'";
+            string query = "UPDATE Document SET inventory = " + doc.Inventory + ", name = N'" + doc.Name + "', dateUpdated = '" + doc.DateUpdated.ToString("yyyy/MM/dd") + "', price = " + doc.Price + " WHERE handoutId = '" + doc.DocumentId + "'";
             Connection.actionQuery(query);
         }   
 
@@ -37,7 +37,13 @@ namespace DAL
 
         public DataTable detailedSelectQuery()
         {
-            string s = "SELECT * FROM Document";
+            string s = "SELECT handoutId, name, inventory, price, dateUpdated, dateCreated FROM Document";
+            return Connection.selectQuery(s);
+        }
+
+        public DataTable findDocument()
+        {
+            string s = "SELECT name, price FROM Document WHERE handoutId = '" + doc.DocumentId + "'";
             return Connection.selectQuery(s);
         }
 

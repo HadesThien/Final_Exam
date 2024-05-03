@@ -12,14 +12,16 @@ namespace DTO {
         public string Name { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateUpdated { get; set; }
+        public int Price { get; set; }
 
         //Constructor
-        public DTO_Document(string id, int inventory, string name, DateTime dateCreated, DateTime dateUpdate) {
+        public DTO_Document(string id, int inventory, string name, DateTime dateCreated, DateTime dateUpdate, int price) {
             DocumentId = id;
             Inventory = inventory;
             Name = name;
             DateCreated = dateCreated;
             DateUpdated = dateUpdate;
+            Price = price;
         }
 
     }

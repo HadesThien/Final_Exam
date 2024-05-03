@@ -128,7 +128,7 @@ namespace Final_Exam {
             truongHocTextBox.Texts = dt.Rows[0][5].ToString();
             register = new BUS_Register(aId, "", DateTime.Now);
             tinhTrangComboBox.Enabled = false;
-            if (tinhTrangComboBox.Texts.Equals("Đang học"))
+            if (tinhTrangComboBox.Texts.Equals("Nhập học") || tinhTrangComboBox.Texts.Equals("Học thử"))
             {
                 classListBox.Enabled = true;
             } else
@@ -141,7 +141,7 @@ namespace Final_Exam {
             foreach (DataRow row in c.Rows)
             {
                 bus_class = new BUS_Class(row[0].ToString(), "", "", 0, 0, 0, 0, DateTime.Now, "", "");
-                classList.Add(bus_class.getName());
+                classList.Add(bus_class.getClassName());
             }
 
             classTextBox.Texts = "";
@@ -173,7 +173,6 @@ namespace Final_Exam {
             bus_class = new BUS_Class("", "", "", 0, 0, 0, 0, DateTime.Now, "Đang mở", "");
             foreach (DataRow row in bus_class.getNames().Rows)
             {
-                Console.WriteLine(row[0].ToString());
                 classListBox.Items.Add(row[0].ToString());
             }
             if (String.IsNullOrEmpty(aId))
@@ -293,35 +292,35 @@ namespace Final_Exam {
             List<string> subjects = new List<string>();
             List<string> shifts = new List<string>();
             List<int> grades = new List<int>();
-            foreach (string s in classes)
+            Console.WriteLine(classes.Length);
+            Console.WriteLine(classTextBox.Texts);
+            if (classes.Length > 1)
             {
-                string[] list = s.Split(' ');
-                subjects.Add(list[0]);
-                string[] list1 = list[1].Split('.');
-                shifts.Add(list1[1]);
-                grades.Add(int.Parse(list1[0]));
-            }
-            foreach (string s in subjects)
-            {
-                Console.WriteLine(s);
-            }
-            foreach (string s in shifts)
-            {
-                Console.WriteLine(s);
-            }
-            foreach (int s in grades)
-            {
-                Console.WriteLine(s);
+                foreach (string s in classes)
+                {
+                    string[] list = s.Split(' ');
+                    subjects.Add(list[0]);
+                    string[] list1 = list[1].Split('.');
+                    shifts.Add(list1[1]);
+                    grades.Add(int.Parse(list1[0]));
+                }
+                foreach (string s in subjects)
+                {
+                    Console.WriteLine(s);
+                }
+                foreach (string s in shifts)
+                {
+                    Console.WriteLine(s);
+                }
+                foreach (int s in grades)
+                {
+                    Console.WriteLine(s);
+                }
             }
             // Tình trạng trong ghi danh Form là để cho người dùng hiểu
             // Thực tế có 3 tình trạng chính là Nếu học sinh nhập học thì tình trạng  là "Đang học" 
             // Nếu Ô tình trạng là mặc định là "Mặc định" thì tình trạng là "Thôi học" tức chỉ những học sinh không có học tại trung tâm
             // Nếu tình trạng là học thử thì vẫn là như vậy nhưng không có nút chuyển tình trạng thành học thử.
-            string status = tinhTrangComboBox.Texts;
-
-            if (status == "Mặc định") status = "Thôi học"; else if (status == "Nhập học") status = "Đang học";
-            student = new BUS_Student(id, nameTextBox.Texts, genderComboBox.Texts, dobTimePicker.Value, numberPhoneTextBox.Texts, truongHocTextBox.Texts, diaChiTextBox.Texts, wardComboBox.Texts, districtComboBox.Texts, cityComboBox.Texts, DateTime.Now, status, ghiChuTextBox.Text);
-            student.addQuery();
             List<string> ids = new List<string>();
             for (int i = 0; i < subjects.Count; i++)
             {
@@ -353,13 +352,13 @@ namespace Final_Exam {
         {
             string valueOfItem = tinhTrangComboBox.SelectedItem.ToString();
 
-            if (!valueOfItem.Equals("Đang học"))
+            if (valueOfItem.Equals("Nhập học") || valueOfItem.Equals("Học thử"))
             {
-                classListBox.Enabled = false;
+                classListBox.Enabled = true;
             }
             else
             {
-                classListBox.Enabled = true;
+                classListBox.Enabled = false;
             }
         }
 

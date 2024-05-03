@@ -27,7 +27,7 @@ namespace Final_Exam {
             this.form = form;
             student = new BUS_Student(id, "", "", DateTime.Now, "", "", "", "", "", "", DateTime.Now, "", "");
             register = new BUS_Register(id, "", DateTime.Now);
-            payment = new BUS_Payment("", DateTime.Now, DateTime.Now, "", "", 0.0f, 0, id);
+            payment = new BUS_Payment(id, DateTime.Now, DateTime.Now, "", "", 0.0f, 0, id, "");
             buy = new BUS_Buy(DateTime.Now, 0, 0, "", DateTime.Now, "", "", id, "");
             dt = student.selectAllPayment();
             dt.Columns[0].ColumnName = "Mã";
@@ -87,8 +87,8 @@ namespace Final_Exam {
             form.ShowDialog();
             if (Account.confirmPassword == true)
             {
-                register.deleteAStudentFromAllClasses();
                 payment.deletePaymentsOfAStudent();
+                register.deleteAStudentFromAllClasses();
                 buy.deleteFromAStudent();
                 student.deleteQuery();
             }

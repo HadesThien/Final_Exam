@@ -50,6 +50,11 @@ namespace BUS
             buy.deleteFromAStudent();
         }
 
+        public void deleteFromADocument()
+        {
+            buy.deleteFromADocument();
+        }
+
 
     }
 }

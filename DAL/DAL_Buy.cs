@@ -50,6 +50,11 @@ namespace DAL
             string s = "DELETE FROM Buy WHERE studentId = '" + buy.StudentId + "'";
             Connection.actionQuery(s);
         }
+        public void deleteFromADocument()
+        {
+            string s = "DELETE FROM Buy WHERE buyId = '" + buy.DocumentId + "'";
+            Connection.actionQuery(s);
+        }
 
     }
 }

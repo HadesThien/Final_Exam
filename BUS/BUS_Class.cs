@@ -84,6 +84,10 @@ namespace BUS
             return dal_class.getRegisteredStudent();
         }
 
+        public string getClassName()
+        {
+            return dal_class.getClassName().Rows[0][0].ToString();
+        }
 
         //Get and set methods
         public string getName() {

@@ -158,28 +158,17 @@
         SsHWECM9b9YAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="studentId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="name.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="numberPhone.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Classes.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dob.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="gender.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dateCreated.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="rjButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="importBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAPhJREFUSEvd1FkKwkAQBNCg6PUU1yu53ULRI7l7B9F/rQIbGqYyS/ArBQ9CpnsC
+        maSr1qcPc9jDCd4/vOa9GbCmUcZwh0/CDUaQnS5sQG0Ws4YOJNNkc7OEaPhaVGOJIcjwsPg+VVOJB8iD
+        59eiGjyLWvOmEOQAqtizqDVvB0EuoIo9i1rz+J8EeYEqTkX1cK8g/3zAE4KcQRV7FrXmHSEIZ4sq9ixq
+        zdtCEA4uVexZ1Jo3gSA9uIJqKMEBWTthORVVU4kBRMOpqBpzLCAZjtwVqA1iOEmzxrWFUzHnTFiTfC11
+        4cFzcHG28Nvmz0i85j1+LaxpbarqC42xGzUkcTfKAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="updateBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAPhJREFUSEvd1FkKwkAQBNCg6PUU1yu53ULRI7l7B9F/rQIbGqYyS/ArBQ9CpnsC
