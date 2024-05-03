@@ -22,7 +22,7 @@ namespace DTO
         public List<DTO_Buy> Buys { get; set; }
 
         //Constructor
-        public DTO_Student(string id, string name, string gender, DateTime dob,string numberPhone, string school, string city, string street, string ward, string district, DateTime dateCreated, string status, string note)
+        public DTO_Student(string id, string name, string gender, DateTime dob,string numberPhone, string school, string street, string ward, string district, string city, DateTime dateCreated, string status, string note)
             : base(id, name, gender, dob,numberPhone) {
             School = school;
             City = city;

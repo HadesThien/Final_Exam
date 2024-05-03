@@ -14,9 +14,9 @@ namespace DAL
     {
         private DTO_Student student;
 
-        public DAL_Student(string id, string name, string gender, DateTime dob, string numberPhone, string school, string city, string street, string ward, string district, DateTime dateCreated, string status, string note)
+        public DAL_Student(string id, string name, string gender, DateTime dob, string numberPhone, string school, string street, string ward, string district, string city, DateTime dateCreated, string status, string note)
         {
-            student = new DTO_Student(id, name, gender, dob, numberPhone, school, city, street, ward, district, dateCreated, status, note);
+            student = new DTO_Student(id, name, gender, dob, numberPhone, school, street, ward, district, city, dateCreated, status, note);
         }
 
         public void addQuery()
@@ -52,8 +52,8 @@ namespace DAL
 
         public void updateQuery()
         {
-            string query1 = "UPDATE Person SET name = N'" + student.Name + "', N'" + student.Gender + "', dob = '" + student.Dob.ToString("d") + "' WHERE Id = '" + student.Id + "'";
-            string query2 = "UPDATE Student SET school = 'N" + student.School + "', street = N'" + student.Street + "', ward = N'" + student.Ward + "', district = N'" + student.District + "', city = '" + student.City + "', status = '" + student.Status + "', note = '" + student.Note + "', WHERE studentId = '" + student.Id + "')";
+            string query1 = "UPDATE Person SET name = N'" + student.Name + "', gender = N'" + student.Gender + "', dob = '" + student.Dob.ToString("yyyy/MM/dd") + "', numberPhone = '" + student.NumberPhone + "' WHERE Id = '" + student.Id + "'";
+            string query2 = "UPDATE Student SET school = N'" + student.School + "', street = N'" + student.Street + "', ward = N'" + student.Ward + "', district = N'" + student.District + "', city = N'" + student.City + "', status = N'" + student.Status + "', note = N'" + student.Note + "' WHERE studentId = '" + student.Id + "'";
             Connection.actionQuery(query1);
             Connection.actionQuery(query2);
         }

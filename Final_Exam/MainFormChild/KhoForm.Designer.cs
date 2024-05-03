@@ -27,35 +27,29 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.searchBtn = new CustomControls.RJControls.RJButton();
             this.filterBtn = new CustomControls.RJControls.RJButton();
             this.createBtn = new CustomControls.RJControls.RJButton();
-            this.settingBtn = new CustomControls.RJControls.RJButton();
-            this.tatcaBtn = new CustomControls.RJControls.RJButton();
-            this.daDongBtn = new CustomControls.RJControls.RJButton();
-            this.dangMoBtn = new CustomControls.RJControls.RJButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.studentGridView = new Final_Exam.RoundedGridView();
-            this.studentId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numberPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Classes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dob = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateCreated = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.payBtn = new CustomControls.RJControls.RJButton();
-            ((System.ComponentModel.ISupportInitialize)(this.studentGridView)).BeginInit();
+            this.settingBtn = new CustomControls.RJControls.RJButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.importBtn = new CustomControls.RJControls.RJButton();
+            this.documentGridView = new Final_Exam.RoundedGridView();
+            this.updateBtn = new CustomControls.RJControls.RJButton();
+            this.buyBtn = new CustomControls.RJControls.RJButton();
+            ((System.ComponentModel.ISupportInitialize)(this.documentGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // searchTextBox
             // 
             this.searchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.searchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTextBox.Location = new System.Drawing.Point(521, 104);
+            this.searchTextBox.Location = new System.Drawing.Point(21, 98);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(544, 31);
+            this.searchTextBox.Size = new System.Drawing.Size(578, 37);
             this.searchTextBox.TabIndex = 21;
             this.searchTextBox.Visible = false;
             // 
@@ -113,211 +107,14 @@
             this.createBtn.ForeColor = System.Drawing.Color.White;
             this.createBtn.Image = ((System.Drawing.Image)(resources.GetObject("createBtn.Image")));
             this.createBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.createBtn.Location = new System.Drawing.Point(998, 12);
+            this.createBtn.Location = new System.Drawing.Point(998, 11);
             this.createBtn.Name = "createBtn";
             this.createBtn.Size = new System.Drawing.Size(134, 40);
             this.createBtn.TabIndex = 3;
-            this.createBtn.Text = "     Nhập hàng";
+            this.createBtn.Text = "     Tạo";
             this.createBtn.TextColor = System.Drawing.Color.White;
             this.createBtn.UseVisualStyleBackColor = false;
             this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
-            // 
-            // settingBtn
-            // 
-            this.settingBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.settingBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
-            this.settingBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
-            this.settingBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.settingBtn.BorderRadius = 12;
-            this.settingBtn.BorderSize = 0;
-            this.settingBtn.FlatAppearance.BorderSize = 0;
-            this.settingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingBtn.ForeColor = System.Drawing.Color.White;
-            this.settingBtn.Image = ((System.Drawing.Image)(resources.GetObject("settingBtn.Image")));
-            this.settingBtn.Location = new System.Drawing.Point(1134, 12);
-            this.settingBtn.Name = "settingBtn";
-            this.settingBtn.Size = new System.Drawing.Size(50, 40);
-            this.settingBtn.TabIndex = 3;
-            this.settingBtn.TextColor = System.Drawing.Color.White;
-            this.settingBtn.UseVisualStyleBackColor = false;
-            // 
-            // tatcaBtn
-            // 
-            this.tatcaBtn.BackColor = System.Drawing.Color.RoyalBlue;
-            this.tatcaBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.tatcaBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.tatcaBtn.BorderRadius = 0;
-            this.tatcaBtn.BorderSize = 0;
-            this.tatcaBtn.FlatAppearance.BorderSize = 0;
-            this.tatcaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tatcaBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tatcaBtn.ForeColor = System.Drawing.Color.White;
-            this.tatcaBtn.Location = new System.Drawing.Point(17, 85);
-            this.tatcaBtn.Name = "tatcaBtn";
-            this.tatcaBtn.Size = new System.Drawing.Size(114, 40);
-            this.tatcaBtn.TabIndex = 5;
-            this.tatcaBtn.Text = "Tất cả ";
-            this.tatcaBtn.TextColor = System.Drawing.Color.White;
-            this.tatcaBtn.UseVisualStyleBackColor = false;
-            this.tatcaBtn.Click += new System.EventHandler(this.tatcaBtn_Click);
-            // 
-            // daDongBtn
-            // 
-            this.daDongBtn.BackColor = System.Drawing.Color.RoyalBlue;
-            this.daDongBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.daDongBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.daDongBtn.BorderRadius = 0;
-            this.daDongBtn.BorderSize = 0;
-            this.daDongBtn.FlatAppearance.BorderSize = 0;
-            this.daDongBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.daDongBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.daDongBtn.ForeColor = System.Drawing.Color.White;
-            this.daDongBtn.Location = new System.Drawing.Point(132, 85);
-            this.daDongBtn.Name = "daDongBtn";
-            this.daDongBtn.Size = new System.Drawing.Size(114, 40);
-            this.daDongBtn.TabIndex = 5;
-            this.daDongBtn.Text = "Tồn ";
-            this.daDongBtn.TextColor = System.Drawing.Color.White;
-            this.daDongBtn.UseVisualStyleBackColor = false;
-            this.daDongBtn.Click += new System.EventHandler(this.daDongBtn_Click);
-            // 
-            // dangMoBtn
-            // 
-            this.dangMoBtn.BackColor = System.Drawing.Color.RoyalBlue;
-            this.dangMoBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.dangMoBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dangMoBtn.BorderRadius = 0;
-            this.dangMoBtn.BorderSize = 0;
-            this.dangMoBtn.FlatAppearance.BorderSize = 0;
-            this.dangMoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dangMoBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dangMoBtn.ForeColor = System.Drawing.Color.White;
-            this.dangMoBtn.Location = new System.Drawing.Point(247, 85);
-            this.dangMoBtn.Name = "dangMoBtn";
-            this.dangMoBtn.Size = new System.Drawing.Size(114, 40);
-            this.dangMoBtn.TabIndex = 5;
-            this.dangMoBtn.Text = "Chờ xử lý";
-            this.dangMoBtn.TextColor = System.Drawing.Color.White;
-            this.dangMoBtn.UseVisualStyleBackColor = false;
-            this.dangMoBtn.Click += new System.EventHandler(this.dangMoBtn_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
-            this.label1.Location = new System.Drawing.Point(12, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 40);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Đề cương";
-            // 
-            // studentGridView
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            this.studentGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.studentGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.studentGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.studentGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.studentGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.studentGridView.BorderRadius = 7;
-            this.studentGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.studentGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.studentGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.studentGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.studentGridView.ColumnHeadersHeight = 50;
-            this.studentGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.studentId,
-            this.name,
-            this.numberPhone,
-            this.Classes,
-            this.dob,
-            this.gender,
-            this.dateCreated});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.studentGridView.DefaultCellStyle = dataGridViewCellStyle3;
-            this.studentGridView.EnableHeadersVisualStyles = false;
-            this.studentGridView.GridColor = System.Drawing.Color.GhostWhite;
-            this.studentGridView.Location = new System.Drawing.Point(17, 157);
-            this.studentGridView.Name = "studentGridView";
-            this.studentGridView.RowHeadersVisible = false;
-            this.studentGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.studentGridView.RowTemplate.DividerHeight = 1;
-            this.studentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.studentGridView.Size = new System.Drawing.Size(1167, 523);
-            this.studentGridView.TabIndex = 22;
-            // 
-            // studentId
-            // 
-            this.studentId.HeaderText = "Mã học sinh";
-            this.studentId.Name = "studentId";
-            // 
-            // name
-            // 
-            this.name.HeaderText = "Họ và Tên";
-            this.name.Name = "name";
-            // 
-            // numberPhone
-            // 
-            this.numberPhone.HeaderText = "Số điện thoại";
-            this.numberPhone.Name = "numberPhone";
-            // 
-            // Classes
-            // 
-            this.Classes.HeaderText = "Lớp học";
-            this.Classes.Name = "Classes";
-            // 
-            // dob
-            // 
-            this.dob.HeaderText = "Ngày sinh";
-            this.dob.Name = "dob";
-            // 
-            // gender
-            // 
-            this.gender.HeaderText = "Giới tính";
-            this.gender.Name = "gender";
-            // 
-            // dateCreated
-            // 
-            this.dateCreated.HeaderText = "Ngày tạo";
-            this.dateCreated.Name = "dateCreated";
-            // 
-            // rjButton1
-            // 
-            this.rjButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
-            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 12;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Image = ((System.Drawing.Image)(resources.GetObject("rjButton1.Image")));
-            this.rjButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rjButton1.Location = new System.Drawing.Point(858, 11);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(134, 40);
-            this.rjButton1.TabIndex = 3;
-            this.rjButton1.Text = "     Nhập kho";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
             // 
             // payBtn
             // 
@@ -341,22 +138,180 @@
             this.payBtn.TextColor = System.Drawing.Color.White;
             this.payBtn.UseVisualStyleBackColor = false;
             // 
+            // settingBtn
+            // 
+            this.settingBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.settingBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.settingBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.settingBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.settingBtn.BorderRadius = 12;
+            this.settingBtn.BorderSize = 0;
+            this.settingBtn.FlatAppearance.BorderSize = 0;
+            this.settingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settingBtn.ForeColor = System.Drawing.Color.White;
+            this.settingBtn.Image = ((System.Drawing.Image)(resources.GetObject("settingBtn.Image")));
+            this.settingBtn.Location = new System.Drawing.Point(1134, 12);
+            this.settingBtn.Name = "settingBtn";
+            this.settingBtn.Size = new System.Drawing.Size(50, 40);
+            this.settingBtn.TabIndex = 3;
+            this.settingBtn.TextColor = System.Drawing.Color.White;
+            this.settingBtn.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
+            this.label1.Location = new System.Drawing.Point(12, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(190, 50);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Đề cương";
+            // 
+            // importBtn
+            // 
+            this.importBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.importBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.importBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.importBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.importBtn.BorderRadius = 12;
+            this.importBtn.BorderSize = 0;
+            this.importBtn.FlatAppearance.BorderSize = 0;
+            this.importBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.importBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.importBtn.ForeColor = System.Drawing.Color.White;
+            this.importBtn.Image = ((System.Drawing.Image)(resources.GetObject("importBtn.Image")));
+            this.importBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.importBtn.Location = new System.Drawing.Point(858, 11);
+            this.importBtn.Name = "importBtn";
+            this.importBtn.Size = new System.Drawing.Size(134, 40);
+            this.importBtn.TabIndex = 3;
+            this.importBtn.Text = "     Nhập kho";
+            this.importBtn.TextColor = System.Drawing.Color.White;
+            this.importBtn.UseVisualStyleBackColor = false;
+            this.importBtn.Click += new System.EventHandler(this.importBtn_Click);
+            // 
+            // documentGridView
+            // 
+            this.documentGridView.AllowUserToAddRows = false;
+            this.documentGridView.AllowUserToDeleteRows = false;
+            this.documentGridView.AllowUserToResizeColumns = false;
+            this.documentGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            this.documentGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.documentGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.documentGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.documentGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.documentGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.documentGridView.BorderRadius = 7;
+            this.documentGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.documentGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.documentGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.documentGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.documentGridView.ColumnHeadersHeight = 50;
+            this.documentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.documentGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.documentGridView.EnableHeadersVisualStyles = false;
+            this.documentGridView.GridColor = System.Drawing.Color.GhostWhite;
+            this.documentGridView.Location = new System.Drawing.Point(17, 157);
+            this.documentGridView.MultiSelect = false;
+            this.documentGridView.Name = "documentGridView";
+            this.documentGridView.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.documentGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.documentGridView.RowHeadersVisible = false;
+            this.documentGridView.RowHeadersWidth = 51;
+            this.documentGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.documentGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.documentGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.documentGridView.RowTemplate.DividerHeight = 1;
+            this.documentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.documentGridView.Size = new System.Drawing.Size(1167, 523);
+            this.documentGridView.TabIndex = 22;
+            // 
+            // updateBtn
+            // 
+            this.updateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.updateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.updateBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.updateBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.updateBtn.BorderRadius = 12;
+            this.updateBtn.BorderSize = 0;
+            this.updateBtn.FlatAppearance.BorderSize = 0;
+            this.updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateBtn.ForeColor = System.Drawing.Color.White;
+            this.updateBtn.Image = ((System.Drawing.Image)(resources.GetObject("updateBtn.Image")));
+            this.updateBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.updateBtn.Location = new System.Drawing.Point(718, 11);
+            this.updateBtn.Name = "updateBtn";
+            this.updateBtn.Size = new System.Drawing.Size(134, 40);
+            this.updateBtn.TabIndex = 23;
+            this.updateBtn.Text = "     Sửa";
+            this.updateBtn.TextColor = System.Drawing.Color.White;
+            this.updateBtn.UseVisualStyleBackColor = false;
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
+            // 
+            // buyBtn
+            // 
+            this.buyBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buyBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.buyBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.buyBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buyBtn.BorderRadius = 12;
+            this.buyBtn.BorderSize = 0;
+            this.buyBtn.FlatAppearance.BorderSize = 0;
+            this.buyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buyBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buyBtn.ForeColor = System.Drawing.Color.White;
+            this.buyBtn.Image = ((System.Drawing.Image)(resources.GetObject("buyBtn.Image")));
+            this.buyBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buyBtn.Location = new System.Drawing.Point(578, 11);
+            this.buyBtn.Name = "buyBtn";
+            this.buyBtn.Size = new System.Drawing.Size(134, 40);
+            this.buyBtn.TabIndex = 23;
+            this.buyBtn.Text = "     Mua";
+            this.buyBtn.TextColor = System.Drawing.Color.White;
+            this.buyBtn.UseVisualStyleBackColor = false;
+            this.buyBtn.Click += new System.EventHandler(this.updateBtn_Click);
+            // 
             // KhoForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(1200, 692);
-            this.Controls.Add(this.tatcaBtn);
-            this.Controls.Add(this.daDongBtn);
-            this.Controls.Add(this.payBtn);
-            this.Controls.Add(this.rjButton1);
+            this.Controls.Add(this.buyBtn);
+            this.Controls.Add(this.updateBtn);
+            this.Controls.Add(this.documentGridView);
+            this.Controls.Add(this.importBtn);
             this.Controls.Add(this.createBtn);
-            this.Controls.Add(this.dangMoBtn);
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.settingBtn);
             this.Controls.Add(this.filterBtn);
-            this.Controls.Add(this.studentGridView);
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -364,7 +319,8 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "KhoForm";
             this.Text = "KhoForm";
-            ((System.ComponentModel.ISupportInitialize)(this.studentGridView)).EndInit();
+            this.Load += new System.EventHandler(this.KhoForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.documentGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -374,22 +330,14 @@
 
         private System.Windows.Forms.TextBox searchTextBox;
         private CustomControls.RJControls.RJButton searchBtn;
+        private CustomControls.RJControls.RJButton payBtn;
         private CustomControls.RJControls.RJButton filterBtn;
         private CustomControls.RJControls.RJButton createBtn;
         private CustomControls.RJControls.RJButton settingBtn;
-        private CustomControls.RJControls.RJButton tatcaBtn;
-        private CustomControls.RJControls.RJButton daDongBtn;
-        private CustomControls.RJControls.RJButton dangMoBtn;
         private System.Windows.Forms.Label label1;
-        private RoundedGridView studentGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studentId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numberPhone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Classes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dob;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateCreated;
-        private CustomControls.RJControls.RJButton rjButton1;
-        private CustomControls.RJControls.RJButton payBtn;
+        private CustomControls.RJControls.RJButton importBtn;
+        private RoundedGridView documentGridView;
+        private CustomControls.RJControls.RJButton updateBtn;
+        private CustomControls.RJControls.RJButton buyBtn;
     }
 }

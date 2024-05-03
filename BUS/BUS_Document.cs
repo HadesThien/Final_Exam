@@ -11,9 +11,9 @@ namespace BUS
     public class BUS_Document
     {
         private DAL_Document doc;
-        public BUS_Document(int inventory, string id, string name, DateTime dateCreated, DateTime dateUpdate)
+        public BUS_Document(int inventory, string id, string name, DateTime dateCreated, DateTime dateUpdate, int price)
         {
-            doc = new DAL_Document(id, inventory, name, dateCreated, dateUpdate);
+            doc = new DAL_Document(id, inventory, name, dateCreated, dateUpdate, price);
         }
 
         public void addQuery()
@@ -55,6 +55,11 @@ namespace BUS
             {
                 return "TL001";
             }
+        }
+
+        public DataTable findDocument()
+        {
+            return doc.findDocument();
         }
 
     }

@@ -71,10 +71,7 @@ namespace Final_Exam {
         private void studentGridView_CellContentClick(object sender, DataGridViewCellEventArgs e) {
             int colIndex = e.ColumnIndex;
             int rowIndex = e.RowIndex;
-            if(colIndex==0 && rowIndex != -1) {
-                Form chiTietSinhVien = new ChiTietSinhVienForm(studentGridView.Rows[rowIndex].Cells[0].Value.ToString());
-                chiTietSinhVien.ShowDialog();
-            }
+            if(colIndex==0 && rowIndex != -1) { Form chiTietSinhVien = new ChiTietSinhVienForm(this, studentGridView.Rows[rowIndex].Cells[0].Value.ToString()); chiTietSinhVien.ShowDialog(); }
 
         }
 
@@ -120,6 +117,13 @@ namespace Final_Exam {
         {
             student = new BUS_Student("", "", "", DateTime.Now, "", "", "", "", "", "", DateTime.Now, "", "");
             updateGridView(student.basicSelectQueryDropout());
+        }
+
+        private void adjustBtn_Click(object sender, EventArgs e)
+        {
+            int row = studentGridView.CurrentCell.RowIndex;
+            Form GhiDanhForm = new ghiDanhForm(this, studentGridView.Rows[row].Cells[0].Value.ToString());
+            GhiDanhForm.ShowDialog();
         }
 
         private void searchTextBox_KeyDown(object sender, KeyEventArgs e) {

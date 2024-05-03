@@ -84,6 +84,11 @@ namespace DAL
             return Connection.selectQuery(s);
         }
 
+        public DataTable getClassName()
+        {
+            string s = "SELECT subject + ' ' + cast(grade as varchar) + '.' + shift FROM Class WHERE classId = '" + dto_class.ClassId + "'";
+            return Connection.selectQuery(s);
+        }
 
         //Get set method
         public string getname() {
