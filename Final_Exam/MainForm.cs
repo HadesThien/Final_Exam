@@ -87,29 +87,43 @@ namespace Final_Exam {
         }
         //------------------------
 
+        private void changeBtn(Button btn) {
 
+            btn.BackColor = Color.FromArgb(27, 31, 136);
+            btn.ForeColor = Color.Black;
+        }
         //Buttons at sidebar
         private void hocVienBtn_Click(object sender, EventArgs e) {
+            changeBtn(studentBtn);
             OpenChildForm(new QuanLySinhVienForm());
         }
 
         private void lopHocBtn_Click(object sender, EventArgs e)
         {
+            changeBtn(classBtn);
             OpenChildForm(new LophocForm());
         }
 
 
         private void khoDeBtn_Click(object sender, EventArgs e) {
+            changeBtn(storeBtn);
             OpenChildForm(new KhoForm());
         }
 
         private void congNoBtn_Click(object sender, EventArgs e) {
+            changeBtn(paymentBtn);
             OpenChildForm(new CongNoForm());
         }
 
         private void dashboardBtn_Click(object sender, EventArgs e) {
+            changeBtn(dashboardBtn);
             OpenChildForm(new DashboardForm());
         }
+        private void paidBtn_Click(object sender, EventArgs e) {
+            changeBtn(paidBtn);
+            OpenChildForm(new TaoCongNoForm());
+        }
+
         //-----------------------------------
 
 
@@ -160,6 +174,11 @@ namespace Final_Exam {
             Form form = new AccountInfoForm();
             OpenChildForm(form);
         }
+
+        private void sidebar_Paint(object sender, PaintEventArgs e) {
+
+        }
+
         //----------------Ends with all feature of menu Btn----------------
     }
 }

@@ -25,7 +25,8 @@
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaoCongNoForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.paymentCheckedBox = new System.Windows.Forms.CheckedListBox();
+            this.studentCheckedListBox = new System.Windows.Forms.CheckedListBox();
+            this.classCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.payCheckedBox = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -46,8 +47,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.classCheckedListBox = new System.Windows.Forms.CheckedListBox();
-            this.studentCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,7 +58,6 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Controls.Add(this.studentCheckedListBox);
             this.panel1.Controls.Add(this.classCheckedListBox);
-            this.panel1.Controls.Add(this.paymentCheckedBox);
             this.panel1.Controls.Add(this.payCheckedBox);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label10);
@@ -82,17 +80,21 @@
             this.panel1.Size = new System.Drawing.Size(324, 727);
             this.panel1.TabIndex = 0;
             // 
-            // paymentCheckedBox
+            // studentCheckedListBox
             // 
-            this.paymentCheckedBox.FormattingEnabled = true;
-            this.paymentCheckedBox.Items.AddRange(new object[] {
-            "Tiền mặt ",
-            "Thanh toán QR"});
-            this.paymentCheckedBox.Location = new System.Drawing.Point(180, 613);
-            this.paymentCheckedBox.Name = "paymentCheckedBox";
-            this.paymentCheckedBox.Size = new System.Drawing.Size(132, 52);
-            this.paymentCheckedBox.TabIndex = 10;
-            this.paymentCheckedBox.Visible = false;
+            this.studentCheckedListBox.FormattingEnabled = true;
+            this.studentCheckedListBox.Location = new System.Drawing.Point(21, 88);
+            this.studentCheckedListBox.Name = "studentCheckedListBox";
+            this.studentCheckedListBox.Size = new System.Drawing.Size(291, 172);
+            this.studentCheckedListBox.TabIndex = 11;
+            // 
+            // classCheckedListBox
+            // 
+            this.classCheckedListBox.FormattingEnabled = true;
+            this.classCheckedListBox.Location = new System.Drawing.Point(21, 333);
+            this.classCheckedListBox.Name = "classCheckedListBox";
+            this.classCheckedListBox.Size = new System.Drawing.Size(291, 172);
+            this.classCheckedListBox.TabIndex = 11;
             // 
             // payCheckedBox
             // 
@@ -329,27 +331,12 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label4.Location = new System.Drawing.Point(12, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(199, 40);
+            this.label4.Size = new System.Drawing.Size(376, 40);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Đăng ký mới:";
-            // 
-            // classCheckedListBox
-            // 
-            this.classCheckedListBox.FormattingEnabled = true;
-            this.classCheckedListBox.Location = new System.Drawing.Point(21, 333);
-            this.classCheckedListBox.Name = "classCheckedListBox";
-            this.classCheckedListBox.Size = new System.Drawing.Size(291, 172);
-            this.classCheckedListBox.TabIndex = 11;
-            // 
-            // studentCheckedListBox
-            // 
-            this.studentCheckedListBox.FormattingEnabled = true;
-            this.studentCheckedListBox.Location = new System.Drawing.Point(21, 88);
-            this.studentCheckedListBox.Name = "studentCheckedListBox";
-            this.studentCheckedListBox.Size = new System.Drawing.Size(291, 172);
-            this.studentCheckedListBox.TabIndex = 11;
+            this.label4.Text = "Đăng ký mới / Thanh toán";
             // 
             // TaoCongNoForm
             // 
@@ -399,7 +386,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.CheckedListBox paymentCheckedBox;
         private System.Windows.Forms.CheckBox payCheckedBox;
         private System.Windows.Forms.CheckedListBox studentCheckedListBox;
         private System.Windows.Forms.CheckedListBox classCheckedListBox;

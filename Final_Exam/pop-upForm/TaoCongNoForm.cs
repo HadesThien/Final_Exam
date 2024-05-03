@@ -52,7 +52,7 @@ namespace Final_Exam {
         }
 
         private void payCheckedBox_CheckedChanged(object sender, EventArgs e) {
-            paymentCheckedBox.Visible = !paymentCheckedBox.Visible;
+            
         }
 
         private void searchClassTextBox__TextChanged(object sender, EventArgs e) {
