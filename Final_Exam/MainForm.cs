@@ -17,7 +17,7 @@ namespace Final_Exam {
         public static bool isLogout = false;
         bool sideBarExpand = true;
         private Form currentFormChild;
-
+        List<Button> btns = new List<Button>();
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
                 (
@@ -38,14 +38,20 @@ namespace Final_Exam {
             move.SetMovable(crossbar);
             this.DoubleBuffered = true;
             this.SetStyle(ControlStyles.ResizeRedraw, true);
+            btns.Add(dashboardBtn);
+            btns.Add(studentBtn);
+            btns.Add(classBtn);
+            btns.Add(storeBtn);
+            btns.Add(paidBtn);
+            btns.Add(paymentBtn);
+            btns.Add(accountBtn);
+            dashboardBtn.BackColor = Color.FromArgb(17, 21, 83);
+            dashboardBtn.ForeColor = Color.GhostWhite;
         }
         //Setting size Form 
 
         //Methods
         private void OpenChildForm(Form childForm) {
-            //if(currentFormChild != null) {
-            //    currentFormChild.Close();
-            //}
             currentFormChild = childForm;
             childForm.TopLevel = false;
             childForm.Dock = DockStyle.Fill;
@@ -87,29 +93,49 @@ namespace Final_Exam {
         }
         //------------------------
 
-
+        private void changeBtn(Button btn) {
+            foreach(Button b in btns) {
+                if(b == btn) {
+                    b.BackColor = Color.FromArgb(17, 21, 83);
+                    b.ForeColor = Color.GhostWhite;
+                }else {
+                    b.BackColor = Color.MidnightBlue;
+                    b.ForeColor = Color.White;
+                }
+            }
+        }
         //Buttons at sidebar
         private void hocVienBtn_Click(object sender, EventArgs e) {
+            changeBtn(studentBtn);
             OpenChildForm(new QuanLySinhVienForm());
         }
 
         private void lopHocBtn_Click(object sender, EventArgs e)
         {
+            changeBtn(classBtn);
             OpenChildForm(new LophocForm());
         }
 
 
         private void khoDeBtn_Click(object sender, EventArgs e) {
+            changeBtn(storeBtn);
             OpenChildForm(new KhoForm());
         }
 
         private void congNoBtn_Click(object sender, EventArgs e) {
+            changeBtn(paymentBtn);
             OpenChildForm(new CongNoForm());
         }
 
         private void dashboardBtn_Click(object sender, EventArgs e) {
+            changeBtn(dashboardBtn);
             OpenChildForm(new DashboardForm());
         }
+        private void paidBtn_Click(object sender, EventArgs e) {
+            changeBtn(paidBtn);
+            OpenChildForm(new ThanhToanForm());
+        }
+
         //-----------------------------------
 
 
@@ -160,6 +186,11 @@ namespace Final_Exam {
             Form form = new AccountInfoForm();
             OpenChildForm(form);
         }
+
+        private void sidebar_Paint(object sender, PaintEventArgs e) {
+
+        }
+
         //----------------Ends with all feature of menu Btn----------------
     }
 }

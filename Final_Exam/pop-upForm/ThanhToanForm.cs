@@ -9,34 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 namespace Final_Exam {
-    public partial class TaoCongNoForm : Form {
+    public partial class ThanhToanForm : Form {
         //Properties
         private List<string> danhSachHocSinh= new List<string>(); 
         private List<string> danhSachLopHoc = new List<string>();
-
-
-
-
         //Constructor
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-                (
-                    int nLeftRect,     // x-coordinate of upper-left corner
-                    int nTopRect,      // y-coordinate of upper-left corner
-                    int nRightRect,    // x-coordinate of lower-right corner
-                    int nBottomRect,   // y-coordinate of lower-right corner
-                    int nWidthEllipse, // width of ellipse
-                    int nHeightEllipse // height of ellipse
-                );
-
-        public TaoCongNoForm() {
+        public ThanhToanForm() {
             InitializeComponent();
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 20, 20));
         }
 
-        private void cancelBtn_Click(object sender, EventArgs e) {
-            this.Close();
-        }
 
         private List<string> FindRelatedStudents(string searchText) {
             List<string> relatedStudents = new List<string>();
@@ -47,13 +28,7 @@ namespace Final_Exam {
             }
             return relatedStudents;
         }
-        private void getDanhSachHocSinh() {
 
-        }
-
-        private void payCheckedBox_CheckedChanged(object sender, EventArgs e) {
-            paymentCheckedBox.Visible = !paymentCheckedBox.Visible;
-        }
 
         private void searchClassTextBox__TextChanged(object sender, EventArgs e) {
             string searchText = searchClassTextBox.Text;
