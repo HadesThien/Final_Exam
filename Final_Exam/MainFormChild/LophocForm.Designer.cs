@@ -40,9 +40,7 @@
             this.updateBtn = new CustomControls.RJControls.RJButton();
             this.createBtn = new CustomControls.RJControls.RJButton();
             this.searchBtn = new CustomControls.RJControls.RJButton();
-            this.settingBtn = new CustomControls.RJControls.RJButton();
             this.tatcaBtn = new CustomControls.RJControls.RJButton();
-            this.filterBtn = new CustomControls.RJControls.RJButton();
             this.daDongBtn = new CustomControls.RJControls.RJButton();
             this.dangMoBtn = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.classGridView)).BeginInit();
@@ -52,11 +50,12 @@
             // 
             this.searchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.searchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTextBox.Location = new System.Drawing.Point(525, 101);
+            this.searchTextBox.Location = new System.Drawing.Point(577, 101);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(544, 31);
+            this.searchTextBox.Size = new System.Drawing.Size(544, 37);
             this.searchTextBox.TabIndex = 15;
             this.searchTextBox.Visible = false;
+            this.searchTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchTextBox_KeyDown);
             // 
             // label1
             // 
@@ -65,7 +64,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
             this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(266, 40);
+            this.label1.Size = new System.Drawing.Size(339, 50);
             this.label1.TabIndex = 10;
             this.label1.Text = "Danh sách lớp học";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -148,7 +147,7 @@
             this.updateBtn.ForeColor = System.Drawing.Color.White;
             this.updateBtn.Image = ((System.Drawing.Image)(resources.GetObject("updateBtn.Image")));
             this.updateBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.updateBtn.Location = new System.Drawing.Point(908, 11);
+            this.updateBtn.Location = new System.Drawing.Point(960, 11);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(109, 40);
             this.updateBtn.TabIndex = 3;
@@ -172,7 +171,7 @@
             this.createBtn.ForeColor = System.Drawing.Color.White;
             this.createBtn.Image = ((System.Drawing.Image)(resources.GetObject("createBtn.Image")));
             this.createBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.createBtn.Location = new System.Drawing.Point(1023, 12);
+            this.createBtn.Location = new System.Drawing.Point(1075, 12);
             this.createBtn.Name = "createBtn";
             this.createBtn.Size = new System.Drawing.Size(109, 40);
             this.createBtn.TabIndex = 3;
@@ -193,7 +192,7 @@
             this.searchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchBtn.ForeColor = System.Drawing.Color.White;
             this.searchBtn.Image = ((System.Drawing.Image)(resources.GetObject("searchBtn.Image")));
-            this.searchBtn.Location = new System.Drawing.Point(1086, 98);
+            this.searchBtn.Location = new System.Drawing.Point(1138, 98);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(46, 37);
             this.searchBtn.TabIndex = 3;
@@ -201,26 +200,6 @@
             this.searchBtn.TextColor = System.Drawing.Color.White;
             this.searchBtn.UseVisualStyleBackColor = false;
             this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
-            // 
-            // settingBtn
-            // 
-            this.settingBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.settingBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
-            this.settingBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
-            this.settingBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.settingBtn.BorderRadius = 12;
-            this.settingBtn.BorderSize = 0;
-            this.settingBtn.FlatAppearance.BorderSize = 0;
-            this.settingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingBtn.ForeColor = System.Drawing.Color.White;
-            this.settingBtn.Image = ((System.Drawing.Image)(resources.GetObject("settingBtn.Image")));
-            this.settingBtn.Location = new System.Drawing.Point(1134, 12);
-            this.settingBtn.Name = "settingBtn";
-            this.settingBtn.Size = new System.Drawing.Size(50, 40);
-            this.settingBtn.TabIndex = 3;
-            this.settingBtn.TextColor = System.Drawing.Color.White;
-            this.settingBtn.UseVisualStyleBackColor = false;
-            this.settingBtn.Click += new System.EventHandler(this.settingBtn_Click);
             // 
             // tatcaBtn
             // 
@@ -241,27 +220,6 @@
             this.tatcaBtn.TextColor = System.Drawing.Color.White;
             this.tatcaBtn.UseVisualStyleBackColor = false;
             this.tatcaBtn.Click += new System.EventHandler(this.tatcaBtn_Click);
-            // 
-            // filterBtn
-            // 
-            this.filterBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.filterBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
-            this.filterBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
-            this.filterBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.filterBtn.BorderRadius = 12;
-            this.filterBtn.BorderSize = 0;
-            this.filterBtn.FlatAppearance.BorderSize = 0;
-            this.filterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.filterBtn.ForeColor = System.Drawing.Color.White;
-            this.filterBtn.Image = ((System.Drawing.Image)(resources.GetObject("filterBtn.Image")));
-            this.filterBtn.Location = new System.Drawing.Point(1138, 98);
-            this.filterBtn.Name = "filterBtn";
-            this.filterBtn.Size = new System.Drawing.Size(46, 37);
-            this.filterBtn.TabIndex = 3;
-            this.filterBtn.Text = " ";
-            this.filterBtn.TextColor = System.Drawing.Color.White;
-            this.filterBtn.UseVisualStyleBackColor = false;
-            this.filterBtn.Click += new System.EventHandler(this.filterBtn_Click);
             // 
             // daDongBtn
             // 
@@ -305,7 +263,7 @@
             // 
             // LophocForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(91)))), ((int)(((byte)(147)))));
             this.ClientSize = new System.Drawing.Size(1200, 692);
@@ -313,9 +271,7 @@
             this.Controls.Add(this.updateBtn);
             this.Controls.Add(this.createBtn);
             this.Controls.Add(this.searchBtn);
-            this.Controls.Add(this.settingBtn);
             this.Controls.Add(this.tatcaBtn);
-            this.Controls.Add(this.filterBtn);
             this.Controls.Add(this.daDongBtn);
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.dangMoBtn);
@@ -337,9 +293,7 @@
 
         private System.Windows.Forms.TextBox searchTextBox;
         private CustomControls.RJControls.RJButton searchBtn;
-        private CustomControls.RJControls.RJButton filterBtn;
         private CustomControls.RJControls.RJButton createBtn;
-        private CustomControls.RJControls.RJButton settingBtn;
         private CustomControls.RJControls.RJButton tatcaBtn;
         private CustomControls.RJControls.RJButton daDongBtn;
         private CustomControls.RJControls.RJButton dangMoBtn;

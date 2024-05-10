@@ -99,8 +99,22 @@ namespace Final_Exam {
 
         private void classBtn_Click(object sender, EventArgs e) {
             //addressLabel.Text =
-            student = new BUS_Student(id, hoTenLabel.Text, gioiTinhLabel.Text, DateTime.Parse(ngaySinhLabel.Text), soDienThoaiLabel.Text, schoolLabel.Text, "", "","","", DateTime.Parse(ngayTaoLabel.Text), tinhTrangLabel.Text, ghiChuLabel.Text);
+            student = new BUS_Student(id, "", "", DateTime.Now, "", "", "", "", "", "", DateTime.Now, "", "");
+            dt = student.selectClassesOfAStudent();
+            paymentGridView.DataSource = dt;
+        }
 
+        private void hocPhiBtn_Click(object sender, EventArgs e)
+        {
+            student = new BUS_Student(id, "", "", DateTime.Now, "", "", "", "", "", "", DateTime.Now, "", "");
+            dt = student.selectAllPayment();
+            dt.Columns[0].ColumnName = "Mã";
+            dt.Columns[1].ColumnName = "Tên thu phí";
+            dt.Columns[2].ColumnName = "Kỳ thanh toán";
+            dt.Columns[3].ColumnName = "Trạng thái";
+            dt.Columns[4].ColumnName = "Ghi chú";
+            dt.Columns[5].ColumnName = "Ngày thanh toán";
+            paymentGridView.DataSource = dt;
         }
     }
 }

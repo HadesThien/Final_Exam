@@ -62,5 +62,21 @@ namespace BUS
             return doc.findDocument();
         }
 
+        public DataTable searchDocument()
+        {
+            return doc.searchDocument();
+        }
+
+        public DataTable getNames()
+        {
+            return doc.getNames();
+        }
+
+        public DataTable getDocumentFromName()
+        {
+            return doc.getDocumentFromName();
+        }
+
+
     }
 }

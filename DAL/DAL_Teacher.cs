@@ -59,5 +59,13 @@ namespace DAL
             DataTable dt =  Connection.selectQuery(s);
             return dt.Rows[0][0].ToString();
         }
+
+        public DataTable getTeachers()
+        {
+            string s = "SELECT t.teacherId + ' - ' + p.name + ' - ' + t.subject as teacher " +
+                       "FROM Person p " +
+                       "INNER JOIN Teacher t ON t.teacherId = p.Id";
+            return Connection.selectQuery(s);
+        }
     }
 }

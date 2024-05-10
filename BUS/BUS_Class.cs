@@ -89,6 +89,30 @@ namespace BUS
             return dal_class.getClassName().Rows[0][0].ToString();
         }
 
+        public DataTable getSubjects()
+        {
+            return dal_class.getSubjects();
+        }
+
+        public bool existsThisClass()
+        {
+            return dal_class.getClassId().Rows.Count > 0;
+        }
+
+        public string getTeacher()
+        {
+            return dal_class.getTeacher().Rows[0][0].ToString();
+        }
+
+        public DataTable getOtherInfo()
+        {
+            return dal_class.getOtherInfo();
+        }
+        public bool teacherTeachesOnThisShift()
+        {
+            return dal_class.teacherTeachesOnThisShift().Rows.Count > 0;
+        }
+
         //Get and set methods
         public string getName() {
             return dal_class.getname();

@@ -175,7 +175,7 @@ namespace Final_Exam {
             {
                 classListBox.Items.Add(row[0].ToString());
             }
-            if (String.IsNullOrEmpty(aId))
+            if (string.IsNullOrEmpty(aId))
             {
                 defaultForm();
             }
@@ -183,8 +183,6 @@ namespace Final_Exam {
             {
                 defaultForm1();
             }
-            id = student.getId();
-            idLabel.Text = student.getId();
             classTextBox.Visible = false;
             buttonSelect.Visible = false;
         }
@@ -267,18 +265,8 @@ namespace Final_Exam {
                 MessageBox.Show("Chỉ có thể đăng ký từ 0-4 lớp");
                 return;
             }
-            if (String.IsNullOrEmpty(this.id))
+            if (string.IsNullOrEmpty(id))
             {
-                //bool flag1 = nameTextBox.Texts.Equals("") || diaChiTextBox.Texts.Equals("") || truongHocTextBox.Texts.Equals("") || genderComboBox.Texts.Equals("") || tinhTrangComboBox.Texts.Equals("") || numberPhoneTextBox.Texts.Equals("");
-                //if (flag1)
-                //{
-                //    MessageBox.Show("Vui lòng điền đầy đủ thông tin học sinh");
-                //    return;
-                //}
-                //string[] classes1 = classTextBox.Texts.Split(new string[] { ", " }, StringSplitOptions.None);
-                //if (classes1.Length > 4) {
-                //    MessageBox.Show("Chỉ có thể đăng ký từ 0-4 lớp");
-                //}
                 register = new BUS_Register(aId, "", DateTime.Now);
                 DataTable c = register.getClassesOfAStudent();
 
@@ -308,18 +296,6 @@ namespace Final_Exam {
                     shifts.Add(list1[1]);
                     grades.Add(int.Parse(list1[0]));
                 }
-                foreach (string s in subjects)
-                {
-                    Console.WriteLine(s);
-                }
-                foreach (string s in shifts)
-                {
-                    Console.WriteLine(s);
-                }
-                foreach (int s in grades)
-                {
-                    Console.WriteLine(s);
-                }
             }
             // Tình trạng trong ghi danh Form là để cho người dùng hiểu
             // Thực tế có 3 tình trạng chính là Nếu học sinh nhập học thì tình trạng  là "Đang học" 
@@ -331,10 +307,12 @@ namespace Final_Exam {
                 bus_class = new BUS_Class("", subjects[i], shifts[i], grades[i], 0, 0, 0, DateTime.Now,"Đang mở", "");
                 ids.Add(bus_class.getClassId());
             }
-            if (String.IsNullOrEmpty(this.id))
+
+            if (string.IsNullOrEmpty(this.id))
             {
                 foreach (string s in ids)
                 {
+                    Console.WriteLine(s + " " + aId);
                     register = new BUS_Register(aId, s, DateTime.Now);
                     register.addQuery();
                 }
@@ -343,6 +321,7 @@ namespace Final_Exam {
             {
                 foreach (string s in ids)
                 {
+                    Console.WriteLine(s + " " + id);
                     register = new BUS_Register(id, s, DateTime.Now);
                     register.addQuery();
                 }
@@ -357,9 +336,13 @@ namespace Final_Exam {
             if (valueOfItem.Equals("Nhập học") || valueOfItem.Equals("Học thử")) {
                 classTextBox.Visible = true;
                 buttonSelect.Visible = true;
+                classTextBox.Enabled = true;
+                classListBox.Enabled = true;
+                buttonSelect.Enabled = true;
             }
             else {
                 classTextBox.Visible = false;
+                classListBox.Visible = false;
                 buttonSelect.Visible =false;
             }
         }

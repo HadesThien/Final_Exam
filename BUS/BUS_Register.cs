@@ -40,5 +40,14 @@ namespace BUS
         {
             return register.getClassesOfAStudent();
         }
+        public void deleteARegistryOfAClass()
+        {
+            register.deleteARegistryOfAClass();
+        }
+
+        public DataTable getClassNameFromAStudent()
+        {
+            return register.getClassNameFromAStudent();
+        }
     }
 }

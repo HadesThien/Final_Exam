@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.Odbc;
 using System.Linq;
 using System.Net.Http.Headers;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
@@ -25,7 +26,6 @@ namespace DAL
             string query2 = "INSERT INTO Student VALUES(N'" + student.School + "', N'" + student.Street + "', N'" + student.Ward + "', N'" + student.District + "', N'" + student.City + "', '" + student.DateCreated.ToString("yyyy/MM/dd") + "', N'" + student.Status + "', N'" + student.Note + "', '" + student.Id + "')";
             Connection.actionQuery(query1);
             Connection.actionQuery(query2);
-            Console.WriteLine("hello132");
             //string query3 = "";
             //{
             //    for (int i = 0; i < student.Registers.Count; i++)
@@ -56,6 +56,11 @@ namespace DAL
             string query2 = "UPDATE Student SET school = N'" + student.School + "', street = N'" + student.Street + "', ward = N'" + student.Ward + "', district = N'" + student.District + "', city = N'" + student.City + "', status = N'" + student.Status + "', note = N'" + student.Note + "' WHERE studentId = '" + student.Id + "'";
             Connection.actionQuery(query1);
             Connection.actionQuery(query2);
+        }
+        public DataTable selectClassesOfAStudent()
+        {
+            string s = $"SELECT c.subject + ' ' + cast(c.grade as varchar) + '.' + c.shift as [Tên lớp], c.numberOfSession as [Số buổi], c.numberOfStudent as [Số học sinh], c.price as [Học phí], c.dateCreated as [Ngày tạo]\r\nfrom Class c\r\ninner join Register r on r.classId = c.classId\r\nwhere r.studentId = '{student.Id}'\r\n";
+            return Connection.selectQuery(s);
         }
 
         public void deleteQuery()
@@ -140,13 +145,15 @@ namespace DAL
             return Connection.selectQuery(s);
         }
         public DataTable selectAllPayment() {
-            string s = $"Select p.paymentId, c.subject + ' ' + cast(c.grade as varchar) + '.' + cast(c.shift as varchar) as name, p.period,p.status,p.note,p.dateCreated " +
+            string s = $"Select p.paymentId, c.subject + ' ' + cast(c.grade as varchar) + '.' + cast(c.shift as varchar) as name, RIGHT(CONVERT(VARCHAR(10), p.period, 103), 7),p.status,p.note,p.dateCreated " +
                 $"From Payment p " +
-                $"Join Register r On p.StudentId = r.studentId " +
+                $"JOIN \r\n    Student s ON p.studentId = s.studentId\r\n" +
+                $"JOIN \r\n    Person pe ON s.studentId = pe.Id\r\n" +
+                $"Join Register r On p.StudentId = r.studentId and r.classId = p.classId " +
                 $"Join Class c On r.classId = c.ClassId" +
                 $" Where p.studentId ='{student.Id}'" +
                 $"\r\nUnion all\r\n" +
-                $"Select b.buyId, d.name, b.period,b.status, b.note, b.buyingDate " +
+                $"Select b.buyId, d.name, RIGHT(CONVERT(VARCHAR(10), b.period, 103), 7),b.status, b.note, b.buyingDate " +
                 $"from buy b " +
                 $"Join Document d On d.handoutId = b.handoutId " +
                 $"where b.studentId ='{student.Id}';";
@@ -155,6 +162,14 @@ namespace DAL
         public void updateStatus() {
             string s = $"Update Student set status = N'{student.Status}' where StudentId = '{student.Id}'";
             Connection.actionQuery(s);
+        }
+
+        public DataTable getIdAndName()
+        {
+            string s = "SELECT s.studentId + ' - ' + p.name as [student] " +
+                       "FROM Person p " +
+                       "INNER JOIN Student s ON p.Id = s.studentId";
+            return Connection.selectQuery(s);
         }
     }
 }

@@ -59,6 +59,10 @@ namespace BUS
         {
             payment.deletePaymentsOfAStudent();
         }
+        public bool existsPaymentOfAPeriod()
+        {
+            return payment.selectPaymentOfAPeriod().Rows.Count > 0;
+        }
     }
 
 }

@@ -78,5 +78,39 @@ namespace Final_Exam {
             Form form = new NhapHangForm(this, documentGridView.Rows[row].Cells[0].Value.ToString(), false, int.Parse(documentGridView.Rows[row].Cells[2].Value.ToString()));
             form.ShowDialog();
         }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            searchTextBox.Visible = true;
+        }
+
+        private void searchTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Console.WriteLine(searchTextBox.Text);
+                doc = new BUS_Document(0, "", searchTextBox.Text, DateTime.Now, DateTime.Now, 0);
+                DataTable dt = doc.searchDocument();
+
+                documentGridView.DataSource = dt;
+
+                dt.Columns[0].ColumnName = "Mã đề cương";
+                dt.Columns[1].ColumnName = "Tên đề cương";
+                dt.Columns[2].ColumnName = "Số lượng";
+                dt.Columns[3].ColumnName = "Giá";
+                dt.Columns[4].ColumnName = "Ngày cập nhật";
+                dt.Columns[5].ColumnName = "Ngày tạo";
+
+                foreach (DataGridViewColumn col in documentGridView.Columns)
+                {
+                    col.SortMode = DataGridViewColumnSortMode.NotSortable;
+                }
+            }
+        }
+
+        private void searchTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

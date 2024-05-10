@@ -133,7 +133,7 @@ namespace Final_Exam {
         }
         private void paidBtn_Click(object sender, EventArgs e) {
             changeBtn(paidBtn);
-            OpenChildForm(new ThanhToanForm());
+            OpenChildForm(new ThanhToanForm(true));
         }
 
         //-----------------------------------

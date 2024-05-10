@@ -18,9 +18,11 @@ namespace Final_Exam.pop_upForm {
         string classId;
         string className;
         DataTable dt;
+        LophocForm form;
         //Constructor
-        public ChiTietLopHocForm(string className) {
+        public ChiTietLopHocForm(string className, LophocForm form) {
             InitializeComponent();
+            this.form = form;
             this.className = className;
             string[] parts = className.Split(' ');
             string subject = parts[0];
@@ -81,6 +83,7 @@ namespace Final_Exam.pop_upForm {
                     ChiTietLopHocForm_Load(sender, e);
                 }
             }
+            form.updateGridView("");
             this.Close();
         }
     }

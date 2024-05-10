@@ -16,7 +16,8 @@ namespace Final_Exam
     {
         //Properties 
         BUS_Class classes;
-        DataTable dt; 
+        DataTable dt;
+        private DataTable originalData = new DataTable();
 
         //Constructor
         public LophocForm()
@@ -63,7 +64,7 @@ namespace Final_Exam
         }
 
         private void createBtn_Click(object sender, EventArgs e) {
-            Form form = new TaoLopForm();
+            Form form = new TaoLopForm(this);
             form.ShowDialog();
         }
 
@@ -86,41 +87,40 @@ namespace Final_Exam
             }
         }
 
-        private void tatcaBtn_Click(object sender, EventArgs e) {
-            classes = new BUS_Class("", "", "", 0, 0, 0, 0, DateTime.Now,"", "");
-            dt = classes.basicSelectQuery();
+        public void updateGridView(string status)
+        {
+            classes = new BUS_Class("", "", "", 0, 0, 0, 0, DateTime.Now, status, "");
+            if (status.Equals(""))
+            {
+                dt = classes.basicSelectQuery();
+            }
+            else
+            {
+                dt = classes.selectOptionalClass();
+            }
             dt.Columns[0].ColumnName = "Tên lớp";
             dt.Columns[1].ColumnName = "Số buổi ";
             dt.Columns[2].ColumnName = "Số học sinh";
             dt.Columns[3].ColumnName = "Học phí";
             dt.Columns[4].ColumnName = "Ngày tạo";
+            originalData = dt;
             classGridView.DataSource = dt;
+        }
+
+        private void tatcaBtn_Click(object sender, EventArgs e) {
+            updateGridView("");
         }
 
         private void daDongBtn_Click(object sender, EventArgs e) {
-            classes = new BUS_Class("", "", "", 0, 0, 0, 0, DateTime.Now,"Đã đóng", "");
-            dt = classes.selectOptionalClass();
-            dt.Columns[0].ColumnName = "Tên lớp";
-            dt.Columns[1].ColumnName = "Số buổi ";
-            dt.Columns[2].ColumnName = "Số học sinh";
-            dt.Columns[3].ColumnName = "Học phí";
-            dt.Columns[4].ColumnName = "Ngày tạo";
-            classGridView.DataSource = dt;
+            updateGridView("Đã đóng");
         }
 
         private void dangMoBtn_Click(object sender, EventArgs e) {
-            classes = new BUS_Class("", "", "", 0, 0, 0, 0, DateTime.Now,"Đang mở", "");
-            dt = classes.selectOptionalClass();
-            dt.Columns[0].ColumnName = "Tên lớp";
-            dt.Columns[1].ColumnName = "Số buổi ";
-            dt.Columns[2].ColumnName = "Số học sinh";
-            dt.Columns[3].ColumnName = "Học phí";
-            dt.Columns[4].ColumnName = "Ngày tạo";
-            classGridView.DataSource = dt;
+            updateGridView("Đang mở");
         }
 
         private void updateBtn_Click(object sender, EventArgs e) {
-            Form form = new TaoLopForm();
+            Form form = new TaoLopForm(classGridView.SelectedCells[0].Value.ToString(), this);
             form.ShowDialog();
 
         }
@@ -128,10 +128,53 @@ namespace Final_Exam
         private void classGridView_CellContentClick(object sender, DataGridViewCellEventArgs e) {
             int colIndex = e.ColumnIndex;
             int rowIndex = e.RowIndex;
-            if(colIndex==0 && rowIndex != -1) {
-                Form form= new ChiTietLopHocForm(classGridView.Rows[rowIndex].Cells[0].Value.ToString());
+            if (colIndex == 0 && rowIndex != -1) {
+                Form form = new ChiTietLopHocForm(classGridView.Rows[rowIndex].Cells[0].Value.ToString(), this);
                 form.ShowDialog();
             }
+        }
+
+
+        private void searchTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+           if(e.KeyCode == Keys.Enter) {
+                Console.WriteLine("hello");
+                string searchValue = searchTextBox.Text;
+                if (!string.IsNullOrEmpty(searchValue))
+                {
+                    updateGridView("");
+                    DataTable dt = new DataTable();
+                    dt.Columns.Add("Tên lớp học");
+                    dt.Columns.Add("Số buổi");
+                    dt.Columns.Add("Số học sinh");
+                    dt.Columns.Add("Học phí");
+                    dt.Columns.Add("Ngày tạo");
+                    for (int i = 0; i < classGridView.Rows.Count; i++)
+                    {
+                        string s = classGridView.Rows[i].Cells[0].Value.ToString();
+                        if (s.IndexOf(searchValue, 0, StringComparison.OrdinalIgnoreCase) != -1)
+                        {
+                            DataRow dr = dt.NewRow();
+                            foreach(DataGridViewCell cell in classGridView.Rows[i].Cells)
+                            {
+                                dr[cell.ColumnIndex] = cell.Value;
+                            }
+                            dt.Rows.Add(dr);
+                        }
+                    }
+                    classGridView.DataSource = dt;
+                }
+                else
+                {
+                    updateGridView("");
+                }
+           }
+        }
+
+
+        public void showSearchedClass(string name)
+        {
+          
         }
     }
 }

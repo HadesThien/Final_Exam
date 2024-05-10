@@ -39,7 +39,6 @@
             this.adjustBtn = new CustomControls.RJControls.RJButton();
             this.createBtn = new CustomControls.RJControls.RJButton();
             this.hocthuBtn = new CustomControls.RJControls.RJButton();
-            this.filterBtn = new CustomControls.RJControls.RJButton();
             this.searchBtn = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.studentGridView)).BeginInit();
             this.SuspendLayout();
@@ -60,11 +59,12 @@
             this.searchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.searchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTextBox.Location = new System.Drawing.Point(521, 104);
+            this.searchTextBox.Location = new System.Drawing.Point(588, 104);
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(544, 37);
             this.searchTextBox.TabIndex = 9;
             this.searchTextBox.Visible = false;
+            this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             this.searchTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchTextBox_KeyDown);
             // 
             // studentGridView
@@ -278,26 +278,6 @@
             this.hocthuBtn.UseVisualStyleBackColor = false;
             this.hocthuBtn.Click += new System.EventHandler(this.hocthuBtn_Click);
             // 
-            // filterBtn
-            // 
-            this.filterBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.filterBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
-            this.filterBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
-            this.filterBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.filterBtn.BorderRadius = 12;
-            this.filterBtn.BorderSize = 0;
-            this.filterBtn.FlatAppearance.BorderSize = 0;
-            this.filterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.filterBtn.ForeColor = System.Drawing.Color.White;
-            this.filterBtn.Image = ((System.Drawing.Image)(resources.GetObject("filterBtn.Image")));
-            this.filterBtn.Location = new System.Drawing.Point(1138, 98);
-            this.filterBtn.Name = "filterBtn";
-            this.filterBtn.Size = new System.Drawing.Size(46, 37);
-            this.filterBtn.TabIndex = 3;
-            this.filterBtn.Text = " ";
-            this.filterBtn.TextColor = System.Drawing.Color.White;
-            this.filterBtn.UseVisualStyleBackColor = false;
-            // 
             // searchBtn
             // 
             this.searchBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -310,7 +290,7 @@
             this.searchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchBtn.ForeColor = System.Drawing.Color.White;
             this.searchBtn.Image = ((System.Drawing.Image)(resources.GetObject("searchBtn.Image")));
-            this.searchBtn.Location = new System.Drawing.Point(1082, 98);
+            this.searchBtn.Location = new System.Drawing.Point(1138, 104);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(46, 37);
             this.searchBtn.TabIndex = 3;
@@ -333,7 +313,6 @@
             this.Controls.Add(this.adjustBtn);
             this.Controls.Add(this.createBtn);
             this.Controls.Add(this.hocthuBtn);
-            this.Controls.Add(this.filterBtn);
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.label1);
@@ -342,7 +321,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "QuanLySinhVienForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản lý sinh viên";
+            this.Text = ":";
             this.Load += new System.EventHandler(this.QuanLySinhVienForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.studentGridView)).EndInit();
             this.ResumeLayout(false);
@@ -359,7 +338,6 @@
         private CustomControls.RJControls.RJButton hocthuBtn;
         private CustomControls.RJControls.RJButton danghocBtn;
         private CustomControls.RJControls.RJButton tatcaBtn;
-        private CustomControls.RJControls.RJButton filterBtn;
         private System.Windows.Forms.TextBox searchTextBox;
         private RoundedGridView studentGridView;
         private CustomControls.RJControls.RJButton adjustBtn;

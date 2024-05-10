@@ -45,5 +45,16 @@ namespace DAL
             string s = "SELECT classId FROM Register WHERE studentId = '" + register.StudentId + "'";
             return Connection.selectQuery(s);
         }
+
+        public void deleteARegistryOfAClass()
+        {
+            string s = "DELETE FROM Register WHERE classId = '" + register.ClassId + "'";
+            Connection.actionQuery(s);
+        }
+        public DataTable getClassNameFromAStudent()
+        {
+            string s = $"SELECT c.subject + ' ' + CAST(c.grade as varchar) + '.' + c.shift as class\r\nFROM Class c\r\nINNER JOIN Register r ON c.classId = r.classId\r\nWHERE r.studentId = '{register.StudentId}'";
+            return Connection.selectQuery(s);
+        }
     }
 }

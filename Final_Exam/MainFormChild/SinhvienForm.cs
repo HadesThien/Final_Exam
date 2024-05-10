@@ -137,6 +137,11 @@ namespace Final_Exam {
             dt = student.search();
             studentGridView.DataSource = dt;    
         }
+
+        private void searchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 
 }

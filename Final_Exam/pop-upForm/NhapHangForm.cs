@@ -152,5 +152,10 @@ namespace Final_Exam {
             form.updateGridView();
             this.Close();
         }
+
+        private void soLuongTextBox__TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

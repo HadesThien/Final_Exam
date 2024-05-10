@@ -52,5 +52,24 @@ namespace DAL
             string s = "SELECT TOP 1 handoutId FROM Document ORDER BY handoutId DESC";
             return Connection.selectQuery(s);
         }
+
+        public DataTable searchDocument()
+        {
+            string s = $"SELECT handoutId, name, inventory, price, dateUpdated, dateCreated FROM Document WHERE name LIKE N'%{doc.Name}%'";
+            return Connection.selectQuery(s);
+
+        }
+
+        public DataTable getNames()
+        {
+            string s = "SELECT name FROM Document";
+            return Connection.selectQuery(s);
+        }
+
+        public DataTable getDocumentFromName()
+        {
+            string s = "SELECT * FROM Document WHERE name = N'" + doc.Name + "'";
+            return Connection.selectQuery(s);
+        }
     }
 }

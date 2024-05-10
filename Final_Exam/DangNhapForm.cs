@@ -95,5 +95,13 @@ namespace Final_Exam {
         private void label3_Click(object sender, EventArgs e) {
 
         }
+
+        private void taiKhoanTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter) {
+                e.Handled = true;
+                dangNhapBtn_Click(sender, e);
+            }
+        }
     }
 }

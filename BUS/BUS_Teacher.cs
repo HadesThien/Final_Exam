@@ -59,5 +59,8 @@ namespace BUS
         public string getTeacherName() {
             return teacher.getName();
         }
+        public DataTable getTeachers() {
+            return teacher.getTeachers();
+        }
     }
 }

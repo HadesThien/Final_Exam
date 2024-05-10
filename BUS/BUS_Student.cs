@@ -17,6 +17,16 @@ namespace BUS
             student = new DAL_Student(id, name, gender, dob, numberPhone, school, street, ward, district, city, dateCreated, status, note);
         }
 
+        public DataTable selectClassesOfAStudent()
+        {
+            return student.selectClassesOfAStudent();
+        }
+
+        public DataTable getIdAndName()
+        {
+            return student.getIdAndName();
+        }
+
         public void addQuery()
         {
             student.addQuery();
