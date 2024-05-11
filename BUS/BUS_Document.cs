@@ -76,6 +76,10 @@ namespace BUS
         {
             return doc.getDocumentFromName();
         }
+        public void updateAfterBuying()
+        {
+            doc.updateAfterBuying();
+        }
 
 
     }

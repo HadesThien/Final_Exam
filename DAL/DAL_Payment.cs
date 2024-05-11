@@ -19,13 +19,13 @@ namespace DAL
 
         public void addQuery()
         {
-            string query = "INSERT INTO Payment VALUES('" + payment.DateCreated + "', " + payment.Period.ToString("MM/yyyy") + ", '" + payment.Status + "', '" + payment.Note + "', " + payment.Promotion + ", " + payment.Number_Of_Session + ", '" + payment.PaymentId + "', '" + payment.StudentId + "', " + payment.ClassId + "')";
+            string query = "INSERT INTO Payment VALUES('" + payment.DateCreated.ToString("yyyy/MM/dd") + "', '" + payment.Period.ToString("yyyy/MM/dd") + "', N'" + payment.Status + "', N'" + payment.Note + "', " + payment.Promotion + ", " + payment.Number_Of_Session + ", '" + payment.PaymentId + "', '" + payment.StudentId + "', '" + payment.ClassId + "')";
             Connection.actionQuery(query);
         }
 
         public void updateQuery()
         {
-            string query = "UPDATE Payment SET status = '" + payment.Status + "', note = '" + payment.Note + "' WHERE paymentId = '" + payment.PaymentId + "'";
+            string query = "UPDATE Payment SET status = N'" + payment.Status + "', note = N'" + payment.Note + "' WHERE paymentId = '" + payment.PaymentId + "'";
             Connection.actionQuery(query);
         }
 
@@ -65,10 +65,18 @@ namespace DAL
 
         public DataTable selectPaymentOfAPeriod()
         {
-            string s = "SELECT * " +
+            string s = "SELECT paymentId " +
                        "FROM Payment " +
-                      $"WHERE studentId = '{payment.StudentId}' AND classId = '{payment.ClassId}' AND (MONTH('{payment.Period}') = MONTH(GETDATE()) AND YEAR('{payment.Period}) = YEAR(GETDATE()))";
+                      $"WHERE studentId = '{payment.StudentId}' AND classId = '{payment.ClassId}' AND (MONTH(period) = MONTH(GETDATE()) AND YEAR(period) = YEAR(GETDATE())) AND status = N'Thanh toán'";
             return Connection.selectQuery(s);
         }
+        public DataTable selectPaymentOfAPeriod1()
+        {
+            string s = "SELECT paymentId " +
+                       "FROM Payment " +
+                      $"WHERE studentId = '{payment.StudentId}' AND classId = '{payment.ClassId}' AND (MONTH(period) = MONTH(GETDATE()) AND YEAR(period) = YEAR(GETDATE())) AND status = N'Đăng ký'";
+            return Connection.selectQuery(s);
+        }
+
     }
 }

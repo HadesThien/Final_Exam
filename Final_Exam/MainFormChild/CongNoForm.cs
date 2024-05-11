@@ -24,7 +24,7 @@ namespace Final_Exam {
             updateGridView();
         }
 
-        private void updateGridView()
+        public void updateGridView()
         {
             payment = new BUS_Payment("", DateTime.Now, DateTime.Now, "", "", 0, 0, "","");
             dt = payment.selectQuery();
@@ -48,7 +48,7 @@ namespace Final_Exam {
         }
 
         private void createBtn_Click(object sender, EventArgs e) {
-            Form form = new ThanhToanForm();
+            Form form = new ThanhToanForm(this);
             form.ShowDialog();
         }
 

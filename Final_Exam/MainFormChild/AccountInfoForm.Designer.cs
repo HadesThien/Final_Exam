@@ -238,7 +238,7 @@
             this.accountGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.accountGridView.EnableHeadersVisualStyles = false;
             this.accountGridView.GridColor = System.Drawing.Color.GhostWhite;
-            this.accountGridView.Location = new System.Drawing.Point(20, 228);
+            this.accountGridView.Location = new System.Drawing.Point(-25, 214);
             this.accountGridView.MultiSelect = false;
             this.accountGridView.Name = "accountGridView";
             this.accountGridView.ReadOnly = true;

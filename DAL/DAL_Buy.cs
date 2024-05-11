@@ -20,7 +20,7 @@ namespace DAL
 
         public void addQuery()
         {
-            string query = "INSERT INTO Buy VALUES('" + buy.BuyingDate.ToString() + "', " + buy.Number + "', " + buy.Price + "', '" + buy.Status + "', '" + buy.Period.ToString("MM/yyyy") + "', '" + buy.Note + "', '" + buy.Id + "', '" + buy.StudentId + "', '" + buy.DocumentId + "')";
+            string query = "INSERT INTO Buy VALUES('" + buy.BuyingDate.ToString("yyyy/MM/dd") + "', " + buy.Number + ", " + buy.Price + ", N'" + buy.Status + "', '" + buy.Period.ToString("yyyy/MM/dd") + "', N'" + buy.Note + "', '" + buy.Id + "', '" + buy.StudentId + "', '" + buy.DocumentId + "')";
             Connection.actionQuery(query);
         }
 

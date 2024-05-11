@@ -71,5 +71,11 @@ namespace DAL
             string s = "SELECT * FROM Document WHERE name = N'" + doc.Name + "'";
             return Connection.selectQuery(s);
         }
+
+        public void updateAfterBuying()
+        {
+            string s = $"UPDATE Document SET inventory = inventory - 1 WHERE name = N'{doc.Name}'";
+            Connection.actionQuery(s);
+        }
     }
 }

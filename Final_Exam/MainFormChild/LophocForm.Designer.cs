@@ -52,7 +52,7 @@
             this.searchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchTextBox.Location = new System.Drawing.Point(577, 101);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(544, 37);
+            this.searchTextBox.Size = new System.Drawing.Size(544, 31);
             this.searchTextBox.TabIndex = 15;
             this.searchTextBox.Visible = false;
             this.searchTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchTextBox_KeyDown);
@@ -64,7 +64,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
             this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(339, 50);
+            this.label1.Size = new System.Drawing.Size(266, 40);
             this.label1.TabIndex = 10;
             this.label1.Text = "Danh sách lớp học";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -210,7 +210,7 @@
             this.tatcaBtn.BorderSize = 0;
             this.tatcaBtn.FlatAppearance.BorderSize = 0;
             this.tatcaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tatcaBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tatcaBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tatcaBtn.ForeColor = System.Drawing.Color.White;
             this.tatcaBtn.Location = new System.Drawing.Point(17, 92);
             this.tatcaBtn.Name = "tatcaBtn";
@@ -230,9 +230,9 @@
             this.daDongBtn.BorderSize = 0;
             this.daDongBtn.FlatAppearance.BorderSize = 0;
             this.daDongBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.daDongBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.daDongBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.daDongBtn.ForeColor = System.Drawing.Color.White;
-            this.daDongBtn.Location = new System.Drawing.Point(132, 92);
+            this.daDongBtn.Location = new System.Drawing.Point(247, 92);
             this.daDongBtn.Name = "daDongBtn";
             this.daDongBtn.Size = new System.Drawing.Size(114, 40);
             this.daDongBtn.TabIndex = 5;
@@ -250,9 +250,9 @@
             this.dangMoBtn.BorderSize = 0;
             this.dangMoBtn.FlatAppearance.BorderSize = 0;
             this.dangMoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dangMoBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dangMoBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dangMoBtn.ForeColor = System.Drawing.Color.White;
-            this.dangMoBtn.Location = new System.Drawing.Point(247, 92);
+            this.dangMoBtn.Location = new System.Drawing.Point(132, 92);
             this.dangMoBtn.Name = "dangMoBtn";
             this.dangMoBtn.Size = new System.Drawing.Size(114, 40);
             this.dangMoBtn.TabIndex = 5;
@@ -263,7 +263,7 @@
             // 
             // LophocForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(91)))), ((int)(((byte)(147)))));
             this.ClientSize = new System.Drawing.Size(1200, 692);

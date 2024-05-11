@@ -13,12 +13,14 @@ namespace Final_Exam.pop_upForm {
     public partial class RegisterAccountForm : Form {
         //Properties
         BUS_Account account;
-        DataTable dt; 
+        DataTable dt;
+        private AccountInfoForm form;
         //Contructor
-        public RegisterAccountForm() {
+        public RegisterAccountForm(AccountInfoForm form) {
             InitializeComponent();
             passwordTextBox.PasswordChar = true;
             confirmPasswordTextBox.PasswordChar = true;
+            this.form = form;
         }
         public RegisterAccountForm( BUS_Account account ) {
             InitializeComponent();
@@ -59,7 +61,7 @@ namespace Final_Exam.pop_upForm {
             }else
             {
                 string username = accountTextBox.Texts.Trim();
-                string password = accountTextBox.Texts.Trim();
+                string password = passwordTextBox.Texts.Trim();
                 string role = roleComboBox.Texts;
                 if (role == "Quản lý") role = "admin"; else role = "user";
                 string email = emailTextBox.Texts.Trim();
@@ -68,6 +70,7 @@ namespace Final_Exam.pop_upForm {
                 account = new BUS_Account(username,password,DateTime.Now,DateTime.Now, role, email, numberphone, name);
                 if(saveBtn.Text == "Lưu") account.addAccount();
                 if (saveBtn.Text == "Cập nhật") account.updateAccount();
+                form.updateGridView();
                 this.Close();
             }
         }

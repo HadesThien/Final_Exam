@@ -17,26 +17,21 @@ using System.DirectoryServices.ActiveDirectory;
 namespace Final_Exam {
     public partial class ThanhToanForm : Form
     {
-        //Properties
-        private List<string> danhSachHocSinh = new List<string>();
-        private List<string> danhSachLopHoc = new List<string>();
-
         private BUS_Student student;
         private DataTable thanhToanTable;
 
-        private List<string> subjects;
-        private List<string> shifts;
-        private List<int> grades;
-
         private int tempCheckout = 0;
-        private int checkout = 0;
+        private bool? flag;
+
+        private CongNoForm form;
         //Constructor
-        public ThanhToanForm()
+        public ThanhToanForm(CongNoForm form)
         {
             InitializeComponent();
-            updateStudentListBox();
             label12.Visible = false;
             documentCheckedListBox.Visible = false;
+            studentListBox.Visible = true;
+            this.form = form;
         }
 
         public ThanhToanForm(bool flag)
@@ -46,6 +41,7 @@ namespace Final_Exam {
             saveBtn.Visible = false;
             studentListBox.Visible = true;
             cancelBtn.Visible = false;
+            this.flag = flag;
         }
 
         private void updateStudentListBox()
@@ -58,47 +54,61 @@ namespace Final_Exam {
             }
         }
 
-        private List<string> FindRelatedStudents(string searchText)
+        private void gridViewInit()
         {
-            List<string> relatedStudents = new List<string>();
-            foreach (string student in danhSachHocSinh)
-            {
-                if (student.Contains(searchText))
-                {
-                    relatedStudents.Add(student);
-                }
-            }
-            return relatedStudents;
-        }
-
-
-        private void searchClassTextBox__TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private List<string> FindRelatedClasses(string searchText)
-        {
-            List<string> relatedClasses = new List<string>();
-            foreach (string Class in danhSachLopHoc)
-            {
-                relatedClasses.Add(Class);
-            }
-            return relatedClasses;
-        }
-
-        private void searchStudentTextBox_TextChanged(object sender, EventArgs e)
-        {
-            string searchText = searchStudentTextBox.Text;
-            List<string> relatedStudents = FindRelatedStudents(searchText);
-            foreach (string student in relatedStudents)
-            {
-            }
-
+            thanhToanTable = new DataTable();
+            thanhToanTable.Columns.Add("Tên thanh toán");
+            thanhToanTable.Columns.Add("Loại");
+            thanhToanTable.Columns.Add("Giá");
+            thanhToanTable.Columns.Add("Kỳ");
+            roundedGridView1.DataSource = thanhToanTable;
+            roundedGridView1.Columns[0].ReadOnly = true;
+            roundedGridView1.Columns[1].ReadOnly = true;
+            roundedGridView1.Columns[2].ReadOnly = true;
+            roundedGridView1.Columns[3].ReadOnly = true;
+            DataGridViewNumericUpDownColumn dgv_nud = new DataGridViewNumericUpDownColumn();
+            dgv_nud.Name = "Số buổi / số lượng";
+            dgv_nud.Minimum = 1;
+            dgv_nud.Maximum = 12;
+            roundedGridView1.Columns.Add(dgv_nud);
         }
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
+            string id = (studentLabel.Text).Split(new string[] {" - "}, StringSplitOptions.None)[0];
+            for (int i = 0; i < thanhToanTable.Rows.Count; i++)
+            {
+                if (thanhToanTable.Rows[i][1].ToString().Equals("Lớp"))
+                {
+                    decimal val = Convert.ToDecimal(roundedGridView1.Rows[i].Cells[4].Value);
+                    int n = Convert.ToInt32(val);
+                    tempCheckout += (int)(int.Parse(thanhToanTable.Rows[i][2].ToString()) * (n / 12.0f));
+                    BUS_Payment payment = new BUS_Payment("", DateTime.Now, DateTime.Now, "", "", 0.0f, 0, "", "");
+                    string[] arr = thanhToanTable.Rows[i][0].ToString().Split(new string[] { " " }, StringSplitOptions.None);
+                    string subject = arr[0];
+                    string shift = arr[1].Split(new string[] { "." }, StringSplitOptions.None)[1];
+                    int grade = int.Parse(arr[1].Split(new string[] { "." }, StringSplitOptions.None)[0]);
+                    BUS_Class bus_class = new BUS_Class("", subject, shift, grade, 0, 0, 0, DateTime.Now, "", "");
+                    Console.WriteLine(payment.getId() + " " + n + " " + id + " " + bus_class.getClassId());
+                    payment = new BUS_Payment(payment.getId(), DateTime.Now, DateTime.Now, "Đăng ký", noteTextBox.Text, 0.0f, n, id, bus_class.getClassId());
+                    if (!string.IsNullOrEmpty(payment.existsPaymentOfAPeriod()))
+                    {
+                        MessageBox.Show($"Đã tồn tại công nợ đã thanh toán của môn {thanhToanTable.Rows[i][0].ToString()} của kỳ {DateTime.Now.ToString("MM/yyyy")}");
+                    }
+                    else if (!string.IsNullOrEmpty(payment.existsPaymentOfAPeriod1()))
+                    {
+                        MessageBox.Show($"Đã tồn tại công nợ đăng ký của môn {thanhToanTable.Rows[i][0].ToString()} của kỳ {DateTime.Now.ToString("MM/yyyy")}");
 
+                    }
+                    else
+                    {
+                        payment.addQuery();
+                    }
+                }
+            }
+            studentListBox.SelectedIndex = 0;
+            form.updateGridView();
+            this.Close();
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
@@ -108,6 +118,10 @@ namespace Final_Exam {
 
         private void studentListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (studentListBox.SelectedItem == null)
+            {
+                return;
+            }
             string s = studentListBox.SelectedItem.ToString();
             searchStudentTextBox.Text = s;
             studentLabel.Text = s;
@@ -164,67 +178,7 @@ namespace Final_Exam {
             BUS_Document document = new BUS_Document(0, "", "", DateTime.Now, DateTime.Now, 0);
             documentCheckedListBox.DataSource = document.getNames();
             updateStudentListBox();
-            thanhToanTable = new DataTable();
             documentCheckedListBox.DisplayMember = "name";
-            thanhToanTable.Columns.Add("Tên thanh toán");
-            thanhToanTable.Columns.Add("Loại");
-            thanhToanTable.Columns.Add("Giá");
-            thanhToanTable.Columns.Add("Kỳ");
-            roundedGridView1.DataSource = thanhToanTable;
-            roundedGridView1.Columns[0].ReadOnly = true;
-            roundedGridView1.Columns[1].ReadOnly = true;
-            roundedGridView1.Columns[2].ReadOnly = true;
-            roundedGridView1.Columns[3].ReadOnly = true;
-            DataGridViewNumericUpDownColumn dgv_nud = new DataGridViewNumericUpDownColumn();
-            dgv_nud.Name = "Số buổi / số lượng";
-            dgv_nud.Minimum = 1;
-            dgv_nud.Maximum = 12;
-            roundedGridView1.Columns.Add(dgv_nud);
-        }
-
-        private void updateGridView()
-        {
-        }
-
-        public void updateThanhToanTable()
-        {
-            //thanhToanTable = new DataTable();
-            //thanhToanTable.Columns.Add("Tên thanh toán");
-            //thanhToanTable.Columns.Add("Loại");
-            //thanhToanTable.Columns.Add("Giá");
-            //thanhToanTable.Columns.Add("Kỳ");
-            //subject = new List<string>();
-            //shift = new List<string>();
-            //grade = new List<int>();
-            //int tempCheckout = 0;
-            //int checkout = 0;
-            //foreach (var s in classCheckedListBox.CheckedItems)
-            //{
-            //    DataRowView drv = (DataRowView)s;
-            //    string str = drv["class"].ToString();
-            //    string[] arr = str.Split(new string[] { " " }, StringSplitOptions.None);
-            //    subject.Add(arr[0]);
-            //    shift.Add(arr[1].Split(new string[] { "." }, StringSplitOptions.None)[1]);
-            //    grade.Add(int.Parse(arr[1].Split(new string[] { "." }, StringSplitOptions.None)[0]));
-            //    BUS_Class bus_class = new BUS_Class("", subject[subject.Count - 1], shift[shift.Count - 1], grade[grade.Count - 1], 0, 0, 0, DateTime.Now, "", "");
-            //    bus_class = new BUS_Class(bus_class.getClassId(), subject[subject.Count - 1], shift[shift.Count - 1], grade[grade.Count - 1], 0, 0, 0, DateTime.Now, "", "");
-            //    thanhToanTable.Rows.Add(str, "Lớp", bus_class.getClass().Rows[0][4], DateTime.Now.ToString("MM/yyyy"));
-            //    checkout += int.Parse(bus_class.getClass().Rows[0][4].ToString());
-            //    tempCheckout += int.Parse(bus_class.getClass().Rows[0][4].ToString());
-            //}
-            //foreach (var s in documentCheckedListBox.CheckedItems)
-            //{
-            //    DataRowView drv = (DataRowView)s;
-            //    string str = drv["name"].ToString();
-            //    BUS_Document doc = new BUS_Document(0, "", str, DateTime.Now, DateTime.Now, 0);
-            //    thanhToanTable.Rows.Add(str, "Tài liệu", doc.getDocumentFromName().Rows[0][5], DateTime.Now.ToString("MM/yyyy"));
-            //    checkout += int.Parse(doc.getDocumentFromName().Rows[0][5].ToString());
-            //    tempCheckout += int.Parse(doc.getDocumentFromName().Rows[0][5].ToString());
-            //}
-
-            //checkout = tempCheckout - int.Parse(promotionLabel.Text);
-            //tempCheckoutLabel.Text = tempCheckout.ToString();
-            //checkoutLabel.Text = checkout.ToString();
         }
 
         private void classCheckedListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -247,13 +201,26 @@ namespace Final_Exam {
             return -1;
         }
 
+        public void calculate()
+        {
+            tempCheckout = 0;
+            for (int i = 0; i < roundedGridView1.Rows.Count; i++)
+            {
+                decimal val = Convert.ToDecimal(roundedGridView1.Rows[i].Cells[4].Value);
+                int n = Convert.ToInt32(val);
+                if (thanhToanTable.Rows[i][1].Equals("Lớp"))
+                {
+                    tempCheckout += (int)(int.Parse(thanhToanTable.Rows[i][2].ToString()) * (n / 12.0f));
+                }
+                else
+                {
+                    tempCheckout += (int)(int.Parse(thanhToanTable.Rows[i][2].ToString()));
+                }
+            }
+        }
+
         private void classCheckedListBox_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            //this.BeginInvoke(new Action(() =>
-            //{
-            //    updateThanhToanTable();
-            //    updateGridView();
-            //}));
             DataRowView drv = (DataRowView)classCheckedListBox.Items[e.Index];
             string s = drv["class"].ToString();
             if (e.NewValue == CheckState.Checked)
@@ -266,17 +233,19 @@ namespace Final_Exam {
                 bus_class = new BUS_Class(bus_class.getClassId(), subject, shift, grade, 0, 0, 0, DateTime.Now, "", "");
                 thanhToanTable.Rows.Add(s, "Lớp", bus_class.getClass().Rows[0][4], DateTime.Now.ToString("MM/yyyy"));
                 int count = roundedGridView1.Rows.Count - 1;
-                roundedGridView1.Rows[count].Cells[0].Value = (decimal)12;
-                int n = (int)((decimal)roundedGridView1.Rows[count].Cells[0].Value);
-                tempCheckout += (int)(int.Parse(bus_class.getClass().Rows[0][4].ToString()) * (n / 12.0f));
-                updateGridView();
+                Console.WriteLine(roundedGridView1.Rows[count].Cells[0].Value);
+                roundedGridView1.Rows[count].Cells[4].Value = (decimal)12;
+                for (int i = 0; i < roundedGridView1.Rows[count].Cells.Count; i++)
+                {
+                    Console.WriteLine(roundedGridView1.Rows[count].Cells[i].Value);
+                }
+                calculate();
             }
             else
             {
                 int index = find(s);
-                tempCheckout -= int.Parse(thanhToanTable.Rows[index][2].ToString());
                 thanhToanTable.Rows.RemoveAt(index);
-                updateGridView();
+                calculate();
             }
             tempCheckoutLabel.Text = tempCheckout.ToString();
             checkoutLabel.Text = (tempCheckout - int.Parse(promotionLabel.Text)).ToString();
@@ -284,11 +253,6 @@ namespace Final_Exam {
 
         private void documentCheckedListBox_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            //this.BeginInvoke(new Action(() =>
-            //{
-            //    updateThanhToanTable();
-            //    updateGridView();
-            //}));
             DataRowView drv = (DataRowView)documentCheckedListBox.Items[e.Index];
             string s = drv["name"].ToString();
             if (e.NewValue == CheckState.Checked)
@@ -296,16 +260,15 @@ namespace Final_Exam {
                 BUS_Document doc = new BUS_Document(0, "", s, DateTime.Now, DateTime.Now, 0);
                 thanhToanTable.Rows.Add(s, "Tài liệu", doc.getDocumentFromName().Rows[0][5], DateTime.Now.ToString("MM/yyyy"));
                 int count = roundedGridView1.Rows.Count - 1;
-                roundedGridView1.Rows[count].Cells[0].Value = (decimal)1;
-                roundedGridView1.Rows[count].Cells[0].ReadOnly = true;
-                tempCheckout += int.Parse(doc.getDocumentFromName().Rows[0][5].ToString());
+                roundedGridView1.Rows[count].Cells[4].Value = (decimal)1;
+                roundedGridView1.Rows[count].Cells[4].ReadOnly = true;
+                calculate();
             }
             else
             {
                 int index = find(s);
-                tempCheckout -= int.Parse(thanhToanTable.Rows[index][2].ToString());
                 thanhToanTable.Rows.RemoveAt(index);
-                updateGridView();
+                calculate();
             }
             tempCheckoutLabel.Text = tempCheckout.ToString();
             checkoutLabel.Text = (tempCheckout - int.Parse(promotionLabel.Text)).ToString();
@@ -313,6 +276,61 @@ namespace Final_Exam {
 
         private void payBtn_Click(object sender, EventArgs e)
         {
+            string id = (studentLabel.Text).Split(new string[] {" - "}, StringSplitOptions.None)[0];
+            for (int i = 0; i < thanhToanTable.Rows.Count; i++)
+            {
+                if (thanhToanTable.Rows[i][1].ToString().Equals("Lớp"))
+                {
+                    decimal val = Convert.ToDecimal(roundedGridView1.Rows[i].Cells[4].Value);
+                    int n = Convert.ToInt32(val);
+                    BUS_Payment payment = new BUS_Payment("", DateTime.Now, DateTime.Now, "", "", 0.0f, 0, "", "");
+                    string[] arr = thanhToanTable.Rows[i][0].ToString().Split(new string[] { " " }, StringSplitOptions.None);
+                    string subject = arr[0];
+                    string shift = arr[1].Split(new string[] { "." }, StringSplitOptions.None)[1];
+                    int grade = int.Parse(arr[1].Split(new string[] { "." }, StringSplitOptions.None)[0]);
+                    BUS_Class bus_class = new BUS_Class("", subject, shift, grade, 0, 0, 0, DateTime.Now, "", "");
+                    payment = new BUS_Payment(payment.getId(), DateTime.Now, DateTime.Now, "Thanh toán", noteTextBox.Text, 0.0f, n, id, bus_class.getClassId());
+                    if (!string.IsNullOrEmpty(payment.existsPaymentOfAPeriod()))
+                    {
+                        MessageBox.Show($"Đã tồn tại công nợ của môn {thanhToanTable.Rows[i][0].ToString()} của kỳ {DateTime.Now.ToString("MM/yyyy")}");
+                    }
+                    else if (!string.IsNullOrEmpty(payment.existsPaymentOfAPeriod1()))
+                    {
+                        payment = new BUS_Payment(payment.existsPaymentOfAPeriod1(), DateTime.Now, DateTime.Now, "Thanh toán", noteTextBox.Text, 0.0f, n, id, bus_class.getClassId());
+                        payment.updateQuery();
+                    }
+                    else
+                    {
+                        payment.addQuery();
+                    }
+                }
+                else
+                {
+                    BUS_Document doc = new BUS_Document(0, "", thanhToanTable.Rows[i][0].ToString(), DateTime.Now, DateTime.Now, 0);
+                    BUS_Buy buy = new BUS_Buy(DateTime.Now, 0, 0, "Thanh toán", DateTime.Now, "", "", "", "");
+                    buy = new BUS_Buy(DateTime.Now, 1, int.Parse(doc.getDocumentFromName().Rows[0][5].ToString()), "Thanh toán", DateTime.Now, noteTextBox.Text, buy.getId(), id, doc.getDocumentFromName().Rows[0][1].ToString());
+                    buy.addQuery();
+                    doc.updateAfterBuying();
+                }
+            }
+            studentListBox.SelectedIndex = 0;
+            if (flag == null)
+            {
+                form.updateGridView();
+                this.Close();
+            }
+        }
+
+        private void roundedGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            calculate();
+            tempCheckoutLabel.Text = tempCheckout.ToString();
+            checkoutLabel.Text = (tempCheckout - int.Parse(promotionLabel.Text)).ToString();
+        }
+
+        private void ThanhToanForm_Shown(object sender, EventArgs e)
+        {
+            gridViewInit();
         }
     }
 }

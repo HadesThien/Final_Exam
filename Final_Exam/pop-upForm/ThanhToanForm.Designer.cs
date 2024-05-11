@@ -49,7 +49,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.noteTextBox = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.studentLabel = new System.Windows.Forms.Label();
             this.roundedGridView1 = new Final_Exam.RoundedGridView();
@@ -321,15 +321,15 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Ghi Chú:";
             // 
-            // richTextBox1
+            // noteTextBox
             // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.noteTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.Location = new System.Drawing.Point(88, 518);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(782, 197);
-            this.richTextBox1.TabIndex = 6;
-            this.richTextBox1.Text = "";
+            this.noteTextBox.Location = new System.Drawing.Point(88, 518);
+            this.noteTextBox.Name = "noteTextBox";
+            this.noteTextBox.Size = new System.Drawing.Size(782, 197);
+            this.noteTextBox.TabIndex = 6;
+            this.noteTextBox.Text = "";
             // 
             // label4
             // 
@@ -414,6 +414,7 @@
             this.roundedGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.roundedGridView1.Size = new System.Drawing.Size(858, 455);
             this.roundedGridView1.TabIndex = 11;
+            this.roundedGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.roundedGridView1_CellValueChanged);
             // 
             // ThanhToanForm
             // 
@@ -424,7 +425,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.roundedGridView1);
             this.Controls.Add(this.studentLabel);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.noteTextBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
@@ -434,6 +435,7 @@
             this.Name = "ThanhToanForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.ThanhToanForm_Load);
+            this.Shown += new System.EventHandler(this.ThanhToanForm_Shown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -450,7 +452,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox noteTextBox;
         private CustomControls.RJControls.RJButton payBtn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

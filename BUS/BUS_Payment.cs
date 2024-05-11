@@ -43,25 +43,44 @@ namespace BUS
                 string res = tb.Rows[0][0].ToString();
                 int stt = int.Parse(res.Substring(2, 3)) + 1;
                 if (stt < 10)
-                    res = "TT00" + stt.ToString();
+                    res = "DK00" + stt.ToString();
                 else if (stt < 100)
-                    res = "TT0" + stt.ToString();
+                    res = "DK0" + stt.ToString();
                 else
-                    res = "TT" + stt.ToString();
+                    res = "DK" + stt.ToString();
                 return res;
             }
             else
             {
-                return "TT001";
+                return "DK001";
             }
         }
         public void deletePaymentsOfAStudent()
         {
             payment.deletePaymentsOfAStudent();
         }
-        public bool existsPaymentOfAPeriod()
+        public string existsPaymentOfAPeriod()
         {
-            return payment.selectPaymentOfAPeriod().Rows.Count > 0;
+            if (payment.selectPaymentOfAPeriod().Rows.Count > 0)
+            {
+                return payment.selectPaymentOfAPeriod().Rows[0][0].ToString();
+            }
+            else
+            {
+                return "";
+            }
+        }
+
+        public string existsPaymentOfAPeriod1()
+        {
+            if (payment.selectPaymentOfAPeriod1().Rows.Count > 0)
+            {
+                return payment.selectPaymentOfAPeriod1().Rows[0][0].ToString();
+            }
+            else
+            {
+                return "";
+            }
         }
     }
 
