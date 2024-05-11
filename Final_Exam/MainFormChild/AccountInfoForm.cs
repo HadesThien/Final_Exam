@@ -32,8 +32,8 @@ namespace Final_Exam {
             string username = accountGridView.Rows[currentIndex].Cells[0].Value.ToString();
             string password = accountGridView.Rows[currentIndex].Cells[1].Value.ToString();
             string role = accountGridView.Rows[currentIndex].Cells[2].Value.ToString();
-            string numberphone = accountGridView.Rows[currentIndex].Cells[3].Value.ToString();
-            string email = accountGridView.Rows[currentIndex].Cells[4].Value.ToString();
+            string email = accountGridView.Rows[currentIndex].Cells[3].Value.ToString();
+            string numberphone = accountGridView.Rows[currentIndex].Cells[4].Value.ToString();
             string name = accountGridView.Rows[currentIndex].Cells[5].Value.ToString();
             string lastLoginDate= accountGridView.Rows[currentIndex].Cells[6].Value.ToString();
             string dateCreated = accountGridView.Rows[currentIndex].Cells[7].Value.ToString();
@@ -55,8 +55,8 @@ namespace Final_Exam {
             string username = accountGridView.Rows[currentIndex].Cells[0].Value.ToString();
             string password = accountGridView.Rows[currentIndex].Cells[1].Value.ToString();
             string role = accountGridView.Rows[currentIndex].Cells[2].Value.ToString();
-            string numberphone = accountGridView.Rows[currentIndex].Cells[3].Value.ToString();
-            string email = accountGridView.Rows[currentIndex].Cells[4].Value.ToString();
+            string email = accountGridView.Rows[currentIndex].Cells[3].Value.ToString();
+            string numberphone = accountGridView.Rows[currentIndex].Cells[4].Value.ToString();
             string name = accountGridView.Rows[currentIndex].Cells[5].Value.ToString();
             string lastLoginDate= accountGridView.Rows[currentIndex].Cells[6].Value.ToString();
             string dateCreated = accountGridView.Rows[currentIndex].Cells[7].Value.ToString();
@@ -106,13 +106,13 @@ namespace Final_Exam {
             string username = accountGridView.Rows[currentIndex].Cells[0].Value.ToString();
             string password = accountGridView.Rows[currentIndex].Cells[1].Value.ToString();
             string role = accountGridView.Rows[currentIndex].Cells[2].Value.ToString();
-            string numberphone = accountGridView.Rows[currentIndex].Cells[3].Value.ToString();
-            string email = accountGridView.Rows[currentIndex].Cells[4].Value.ToString();
+            string email = accountGridView.Rows[currentIndex].Cells[3].Value.ToString();
+            string numberphone = accountGridView.Rows[currentIndex].Cells[4].Value.ToString();
             string name = accountGridView.Rows[currentIndex].Cells[5].Value.ToString();
             string lastLoginDate= accountGridView.Rows[currentIndex].Cells[6].Value.ToString();
             string dateCreated = accountGridView.Rows[currentIndex].Cells[7].Value.ToString();
             account = new BUS_Account(username,password,DateTime.Parse(dateCreated),DateTime.Parse(lastLoginDate),role,email,numberphone,name);
-            Form form = new RegisterAccountForm(account);
+            Form form = new RegisterAccountForm(account, this);
             form.ShowDialog();
             AccountInfoForm_Load(sender, e);
         }

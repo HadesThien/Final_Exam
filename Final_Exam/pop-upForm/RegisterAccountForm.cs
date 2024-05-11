@@ -22,7 +22,7 @@ namespace Final_Exam.pop_upForm {
             confirmPasswordTextBox.PasswordChar = true;
             this.form = form;
         }
-        public RegisterAccountForm( BUS_Account account ) {
+        public RegisterAccountForm( BUS_Account account, AccountInfoForm form ) {
             InitializeComponent();
             this.account = account;
             passwordTextBox.PasswordChar = true;
@@ -36,6 +36,7 @@ namespace Final_Exam.pop_upForm {
             numberPhoneTextBox.Texts = account.getNumberphone();
             nameTextBox.Texts = account.getName();
             confirmPasswordTextBox.Enabled = false;
+            this.form = form;
             saveBtn.Text = "Cập nhật";
         }
 
@@ -68,8 +69,8 @@ namespace Final_Exam.pop_upForm {
                 string numberphone =numberPhoneTextBox.Texts.Trim();
                 string name = nameTextBox.Texts.Trim();
                 account = new BUS_Account(username,password,DateTime.Now,DateTime.Now, role, email, numberphone, name);
-                if(saveBtn.Text == "Lưu") account.addAccount();
-                if (saveBtn.Text == "Cập nhật") account.updateAccount();
+                if(saveBtn.Text.Equals("Lưu")) account.addAccount();
+                else if (saveBtn.Text.Equals("Cập nhật")) account.updateAccount();
                 form.updateGridView();
                 this.Close();
             }
