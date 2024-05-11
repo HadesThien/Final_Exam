@@ -23,11 +23,11 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle64 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle65 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,19 +47,17 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.gioiTinhLabel = new System.Windows.Forms.Label();
-            this.tinhTrangLabel = new System.Windows.Forms.Label();
             this.ghiChuLabel = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.schoolLabel = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.paymentGridView = new Final_Exam.RoundedGridView();
             this.hocPhiBtn = new CustomControls.RJControls.RJButton();
-            this.thoiHocBtn = new CustomControls.RJControls.RJButton();
-            this.nhapHocBtn = new CustomControls.RJControls.RJButton();
             this.classBtn = new CustomControls.RJControls.RJButton();
             this.removeBtn = new CustomControls.RJControls.RJButton();
             this.cancelBtn = new CustomControls.RJControls.RJButton();
-            this.paymentGridView = new Final_Exam.RoundedGridView();
             this.rjButton5 = new CustomControls.RJControls.RJButton();
+            this.tinhTrangComboBox = new CustomControls.RJControls.RJComboBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -72,7 +70,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(10, -2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(435, 46);
+            this.label1.Size = new System.Drawing.Size(349, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin chi tiết học sinh";
             // 
@@ -82,7 +80,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 32);
+            this.label2.Size = new System.Drawing.Size(124, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã học viên:";
             // 
@@ -92,7 +90,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 37);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 32);
+            this.label3.Size = new System.Drawing.Size(103, 25);
             this.label3.TabIndex = 0;
             this.label3.Text = "Họ và tên:";
             // 
@@ -102,7 +100,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 74);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(171, 32);
+            this.label4.Size = new System.Drawing.Size(134, 25);
             this.label4.TabIndex = 0;
             this.label4.Text = "Số điện thoại:";
             // 
@@ -112,7 +110,7 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 32);
+            this.label5.Size = new System.Drawing.Size(76, 25);
             this.label5.TabIndex = 0;
             this.label5.Text = "Địa chỉ:";
             // 
@@ -122,7 +120,7 @@
             this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(506, 37);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(135, 32);
+            this.label6.Size = new System.Drawing.Size(105, 25);
             this.label6.TabIndex = 0;
             this.label6.Text = "Ngày sinh:";
             // 
@@ -132,7 +130,7 @@
             this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(506, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(125, 32);
+            this.label7.Size = new System.Drawing.Size(98, 25);
             this.label7.TabIndex = 0;
             this.label7.Text = "Ngày tạo:";
             // 
@@ -142,7 +140,7 @@
             this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(506, 74);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 32);
+            this.label8.Size = new System.Drawing.Size(84, 25);
             this.label8.TabIndex = 0;
             this.label8.Text = "Ghi chú:";
             // 
@@ -152,7 +150,7 @@
             this.maHocVienLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maHocVienLabel.Location = new System.Drawing.Point(184, 0);
             this.maHocVienLabel.Name = "maHocVienLabel";
-            this.maHocVienLabel.Size = new System.Drawing.Size(0, 28);
+            this.maHocVienLabel.Size = new System.Drawing.Size(0, 21);
             this.maHocVienLabel.TabIndex = 0;
             // 
             // hoTenLabel
@@ -161,7 +159,7 @@
             this.hoTenLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hoTenLabel.Location = new System.Drawing.Point(184, 37);
             this.hoTenLabel.Name = "hoTenLabel";
-            this.hoTenLabel.Size = new System.Drawing.Size(0, 28);
+            this.hoTenLabel.Size = new System.Drawing.Size(0, 21);
             this.hoTenLabel.TabIndex = 0;
             // 
             // soDienThoaiLabel
@@ -170,7 +168,7 @@
             this.soDienThoaiLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.soDienThoaiLabel.Location = new System.Drawing.Point(184, 74);
             this.soDienThoaiLabel.Name = "soDienThoaiLabel";
-            this.soDienThoaiLabel.Size = new System.Drawing.Size(0, 28);
+            this.soDienThoaiLabel.Size = new System.Drawing.Size(0, 21);
             this.soDienThoaiLabel.TabIndex = 0;
             // 
             // addressLabel
@@ -179,7 +177,7 @@
             this.addressLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addressLabel.Location = new System.Drawing.Point(184, 0);
             this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(0, 28);
+            this.addressLabel.Size = new System.Drawing.Size(0, 21);
             this.addressLabel.TabIndex = 0;
             // 
             // ngayTaoLabel
@@ -188,7 +186,7 @@
             this.ngayTaoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ngayTaoLabel.Location = new System.Drawing.Point(655, 0);
             this.ngayTaoLabel.Name = "ngayTaoLabel";
-            this.ngayTaoLabel.Size = new System.Drawing.Size(0, 28);
+            this.ngayTaoLabel.Size = new System.Drawing.Size(0, 21);
             this.ngayTaoLabel.TabIndex = 0;
             // 
             // ngaySinhLabel
@@ -197,7 +195,7 @@
             this.ngaySinhLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ngaySinhLabel.Location = new System.Drawing.Point(655, 37);
             this.ngaySinhLabel.Name = "ngaySinhLabel";
-            this.ngaySinhLabel.Size = new System.Drawing.Size(0, 28);
+            this.ngaySinhLabel.Size = new System.Drawing.Size(0, 21);
             this.ngaySinhLabel.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -241,10 +239,10 @@
             this.tableLayoutPanel3.Controls.Add(this.label16, 4, 1);
             this.tableLayoutPanel3.Controls.Add(this.ngayTaoLabel, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.gioiTinhLabel, 5, 0);
-            this.tableLayoutPanel3.Controls.Add(this.tinhTrangLabel, 5, 1);
             this.tableLayoutPanel3.Controls.Add(this.ghiChuLabel, 3, 2);
             this.tableLayoutPanel3.Controls.Add(this.label9, 4, 2);
             this.tableLayoutPanel3.Controls.Add(this.schoolLabel, 5, 2);
+            this.tableLayoutPanel3.Controls.Add(this.tinhTrangComboBox, 5, 1);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(17, 47);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
@@ -260,7 +258,7 @@
             this.label15.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(897, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(119, 32);
+            this.label15.Size = new System.Drawing.Size(93, 25);
             this.label15.TabIndex = 0;
             this.label15.Text = "Giới tính:";
             // 
@@ -270,7 +268,7 @@
             this.label16.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(897, 37);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(140, 32);
+            this.label16.Size = new System.Drawing.Size(110, 25);
             this.label16.TabIndex = 0;
             this.label16.Text = "Tình trạng:";
             // 
@@ -280,18 +278,8 @@
             this.gioiTinhLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gioiTinhLabel.Location = new System.Drawing.Point(1044, 0);
             this.gioiTinhLabel.Name = "gioiTinhLabel";
-            this.gioiTinhLabel.Size = new System.Drawing.Size(0, 28);
+            this.gioiTinhLabel.Size = new System.Drawing.Size(0, 21);
             this.gioiTinhLabel.TabIndex = 0;
-            // 
-            // tinhTrangLabel
-            // 
-            this.tinhTrangLabel.AutoSize = true;
-            this.tinhTrangLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tinhTrangLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.tinhTrangLabel.Location = new System.Drawing.Point(1044, 37);
-            this.tinhTrangLabel.Name = "tinhTrangLabel";
-            this.tinhTrangLabel.Size = new System.Drawing.Size(0, 28);
-            this.tinhTrangLabel.TabIndex = 0;
             // 
             // ghiChuLabel
             // 
@@ -299,7 +287,7 @@
             this.ghiChuLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ghiChuLabel.Location = new System.Drawing.Point(655, 74);
             this.ghiChuLabel.Name = "ghiChuLabel";
-            this.ghiChuLabel.Size = new System.Drawing.Size(0, 28);
+            this.ghiChuLabel.Size = new System.Drawing.Size(0, 21);
             this.ghiChuLabel.TabIndex = 0;
             // 
             // label9
@@ -308,7 +296,7 @@
             this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(897, 74);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(104, 39);
+            this.label9.Size = new System.Drawing.Size(121, 25);
             this.label9.TabIndex = 0;
             this.label9.Text = "Trường học:";
             // 
@@ -318,7 +306,7 @@
             this.schoolLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.schoolLabel.Location = new System.Drawing.Point(1044, 74);
             this.schoolLabel.Name = "schoolLabel";
-            this.schoolLabel.Size = new System.Drawing.Size(0, 28);
+            this.schoolLabel.Size = new System.Drawing.Size(0, 21);
             this.schoolLabel.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -328,8 +316,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.flowLayoutPanel1.Controls.Add(this.hocPhiBtn);
-            this.flowLayoutPanel1.Controls.Add(this.thoiHocBtn);
-            this.flowLayoutPanel1.Controls.Add(this.nhapHocBtn);
             this.flowLayoutPanel1.Controls.Add(this.classBtn);
             this.flowLayoutPanel1.Controls.Add(this.removeBtn);
             this.flowLayoutPanel1.Controls.Add(this.cancelBtn);
@@ -337,6 +323,67 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(234, 443);
             this.flowLayoutPanel1.TabIndex = 6;
+            // 
+            // paymentGridView
+            // 
+            this.paymentGridView.AllowUserToAddRows = false;
+            this.paymentGridView.AllowUserToDeleteRows = false;
+            this.paymentGridView.AllowUserToResizeColumns = false;
+            this.paymentGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle61.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            this.paymentGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle61;
+            this.paymentGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.paymentGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.paymentGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.paymentGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.paymentGridView.BorderRadius = 7;
+            this.paymentGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.paymentGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.paymentGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle62.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle62.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle62.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle62.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle62.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle62.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.paymentGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle62;
+            this.paymentGridView.ColumnHeadersHeight = 50;
+            this.paymentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle63.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle63.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle63.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle63.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle63.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle63.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.paymentGridView.DefaultCellStyle = dataGridViewCellStyle63;
+            this.paymentGridView.EnableHeadersVisualStyles = false;
+            this.paymentGridView.GridColor = System.Drawing.Color.GhostWhite;
+            this.paymentGridView.Location = new System.Drawing.Point(275, 224);
+            this.paymentGridView.MultiSelect = false;
+            this.paymentGridView.Name = "paymentGridView";
+            this.paymentGridView.ReadOnly = true;
+            dataGridViewCellStyle64.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle64.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle64.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle64.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle64.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle64.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle64.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.paymentGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle64;
+            this.paymentGridView.RowHeadersVisible = false;
+            this.paymentGridView.RowHeadersWidth = 51;
+            this.paymentGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle65.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.paymentGridView.RowsDefaultCellStyle = dataGridViewCellStyle65;
+            this.paymentGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.paymentGridView.RowTemplate.DividerHeight = 1;
+            this.paymentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.paymentGridView.Size = new System.Drawing.Size(1078, 440);
+            this.paymentGridView.TabIndex = 11;
             // 
             // hocPhiBtn
             // 
@@ -357,44 +404,6 @@
             this.hocPhiBtn.UseVisualStyleBackColor = false;
             this.hocPhiBtn.Click += new System.EventHandler(this.hocPhiBtn_Click);
             // 
-            // thoiHocBtn
-            // 
-            this.thoiHocBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.thoiHocBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.thoiHocBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.thoiHocBtn.BorderRadius = 0;
-            this.thoiHocBtn.BorderSize = 0;
-            this.thoiHocBtn.FlatAppearance.BorderSize = 0;
-            this.thoiHocBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.thoiHocBtn.ForeColor = System.Drawing.Color.White;
-            this.thoiHocBtn.Location = new System.Drawing.Point(3, 49);
-            this.thoiHocBtn.Name = "thoiHocBtn";
-            this.thoiHocBtn.Size = new System.Drawing.Size(231, 40);
-            this.thoiHocBtn.TabIndex = 5;
-            this.thoiHocBtn.Text = "Thôi học";
-            this.thoiHocBtn.TextColor = System.Drawing.Color.White;
-            this.thoiHocBtn.UseVisualStyleBackColor = false;
-            this.thoiHocBtn.Click += new System.EventHandler(this.thoiHocBtn_Click);
-            // 
-            // nhapHocBtn
-            // 
-            this.nhapHocBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.nhapHocBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.nhapHocBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.nhapHocBtn.BorderRadius = 0;
-            this.nhapHocBtn.BorderSize = 0;
-            this.nhapHocBtn.FlatAppearance.BorderSize = 0;
-            this.nhapHocBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nhapHocBtn.ForeColor = System.Drawing.Color.White;
-            this.nhapHocBtn.Location = new System.Drawing.Point(3, 95);
-            this.nhapHocBtn.Name = "nhapHocBtn";
-            this.nhapHocBtn.Size = new System.Drawing.Size(231, 40);
-            this.nhapHocBtn.TabIndex = 5;
-            this.nhapHocBtn.Text = "Nhập học";
-            this.nhapHocBtn.TextColor = System.Drawing.Color.White;
-            this.nhapHocBtn.UseVisualStyleBackColor = false;
-            this.nhapHocBtn.Click += new System.EventHandler(this.nhapHocBtn_Click);
-            // 
             // classBtn
             // 
             this.classBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
@@ -405,7 +414,7 @@
             this.classBtn.FlatAppearance.BorderSize = 0;
             this.classBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.classBtn.ForeColor = System.Drawing.Color.White;
-            this.classBtn.Location = new System.Drawing.Point(3, 141);
+            this.classBtn.Location = new System.Drawing.Point(3, 49);
             this.classBtn.Name = "classBtn";
             this.classBtn.Size = new System.Drawing.Size(231, 40);
             this.classBtn.TabIndex = 5;
@@ -424,7 +433,7 @@
             this.removeBtn.FlatAppearance.BorderSize = 0;
             this.removeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removeBtn.ForeColor = System.Drawing.Color.White;
-            this.removeBtn.Location = new System.Drawing.Point(3, 187);
+            this.removeBtn.Location = new System.Drawing.Point(3, 95);
             this.removeBtn.Name = "removeBtn";
             this.removeBtn.Size = new System.Drawing.Size(231, 40);
             this.removeBtn.TabIndex = 5;
@@ -443,7 +452,7 @@
             this.cancelBtn.FlatAppearance.BorderSize = 0;
             this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelBtn.ForeColor = System.Drawing.Color.Black;
-            this.cancelBtn.Location = new System.Drawing.Point(3, 233);
+            this.cancelBtn.Location = new System.Drawing.Point(3, 141);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(231, 40);
             this.cancelBtn.TabIndex = 5;
@@ -451,67 +460,6 @@
             this.cancelBtn.TextColor = System.Drawing.Color.Black;
             this.cancelBtn.UseVisualStyleBackColor = false;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
-            // 
-            // paymentGridView
-            // 
-            this.paymentGridView.AllowUserToAddRows = false;
-            this.paymentGridView.AllowUserToDeleteRows = false;
-            this.paymentGridView.AllowUserToResizeColumns = false;
-            this.paymentGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            this.paymentGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.paymentGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.paymentGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.paymentGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.paymentGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.paymentGridView.BorderRadius = 7;
-            this.paymentGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.paymentGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.paymentGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.paymentGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.paymentGridView.ColumnHeadersHeight = 50;
-            this.paymentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.paymentGridView.DefaultCellStyle = dataGridViewCellStyle3;
-            this.paymentGridView.EnableHeadersVisualStyles = false;
-            this.paymentGridView.GridColor = System.Drawing.Color.GhostWhite;
-            this.paymentGridView.Location = new System.Drawing.Point(275, 224);
-            this.paymentGridView.MultiSelect = false;
-            this.paymentGridView.Name = "paymentGridView";
-            this.paymentGridView.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.paymentGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.paymentGridView.RowHeadersVisible = false;
-            this.paymentGridView.RowHeadersWidth = 51;
-            this.paymentGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.paymentGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.paymentGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.paymentGridView.RowTemplate.DividerHeight = 1;
-            this.paymentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.paymentGridView.Size = new System.Drawing.Size(1078, 440);
-            this.paymentGridView.TabIndex = 11;
             // 
             // rjButton5
             // 
@@ -531,9 +479,29 @@
             this.rjButton5.TextColor = System.Drawing.Color.White;
             this.rjButton5.UseVisualStyleBackColor = false;
             // 
+            // tinhTrangComboBox
+            // 
+            this.tinhTrangComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tinhTrangComboBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.tinhTrangComboBox.BorderSize = 1;
+            this.tinhTrangComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tinhTrangComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tinhTrangComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tinhTrangComboBox.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.tinhTrangComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.tinhTrangComboBox.ListTextColor = System.Drawing.Color.DimGray;
+            this.tinhTrangComboBox.Location = new System.Drawing.Point(1044, 40);
+            this.tinhTrangComboBox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.tinhTrangComboBox.Name = "tinhTrangComboBox";
+            this.tinhTrangComboBox.Padding = new System.Windows.Forms.Padding(1);
+            this.tinhTrangComboBox.Size = new System.Drawing.Size(289, 31);
+            this.tinhTrangComboBox.TabIndex = 1;
+            this.tinhTrangComboBox.Texts = "";
+            this.tinhTrangComboBox.OnSelectedIndexChanged += new System.EventHandler(this.tinhTrangComboBox_OnSelectedIndexChanged);
+            // 
             // ChiTietSinhVienForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1365, 676);
@@ -578,7 +546,6 @@
         private System.Windows.Forms.Label ngaySinhLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private CustomControls.RJControls.RJButton thoiHocBtn;
         private CustomControls.RJControls.RJButton hocPhiBtn;
         private CustomControls.RJControls.RJButton classBtn;
         private CustomControls.RJControls.RJButton rjButton5;
@@ -586,13 +553,12 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label gioiTinhLabel;
-        private System.Windows.Forms.Label tinhTrangLabel;
         private CustomControls.RJControls.RJButton cancelBtn;
         private System.Windows.Forms.Label ghiChuLabel;
-        private CustomControls.RJControls.RJButton nhapHocBtn;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label schoolLabel;
         private RoundedGridView paymentGridView;
         private CustomControls.RJControls.RJButton removeBtn;
+        private CustomControls.RJControls.RJComboBox tinhTrangComboBox;
     }
 }

@@ -307,7 +307,7 @@
             this.tinhTrangComboBox.Items.AddRange(new object[] {
             "Nhập học",
             "Học thử",
-            "Mặc định"});
+            "Tham khảo thông tin"});
             this.tinhTrangComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.tinhTrangComboBox.ListTextColor = System.Drawing.Color.DimGray;
             this.tinhTrangComboBox.Location = new System.Drawing.Point(774, 115);
@@ -485,6 +485,7 @@
             this.numberPhoneTextBox.TabIndex = 3;
             this.numberPhoneTextBox.Texts = "";
             this.numberPhoneTextBox.UnderlinedStyle = false;
+            this.numberPhoneTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numberPhoneTextBox_KeyPress);
             // 
             // label6
             // 

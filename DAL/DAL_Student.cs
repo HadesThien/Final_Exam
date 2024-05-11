@@ -161,7 +161,9 @@ namespace DAL
         }
         public void updateStatus() {
             string s = $"Update Student set status = N'{student.Status}' where StudentId = '{student.Id}'";
+            string s2 = $"Update Student set status = N'Đang học' where status = N'Nhập học'";
             Connection.actionQuery(s);
+            Connection.actionQuery(s2);
         }
 
         public DataTable getIdAndName()

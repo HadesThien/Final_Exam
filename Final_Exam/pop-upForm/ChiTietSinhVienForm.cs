@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using Final_Exam.pop_upForm;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Final_Exam {
     public partial class ChiTietSinhVienForm : Form {
@@ -37,6 +38,8 @@ namespace Final_Exam {
             dt.Columns[4].ColumnName = "Ghi chú";
             dt.Columns[5].ColumnName = "Ngày thanh toán";
             paymentGridView.DataSource = dt;
+            tinhTrangComboBox.Items.Add("Nhập học");
+            tinhTrangComboBox.Items.Add("Thôi học");
         }
 
 
@@ -55,8 +58,8 @@ namespace Final_Exam {
             soDienThoaiLabel.Text = dt.Rows[0][4].ToString();
             addressLabel.Text = dt.Rows[0][6].ToString() + ", " + dt.Rows[0][7].ToString() + ", " + dt.Rows[0][8].ToString() + ", " + dt.Rows[0][9].ToString();
             ngayTaoLabel.Text = dt.Rows[0][10].ToString().Split(' ')[0];
-            tinhTrangLabel.Text = dt.Rows[0][11].ToString();
-            if (tinhTrangLabel.Text == "Thôi học") tinhTrangLabel.ForeColor = Color.Red; else tinhTrangLabel.ForeColor = Color.FromArgb(0, 192, 0);
+            tinhTrangComboBox.Texts = dt.Rows[0][11].ToString();
+            if (tinhTrangComboBox.Texts == "Thôi học") tinhTrangComboBox.ForeColor = Color.Red; else tinhTrangComboBox.ForeColor = Color.FromArgb(0, 192, 0);
             ghiChuLabel.Text = dt.Rows[0][12].ToString();
             schoolLabel.Text = dt.Rows[0][5].ToString();
         }
@@ -65,14 +68,6 @@ namespace Final_Exam {
         {
             if(Account.account.getRole() != "admin") removeBtn.Enabled = false;
             update();
-        }
-        //Thôi học 
-        private void nhapHocBtn_Click(object sender, EventArgs e) {
-            setStatus("Đang học", sender, e);
-        }
-        //Nhập học
-        private void thoiHocBtn_Click(object sender, EventArgs e) {
-            setStatus("Thôi học",sender,e);
         }
         public void setStatus(string status,object sender, EventArgs e) {
             string studentId = maHocVienLabel.Text;
@@ -98,7 +93,6 @@ namespace Final_Exam {
         }
 
         private void classBtn_Click(object sender, EventArgs e) {
-            //addressLabel.Text =
             student = new BUS_Student(id, "", "", DateTime.Now, "", "", "", "", "", "", DateTime.Now, "", "");
             dt = student.selectClassesOfAStudent();
             paymentGridView.DataSource = dt;
@@ -115,6 +109,15 @@ namespace Final_Exam {
             dt.Columns[4].ColumnName = "Ghi chú";
             dt.Columns[5].ColumnName = "Ngày thanh toán";
             paymentGridView.DataSource = dt;
+        }
+
+        private void tinhTrangComboBox_OnSelectedIndexChanged(object sender, EventArgs e) {
+            setStatus(tinhTrangComboBox.SelectedItem.ToString(), sender, e);
+            if (tinhTrangComboBox.SelectedItem.ToString() == "Thôi học") tinhTrangComboBox.ForeColor = Color.Red;
+            else {
+                tinhTrangComboBox.ForeColor = Color.LimeGreen;
+                tinhTrangComboBox.Texts = "Đang học";
+            }
         }
     }
 }

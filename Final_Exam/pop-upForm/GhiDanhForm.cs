@@ -13,6 +13,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using BUS;
 using System.Windows.Forms.VisualStyles;
 using System.Reflection.Emit;
+using System.Data.Odbc;
 
 namespace Final_Exam {
     public partial class ghiDanhForm : Form {
@@ -278,7 +279,11 @@ namespace Final_Exam {
             }
             else
             {
-                student = new BUS_Student(id, nameTextBox.Texts, genderComboBox.Texts, dobTimePicker.Value, numberPhoneTextBox.Texts, truongHocTextBox.Texts, diaChiTextBox.Texts, wardComboBox.Texts, districtComboBox.Texts, cityComboBox.Texts, DateTime.Now, tinhTrangComboBox.Texts, ghiChuTextBox.Text);
+                string status = tinhTrangComboBox.Texts;
+                if (status == "Nhập học") status = "Đang học";
+                else if (status == "Tham khảo thông tin") status = "Thôi học";
+                else status = "Học thử";
+                student = new BUS_Student(id, nameTextBox.Texts, genderComboBox.Texts, dobTimePicker.Value, numberPhoneTextBox.Texts, truongHocTextBox.Texts, diaChiTextBox.Texts, wardComboBox.Texts, districtComboBox.Texts, cityComboBox.Texts, DateTime.Now, status, ghiChuTextBox.Text);
                 student.addQuery();
             }
             List<string> subjects = new List<string>();
@@ -350,6 +355,15 @@ namespace Final_Exam {
         private void classListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void numberPhoneTextBox_KeyPress(object sender, KeyPressEventArgs e) {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) {
+                e.Handled = true;
+            }
+            if (numberPhoneTextBox != null && numberPhoneTextBox.Texts.Length >= 11 && !char.IsControl(e.KeyChar)) {
+                e.Handled = true;
+            }
         }
     }
 }

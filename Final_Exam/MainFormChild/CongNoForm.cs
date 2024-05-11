@@ -29,6 +29,7 @@ namespace Final_Exam {
             payment = new BUS_Payment("", DateTime.Now, DateTime.Now, "", "", 0, 0, "","");
             dt = payment.selectQuery();
             paymentGridView.DataSource = dt;
+            paymentGridView.CellFormatting += paymentGridView_CellFormatting;            
         }
 
         private void tatcaBtn_Click(object sender, EventArgs e) {
@@ -59,11 +60,6 @@ namespace Final_Exam {
         private void xoaBtn_Click(object sender, EventArgs e) {
             Form confirmForm = new ConfirmForm();
             confirmForm.ShowDialog();
-        }
-
-        private void paymentGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void searchTextBox_TextChanged(object sender, EventArgs e)
@@ -108,6 +104,14 @@ namespace Final_Exam {
                     updateGridView();
                 }
            }
+        }
+
+        private void paymentGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e) {
+            if (paymentGridView.Columns[e.ColumnIndex].Name == "Tình trạng") {
+                string statusValue = paymentGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                if (statusValue == "Đăng ký") e.CellStyle.ForeColor = Color.Red;
+                else e.CellStyle.ForeColor = Color.FromArgb(0, 192, 0);
+            }
         }
     }
 }

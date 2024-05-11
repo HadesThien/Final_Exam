@@ -386,5 +386,6 @@ namespace CustomControls.RJControls
         {
             AdjustComboBoxDimensions();
         }
+
     }
 }
