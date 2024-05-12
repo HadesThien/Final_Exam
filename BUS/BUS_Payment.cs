@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography.X509Certificates;
 
 namespace BUS
 {
@@ -81,6 +82,45 @@ namespace BUS
             {
                 return "";
             }
+        }
+
+        public List<String> periodsOfExistsRegisteredPayments()
+        {
+            DataTable dt = payment.existsRegisteredPayment();
+            List<String> ret = new List<string>();
+            if (dt.Rows.Count > 0)
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    ret.Add(dt.Rows[i][0].ToString());
+                }
+            }
+            return ret;
+        }
+
+        public string getPaymentId()
+        {
+            return payment.selectPaymentId().Rows[0][0].ToString();
+        }
+
+        public DataTable selectPayment()
+        {
+            return payment.selectPayment();
+        }
+
+        public List<string> selectRegisteredClasses()
+        {
+            List<string> ret = new List<string>();
+            DataTable dt = payment.selectRegisteredClasses();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                ret.Add(dt.Rows[i][0].ToString());
+            }
+            return ret;
+        }
+        public string getStudentId()
+        {
+            return payment.selectStudentId().Rows[0][0].ToString();
         }
     }
 

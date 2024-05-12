@@ -25,7 +25,7 @@ namespace DAL
 
         public void updateQuery()
         {
-            string query = "UPDATE Payment SET status = N'" + payment.Status + "', note = N'" + payment.Note + "' WHERE paymentId = '" + payment.PaymentId + "'";
+            string query = "UPDATE Payment SET period = '" + payment.Period.ToString("yyyy/MM/dd") + "', status = N'" + payment.Status + "', note = N'" + payment.Note + "' WHERE paymentId = '" + payment.PaymentId + "'";
             Connection.actionQuery(query);
         }
 
@@ -37,7 +37,7 @@ namespace DAL
 
         public DataTable selectQuery()
         {
-            string s = $"SELECT \r\n    p.paymentId as [Mã thanh toán],\r\n    pe.name AS [Tên học sinh],\r\n    c.subject + ' ' + cast(c.grade as varchar) + '.' + c.shift AS [Tên lớp],c.Price as [Học phí],\r\n    RIGHT(CONVERT(VARCHAR(10), p.period, 103), 7) AS [Kỳ],\r\n    p.status as [Tình trạng],\r\n    p.promotion as [Khuyến mãi],\r\n    p.numberOfSession as [Số buổi học],\r\n    p.dateCreated as [Ngày tạo]\r\n" +
+            string s = $"SELECT \r\n    p.paymentId as [Mã thanh toán],\r\n    pe.name AS [Tên học sinh],\r\n    c.subject + ' ' + cast(c.grade as varchar) + '.' + c.shift AS [Tên lớp],c.Price as [Học phí],\r\n    RIGHT(CONVERT(VARCHAR(10), p.period, 103), 7) AS [Kỳ],\r\n    p.status as [Tình trạng],\r\n    p.numberOfSession as [Số buổi học],\r\n    p.dateCreated as [Ngày tạo]\r\n" +
                 $"FROM \r\n    Payment p\r\n" +
                 $"JOIN \r\n    Student s ON p.studentId = s.studentId\r\n" +
                 $"JOIN \r\n    Person pe ON s.studentId = pe.Id\r\n" +
@@ -67,16 +67,49 @@ namespace DAL
         {
             string s = "SELECT paymentId " +
                        "FROM Payment " +
-                      $"WHERE studentId = '{payment.StudentId}' AND classId = '{payment.ClassId}' AND (MONTH(period) = MONTH(GETDATE()) AND YEAR(period) = YEAR(GETDATE())) AND status = N'Thanh toán'";
+                      $"WHERE studentId = '{payment.StudentId}' AND classId = '{payment.ClassId}' AND (MONTH(period) = MONTH('{payment.Period.ToString("yyyy/MM/dd")}') AND YEAR(period) = YEAR('{payment.Period.ToString("yyyy/MM/dd")}')) AND status = N'Thanh toán'";
             return Connection.selectQuery(s);
         }
         public DataTable selectPaymentOfAPeriod1()
         {
             string s = "SELECT paymentId " +
                        "FROM Payment " +
-                      $"WHERE studentId = '{payment.StudentId}' AND classId = '{payment.ClassId}' AND (MONTH(period) = MONTH(GETDATE()) AND YEAR(period) = YEAR(GETDATE())) AND status = N'Đăng ký'";
+                      $"WHERE studentId = '{payment.StudentId}' AND classId = '{payment.ClassId}' AND (MONTH(period) = MONTH('{payment.Period.ToString("yyyy/MM/dd")}') AND YEAR(period) = YEAR('{payment.Period.ToString("yyyy/MM/dd")}')) AND status = N'Đăng ký'";
             return Connection.selectQuery(s);
         }
 
+        public DataTable existsRegisteredPayment()
+        {
+            string s = "SELECT period " +
+                       "FROM Payment " +
+                      $"WHERE studentId = '{payment.StudentId}' AND classId = '{payment.ClassId}' AND status = N'Đăng ký'";
+            return Connection.selectQuery(s);
+        }
+
+        public DataTable selectPaymentId()
+        {
+            string s = "SELECT paymentId " +
+                       "FROM Payment " +
+                       $"WHERE studentId = '{payment.StudentId}' AND (MONTH(period) = MONTH('{payment.Period.ToString("yyyy/MM/dd")}') AND YEAR(period) = YEAR('{payment.Period.ToString("yyyy/MM/dd")}')) AND classId = '{payment.ClassId}'";
+            return Connection.selectQuery(s);
+        }
+
+        public DataTable selectPayment()
+        {
+            string s = $"SELECT * FROM Payment WHERE paymentId = '{payment.PaymentId}'";
+            return Connection.selectQuery(s);
+        }
+
+        public DataTable selectRegisteredClasses()
+        {
+            string s = $"SELECT DISTINCT classId\r\nFROM Payment\r\nWHERE studentId = '{payment.StudentId}' AND status = N'Đăng ký'";
+            return Connection.selectQuery(s);
+        }
+
+        public DataTable selectStudentId()
+        {
+            string s = $"SELECT studentId FROM Payment WHERE paymentId = '{payment.PaymentId}'";
+            return Connection.selectQuery(s);
+        }
     }
 }

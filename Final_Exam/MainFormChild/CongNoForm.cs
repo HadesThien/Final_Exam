@@ -60,6 +60,16 @@ namespace Final_Exam {
         private void xoaBtn_Click(object sender, EventArgs e) {
             Form confirmForm = new ConfirmForm();
             confirmForm.ShowDialog();
+            if (Account.confirmPassword == true)
+            {
+                foreach (DataGridViewRow row in paymentGridView.SelectedRows)
+                {
+                    payment = new BUS_Payment(row.Cells[0].Value.ToString(), DateTime.Now, DateTime.Now, "", "", 0.0f, 0, "", "");
+                    payment.deleteQuery();
+                }
+            }
+            Account.confirmPassword = false;
+            updateGridView();
         }
 
         private void searchTextBox_TextChanged(object sender, EventArgs e)
@@ -81,7 +91,6 @@ namespace Final_Exam {
                     dt.Columns.Add("Học phí");
                     dt.Columns.Add("Kỳ");
                     dt.Columns.Add("Tình trạng");
-                    dt.Columns.Add("Khuyến mãi");
                     dt.Columns.Add("Số buổi học");
                     dt.Columns.Add("Ngày tạo");
                     for (int i = 0; i < paymentGridView.Rows.Count; i++)
@@ -112,6 +121,33 @@ namespace Final_Exam {
                 if (statusValue == "Đăng ký") e.CellStyle.ForeColor = Color.Red;
                 else e.CellStyle.ForeColor = Color.FromArgb(0, 192, 0);
             }
+        }
+
+        private void paymentGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void paymentGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            if (paymentGridView.SelectedRows.Count > 0)
+            {
+                xoaBtn.Visible = true;
+            }
+            else
+            {
+                xoaBtn.Visible = false;
+            }
+        }
+
+        private void CongNoForm_Shown(object sender, EventArgs e)
+        {
+            xoaBtn.Visible = false;
+        }
+
+        private void thanhToanBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
