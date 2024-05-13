@@ -142,6 +142,9 @@ namespace BUS
         {
             return payment.registeredRevenue().Rows[0][0].ToString();
         }
+        public DataTable get5Debt() {
+            return payment.get5Debt();
+        }
     }
 
 }

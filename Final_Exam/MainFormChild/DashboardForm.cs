@@ -32,6 +32,9 @@ namespace Final_Exam {
             studentsHaveBirhtdayinMonth.Text = student.numOfStudentsBirthday();
             revenueInMonth.Text = payment.paidRevenue();
             debtInMonth.Text = payment.registeredRevenue();
+            dt = payment.get5Debt();
+            debtGridView.DataSource = dt;
+
         }
 
         private void dashboardLabel_Click(object sender, EventArgs e) {

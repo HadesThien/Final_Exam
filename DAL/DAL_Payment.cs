@@ -135,7 +135,8 @@ namespace DAL
                 $"JOIN \r\n    Student s ON p.studentId = s.studentId\r\n" +
                 $"JOIN \r\n    Person pe ON s.studentId = pe.Id\r\n" +
                 $"JOIN \r\n    Register r ON s.studentId = r.studentId AND r.classId = p.classId\r\n" +
-                $"JOIN \r\n    Class c ON c.classId = r.classId";
+                $"JOIN \r\n    Class c ON c.classId = r.classId "+
+                $"Where p.status = N'Thanh toán'; ";
 
             return Connection.selectQuery(s);
         }
@@ -148,6 +149,10 @@ namespace DAL
         public DataTable registeredRevenue()
         {
             string s = "SELECT SUM(c.price)\r\nFROM      Payment p\r\nJOIN      Student s ON p.studentId = s.studentId\r\nJOIN      Person pe ON s.studentId = pe.Id\r\nJOIN      Register r ON s.studentId = r.studentId AND r.classId = p.classId\r\nJOIN      Class c ON c.classId = r.classId\r\nWHERE p.status = N'Đăng ký' AND MONTH(p.period) = MONTH(GETDATE())";
+            return Connection.selectQuery(s);
+        }
+        public DataTable get5Debt() {
+            string s = "SELECT TOP 5   p.paymentId as [Mã thanh toán],    pe.name AS [Tên học sinh],    c.subject + ' ' + cast(c.grade as varchar) + '.' + c.shift AS [Tên lớp],c.Price as [Học phí],    RIGHT(CONVERT(VARCHAR(10), p.period, 103), 7) AS [Kỳ],    p.status as [Tình trạng],    p.numberOfSession as [Số buổi học],    p.dateCreated as [Ngày tạo] \r\n                FROM    Payment p\r\n                JOIN    Student s ON p.studentId = s.studentId\r\n               JOIN    Person pe ON s.studentId = pe.Id JOIN    Register r ON s.studentId = r.studentId AND r.classId = p.classId JOIN    Class c ON c.classId = r.classId Where p.status = N'Đăng ký';";
             return Connection.selectQuery(s);
         }
     }

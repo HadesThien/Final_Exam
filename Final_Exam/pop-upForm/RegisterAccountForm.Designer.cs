@@ -288,8 +288,7 @@
             this.roleComboBox.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.roleComboBox.Items.AddRange(new object[] {
             "Quản lý ",
-            "Nhân viên",
-            "Giáo viên"});
+            "Nhân viên"});
             this.roleComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.roleComboBox.ListTextColor = System.Drawing.Color.DimGray;
             this.roleComboBox.Location = new System.Drawing.Point(775, 89);
