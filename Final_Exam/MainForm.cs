@@ -99,7 +99,7 @@ namespace Final_Exam {
                     b.BackColor = Color.FromArgb(17, 21, 83);
                     b.ForeColor = Color.GhostWhite;
                 }else {
-                    b.BackColor = Color.MidnightBlue;
+                    b.BackColor = Color.FromArgb(24, 49, 96);
                     b.ForeColor = Color.White;
                 }
             }
@@ -188,6 +188,10 @@ namespace Final_Exam {
         }
 
         private void sidebar_Paint(object sender, PaintEventArgs e) {
+
+        }
+
+        private void studentPanel_Paint(object sender, PaintEventArgs e) {
 
         }
 

@@ -25,38 +25,36 @@
         private void InitializeComponent() {
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.accountTextBox = new CustomControls.RJControls.RJTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.alertEmail = new System.Windows.Forms.Label();
-            this.alertAccount = new System.Windows.Forms.Label();
-            this.alertPassword = new System.Windows.Forms.Label();
-            this.alertName = new System.Windows.Forms.Label();
-            this.alertNumberphone = new System.Windows.Forms.Label();
-            this.accountTextBox = new CustomControls.RJControls.RJTextBox();
             this.emailTextBox = new CustomControls.RJControls.RJTextBox();
             this.passwordTextBox = new CustomControls.RJControls.RJTextBox();
             this.numberPhoneTextBox = new CustomControls.RJControls.RJTextBox();
             this.nameTextBox = new CustomControls.RJControls.RJTextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.roleComboBox = new CustomControls.RJControls.RJComboBox();
+            this.alertEmail = new System.Windows.Forms.Label();
+            this.alertAccount = new System.Windows.Forms.Label();
+            this.alertName = new System.Windows.Forms.Label();
+            this.alertNumberphone = new System.Windows.Forms.Label();
             this.cancelBtn = new CustomControls.RJControls.RJButton();
             this.saveBtn = new CustomControls.RJControls.RJButton();
-            this.confirmPasswordTextBox = new CustomControls.RJControls.RJTextBox();
+            this.passwordFormattingAlert = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Quicksand SemiBold", 24F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(263, 37);
+            this.label1.Size = new System.Drawing.Size(318, 48);
             this.label1.TabIndex = 0;
             this.label1.Text = "Đăng ký tài khoản :";
             // 
@@ -65,7 +63,7 @@
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(56)))), ((int)(((byte)(144)))));
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -94,150 +92,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1159, 519);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(196, 37);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tên tài khoản:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
-            this.label3.Location = new System.Drawing.Point(3, 258);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 37);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Email:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
-            this.label5.Location = new System.Drawing.Point(389, 258);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(193, 37);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Số điện thoại:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
-            this.label6.Location = new System.Drawing.Point(775, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 37);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Quyền:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
-            this.label7.Location = new System.Drawing.Point(775, 258);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(225, 37);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Tên người dùng:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
-            this.label4.Location = new System.Drawing.Point(389, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(145, 37);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Mật khẩu:";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(22, 657);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(267, 37);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Xác nhận mật khẩu:";
-            // 
-            // alertEmail
-            // 
-            this.alertEmail.AutoSize = true;
-            this.alertEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(56)))), ((int)(((byte)(144)))));
-            this.alertEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alertEmail.ForeColor = System.Drawing.Color.Red;
-            this.alertEmail.Location = new System.Drawing.Point(25, 503);
-            this.alertEmail.Name = "alertEmail";
-            this.alertEmail.Size = new System.Drawing.Size(223, 21);
-            this.alertEmail.TabIndex = 0;
-            this.alertEmail.Text = "*Định dạng email không đúng ";
-            this.alertEmail.Visible = false;
-            // 
-            // alertAccount
-            // 
-            this.alertAccount.AutoSize = true;
-            this.alertAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(56)))), ((int)(((byte)(144)))));
-            this.alertAccount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alertAccount.ForeColor = System.Drawing.Color.Red;
-            this.alertAccount.Location = new System.Drawing.Point(29, 243);
-            this.alertAccount.Name = "alertAccount";
-            this.alertAccount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.alertAccount.Size = new System.Drawing.Size(169, 21);
-            this.alertAccount.TabIndex = 0;
-            this.alertAccount.Text = "*Tên Account đã tồn tại";
-            this.alertAccount.Visible = false;
-            // 
-            // alertPassword
-            // 
-            this.alertPassword.AutoSize = true;
-            this.alertPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alertPassword.ForeColor = System.Drawing.Color.Red;
-            this.alertPassword.Location = new System.Drawing.Point(411, 635);
-            this.alertPassword.Name = "alertPassword";
-            this.alertPassword.Size = new System.Drawing.Size(235, 21);
-            this.alertPassword.TabIndex = 0;
-            this.alertPassword.Text = "*Mật khẩu xác nhận không khớp";
-            this.alertPassword.Visible = false;
-            // 
-            // alertName
-            // 
-            this.alertName.AutoSize = true;
-            this.alertName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(56)))), ((int)(((byte)(144)))));
-            this.alertName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alertName.ForeColor = System.Drawing.Color.Red;
-            this.alertName.Location = new System.Drawing.Point(797, 503);
-            this.alertName.Name = "alertName";
-            this.alertName.Size = new System.Drawing.Size(273, 21);
-            this.alertName.TabIndex = 0;
-            this.alertName.Text = "Tên người dùng không được để trống!";
-            this.alertName.Visible = false;
-            // 
-            // alertNumberphone
-            // 
-            this.alertNumberphone.AutoSize = true;
-            this.alertNumberphone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(56)))), ((int)(((byte)(144)))));
-            this.alertNumberphone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alertNumberphone.ForeColor = System.Drawing.Color.Red;
-            this.alertNumberphone.Location = new System.Drawing.Point(411, 503);
-            this.alertNumberphone.Name = "alertNumberphone";
-            this.alertNumberphone.Size = new System.Drawing.Size(341, 21);
-            this.alertNumberphone.TabIndex = 0;
-            this.alertNumberphone.Text = "Số điện thoại người dùng không được để trống!";
-            this.alertNumberphone.Visible = false;
-            // 
             // accountTextBox
             // 
             this.accountTextBox.BackColor = System.Drawing.SystemColors.Window;
@@ -261,6 +115,61 @@
             this.accountTextBox.UnderlinedStyle = false;
             this.accountTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.accountTextBox_KeyPress);
             this.accountTextBox.Leave += new System.EventHandler(this.accountTextBox_Leave);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Quicksand SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(200, 40);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Tên tài khoản:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Quicksand SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
+            this.label3.Location = new System.Drawing.Point(3, 258);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(94, 40);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Email:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Quicksand SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
+            this.label5.Location = new System.Drawing.Point(389, 258);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(194, 40);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Số điện thoại:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Quicksand SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
+            this.label6.Location = new System.Drawing.Point(775, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(109, 40);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Quyền:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Quicksand SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
+            this.label7.Location = new System.Drawing.Point(775, 258);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(224, 40);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Tên người dùng:";
             // 
             // emailTextBox
             // 
@@ -307,6 +216,7 @@
             this.passwordTextBox.TabIndex = 1;
             this.passwordTextBox.Texts = "";
             this.passwordTextBox.UnderlinedStyle = false;
+            this.passwordTextBox.Leave += new System.EventHandler(this.passwordTextBox_Leave);
             // 
             // numberPhoneTextBox
             // 
@@ -356,6 +266,17 @@
             this.nameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameTextBox_KeyPress);
             this.nameTextBox.Leave += new System.EventHandler(this.nameTextBox_Leave);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Quicksand SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
+            this.label4.Location = new System.Drawing.Point(389, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(145, 40);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Mật khẩu:";
+            // 
             // roleComboBox
             // 
             this.roleComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -378,6 +299,59 @@
             this.roleComboBox.Size = new System.Drawing.Size(380, 30);
             this.roleComboBox.TabIndex = 2;
             this.roleComboBox.Texts = "";
+            // 
+            // alertEmail
+            // 
+            this.alertEmail.AutoSize = true;
+            this.alertEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.alertEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alertEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            this.alertEmail.Location = new System.Drawing.Point(25, 503);
+            this.alertEmail.Name = "alertEmail";
+            this.alertEmail.Size = new System.Drawing.Size(223, 21);
+            this.alertEmail.TabIndex = 0;
+            this.alertEmail.Text = "*Định dạng email không đúng ";
+            this.alertEmail.Visible = false;
+            // 
+            // alertAccount
+            // 
+            this.alertAccount.AutoSize = true;
+            this.alertAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.alertAccount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alertAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            this.alertAccount.Location = new System.Drawing.Point(29, 243);
+            this.alertAccount.Name = "alertAccount";
+            this.alertAccount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.alertAccount.Size = new System.Drawing.Size(169, 21);
+            this.alertAccount.TabIndex = 0;
+            this.alertAccount.Text = "*Tên Account đã tồn tại";
+            this.alertAccount.Visible = false;
+            // 
+            // alertName
+            // 
+            this.alertName.AutoSize = true;
+            this.alertName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.alertName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alertName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            this.alertName.Location = new System.Drawing.Point(797, 503);
+            this.alertName.Name = "alertName";
+            this.alertName.Size = new System.Drawing.Size(280, 21);
+            this.alertName.TabIndex = 0;
+            this.alertName.Text = "*Tên người dùng không được để trống!";
+            this.alertName.Visible = false;
+            // 
+            // alertNumberphone
+            // 
+            this.alertNumberphone.AutoSize = true;
+            this.alertNumberphone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.alertNumberphone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alertNumberphone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            this.alertNumberphone.Location = new System.Drawing.Point(411, 503);
+            this.alertNumberphone.Name = "alertNumberphone";
+            this.alertNumberphone.Size = new System.Drawing.Size(348, 21);
+            this.alertNumberphone.TabIndex = 0;
+            this.alertNumberphone.Text = "*Số điện thoại người dùng không được để trống!";
+            this.alertNumberphone.Visible = false;
             // 
             // cancelBtn
             // 
@@ -402,8 +376,8 @@
             // saveBtn
             // 
             this.saveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
-            this.saveBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            this.saveBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
             this.saveBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.saveBtn.BorderRadius = 0;
             this.saveBtn.BorderSize = 0;
@@ -419,41 +393,28 @@
             this.saveBtn.UseVisualStyleBackColor = false;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
-            // confirmPasswordTextBox
+            // passwordFormattingAlert
             // 
-            this.confirmPasswordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.confirmPasswordTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.confirmPasswordTextBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.confirmPasswordTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.confirmPasswordTextBox.BorderRadius = 20;
-            this.confirmPasswordTextBox.BorderSize = 2;
-            this.confirmPasswordTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmPasswordTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.confirmPasswordTextBox.Location = new System.Drawing.Point(409, 660);
-            this.confirmPasswordTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.confirmPasswordTextBox.Multiline = false;
-            this.confirmPasswordTextBox.Name = "confirmPasswordTextBox";
-            this.confirmPasswordTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.confirmPasswordTextBox.PasswordChar = false;
-            this.confirmPasswordTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.confirmPasswordTextBox.PlaceholderText = "";
-            this.confirmPasswordTextBox.Size = new System.Drawing.Size(378, 36);
-            this.confirmPasswordTextBox.TabIndex = 6;
-            this.confirmPasswordTextBox.Texts = "";
-            this.confirmPasswordTextBox.UnderlinedStyle = false;
-            this.confirmPasswordTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.confirmPasswordTextBox_KeyDown);
-            this.confirmPasswordTextBox.Leave += new System.EventHandler(this.confirmPasswordTextBox_Leave);
+            this.passwordFormattingAlert.AutoSize = true;
+            this.passwordFormattingAlert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.passwordFormattingAlert.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordFormattingAlert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            this.passwordFormattingAlert.Location = new System.Drawing.Point(411, 243);
+            this.passwordFormattingAlert.Name = "passwordFormattingAlert";
+            this.passwordFormattingAlert.Size = new System.Drawing.Size(230, 21);
+            this.passwordFormattingAlert.TabIndex = 0;
+            this.passwordFormattingAlert.Text = "*Mật khẩu phải đúng định dạng";
+            this.passwordFormattingAlert.Visible = false;
             // 
             // RegisterAccountForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(56)))), ((int)(((byte)(144)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(1200, 727);
             this.ControlBox = false;
             this.Controls.Add(this.alertAccount);
-            this.Controls.Add(this.alertPassword);
+            this.Controls.Add(this.passwordFormattingAlert);
             this.Controls.Add(this.alertNumberphone);
             this.Controls.Add(this.alertName);
             this.Controls.Add(this.alertEmail);
@@ -461,8 +422,6 @@
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.confirmPasswordTextBox);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -493,13 +452,11 @@
         private CustomControls.RJControls.RJTextBox passwordTextBox;
         private CustomControls.RJControls.RJTextBox numberPhoneTextBox;
         private CustomControls.RJControls.RJTextBox nameTextBox;
-        private System.Windows.Forms.Label label8;
-        private CustomControls.RJControls.RJTextBox confirmPasswordTextBox;
         private System.Windows.Forms.Label alertEmail;
         private System.Windows.Forms.Label alertAccount;
-        private System.Windows.Forms.Label alertPassword;
         private CustomControls.RJControls.RJComboBox roleComboBox;
         private System.Windows.Forms.Label alertName;
         private System.Windows.Forms.Label alertNumberphone;
+        private System.Windows.Forms.Label passwordFormattingAlert;
     }
 }

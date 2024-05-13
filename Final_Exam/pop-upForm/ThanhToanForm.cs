@@ -61,23 +61,23 @@ namespace Final_Exam {
             DataGridViewCheckBoxColumn dgv_cbc = new DataGridViewCheckBoxColumn();
             dgv_cbc.Name = "";
             dgv_cbc.Width = 10;
-            roundedGridView1.Columns.Add(dgv_cbc);
+            paymentGridView.Columns.Add(dgv_cbc);
             thanhToanTable.Columns.Add("Tên thanh toán");
             thanhToanTable.Columns.Add("Loại");
             thanhToanTable.Columns.Add("Giá");
             thanhToanTable.Columns.Add("Kỳ");
-            roundedGridView1.DataSource = thanhToanTable;
-            roundedGridView1.Columns[0].ReadOnly = false;
-            roundedGridView1.Columns[1].ReadOnly = true;
-            roundedGridView1.Columns[2].ReadOnly = true;
-            roundedGridView1.Columns[3].ReadOnly = true;
-            roundedGridView1.Columns[4].ReadOnly = true;
+            paymentGridView.DataSource = thanhToanTable;
+            paymentGridView.Columns[0].ReadOnly = false;
+            paymentGridView.Columns[1].ReadOnly = true;
+            paymentGridView.Columns[2].ReadOnly = true;
+            paymentGridView.Columns[3].ReadOnly = true;
+            paymentGridView.Columns[4].ReadOnly = true;
             DataGridViewNumericUpDownColumn dgv_nud = new DataGridViewNumericUpDownColumn();
             dgv_nud.Name = "Số buổi / số lượng";
             dgv_nud.Minimum = 1;
             dgv_nud.Maximum = 12;
-            roundedGridView1.Columns.Add(dgv_nud);
-            foreach (DataGridViewColumn column in roundedGridView1.Columns)
+            paymentGridView.Columns.Add(dgv_nud);
+            foreach (DataGridViewColumn column in paymentGridView.Columns)
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
@@ -88,13 +88,13 @@ namespace Final_Exam {
             string id = (studentLabel.Text).Split(new string[] {" - "}, StringSplitOptions.None)[0];
             for (int i = 0; i < thanhToanTable.Rows.Count; i++)
             {
-                if (Convert.ToBoolean(roundedGridView1.Rows[i].Cells[0].Value) == false)
+                if (Convert.ToBoolean(paymentGridView.Rows[i].Cells[0].Value) == false)
                 {
                     continue;
                 }
                 if (thanhToanTable.Rows[i][1].ToString().Equals("Lớp"))
                 {
-                    decimal val = Convert.ToDecimal(roundedGridView1.Rows[i].Cells[5].Value);
+                    decimal val = Convert.ToDecimal(paymentGridView.Rows[i].Cells[5].Value);
                     int n = Convert.ToInt32(val);
                     tempCheckout += (int)(int.Parse(thanhToanTable.Rows[i][2].ToString()) * (n / 12.0f));
                     BUS_Payment payment = new BUS_Payment("", DateTime.Now, DateTime.Now, "", "", 0.0f, 0, "", "");
@@ -103,7 +103,7 @@ namespace Final_Exam {
                     string shift = arr[1].Split(new string[] { "." }, StringSplitOptions.None)[1];
                     int grade = int.Parse(arr[1].Split(new string[] { "." }, StringSplitOptions.None)[0]);
                     BUS_Class bus_class = new BUS_Class("", subject, shift, grade, 0, 0, 0, DateTime.Now, "", "");
-                    DateTime dateTime = DateTime.Parse(roundedGridView1.Rows[i].Cells[4].Value.ToString());
+                    DateTime dateTime = DateTime.Parse(paymentGridView.Rows[i].Cells[4].Value.ToString());
                     payment = new BUS_Payment(payment.getId(), DateTime.Now, dateTime, "Đăng ký", noteTextBox.Text, 0.0f, n, id, bus_class.getClassId());
                     if (!string.IsNullOrEmpty(payment.existsPaymentOfAPeriod()))
                     {
@@ -236,13 +236,13 @@ namespace Final_Exam {
         public void calculate()
         {
             tempCheckout = 0;
-            for (int i = 0; i < roundedGridView1.Rows.Count; i++)
+            for (int i = 0; i < paymentGridView.Rows.Count; i++)
             {
-                if (Convert.ToBoolean(roundedGridView1.Rows[i].Cells[0].Value) == false)
+                if (Convert.ToBoolean(paymentGridView.Rows[i].Cells[0].Value) == false)
                 {
                     continue;
                 }
-                decimal val = Convert.ToDecimal(roundedGridView1.Rows[i].Cells[5].Value);
+                decimal val = Convert.ToDecimal(paymentGridView.Rows[i].Cells[5].Value);
                 int n = Convert.ToInt32(val);
                 if (thanhToanTable.Rows[i][1].Equals("Lớp"))
                 {
@@ -277,15 +277,15 @@ namespace Final_Exam {
                         BUS_Payment payment1 = new BUS_Payment("", DateTime.Now, dateTime, "", "", 0.0f, 0, (studentLabel.Text).Split(new string[] { " - " }, StringSplitOptions.None)[0], bus_class.getClassId());
                         payment1 = new BUS_Payment(payment1.getPaymentId(), DateTime.Now, dateTime, "", "", 0.0f, 0, (studentLabel.Text).Split(new string[] { " - " }, StringSplitOptions.None)[0], bus_class.getClassId());
                         thanhToanTable.Rows.Add(s, "Lớp", bus_class.getClass().Rows[0][4], dateTime.ToString("MM/yyyy"));
-                        int n = roundedGridView1.Rows.Count - 1;
-                        roundedGridView1.Rows[n].Cells[5].Value = (decimal)(int.Parse(payment1.selectPayment().Rows[0][5].ToString()));
+                        int n = paymentGridView.Rows.Count - 1;
+                        paymentGridView.Rows[n].Cells[5].Value = (decimal)(int.Parse(payment1.selectPayment().Rows[0][5].ToString()));
                     }
                 }
                 if (payment.existsPaymentOfAPeriod() == "" && payment.existsPaymentOfAPeriod1() == "")
                 {
                     thanhToanTable.Rows.Add(s, "Lớp", bus_class.getClass().Rows[0][4], DateTime.Now.ToString("MM/yyyy"));
-                    int count = roundedGridView1.Rows.Count - 1;
-                    roundedGridView1.Rows[count].Cells[5].Value = (decimal)12;
+                    int count = paymentGridView.Rows.Count - 1;
+                    paymentGridView.Rows[count].Cells[5].Value = (decimal)12;
                 }
                 calculate();
             }
@@ -316,9 +316,9 @@ namespace Final_Exam {
             {
                 BUS_Document doc = new BUS_Document(0, "", s, DateTime.Now, DateTime.Now, 0);
                 thanhToanTable.Rows.Add(s, "Tài liệu", doc.getDocumentFromName().Rows[0][5], DateTime.Now.ToString("MM/yyyy"));
-                int count = roundedGridView1.Rows.Count - 1;
-                roundedGridView1.Rows[count].Cells[5].Value = (decimal)1;
-                roundedGridView1.Rows[count].Cells[5].ReadOnly = true;
+                int count = paymentGridView.Rows.Count - 1;
+                paymentGridView.Rows[count].Cells[5].Value = (decimal)1;
+                paymentGridView.Rows[count].Cells[5].ReadOnly = true;
                 calculate();
             }
             else
@@ -343,13 +343,13 @@ namespace Final_Exam {
             string id = (studentLabel.Text).Split(new string[] {" - "}, StringSplitOptions.None)[0];
             for (int i = 0; i < thanhToanTable.Rows.Count; i++)
             {
-                if (Convert.ToBoolean(roundedGridView1.Rows[i].Cells[0].Value) == false)
+                if (Convert.ToBoolean(paymentGridView.Rows[i].Cells[0].Value) == false)
                 {
                     continue;
                 }
                 if (thanhToanTable.Rows[i][1].ToString().Equals("Lớp"))
                 {
-                    decimal val = Convert.ToDecimal(roundedGridView1.Rows[i].Cells[5].Value);
+                    decimal val = Convert.ToDecimal(paymentGridView.Rows[i].Cells[5].Value);
                     int n = Convert.ToInt32(val);
                     BUS_Payment payment = new BUS_Payment("", DateTime.Now, DateTime.Now, "", "", 0.0f, 0, "", "");
                     string[] arr = thanhToanTable.Rows[i][0].ToString().Split(new string[] { " " }, StringSplitOptions.None);
@@ -357,7 +357,7 @@ namespace Final_Exam {
                     string shift = arr[1].Split(new string[] { "." }, StringSplitOptions.None)[1];
                     int grade = int.Parse(arr[1].Split(new string[] { "." }, StringSplitOptions.None)[0]);
                     BUS_Class bus_class = new BUS_Class("", subject, shift, grade, 0, 0, 0, DateTime.Now, "", "");
-                    DateTime dateTime = DateTime.Parse(roundedGridView1.Rows[i].Cells[4].Value.ToString());
+                    DateTime dateTime = DateTime.Parse(paymentGridView.Rows[i].Cells[4].Value.ToString());
                     payment = new BUS_Payment(payment.getId(), DateTime.Now, dateTime, "Thanh toán", noteTextBox.Text, 0.0f, n, id, bus_class.getClassId());
                     if (!string.IsNullOrEmpty(payment.existsPaymentOfAPeriod1()))
                     {
@@ -404,6 +404,10 @@ namespace Final_Exam {
         private void ThanhToanForm_Shown(object sender, EventArgs e)
         {
             gridViewInit();
+        }
+
+        private void paymentGridView_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+
         }
     }
 }

@@ -24,11 +24,11 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThanhToanForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.searchStudentTextBox = new System.Windows.Forms.TextBox();
@@ -50,10 +50,10 @@
             this.noteTextBox = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.studentLabel = new System.Windows.Forms.Label();
-            this.roundedGridView1 = new Final_Exam.RoundedGridView();
+            this.paymentGridView = new Final_Exam.RoundedGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roundedGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paymentGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -95,17 +95,18 @@
             this.searchStudentTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchStudentTextBox.Location = new System.Drawing.Point(21, 47);
             this.searchStudentTextBox.Name = "searchStudentTextBox";
-            this.searchStudentTextBox.Size = new System.Drawing.Size(291, 37);
+            this.searchStudentTextBox.Size = new System.Drawing.Size(291, 31);
             this.searchStudentTextBox.TabIndex = 16;
             this.searchStudentTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchStudentTextBox_KeyDown_1);
             // 
             // studentListBox
             // 
+            this.studentListBox.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studentListBox.FormattingEnabled = true;
-            this.studentListBox.ItemHeight = 28;
+            this.studentListBox.ItemHeight = 24;
             this.studentListBox.Location = new System.Drawing.Point(21, 76);
             this.studentListBox.Name = "studentListBox";
-            this.studentListBox.Size = new System.Drawing.Size(291, 116);
+            this.studentListBox.Size = new System.Drawing.Size(291, 100);
             this.studentListBox.TabIndex = 15;
             this.studentListBox.SelectedIndexChanged += new System.EventHandler(this.studentListBox_SelectedIndexChanged);
             // 
@@ -119,9 +120,9 @@
             this.cancelBtn.BorderSize = 0;
             this.cancelBtn.FlatAppearance.BorderSize = 0;
             this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
+            this.cancelBtn.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelBtn.ForeColor = System.Drawing.Color.Black;
-            this.cancelBtn.Location = new System.Drawing.Point(24, 679);
+            this.cancelBtn.Location = new System.Drawing.Point(22, 679);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(88, 40);
             this.cancelBtn.TabIndex = 14;
@@ -134,16 +135,16 @@
             // 
             this.saveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.saveBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.saveBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            this.saveBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
             this.saveBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.saveBtn.BorderRadius = 0;
             this.saveBtn.BorderSize = 0;
             this.saveBtn.FlatAppearance.BorderSize = 0;
             this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
+            this.saveBtn.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveBtn.ForeColor = System.Drawing.Color.White;
-            this.saveBtn.Location = new System.Drawing.Point(118, 679);
+            this.saveBtn.Location = new System.Drawing.Point(116, 679);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(88, 40);
             this.saveBtn.TabIndex = 13;
@@ -154,20 +155,22 @@
             // 
             // documentCheckedListBox
             // 
+            this.documentCheckedListBox.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.documentCheckedListBox.FormattingEnabled = true;
             this.documentCheckedListBox.Location = new System.Drawing.Point(21, 417);
             this.documentCheckedListBox.Name = "documentCheckedListBox";
-            this.documentCheckedListBox.Size = new System.Drawing.Size(291, 120);
+            this.documentCheckedListBox.Size = new System.Drawing.Size(291, 114);
             this.documentCheckedListBox.TabIndex = 11;
             this.documentCheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.documentCheckedListBox_ItemCheck);
             this.documentCheckedListBox.SelectedIndexChanged += new System.EventHandler(this.documentCheckedListBox_SelectedIndexChanged);
             // 
             // classCheckedListBox
             // 
+            this.classCheckedListBox.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.classCheckedListBox.FormattingEnabled = true;
             this.classCheckedListBox.Location = new System.Drawing.Point(22, 242);
             this.classCheckedListBox.Name = "classCheckedListBox";
-            this.classCheckedListBox.Size = new System.Drawing.Size(291, 120);
+            this.classCheckedListBox.Size = new System.Drawing.Size(291, 114);
             this.classCheckedListBox.TabIndex = 11;
             this.classCheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.classCheckedListBox_ItemCheck);
             this.classCheckedListBox.SelectedIndexChanged += new System.EventHandler(this.classCheckedListBox_SelectedIndexChanged);
@@ -177,9 +180,10 @@
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(17, 648);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(115, 28);
+            this.label8.Size = new System.Drawing.Size(93, 24);
             this.label8.TabIndex = 8;
             this.label8.Text = "Thành tiền:";
             // 
@@ -188,10 +192,11 @@
             this.checkoutLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkoutLabel.AutoSize = true;
+            this.checkoutLabel.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkoutLabel.Location = new System.Drawing.Point(148, 648);
             this.checkoutLabel.Name = "checkoutLabel";
             this.checkoutLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkoutLabel.Size = new System.Drawing.Size(23, 28);
+            this.checkoutLabel.Size = new System.Drawing.Size(20, 24);
             this.checkoutLabel.TabIndex = 8;
             this.checkoutLabel.Text = "0";
             // 
@@ -200,10 +205,11 @@
             this.tempCheckoutLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tempCheckoutLabel.AutoSize = true;
-            this.tempCheckoutLabel.Location = new System.Drawing.Point(148, 620);
+            this.tempCheckoutLabel.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tempCheckoutLabel.Location = new System.Drawing.Point(148, 587);
             this.tempCheckoutLabel.Name = "tempCheckoutLabel";
             this.tempCheckoutLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tempCheckoutLabel.Size = new System.Drawing.Size(23, 28);
+            this.tempCheckoutLabel.Size = new System.Drawing.Size(20, 24);
             this.tempCheckoutLabel.TabIndex = 8;
             this.tempCheckoutLabel.Text = "0";
             // 
@@ -212,9 +218,10 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 620);
+            this.label6.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(17, 587);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 28);
+            this.label6.Size = new System.Drawing.Size(79, 24);
             this.label6.TabIndex = 8;
             this.label6.Text = "Tạm tính:";
             // 
@@ -222,18 +229,18 @@
             // 
             this.payBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.payBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.payBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.payBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            this.payBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
             this.payBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.payBtn.BorderRadius = 0;
             this.payBtn.BorderSize = 0;
             this.payBtn.FlatAppearance.BorderSize = 0;
             this.payBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.payBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
+            this.payBtn.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.payBtn.ForeColor = System.Drawing.Color.White;
-            this.payBtn.Location = new System.Drawing.Point(212, 679);
+            this.payBtn.Location = new System.Drawing.Point(210, 679);
             this.payBtn.Name = "payBtn";
-            this.payBtn.Size = new System.Drawing.Size(88, 40);
+            this.payBtn.Size = new System.Drawing.Size(109, 40);
             this.payBtn.TabIndex = 7;
             this.payBtn.Text = "Thanh toán";
             this.payBtn.TextColor = System.Drawing.Color.White;
@@ -243,22 +250,22 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label12.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label12.Location = new System.Drawing.Point(100, 377);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(140, 37);
+            this.label12.Size = new System.Drawing.Size(80, 24);
             this.label12.TabIndex = 5;
             this.label12.Text = "Đề cương";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label5.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label5.Location = new System.Drawing.Point(100, 202);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 37);
+            this.label5.Size = new System.Drawing.Size(70, 24);
             this.label5.TabIndex = 5;
             this.label5.Text = "Lớp học";
             // 
@@ -268,18 +275,18 @@
             this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label2.Location = new System.Drawing.Point(17, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 28);
+            this.label2.Size = new System.Drawing.Size(164, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "Chọn học sinh tại đây";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label1.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label1.Location = new System.Drawing.Point(38, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(255, 37);
+            this.label1.Size = new System.Drawing.Size(147, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin học viên";
             // 
@@ -287,10 +294,11 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
+            this.label3.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label3.Location = new System.Drawing.Point(12, 521);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 28);
+            this.label3.Size = new System.Drawing.Size(70, 24);
             this.label3.TabIndex = 5;
             this.label3.Text = "Ghi Chú:";
             // 
@@ -307,11 +315,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 19F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
+            this.label4.Font = new System.Drawing.Font("Quicksand SemiBold", 24F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label4.Location = new System.Drawing.Point(8, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(413, 45);
+            this.label4.Size = new System.Drawing.Size(426, 48);
             this.label4.TabIndex = 5;
             this.label4.Text = "Đăng ký mới / Thanh toán";
             // 
@@ -319,84 +327,85 @@
             // 
             this.studentLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.studentLabel.AutoSize = true;
-            this.studentLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.studentLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
+            this.studentLabel.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.studentLabel.Location = new System.Drawing.Point(537, 15);
             this.studentLabel.Name = "studentLabel";
             this.studentLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.studentLabel.Size = new System.Drawing.Size(218, 28);
+            this.studentLabel.Size = new System.Drawing.Size(172, 24);
             this.studentLabel.TabIndex = 7;
             this.studentLabel.Text = "[Học sinh thanh toán]";
             // 
-            // roundedGridView1
+            // paymentGridView
             // 
-            this.roundedGridView1.AllowUserToAddRows = false;
-            this.roundedGridView1.AllowUserToDeleteRows = false;
-            this.roundedGridView1.AllowUserToResizeColumns = false;
-            this.roundedGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            this.roundedGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.roundedGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.paymentGridView.AllowUserToAddRows = false;
+            this.paymentGridView.AllowUserToDeleteRows = false;
+            this.paymentGridView.AllowUserToResizeColumns = false;
+            this.paymentGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            this.paymentGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.paymentGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.roundedGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.roundedGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.roundedGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.roundedGridView1.BorderRadius = 7;
-            this.roundedGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.roundedGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.roundedGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.roundedGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.roundedGridView1.ColumnHeadersHeight = 50;
-            this.roundedGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.roundedGridView1.DefaultCellStyle = dataGridViewCellStyle8;
-            this.roundedGridView1.EnableHeadersVisualStyles = false;
-            this.roundedGridView1.GridColor = System.Drawing.Color.GhostWhite;
-            this.roundedGridView1.Location = new System.Drawing.Point(12, 57);
-            this.roundedGridView1.MultiSelect = false;
-            this.roundedGridView1.Name = "roundedGridView1";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.roundedGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.roundedGridView1.RowHeadersVisible = false;
-            this.roundedGridView1.RowHeadersWidth = 51;
-            this.roundedGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.roundedGridView1.RowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.roundedGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.roundedGridView1.RowTemplate.DividerHeight = 1;
-            this.roundedGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.roundedGridView1.Size = new System.Drawing.Size(858, 455);
-            this.roundedGridView1.TabIndex = 11;
-            this.roundedGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.roundedGridView1_CellValueChanged);
+            this.paymentGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.paymentGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.paymentGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.paymentGridView.BorderRadius = 7;
+            this.paymentGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.paymentGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.paymentGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(181)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.paymentGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.paymentGridView.ColumnHeadersHeight = 50;
+            this.paymentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.paymentGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.paymentGridView.EnableHeadersVisualStyles = false;
+            this.paymentGridView.GridColor = System.Drawing.Color.GhostWhite;
+            this.paymentGridView.Location = new System.Drawing.Point(12, 57);
+            this.paymentGridView.MultiSelect = false;
+            this.paymentGridView.Name = "paymentGridView";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.paymentGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.paymentGridView.RowHeadersVisible = false;
+            this.paymentGridView.RowHeadersWidth = 51;
+            this.paymentGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.paymentGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.paymentGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.paymentGridView.RowTemplate.DividerHeight = 1;
+            this.paymentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.paymentGridView.Size = new System.Drawing.Size(858, 455);
+            this.paymentGridView.TabIndex = 11;
+            this.paymentGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.paymentGridView_CellContentClick);
+            this.paymentGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.roundedGridView1_CellValueChanged);
             // 
             // ThanhToanForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(31)))), ((int)(((byte)(136)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 727);
             this.ControlBox = false;
-            this.Controls.Add(this.roundedGridView1);
+            this.Controls.Add(this.paymentGridView);
             this.Controls.Add(this.studentLabel);
             this.Controls.Add(this.noteTextBox);
             this.Controls.Add(this.label4);
@@ -412,7 +421,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roundedGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paymentGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -440,7 +449,7 @@
         private System.Windows.Forms.ListBox studentListBox;
         private System.Windows.Forms.Label studentLabel;
         private System.Windows.Forms.TextBox searchStudentTextBox;
-        private RoundedGridView roundedGridView1;
+        private RoundedGridView paymentGridView;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
