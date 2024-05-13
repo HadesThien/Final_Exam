@@ -55,13 +55,6 @@ namespace Final_Exam
 
         }
 
-        private void filterBtn_Click(object sender, EventArgs e) {
-
-        }
-
-        private void settingBtn_Click(object sender, EventArgs e) {
-
-        }
 
         private void createBtn_Click(object sender, EventArgs e) {
             Form form = new TaoLopForm(this);
@@ -172,9 +165,5 @@ namespace Final_Exam
         }
 
 
-        public void showSearchedClass(string name)
-        {
-          
-        }
     }
 }

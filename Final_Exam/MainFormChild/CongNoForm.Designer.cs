@@ -31,8 +31,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.congNoLabel = new System.Windows.Forms.Label();
-            this.xoaBtn = new CustomControls.RJControls.RJButton();
             this.createBtn = new CustomControls.RJControls.RJButton();
+            this.xoaBtn = new CustomControls.RJControls.RJButton();
             this.searchBtn = new CustomControls.RJControls.RJButton();
             this.tatcaBtn = new CustomControls.RJControls.RJButton();
             this.registeredBtn = new CustomControls.RJControls.RJButton();
@@ -65,30 +65,6 @@
             this.congNoLabel.TabIndex = 16;
             this.congNoLabel.Text = "Danh sách thu phí";
             // 
-            // xoaBtn
-            // 
-            this.xoaBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.xoaBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
-            this.xoaBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
-            this.xoaBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.xoaBtn.BorderRadius = 12;
-            this.xoaBtn.BorderSize = 0;
-            this.xoaBtn.FlatAppearance.BorderSize = 0;
-            this.xoaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.xoaBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xoaBtn.ForeColor = System.Drawing.Color.White;
-            this.xoaBtn.Image = ((System.Drawing.Image)(resources.GetObject("xoaBtn.Image")));
-            this.xoaBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.xoaBtn.Location = new System.Drawing.Point(890, 12);
-            this.xoaBtn.Name = "xoaBtn";
-            this.xoaBtn.Size = new System.Drawing.Size(144, 40);
-            this.xoaBtn.TabIndex = 3;
-            this.xoaBtn.Text = "    Xóa công nợ";
-            this.xoaBtn.TextColor = System.Drawing.Color.White;
-            this.xoaBtn.UseVisualStyleBackColor = false;
-            this.xoaBtn.Visible = false;
-            this.xoaBtn.Click += new System.EventHandler(this.xoaBtn_Click);
-            // 
             // createBtn
             // 
             this.createBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -103,7 +79,7 @@
             this.createBtn.ForeColor = System.Drawing.Color.White;
             this.createBtn.Image = ((System.Drawing.Image)(resources.GetObject("createBtn.Image")));
             this.createBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.createBtn.Location = new System.Drawing.Point(1040, 12);
+            this.createBtn.Location = new System.Drawing.Point(1020, 20);
             this.createBtn.Name = "createBtn";
             this.createBtn.Size = new System.Drawing.Size(144, 40);
             this.createBtn.TabIndex = 3;
@@ -111,6 +87,30 @@
             this.createBtn.TextColor = System.Drawing.Color.White;
             this.createBtn.UseVisualStyleBackColor = false;
             this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
+            // 
+            // xoaBtn
+            // 
+            this.xoaBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.xoaBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            this.xoaBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            this.xoaBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.xoaBtn.BorderRadius = 12;
+            this.xoaBtn.BorderSize = 0;
+            this.xoaBtn.FlatAppearance.BorderSize = 0;
+            this.xoaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.xoaBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xoaBtn.ForeColor = System.Drawing.Color.White;
+            this.xoaBtn.Image = ((System.Drawing.Image)(resources.GetObject("xoaBtn.Image")));
+            this.xoaBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.xoaBtn.Location = new System.Drawing.Point(870, 20);
+            this.xoaBtn.Name = "xoaBtn";
+            this.xoaBtn.Size = new System.Drawing.Size(144, 40);
+            this.xoaBtn.TabIndex = 3;
+            this.xoaBtn.Text = "    Xóa công nợ";
+            this.xoaBtn.TextColor = System.Drawing.Color.White;
+            this.xoaBtn.UseVisualStyleBackColor = false;
+            this.xoaBtn.Visible = false;
+            this.xoaBtn.Click += new System.EventHandler(this.xoaBtn_Click);
             // 
             // searchBtn
             // 
@@ -212,26 +212,26 @@
             this.paymentGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.paymentGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(181)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.paymentGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.paymentGridView.ColumnHeadersHeight = 50;
             this.paymentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.paymentGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.paymentGridView.EnableHeadersVisualStyles = false;
             this.paymentGridView.GridColor = System.Drawing.Color.GhostWhite;
-            this.paymentGridView.Location = new System.Drawing.Point(17, 157);
+            this.paymentGridView.Location = new System.Drawing.Point(17, 151);
             this.paymentGridView.MultiSelect = false;
             this.paymentGridView.Name = "paymentGridView";
             this.paymentGridView.ReadOnly = true;
@@ -251,9 +251,8 @@
             this.paymentGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.paymentGridView.RowTemplate.DividerHeight = 1;
             this.paymentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.paymentGridView.Size = new System.Drawing.Size(1167, 523);
-            this.paymentGridView.TabIndex = 22;
-            this.paymentGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.paymentGridView_CellFormatting);
+            this.paymentGridView.Size = new System.Drawing.Size(1167, 529);
+            this.paymentGridView.TabIndex = 24;
             // 
             // CongNoForm
             // 
@@ -261,9 +260,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.createBtn);
             this.Controls.Add(this.paymentGridView);
             this.Controls.Add(this.xoaBtn);
-            this.Controls.Add(this.createBtn);
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.tatcaBtn);
             this.Controls.Add(this.registeredBtn);
@@ -276,6 +275,7 @@
             this.Name = "CongNoForm";
             this.Text = "CongNoForm";
             this.Load += new System.EventHandler(this.CongNoForm_Load);
+            this.Shown += new System.EventHandler(this.CongNoForm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.paymentGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

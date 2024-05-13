@@ -64,10 +64,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Quicksand SemiBold", 24F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label1.Location = new System.Drawing.Point(0, -5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(311, 40);
+            this.label1.Size = new System.Drawing.Size(332, 48);
             this.label1.TabIndex = 2;
             this.label1.Text = "GHI DANH HỌC SINH";
             // 
@@ -511,6 +512,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label14.Location = new System.Drawing.Point(779, 3);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(234, 30);
@@ -522,7 +524,7 @@
             this.classListBox.FormattingEnabled = true;
             this.classListBox.Location = new System.Drawing.Point(782, 302);
             this.classListBox.Name = "classListBox";
-            this.classListBox.Size = new System.Drawing.Size(342, 76);
+            this.classListBox.Size = new System.Drawing.Size(342, 52);
             this.classListBox.TabIndex = 11;
             this.classListBox.Visible = false;
             this.classListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.classListBox_ItemCheck);
@@ -564,8 +566,8 @@
             this.saveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.saveBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.saveBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            this.saveBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
             this.saveBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.saveBtn.BorderRadius = 0;
             this.saveBtn.BorderSize = 0;
@@ -607,7 +609,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1184, 653);
             this.ControlBox = false;
             this.Controls.Add(this.classListBox);

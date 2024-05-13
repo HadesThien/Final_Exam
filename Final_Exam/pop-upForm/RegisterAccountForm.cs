@@ -19,14 +19,12 @@ namespace Final_Exam.pop_upForm {
         public RegisterAccountForm(AccountInfoForm form) {
             InitializeComponent();
             passwordTextBox.PasswordChar = true;
-            confirmPasswordTextBox.PasswordChar = true;
             this.form = form;
         }
         public RegisterAccountForm( BUS_Account account, AccountInfoForm form ) {
             InitializeComponent();
             this.account = account;
             passwordTextBox.PasswordChar = true;
-            confirmPasswordTextBox.PasswordChar = true;
             accountTextBox.Texts = account.getUsername();
             accountTextBox.Enabled = false;
             passwordTextBox.Texts= account.getPassword();
@@ -35,7 +33,6 @@ namespace Final_Exam.pop_upForm {
             emailTextBox.Texts = account.getEmail();
             numberPhoneTextBox.Texts = account.getNumberphone();
             nameTextBox.Texts = account.getName();
-            confirmPasswordTextBox.Enabled = false;
             this.form = form;
             saveBtn.Text = "Cập nhật";
         }
@@ -44,11 +41,7 @@ namespace Final_Exam.pop_upForm {
             this.Close();
         }
 
-        private void confirmPasswordTextBox_Leave(object sender, EventArgs e) {
-            alertPassword.Visible = (confirmPasswordTextBox.Texts != passwordTextBox.Texts) ? true : false;
-            
-        }
-
+ 
         private void emailTextBox_Leave(object sender, EventArgs e) {
             alertEmail.Visible = (!emailTextBox.Texts.Contains("@") &&  !emailTextBox.Texts.Contains(".")) ? true : false;
 
@@ -56,23 +49,25 @@ namespace Final_Exam.pop_upForm {
 
 
         private void saveBtn_Click(object sender, EventArgs e) {
-            if(alertPassword.Visible || alertEmail.Visible || alertEmail.Visible || alertNumberphone.Visible || alertName.Visible  && saveBtn.Text =="Lưu") 
+            if(passwordFormattingAlert.Visible||alertEmail.Visible || alertEmail.Visible || alertNumberphone.Visible || alertName.Visible  && saveBtn.Text =="Lưu") 
             {
                 MessageBox.Show("Không thể tạo tại khoản, vui lòng điền thông tin hợp lệ", "Thông báo tài khoản đang tạo!", MessageBoxButtons.OK);
             }else
             {
-                string username = accountTextBox.Texts.Trim();
-                string password = passwordTextBox.Texts.Trim();
-                string role = roleComboBox.Texts;
-                if (role == "Quản lý") role = "admin"; else role = "user";
-                string email = emailTextBox.Texts.Trim();
-                string numberphone =numberPhoneTextBox.Texts.Trim();
-                string name = nameTextBox.Texts.Trim();
-                account = new BUS_Account(username,password,DateTime.Now,DateTime.Now, role, email, numberphone, name);
-                if(saveBtn.Text.Equals("Lưu")) account.addAccount();
-                else if (saveBtn.Text.Equals("Cập nhật")) account.updateAccount();
-                form.updateGridView();
-                this.Close();
+                if(MessageBox.Show("Bạn có chắc đã kiểm tra kỹ thông tin tài khoản trước khi đăng ký ?", "Nhắc nhở", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes) {
+                    string username = accountTextBox.Texts.Trim();
+                    string password = passwordTextBox.Texts.Trim();
+                    string role = roleComboBox.Texts;
+                    if (role == "Quản lý") role = "admin"; else role = "user";
+                    string email = emailTextBox.Texts.Trim();
+                    string numberphone =numberPhoneTextBox.Texts.Trim();
+                    string name = nameTextBox.Texts.Trim();
+                    account = new BUS_Account(username,password,DateTime.Now,DateTime.Now, role, email, numberphone, name);
+                    if(saveBtn.Text.Equals("Lưu")) account.addAccount();
+                    else if (saveBtn.Text.Equals("Cập nhật")) account.updateAccount();
+                    form.updateGridView();
+                    this.Close();
+                }
             }
         }
 
@@ -122,7 +117,25 @@ namespace Final_Exam.pop_upForm {
 
  
         private void confirmPasswordTextBox_KeyDown(object sender, KeyEventArgs e) {
-            if(e.KeyCode == Keys.Enter) saveBtn_Click(sender, e);   
+            if(e.KeyCode == Keys.Enter) saveBtn_Click(sender, e);
+        }
+        private bool CheckPasswordFormat(string password) {
+            if (password.Length < 8 || password.Length > 20) {
+                passwordFormattingAlert.Text = "*Độ dài mật khẩu phải từ 8-20";
+                return false;
+            }
+
+            if (!password.Any(char.IsUpper) || !password.Any(char.IsLower) || !password.Any(char.IsDigit)) {
+                passwordFormattingAlert.Text = "*Mật khẩu phải có ít nhất một chữ hoa,\n một chữ thường và một chữ số";
+                return false;
+            }
+            return true;
+        }
+
+        private void passwordTextBox_Leave(object sender, EventArgs e) {
+            if (CheckPasswordFormat(passwordTextBox.Texts)) {
+                passwordFormattingAlert.Visible= true;
+            }
         }
     }
 }

@@ -44,7 +44,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.GhostWhite;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.delBtn);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.saveBtn);
@@ -63,8 +63,8 @@
             // 
             // delBtn
             // 
-            this.delBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
-            this.delBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.delBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            this.delBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
             this.delBtn.BorderColor = System.Drawing.Color.Ivory;
             this.delBtn.BorderRadius = 0;
             this.delBtn.BorderSize = 0;
@@ -87,14 +87,14 @@
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.label10.Location = new System.Drawing.Point(547, 313);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 28);
+            this.label10.Size = new System.Drawing.Size(42, 21);
             this.label10.TabIndex = 10;
             this.label10.Text = ".Vnđ";
             // 
             // saveBtn
             // 
-            this.saveBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.saveBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            this.saveBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
             this.saveBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.saveBtn.BorderRadius = 0;
             this.saveBtn.BorderSize = 0;
@@ -146,7 +146,7 @@
             this.giaTienTextBox.PasswordChar = false;
             this.giaTienTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.giaTienTextBox.PlaceholderText = "";
-            this.giaTienTextBox.Size = new System.Drawing.Size(556, 35);
+            this.giaTienTextBox.Size = new System.Drawing.Size(556, 31);
             this.giaTienTextBox.TabIndex = 2;
             this.giaTienTextBox.Texts = "";
             this.giaTienTextBox.UnderlinedStyle = false;
@@ -169,7 +169,7 @@
             this.soLuongTextBox.PasswordChar = false;
             this.soLuongTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.soLuongTextBox.PlaceholderText = "";
-            this.soLuongTextBox.Size = new System.Drawing.Size(556, 35);
+            this.soLuongTextBox.Size = new System.Drawing.Size(556, 31);
             this.soLuongTextBox.TabIndex = 1;
             this.soLuongTextBox.Texts = "";
             this.soLuongTextBox.UnderlinedStyle = false;
@@ -193,7 +193,7 @@
             this.tenSanPhamTextBox.PasswordChar = false;
             this.tenSanPhamTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tenSanPhamTextBox.PlaceholderText = "";
-            this.tenSanPhamTextBox.Size = new System.Drawing.Size(556, 35);
+            this.tenSanPhamTextBox.Size = new System.Drawing.Size(556, 31);
             this.tenSanPhamTextBox.TabIndex = 0;
             this.tenSanPhamTextBox.Texts = "";
             this.tenSanPhamTextBox.UnderlinedStyle = false;
@@ -201,61 +201,66 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Quicksand SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label5.Location = new System.Drawing.Point(31, 268);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(156, 46);
+            this.label5.Size = new System.Drawing.Size(130, 40);
             this.label5.TabIndex = 1;
             this.label5.Text = "Giá tiền: ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Quicksand SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label4.Location = new System.Drawing.Point(31, 170);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(321, 46);
+            this.label4.Size = new System.Drawing.Size(268, 40);
             this.label4.TabIndex = 1;
             this.label4.Text = "Số lượng nhập kho:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Quicksand SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label3.Location = new System.Drawing.Point(31, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(241, 46);
+            this.label3.Size = new System.Drawing.Size(207, 40);
             this.label3.TabIndex = 1;
             this.label3.Text = "Tên sản phẩm:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label1.Font = new System.Drawing.Font("Quicksand SemiBold", 24F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label1.Location = new System.Drawing.Point(-1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 50);
+            this.label1.Size = new System.Drawing.Size(189, 48);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nhập hàng";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Quicksand SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label2.Location = new System.Drawing.Point(-1, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(241, 46);
+            this.label2.Size = new System.Drawing.Size(200, 40);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mã đề cương: ";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Quicksand SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label6.Location = new System.Drawing.Point(-1, 139);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(160, 46);
+            this.label6.Size = new System.Drawing.Size(130, 40);
             this.label6.TabIndex = 1;
             this.label6.Text = "Ghi Chú: ";
             // 
@@ -273,15 +278,15 @@
             this.handoutIdTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.handoutIdTextBox.Location = new System.Drawing.Point(225, 60);
             this.handoutIdTextBox.Name = "handoutIdTextBox";
-            this.handoutIdTextBox.Size = new System.Drawing.Size(34, 46);
+            this.handoutIdTextBox.Size = new System.Drawing.Size(28, 37);
             this.handoutIdTextBox.TabIndex = 4;
             this.handoutIdTextBox.Text = "-";
             // 
             // NhapHangForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 727);
             this.ControlBox = false;
             this.Controls.Add(this.handoutIdTextBox);

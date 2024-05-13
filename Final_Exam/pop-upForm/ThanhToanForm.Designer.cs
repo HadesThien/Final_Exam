@@ -38,8 +38,6 @@
             this.documentCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.classCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.promotionLabel = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.checkoutLabel = new System.Windows.Forms.Label();
             this.tempCheckoutLabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,10 +50,10 @@
             this.noteTextBox = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.studentLabel = new System.Windows.Forms.Label();
-            this.roundedGridView1 = new Final_Exam.RoundedGridView();
+            this.paymentGridView = new Final_Exam.RoundedGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roundedGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paymentGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,8 +67,6 @@
             this.panel1.Controls.Add(this.documentCheckedListBox);
             this.panel1.Controls.Add(this.classCheckedListBox);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.promotionLabel);
-            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.checkoutLabel);
             this.panel1.Controls.Add(this.tempCheckoutLabel);
             this.panel1.Controls.Add(this.label6);
@@ -139,8 +135,8 @@
             // 
             this.saveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.saveBtn.BackColor = System.Drawing.Color.DodgerBlue;
-            this.saveBtn.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            this.saveBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
             this.saveBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.saveBtn.BorderRadius = 0;
             this.saveBtn.BorderSize = 0;
@@ -187,34 +183,9 @@
             this.label8.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(17, 648);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 24);
+            this.label8.Size = new System.Drawing.Size(93, 24);
             this.label8.TabIndex = 8;
-            this.label8.Text = "Thành tiền";
-            // 
-            // promotionLabel
-            // 
-            this.promotionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.promotionLabel.AutoSize = true;
-            this.promotionLabel.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.promotionLabel.Location = new System.Drawing.Point(148, 616);
-            this.promotionLabel.Name = "promotionLabel";
-            this.promotionLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.promotionLabel.Size = new System.Drawing.Size(20, 24);
-            this.promotionLabel.TabIndex = 8;
-            this.promotionLabel.Text = "0";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(17, 616);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(103, 24);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Khuyến mãi:";
+            this.label8.Text = "Thành tiền:";
             // 
             // checkoutLabel
             // 
@@ -258,8 +229,8 @@
             // 
             this.payBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.payBtn.BackColor = System.Drawing.Color.DodgerBlue;
-            this.payBtn.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.payBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            this.payBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
             this.payBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.payBtn.BorderRadius = 0;
             this.payBtn.BorderSize = 0;
@@ -356,56 +327,56 @@
             // 
             this.studentLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.studentLabel.AutoSize = true;
-            this.studentLabel.Font = new System.Drawing.Font("Quicksand Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentLabel.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studentLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.studentLabel.Location = new System.Drawing.Point(537, 15);
             this.studentLabel.Name = "studentLabel";
             this.studentLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.studentLabel.Size = new System.Drawing.Size(179, 18);
+            this.studentLabel.Size = new System.Drawing.Size(172, 24);
             this.studentLabel.TabIndex = 7;
             this.studentLabel.Text = "[Học sinh thanh toán]";
             // 
-            // roundedGridView1
+            // paymentGridView
             // 
-            this.roundedGridView1.AllowUserToAddRows = false;
-            this.roundedGridView1.AllowUserToDeleteRows = false;
-            this.roundedGridView1.AllowUserToResizeColumns = false;
-            this.roundedGridView1.AllowUserToResizeRows = false;
+            this.paymentGridView.AllowUserToAddRows = false;
+            this.paymentGridView.AllowUserToDeleteRows = false;
+            this.paymentGridView.AllowUserToResizeColumns = false;
+            this.paymentGridView.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            this.roundedGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.roundedGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.paymentGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.paymentGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.roundedGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.roundedGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.roundedGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.roundedGridView1.BorderRadius = 7;
-            this.roundedGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.roundedGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.roundedGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.paymentGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.paymentGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.paymentGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.paymentGridView.BorderRadius = 7;
+            this.paymentGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.paymentGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.paymentGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Quicksand Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(181)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(181)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.roundedGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.roundedGridView1.ColumnHeadersHeight = 50;
-            this.roundedGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.paymentGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.paymentGridView.ColumnHeadersHeight = 50;
+            this.paymentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.roundedGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.roundedGridView1.EnableHeadersVisualStyles = false;
-            this.roundedGridView1.GridColor = System.Drawing.Color.GhostWhite;
-            this.roundedGridView1.Location = new System.Drawing.Point(12, 57);
-            this.roundedGridView1.MultiSelect = false;
-            this.roundedGridView1.Name = "roundedGridView1";
+            this.paymentGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.paymentGridView.EnableHeadersVisualStyles = false;
+            this.paymentGridView.GridColor = System.Drawing.Color.GhostWhite;
+            this.paymentGridView.Location = new System.Drawing.Point(12, 57);
+            this.paymentGridView.MultiSelect = false;
+            this.paymentGridView.Name = "paymentGridView";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -413,18 +384,19 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.roundedGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.roundedGridView1.RowHeadersVisible = false;
-            this.roundedGridView1.RowHeadersWidth = 51;
-            this.roundedGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.paymentGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.paymentGridView.RowHeadersVisible = false;
+            this.paymentGridView.RowHeadersWidth = 51;
+            this.paymentGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.roundedGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.roundedGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.roundedGridView1.RowTemplate.DividerHeight = 1;
-            this.roundedGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.roundedGridView1.Size = new System.Drawing.Size(858, 455);
-            this.roundedGridView1.TabIndex = 11;
-            this.roundedGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.roundedGridView1_CellValueChanged);
+            this.paymentGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.paymentGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.paymentGridView.RowTemplate.DividerHeight = 1;
+            this.paymentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.paymentGridView.Size = new System.Drawing.Size(858, 455);
+            this.paymentGridView.TabIndex = 11;
+            this.paymentGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.paymentGridView_CellContentClick);
+            this.paymentGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.roundedGridView1_CellValueChanged);
             // 
             // ThanhToanForm
             // 
@@ -433,7 +405,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 727);
             this.ControlBox = false;
-            this.Controls.Add(this.roundedGridView1);
+            this.Controls.Add(this.paymentGridView);
             this.Controls.Add(this.studentLabel);
             this.Controls.Add(this.noteTextBox);
             this.Controls.Add(this.label4);
@@ -449,7 +421,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roundedGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paymentGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -465,10 +437,8 @@
         private CustomControls.RJControls.RJButton payBtn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label promotionLabel;
         private System.Windows.Forms.Label checkoutLabel;
         private System.Windows.Forms.Label tempCheckoutLabel;
         private System.Windows.Forms.CheckedListBox classCheckedListBox;
@@ -479,7 +449,7 @@
         private System.Windows.Forms.ListBox studentListBox;
         private System.Windows.Forms.Label studentLabel;
         private System.Windows.Forms.TextBox searchStudentTextBox;
-        private RoundedGridView roundedGridView1;
+        private RoundedGridView paymentGridView;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

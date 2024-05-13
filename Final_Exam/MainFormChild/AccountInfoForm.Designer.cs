@@ -40,11 +40,11 @@
             this.emailLabel = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.roleLabel = new System.Windows.Forms.Label();
-            this.accountGridView = new Final_Exam.RoundedGridView();
             this.xoaBtn = new CustomControls.RJControls.RJButton();
             this.registerBtn = new CustomControls.RJControls.RJButton();
             this.updateBtn = new CustomControls.RJControls.RJButton();
             this.changePwBtn = new CustomControls.RJControls.RJButton();
+            this.accountGridView = new Final_Exam.RoundedGridView();
             ((System.ComponentModel.ISupportInitialize)(this.accountGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -200,68 +200,6 @@
             this.roleLabel.TabIndex = 0;
             this.roleLabel.Text = "Role";
             // 
-            // accountGridView
-            // 
-            this.accountGridView.AllowUserToAddRows = false;
-            this.accountGridView.AllowUserToDeleteRows = false;
-            this.accountGridView.AllowUserToResizeColumns = false;
-            this.accountGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            this.accountGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.accountGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.accountGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.accountGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.accountGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.accountGridView.BorderRadius = 7;
-            this.accountGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.accountGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.accountGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.accountGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.accountGridView.ColumnHeadersHeight = 50;
-            this.accountGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.accountGridView.DefaultCellStyle = dataGridViewCellStyle3;
-            this.accountGridView.EnableHeadersVisualStyles = false;
-            this.accountGridView.GridColor = System.Drawing.Color.GhostWhite;
-            this.accountGridView.Location = new System.Drawing.Point(12, 214);
-            this.accountGridView.MultiSelect = false;
-            this.accountGridView.Name = "accountGridView";
-            this.accountGridView.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.accountGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.accountGridView.RowHeadersVisible = false;
-            this.accountGridView.RowHeadersWidth = 51;
-            this.accountGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.accountGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.accountGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.accountGridView.RowTemplate.DividerHeight = 1;
-            this.accountGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.accountGridView.Size = new System.Drawing.Size(1165, 450);
-            this.accountGridView.TabIndex = 11;
-            this.accountGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.accountGridView_CellClick);
-            // 
             // xoaBtn
             // 
             this.xoaBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -349,6 +287,67 @@
             this.changePwBtn.Visible = false;
             this.changePwBtn.Click += new System.EventHandler(this.changePwBtn_Click);
             // 
+            // accountGridView
+            // 
+            this.accountGridView.AllowUserToAddRows = false;
+            this.accountGridView.AllowUserToDeleteRows = false;
+            this.accountGridView.AllowUserToResizeColumns = false;
+            this.accountGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            this.accountGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.accountGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.accountGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.accountGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.accountGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.accountGridView.BorderRadius = 7;
+            this.accountGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.accountGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.accountGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(181)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.accountGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.accountGridView.ColumnHeadersHeight = 50;
+            this.accountGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.accountGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.accountGridView.EnableHeadersVisualStyles = false;
+            this.accountGridView.GridColor = System.Drawing.Color.GhostWhite;
+            this.accountGridView.Location = new System.Drawing.Point(12, 189);
+            this.accountGridView.MultiSelect = false;
+            this.accountGridView.Name = "accountGridView";
+            this.accountGridView.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.accountGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.accountGridView.RowHeadersVisible = false;
+            this.accountGridView.RowHeadersWidth = 51;
+            this.accountGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.accountGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.accountGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.accountGridView.RowTemplate.DividerHeight = 1;
+            this.accountGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.accountGridView.Size = new System.Drawing.Size(1167, 529);
+            this.accountGridView.TabIndex = 13;
+            // 
             // AccountInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -401,7 +400,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label roleLabel;
         private CustomControls.RJControls.RJButton xoaBtn;
-        private RoundedGridView accountGridView;
         private CustomControls.RJControls.RJButton updateBtn;
+        private RoundedGridView accountGridView;
     }
 }

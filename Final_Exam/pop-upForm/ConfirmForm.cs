@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace Final_Exam.pop_upForm {
     public partial class ConfirmForm : Form {
+        string confirm = "Tôi muốn CÓ";
         public ConfirmForm() {
             InitializeComponent();
             passwordTextBox.PasswordChar = true;
@@ -21,7 +22,7 @@ namespace Final_Exam.pop_upForm {
         }
 
         private void saveBtn_Click(object sender, EventArgs e) {
-            if (passwordTextBox.Texts == Account.account.getPassword()) {
+            if (passwordTextBox.Texts == confirm) {
                 Account.confirmPassword = true;
                 this.Close();
             }

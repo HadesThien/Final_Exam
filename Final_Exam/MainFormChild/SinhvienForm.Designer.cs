@@ -23,15 +23,14 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLySinhVienForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLySinhVienForm));
             this.label1 = new System.Windows.Forms.Label();
             this.searchTextBox = new System.Windows.Forms.TextBox();
-            this.studentGridView = new Final_Exam.RoundedGridView();
             this.tatcaBtn = new CustomControls.RJControls.RJButton();
             this.thoihocBtn = new CustomControls.RJControls.RJButton();
             this.printBtn = new CustomControls.RJControls.RJButton();
@@ -40,6 +39,7 @@
             this.createBtn = new CustomControls.RJControls.RJButton();
             this.hocthuBtn = new CustomControls.RJControls.RJButton();
             this.searchBtn = new CustomControls.RJControls.RJButton();
+            this.studentGridView = new Final_Exam.RoundedGridView();
             ((System.ComponentModel.ISupportInitialize)(this.studentGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,70 +66,6 @@
             this.searchTextBox.Visible = false;
             this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             this.searchTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchTextBox_KeyDown);
-            // 
-            // studentGridView
-            // 
-            this.studentGridView.AllowUserToAddRows = false;
-            this.studentGridView.AllowUserToDeleteRows = false;
-            this.studentGridView.AllowUserToResizeColumns = false;
-            this.studentGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            this.studentGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.studentGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.studentGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.studentGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.studentGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.studentGridView.BorderRadius = 7;
-            this.studentGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.studentGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.studentGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.studentGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.studentGridView.ColumnHeadersHeight = 50;
-            this.studentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.studentGridView.DefaultCellStyle = dataGridViewCellStyle3;
-            this.studentGridView.EnableHeadersVisualStyles = false;
-            this.studentGridView.GridColor = System.Drawing.Color.GhostWhite;
-            this.studentGridView.Location = new System.Drawing.Point(17, 157);
-            this.studentGridView.MultiSelect = false;
-            this.studentGridView.Name = "studentGridView";
-            this.studentGridView.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.studentGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.studentGridView.RowHeadersVisible = false;
-            this.studentGridView.RowHeadersWidth = 51;
-            this.studentGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.studentGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.studentGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.studentGridView.RowTemplate.DividerHeight = 1;
-            this.studentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.studentGridView.Size = new System.Drawing.Size(1167, 523);
-            this.studentGridView.TabIndex = 10;
-            this.studentGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentGridView_CellClick);
-            this.studentGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentGridView_CellContentClick);
-            this.studentGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.studentGridView_CellFormatting);
             // 
             // tatcaBtn
             // 
@@ -183,7 +119,7 @@
             this.printBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printBtn.ForeColor = System.Drawing.Color.White;
             this.printBtn.Image = ((System.Drawing.Image)(resources.GetObject("printBtn.Image")));
-            this.printBtn.Location = new System.Drawing.Point(1134, 12);
+            this.printBtn.Location = new System.Drawing.Point(1134, 17);
             this.printBtn.Name = "printBtn";
             this.printBtn.Size = new System.Drawing.Size(50, 40);
             this.printBtn.TabIndex = 3;
@@ -225,7 +161,7 @@
             this.adjustBtn.ForeColor = System.Drawing.Color.White;
             this.adjustBtn.Image = ((System.Drawing.Image)(resources.GetObject("adjustBtn.Image")));
             this.adjustBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adjustBtn.Location = new System.Drawing.Point(904, 12);
+            this.adjustBtn.Location = new System.Drawing.Point(904, 17);
             this.adjustBtn.Name = "adjustBtn";
             this.adjustBtn.Size = new System.Drawing.Size(109, 40);
             this.adjustBtn.TabIndex = 3;
@@ -249,7 +185,7 @@
             this.createBtn.ForeColor = System.Drawing.Color.White;
             this.createBtn.Image = ((System.Drawing.Image)(resources.GetObject("createBtn.Image")));
             this.createBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.createBtn.Location = new System.Drawing.Point(1019, 12);
+            this.createBtn.Location = new System.Drawing.Point(1019, 17);
             this.createBtn.Name = "createBtn";
             this.createBtn.Size = new System.Drawing.Size(109, 40);
             this.createBtn.TabIndex = 3;
@@ -299,6 +235,70 @@
             this.searchBtn.UseVisualStyleBackColor = false;
             this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
+            // studentGridView
+            // 
+            this.studentGridView.AllowUserToAddRows = false;
+            this.studentGridView.AllowUserToDeleteRows = false;
+            this.studentGridView.AllowUserToResizeColumns = false;
+            this.studentGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            this.studentGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.studentGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.studentGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.studentGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.studentGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.studentGridView.BorderRadius = 7;
+            this.studentGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.studentGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.studentGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(181)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.studentGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.studentGridView.ColumnHeadersHeight = 50;
+            this.studentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.studentGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.studentGridView.EnableHeadersVisualStyles = false;
+            this.studentGridView.GridColor = System.Drawing.Color.GhostWhite;
+            this.studentGridView.Location = new System.Drawing.Point(17, 151);
+            this.studentGridView.MultiSelect = false;
+            this.studentGridView.Name = "studentGridView";
+            this.studentGridView.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.studentGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.studentGridView.RowHeadersVisible = false;
+            this.studentGridView.RowHeadersWidth = 51;
+            this.studentGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.studentGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.studentGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.studentGridView.RowTemplate.DividerHeight = 1;
+            this.studentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.studentGridView.Size = new System.Drawing.Size(1167, 529);
+            this.studentGridView.TabIndex = 12;
+            this.studentGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentGridView_CellClick);
+            this.studentGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentGridView_CellContentClick);
+            this.studentGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.studentGridView_CellFormatting);
+            // 
             // QuanLySinhVienForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -339,7 +339,7 @@
         private CustomControls.RJControls.RJButton danghocBtn;
         private CustomControls.RJControls.RJButton tatcaBtn;
         private System.Windows.Forms.TextBox searchTextBox;
-        private RoundedGridView studentGridView;
         private CustomControls.RJControls.RJButton adjustBtn;
+        private RoundedGridView studentGridView;
     }
 }
