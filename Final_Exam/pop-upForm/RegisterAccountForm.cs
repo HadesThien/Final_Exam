@@ -72,9 +72,10 @@ namespace Final_Exam.pop_upForm {
         }
 
         private void numberPhoneTextBox_KeyPress(object sender, KeyPressEventArgs e) {
-            if(!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar)){
+            if(!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar) ){
                 e.Handled = true;
             }
+            if (numberPhoneTextBox.Texts.Length >= 11) e.Handled = true;
             alertNumberphone.Visible = false;
         }
 

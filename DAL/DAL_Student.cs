@@ -173,5 +173,14 @@ namespace DAL
                        "INNER JOIN Student s ON p.Id = s.studentId";
             return Connection.selectQuery(s);
         }
+        public DataTable get5RecentStudent() {
+            string s = $"SELECT TOP 5 p.name, p.gender, p.dob,p.numberphone, s.dateCreated \r\nFROM student s INNER JOIN person p ON p.Id = s.studentId \r\nORDER BY s.dateCreated DESC ;";
+            return Connection.selectQuery(s);
+        }
+        public DataTable get5BirthDayStudent() {
+            string s = $"SELECT TOP 5 p.name, p.gender, p.dob, p.numberphone \r\nFROM student s \r\nINNER JOIN person p ON p.Id = s.studentId  \r\nWHERE MONTH(p.dob) = MONTH(GETDATE()) \r\nAND DAY(p.dob) <= DAY(EOMONTH(GETDATE())) \r\nORDER BY DAY(p.dob);";
+            return Connection.selectQuery(s);
+        }
+        
     }
 }

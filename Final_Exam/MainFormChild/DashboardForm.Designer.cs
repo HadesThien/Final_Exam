@@ -24,47 +24,62 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dashboardLabel = new System.Windows.Forms.Label();
             this.dashboardPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.debtPanel = new Final_Exam.RoundedPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.debtInMonth = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.revenuePanel = new Final_Exam.RoundedPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.revenueInMonth = new System.Windows.Forms.Label();
             this.dobPanel = new Final_Exam.RoundedPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.studentsHaveBirhtdayinMonth = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.newStudentPanel = new Final_Exam.RoundedPanel();
             this.label17 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label16 = new System.Windows.Forms.Label();
+            this.amountStudentinMonth = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.roundedPanel5 = new Final_Exam.RoundedPanel();
             this.header1 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.roundedPanel6 = new Final_Exam.RoundedPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.roundedPanel7 = new Final_Exam.RoundedPanel();
             this.header2 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.studentGridView = new Final_Exam.RoundedGridView();
+            this.newPaymentGridView = new Final_Exam.RoundedGridView();
+            this.studentHaveBirthDayInMonthGridView = new Final_Exam.RoundedGridView();
             this.dashboardPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.debtPanel.SuspendLayout();
@@ -79,14 +94,14 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.roundedPanel5.SuspendLayout();
             this.header1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.roundedPanel6.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.roundedPanel7.SuspendLayout();
             this.header2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newPaymentGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentHaveBirthDayInMonthGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // dashboardLabel
@@ -143,7 +158,7 @@
             this.debtPanel.BorderColor = System.Drawing.Color.IndianRed;
             this.debtPanel.Controls.Add(this.label11);
             this.debtPanel.Controls.Add(this.pictureBox4);
-            this.debtPanel.Controls.Add(this.label10);
+            this.debtPanel.Controls.Add(this.debtInMonth);
             this.debtPanel.Controls.Add(this.label9);
             this.debtPanel.Location = new System.Drawing.Point(888, 3);
             this.debtPanel.Name = "debtPanel";
@@ -179,19 +194,19 @@
             this.pictureBox4.TabIndex = 28;
             this.pictureBox4.TabStop = false;
             // 
-            // label10
+            // debtInMonth
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.debtInMonth.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(40, 30);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(20, 24);
-            this.label10.TabIndex = 28;
-            this.label10.Text = "0";
+            this.debtInMonth.AutoSize = true;
+            this.debtInMonth.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.debtInMonth.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.debtInMonth.Location = new System.Drawing.Point(40, 30);
+            this.debtInMonth.Name = "debtInMonth";
+            this.debtInMonth.Size = new System.Drawing.Size(20, 24);
+            this.debtInMonth.TabIndex = 28;
+            this.debtInMonth.Text = "0";
             // 
             // label9
             // 
@@ -216,7 +231,7 @@
             this.revenuePanel.Controls.Add(this.label8);
             this.revenuePanel.Controls.Add(this.pictureBox3);
             this.revenuePanel.Controls.Add(this.label7);
-            this.revenuePanel.Controls.Add(this.label6);
+            this.revenuePanel.Controls.Add(this.revenueInMonth);
             this.revenuePanel.Location = new System.Drawing.Point(593, 3);
             this.revenuePanel.Name = "revenuePanel";
             this.revenuePanel.Radius = 30;
@@ -264,19 +279,19 @@
             this.label7.TabIndex = 28;
             this.label7.Text = "Doanh thu";
             // 
-            // label6
+            // revenueInMonth
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.revenueInMonth.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(40, 31);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(20, 24);
-            this.label6.TabIndex = 28;
-            this.label6.Text = "0";
+            this.revenueInMonth.AutoSize = true;
+            this.revenueInMonth.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.revenueInMonth.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.revenueInMonth.Location = new System.Drawing.Point(40, 31);
+            this.revenueInMonth.Name = "revenueInMonth";
+            this.revenueInMonth.Size = new System.Drawing.Size(20, 24);
+            this.revenueInMonth.TabIndex = 28;
+            this.revenueInMonth.Text = "0";
             // 
             // dobPanel
             // 
@@ -286,7 +301,7 @@
             this.dobPanel.BorderColor = System.Drawing.Color.Chocolate;
             this.dobPanel.Controls.Add(this.label3);
             this.dobPanel.Controls.Add(this.pictureBox2);
-            this.dobPanel.Controls.Add(this.label5);
+            this.dobPanel.Controls.Add(this.studentsHaveBirhtdayinMonth);
             this.dobPanel.Controls.Add(this.label4);
             this.dobPanel.Location = new System.Drawing.Point(298, 3);
             this.dobPanel.Name = "dobPanel";
@@ -321,19 +336,19 @@
             this.pictureBox2.TabIndex = 28;
             this.pictureBox2.TabStop = false;
             // 
-            // label5
+            // studentsHaveBirhtdayinMonth
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.studentsHaveBirhtdayinMonth.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(43, 31);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(20, 24);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "0";
+            this.studentsHaveBirhtdayinMonth.AutoSize = true;
+            this.studentsHaveBirhtdayinMonth.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentsHaveBirhtdayinMonth.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.studentsHaveBirhtdayinMonth.Location = new System.Drawing.Point(43, 31);
+            this.studentsHaveBirhtdayinMonth.Name = "studentsHaveBirhtdayinMonth";
+            this.studentsHaveBirhtdayinMonth.Size = new System.Drawing.Size(20, 24);
+            this.studentsHaveBirhtdayinMonth.TabIndex = 28;
+            this.studentsHaveBirhtdayinMonth.Text = "0";
             // 
             // label4
             // 
@@ -358,7 +373,7 @@
             this.newStudentPanel.Controls.Add(this.label17);
             this.newStudentPanel.Controls.Add(this.label15);
             this.newStudentPanel.Controls.Add(this.pictureBox5);
-            this.newStudentPanel.Controls.Add(this.label16);
+            this.newStudentPanel.Controls.Add(this.amountStudentinMonth);
             this.newStudentPanel.Location = new System.Drawing.Point(3, 3);
             this.newStudentPanel.Name = "newStudentPanel";
             this.newStudentPanel.Radius = 30;
@@ -406,19 +421,19 @@
             this.pictureBox5.TabIndex = 30;
             this.pictureBox5.TabStop = false;
             // 
-            // label16
+            // amountStudentinMonth
             // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.amountStudentinMonth.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label16.Location = new System.Drawing.Point(43, 36);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(20, 24);
-            this.label16.TabIndex = 31;
-            this.label16.Text = "0";
+            this.amountStudentinMonth.AutoSize = true;
+            this.amountStudentinMonth.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.amountStudentinMonth.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.amountStudentinMonth.Location = new System.Drawing.Point(43, 36);
+            this.amountStudentinMonth.Name = "amountStudentinMonth";
+            this.amountStudentinMonth.Size = new System.Drawing.Size(20, 24);
+            this.amountStudentinMonth.TabIndex = 31;
+            this.amountStudentinMonth.Text = "0";
             // 
             // panel5
             // 
@@ -457,8 +472,8 @@
             // 
             this.roundedPanel5.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.roundedPanel5.BorderColor = System.Drawing.Color.White;
+            this.roundedPanel5.Controls.Add(this.studentGridView);
             this.roundedPanel5.Controls.Add(this.header1);
-            this.roundedPanel5.Controls.Add(this.dataGridView1);
             this.roundedPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.roundedPanel5.Location = new System.Drawing.Point(587, 3);
             this.roundedPanel5.Name = "roundedPanel5";
@@ -488,30 +503,18 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "Học viên mới nhất";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(579, 226);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(3, 3);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(300, 226);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -520,8 +523,8 @@
             // 
             this.roundedPanel6.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.roundedPanel6.BorderColor = System.Drawing.Color.White;
+            this.roundedPanel6.Controls.Add(this.studentHaveBirthDayInMonthGridView);
             this.roundedPanel6.Controls.Add(this.panel2);
-            this.roundedPanel6.Controls.Add(this.dataGridView2);
             this.roundedPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.roundedPanel6.Location = new System.Drawing.Point(3, 235);
             this.roundedPanel6.Name = "roundedPanel6";
@@ -550,23 +553,12 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "Sinh nhật học viên trong tháng ";
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(578, 227);
-            this.dataGridView2.TabIndex = 1;
-            // 
             // roundedPanel7
             // 
             this.roundedPanel7.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.roundedPanel7.BorderColor = System.Drawing.Color.White;
+            this.roundedPanel7.Controls.Add(this.newPaymentGridView);
             this.roundedPanel7.Controls.Add(this.header2);
-            this.roundedPanel7.Controls.Add(this.dataGridView3);
             this.roundedPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.roundedPanel7.Location = new System.Drawing.Point(587, 235);
             this.roundedPanel7.Name = "roundedPanel7";
@@ -596,16 +588,182 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "Phiếu thu gần nhất";
             // 
-            // dataGridView3
+            // studentGridView
             // 
-            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(579, 227);
-            this.dataGridView3.TabIndex = 1;
+            this.studentGridView.AllowUserToAddRows = false;
+            this.studentGridView.AllowUserToDeleteRows = false;
+            this.studentGridView.AllowUserToResizeColumns = false;
+            this.studentGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            this.studentGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.studentGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.studentGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.studentGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.studentGridView.BorderRadius = 7;
+            this.studentGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.studentGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.studentGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(181)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.studentGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.studentGridView.ColumnHeadersHeight = 50;
+            this.studentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.studentGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.studentGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.studentGridView.EnableHeadersVisualStyles = false;
+            this.studentGridView.GridColor = System.Drawing.Color.GhostWhite;
+            this.studentGridView.Location = new System.Drawing.Point(0, 27);
+            this.studentGridView.MultiSelect = false;
+            this.studentGridView.Name = "studentGridView";
+            this.studentGridView.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.studentGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.studentGridView.RowHeadersVisible = false;
+            this.studentGridView.RowHeadersWidth = 51;
+            this.studentGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.studentGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.studentGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.studentGridView.RowTemplate.DividerHeight = 1;
+            this.studentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.studentGridView.Size = new System.Drawing.Size(579, 199);
+            this.studentGridView.TabIndex = 15;
+            // 
+            // newPaymentGridView
+            // 
+            this.newPaymentGridView.AllowUserToAddRows = false;
+            this.newPaymentGridView.AllowUserToDeleteRows = false;
+            this.newPaymentGridView.AllowUserToResizeColumns = false;
+            this.newPaymentGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            this.newPaymentGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            this.newPaymentGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.newPaymentGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.newPaymentGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.newPaymentGridView.BorderRadius = 7;
+            this.newPaymentGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.newPaymentGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.newPaymentGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(181)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.newPaymentGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.newPaymentGridView.ColumnHeadersHeight = 50;
+            this.newPaymentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.newPaymentGridView.DefaultCellStyle = dataGridViewCellStyle13;
+            this.newPaymentGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newPaymentGridView.EnableHeadersVisualStyles = false;
+            this.newPaymentGridView.GridColor = System.Drawing.Color.GhostWhite;
+            this.newPaymentGridView.Location = new System.Drawing.Point(0, 27);
+            this.newPaymentGridView.MultiSelect = false;
+            this.newPaymentGridView.Name = "newPaymentGridView";
+            this.newPaymentGridView.ReadOnly = true;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.newPaymentGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.newPaymentGridView.RowHeadersVisible = false;
+            this.newPaymentGridView.RowHeadersWidth = 51;
+            this.newPaymentGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.newPaymentGridView.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            this.newPaymentGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.newPaymentGridView.RowTemplate.DividerHeight = 1;
+            this.newPaymentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.newPaymentGridView.Size = new System.Drawing.Size(579, 200);
+            this.newPaymentGridView.TabIndex = 32;
+            // 
+            // studentHaveBirthDayInMonthGridView
+            // 
+            this.studentHaveBirthDayInMonthGridView.AllowUserToAddRows = false;
+            this.studentHaveBirthDayInMonthGridView.AllowUserToDeleteRows = false;
+            this.studentHaveBirthDayInMonthGridView.AllowUserToResizeColumns = false;
+            this.studentHaveBirthDayInMonthGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            this.studentHaveBirthDayInMonthGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.studentHaveBirthDayInMonthGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.studentHaveBirthDayInMonthGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.studentHaveBirthDayInMonthGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.studentHaveBirthDayInMonthGridView.BorderRadius = 7;
+            this.studentHaveBirthDayInMonthGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.studentHaveBirthDayInMonthGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.studentHaveBirthDayInMonthGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(181)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.studentHaveBirthDayInMonthGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.studentHaveBirthDayInMonthGridView.ColumnHeadersHeight = 50;
+            this.studentHaveBirthDayInMonthGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.studentHaveBirthDayInMonthGridView.DefaultCellStyle = dataGridViewCellStyle8;
+            this.studentHaveBirthDayInMonthGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.studentHaveBirthDayInMonthGridView.EnableHeadersVisualStyles = false;
+            this.studentHaveBirthDayInMonthGridView.GridColor = System.Drawing.Color.GhostWhite;
+            this.studentHaveBirthDayInMonthGridView.Location = new System.Drawing.Point(0, 27);
+            this.studentHaveBirthDayInMonthGridView.MultiSelect = false;
+            this.studentHaveBirthDayInMonthGridView.Name = "studentHaveBirthDayInMonthGridView";
+            this.studentHaveBirthDayInMonthGridView.ReadOnly = true;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.studentHaveBirthDayInMonthGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.studentHaveBirthDayInMonthGridView.RowHeadersVisible = false;
+            this.studentHaveBirthDayInMonthGridView.RowHeadersWidth = 51;
+            this.studentHaveBirthDayInMonthGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.studentHaveBirthDayInMonthGridView.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.studentHaveBirthDayInMonthGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.studentHaveBirthDayInMonthGridView.RowTemplate.DividerHeight = 1;
+            this.studentHaveBirthDayInMonthGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.studentHaveBirthDayInMonthGridView.Size = new System.Drawing.Size(578, 200);
+            this.studentHaveBirthDayInMonthGridView.TabIndex = 32;
             // 
             // DashboardForm
             // 
@@ -640,16 +798,16 @@
             this.roundedPanel5.ResumeLayout(false);
             this.header1.ResumeLayout(false);
             this.header1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.roundedPanel6.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.roundedPanel7.ResumeLayout(false);
             this.header2.ResumeLayout(false);
             this.header2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newPaymentGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentHaveBirthDayInMonthGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -661,13 +819,13 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label revenueInMonth;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label debtInMonth;
+        private System.Windows.Forms.Label studentsHaveBirhtdayinMonth;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
@@ -677,22 +835,22 @@
         private RoundedPanel revenuePanel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private RoundedPanel roundedPanel5;
         private System.Windows.Forms.Panel header1;
         private System.Windows.Forms.Label label12;
         private RoundedPanel roundedPanel6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private RoundedPanel roundedPanel7;
         private System.Windows.Forms.Panel header2;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridView dataGridView3;
         private RoundedPanel newStudentPanel;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label amountStudentinMonth;
+        private RoundedGridView studentGridView;
+        private RoundedGridView studentHaveBirthDayInMonthGridView;
+        private RoundedGridView newPaymentGridView;
     }
 }

@@ -122,6 +122,9 @@ namespace BUS
         {
             return payment.selectStudentId().Rows[0][0].ToString();
         }
+        public DataTable get5newPayment() {
+            return payment.select5NewPayment();
+        }
     }
 
 }
