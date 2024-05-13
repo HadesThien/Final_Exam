@@ -60,11 +60,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
+            this.label1.Font = new System.Drawing.Font("Quicksand SemiBold", 24F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(266, 40);
+            this.label1.Size = new System.Drawing.Size(303, 48);
             this.label1.TabIndex = 10;
             this.label1.Text = "Danh sách lớp học";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -136,8 +136,8 @@
             // updateBtn
             // 
             this.updateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.updateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
-            this.updateBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.updateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            this.updateBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
             this.updateBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.updateBtn.BorderRadius = 12;
             this.updateBtn.BorderSize = 0;
@@ -160,8 +160,8 @@
             // createBtn
             // 
             this.createBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.createBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
-            this.createBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.createBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            this.createBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
             this.createBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.createBtn.BorderRadius = 12;
             this.createBtn.BorderSize = 0;
@@ -183,8 +183,8 @@
             // searchBtn
             // 
             this.searchBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
-            this.searchBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(103)))), ((int)(((byte)(106)))));
+            this.searchBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            this.searchBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
             this.searchBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.searchBtn.BorderRadius = 12;
             this.searchBtn.BorderSize = 0;
@@ -203,8 +203,8 @@
             // 
             // tatcaBtn
             // 
-            this.tatcaBtn.BackColor = System.Drawing.Color.RoyalBlue;
-            this.tatcaBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.tatcaBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            this.tatcaBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
             this.tatcaBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.tatcaBtn.BorderRadius = 0;
             this.tatcaBtn.BorderSize = 0;
@@ -223,8 +223,8 @@
             // 
             // daDongBtn
             // 
-            this.daDongBtn.BackColor = System.Drawing.Color.RoyalBlue;
-            this.daDongBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.daDongBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            this.daDongBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
             this.daDongBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.daDongBtn.BorderRadius = 0;
             this.daDongBtn.BorderSize = 0;
@@ -243,8 +243,8 @@
             // 
             // dangMoBtn
             // 
-            this.dangMoBtn.BackColor = System.Drawing.Color.RoyalBlue;
-            this.dangMoBtn.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.dangMoBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            this.dangMoBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
             this.dangMoBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.dangMoBtn.BorderRadius = 0;
             this.dangMoBtn.BorderSize = 0;
@@ -265,7 +265,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(91)))), ((int)(((byte)(147)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.classGridView);
             this.Controls.Add(this.updateBtn);
