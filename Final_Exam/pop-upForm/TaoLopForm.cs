@@ -173,45 +173,22 @@ namespace Final_Exam {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin lớp học");
                 return;
             }
-            string s = teacherComboBox.Texts.Split(new string[] { " - " }, StringSplitOptions.None)[2];
-            string teacherId = teacherComboBox.Texts.Split(new string[] { " - " }, StringSplitOptions.None)[0];
-            if (!s.Equals(subjectComboBox.Texts))
-            {
-                MessageBox.Show("Giáo viên không thể dạy lớp này, vui lòng chọn giáo viên khác");
-                return;
-            }
             if (String.IsNullOrEmpty(className))
             {
-                bus_class = new BUS_Class(id, subjectComboBox.Texts, shiftComboBox.Texts, int.Parse(gradeComboBox.Texts), int.Parse(giaTienTextBox.Texts), int.Parse(soBuoiTextBox.Texts), int.Parse(soHocSinhTextBox.Texts), DateTime.Now, statusComboBox.Texts, teacherId);
+                bus_class = new BUS_Class(id, subjectComboBox.Texts, shiftComboBox.Texts, int.Parse(gradeComboBox.Texts), int.Parse(giaTienTextBox.Texts), int.Parse(soBuoiTextBox.Texts), int.Parse(soHocSinhTextBox.Texts), DateTime.Now, statusComboBox.Texts, "GV001");
                 if (bus_class.existsThisClass())
                 {
                     MessageBox.Show("Đã tồn tại lớp học này");
-                    return;
-                }
-                if (bus_class.teacherTeachesOnThisShift())
-                {
-                    MessageBox.Show("Giáo viên đã dạy vào ca này");
                     return;
                 }
             }
             else
             {
                 id = maLopTextBox.Texts;
-                bus_class = new BUS_Class(id, subjectComboBox.Texts, shiftComboBox.Texts, int.Parse(gradeComboBox.Texts), int.Parse(giaTienTextBox.Texts), int.Parse(soBuoiTextBox.Texts), int.Parse(soHocSinhTextBox.Texts), DateTime.Now, statusComboBox.Texts, teacherId);
-                Console.WriteLine(subject + " " + grade.ToString() + "." + shift);
-                Console.WriteLine(subjectComboBox.Texts + " " + gradeComboBox.Texts + "." + shiftComboBox.Texts);
-                Console.WriteLine(bus_class.existsThisClass());
+                bus_class = new BUS_Class(id, subjectComboBox.Texts, shiftComboBox.Texts, int.Parse(gradeComboBox.Texts), int.Parse(giaTienTextBox.Texts), int.Parse(soBuoiTextBox.Texts), int.Parse(soHocSinhTextBox.Texts), DateTime.Now, statusComboBox.Texts, "GV001");
                 if (bus_class.existsThisClass() && !(subjectComboBox.Texts.Equals(subject) && shiftComboBox.Texts.Equals(shift) && int.Parse(gradeComboBox.Texts) == grade))
                 {
                     MessageBox.Show("Đã tồn tại lớp học này");
-                    return;
-                }
-                Console.WriteLine(teacherInfo);
-                Console.WriteLine(teacherComboBox.Texts);
-                Console.WriteLine();
-                if (bus_class.teacherTeachesOnThisShift() && !teacherInfo.Equals(teacherComboBox.Texts))
-                {
-                    MessageBox.Show("Giáo viên đã dạy vào ca này");
                     return;
                 }
             }

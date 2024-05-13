@@ -43,6 +43,10 @@ namespace Final_Exam.pop_upForm {
         }
 
         private void ChiTietLopHocForm_Load(object sender, EventArgs e) {
+            if (Account.account.getRole() == "admin")
+            {
+                removeBtn.Visible = false;
+            }
             subjedtLabel.Text = classes.getSubject();
             classNameLabel.Text = classes.getName();
             shiftLabel.Text = classes.getShift();

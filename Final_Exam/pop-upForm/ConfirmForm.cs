@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Final_Exam.pop_upForm {
     public partial class ConfirmForm : Form {
-        string confirm = "Tôi muốn CÓ";
+        string confirm = "123";
         public ConfirmForm() {
             InitializeComponent();
             passwordTextBox.PasswordChar = true;

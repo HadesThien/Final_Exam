@@ -125,6 +125,7 @@ namespace Final_Exam {
             studentListBox.SelectedIndex = 0;
             form.updateGridView();
             this.Close();
+
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
@@ -341,6 +342,7 @@ namespace Final_Exam {
         private void payBtn_Click(object sender, EventArgs e)
         {
             string id = (studentLabel.Text).Split(new string[] {" - "}, StringSplitOptions.None)[0];
+            string name = (studentLabel.Text).Split(new string[] {" - "}, StringSplitOptions.None)[1];
             for (int i = 0; i < thanhToanTable.Rows.Count; i++)
             {
                 if (Convert.ToBoolean(paymentGridView.Rows[i].Cells[0].Value) == false)
@@ -378,6 +380,22 @@ namespace Final_Exam {
                     doc.updateAfterBuying();
                 }
             }
+            calculate();
+            tempCheckoutLabel.Text = tempCheckout.ToString();
+            if (tempCheckout % 1000 == 0)
+            {
+                checkoutLabel.Text = tempCheckout.ToString();
+            }
+            else
+            {
+                checkoutLabel.Text = (tempCheckout + 1000 - (tempCheckout % 1000)).ToString();
+            }
+            string s1 = tempCheckoutLabel.Text;
+            string s2 = checkoutLabel.Text;
+            BUS_Student student = new BUS_Student(id, "", "", DateTime.Now, "", "", "", "", "", "", DateTime.Now, "", "");
+            HoaDonForm hoaDon = new HoaDonForm(paymentGridView, name, student.findStudentBasic().Rows[0][2].ToString(), s1, s2);
+            hoaDon.Show();
+            hoaDon.Close();
             studentListBox.SelectedIndex = -1;
             studentListBox.SelectedIndex = 0;
             if (flag == null)

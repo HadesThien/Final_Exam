@@ -119,5 +119,10 @@ namespace Final_Exam {
                 tinhTrangComboBox.Texts = "Đang học";
             }
         }
+
+        private void paymentGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

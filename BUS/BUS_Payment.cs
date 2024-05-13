@@ -122,6 +122,14 @@ namespace BUS
         {
             return payment.selectStudentId().Rows[0][0].ToString();
         }
+        public DataTable selectPaidQuery()
+        {
+            return payment.selectPaidQuery();
+        }
+        public DataTable selectRegisteredQuery()
+        {
+            return payment.selectRegisteredQuery();
+        }
     }
 
 }

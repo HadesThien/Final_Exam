@@ -60,7 +60,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label1.Location = new System.Drawing.Point(24, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 50);
+            this.label1.Size = new System.Drawing.Size(249, 61);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tạo lớp học";
             // 
@@ -74,7 +74,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label2.Location = new System.Drawing.Point(698, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 40);
+            this.label2.Size = new System.Drawing.Size(156, 50);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên lớp: ";
             // 
@@ -85,7 +85,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 30);
+            this.label3.Size = new System.Drawing.Size(133, 37);
             this.label3.TabIndex = 1;
             this.label3.Text = "Môn học:";
             // 
@@ -96,7 +96,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label4.Location = new System.Drawing.Point(3, 214);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 30);
+            this.label4.Size = new System.Drawing.Size(107, 37);
             this.label4.TabIndex = 1;
             this.label4.Text = "Ca học:";
             // 
@@ -107,7 +107,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label5.Location = new System.Drawing.Point(3, 107);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 30);
+            this.label5.Size = new System.Drawing.Size(132, 37);
             this.label5.TabIndex = 1;
             this.label5.Text = "Khối học:";
             // 
@@ -118,7 +118,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label6.Location = new System.Drawing.Point(3, 321);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(132, 30);
+            this.label6.Size = new System.Drawing.Size(169, 37);
             this.label6.TabIndex = 1;
             this.label6.Text = "Số buổi học:";
             // 
@@ -129,7 +129,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label7.Location = new System.Drawing.Point(3, 428);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(189, 30);
+            this.label7.Size = new System.Drawing.Size(187, 74);
             this.label7.TabIndex = 1;
             this.label7.Text = "Số lượng học sinh:";
             // 
@@ -200,7 +200,7 @@
             this.soBuoiTextBox.PasswordChar = false;
             this.soBuoiTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.soBuoiTextBox.PlaceholderText = "";
-            this.soBuoiTextBox.Size = new System.Drawing.Size(422, 36);
+            this.soBuoiTextBox.Size = new System.Drawing.Size(422, 43);
             this.soBuoiTextBox.TabIndex = 3;
             this.soBuoiTextBox.Texts = "";
             this.soBuoiTextBox.UnderlinedStyle = false;
@@ -224,7 +224,7 @@
             this.soHocSinhTextBox.PasswordChar = false;
             this.soHocSinhTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.soHocSinhTextBox.PlaceholderText = "";
-            this.soHocSinhTextBox.Size = new System.Drawing.Size(422, 36);
+            this.soHocSinhTextBox.Size = new System.Drawing.Size(422, 43);
             this.soHocSinhTextBox.TabIndex = 4;
             this.soHocSinhTextBox.Texts = "";
             this.soHocSinhTextBox.UnderlinedStyle = false;
@@ -282,7 +282,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label8.Location = new System.Drawing.Point(698, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(376, 40);
+            this.label8.Size = new System.Drawing.Size(464, 50);
             this.label8.TabIndex = 1;
             this.label8.Text = "Mã lớp (phát sinh tự động): ";
             // 
@@ -296,7 +296,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label9.Location = new System.Drawing.Point(701, 221);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(122, 40);
+            this.label9.Size = new System.Drawing.Size(153, 50);
             this.label9.TabIndex = 1;
             this.label9.Text = "Giá tiền:";
             // 
@@ -306,7 +306,7 @@
             this.alert.ForeColor = System.Drawing.Color.Red;
             this.alert.Location = new System.Drawing.Point(704, 317);
             this.alert.Name = "alert";
-            this.alert.Size = new System.Drawing.Size(250, 21);
+            this.alert.Size = new System.Drawing.Size(319, 28);
             this.alert.TabIndex = 8;
             this.alert.Text = "*Giá tiền phải lớn hơn 1.000 đồng";
             this.alert.Visible = false;
@@ -318,7 +318,7 @@
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.label10.Location = new System.Drawing.Point(1087, 280);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(42, 21);
+            this.label10.Size = new System.Drawing.Size(53, 28);
             this.label10.TabIndex = 9;
             this.label10.Text = ".Vnđ";
             // 
@@ -332,9 +332,10 @@
             this.teacherLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.teacherLabel.Location = new System.Drawing.Point(701, 441);
             this.teacherLabel.Name = "teacherLabel";
-            this.teacherLabel.Size = new System.Drawing.Size(209, 40);
+            this.teacherLabel.Size = new System.Drawing.Size(262, 50);
             this.teacherLabel.TabIndex = 1;
             this.teacherLabel.Text = "Chọn giáo viên";
+            this.teacherLabel.Visible = false;
             // 
             // teacherComboBox
             // 
@@ -354,6 +355,7 @@
             this.teacherComboBox.Size = new System.Drawing.Size(434, 39);
             this.teacherComboBox.TabIndex = 10;
             this.teacherComboBox.Texts = "";
+            this.teacherComboBox.Visible = false;
             // 
             // maLopTextBox
             // 
@@ -376,7 +378,7 @@
             this.maLopTextBox.PasswordChar = false;
             this.maLopTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.maLopTextBox.PlaceholderText = "";
-            this.maLopTextBox.Size = new System.Drawing.Size(434, 40);
+            this.maLopTextBox.Size = new System.Drawing.Size(434, 47);
             this.maLopTextBox.TabIndex = 4;
             this.maLopTextBox.Texts = "";
             this.maLopTextBox.UnderlinedStyle = false;
@@ -401,7 +403,7 @@
             this.giaTienTextBox.PasswordChar = false;
             this.giaTienTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.giaTienTextBox.PlaceholderText = "";
-            this.giaTienTextBox.Size = new System.Drawing.Size(434, 40);
+            this.giaTienTextBox.Size = new System.Drawing.Size(434, 47);
             this.giaTienTextBox.TabIndex = 5;
             this.giaTienTextBox.Texts = "";
             this.giaTienTextBox.UnderlinedStyle = false;
@@ -429,7 +431,7 @@
             this.tenLopTextBox.PasswordChar = false;
             this.tenLopTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tenLopTextBox.PlaceholderText = "";
-            this.tenLopTextBox.Size = new System.Drawing.Size(434, 40);
+            this.tenLopTextBox.Size = new System.Drawing.Size(434, 47);
             this.tenLopTextBox.TabIndex = 4;
             this.tenLopTextBox.Texts = "";
             this.tenLopTextBox.UnderlinedStyle = false;
@@ -489,7 +491,7 @@
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label11.Location = new System.Drawing.Point(701, 345);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(158, 40);
+            this.label11.Size = new System.Drawing.Size(198, 50);
             this.label11.TabIndex = 11;
             this.label11.Text = "Tình trạng:";
             // 
@@ -514,7 +516,7 @@
             // 
             // TaoLopForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1170, 639);

@@ -142,6 +142,19 @@ namespace Final_Exam {
         {
             
         }
+
+        private void studentGridView_SelectionChanged(object sender, EventArgs e)
+        {
+
+            if (studentGridView.SelectedRows.Count == 1)
+            {
+                adjustBtn.Visible = true;
+            }
+            else
+            {
+                adjustBtn.Visible = false;
+            }
+        }
     }
 
 }

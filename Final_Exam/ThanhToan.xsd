@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ThanhToan" targetNamespace="http://tempuri.org/ThanhToan.xsd" xmlns:mstns="http://tempuri.org/ThanhToan.xsd" xmlns="http://tempuri.org/ThanhToan.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ThanhToan" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="ThanhToan" msprop:Generator_DataSetName="ThanhToan">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_UserTableName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tên_x0020_thanh_x0020_toán" msprop:Generator_ColumnPropNameInRow="Tên_thanh_toán" msprop:Generator_ColumnPropNameInTable="Tên_thanh_toánColumn" msprop:Generator_ColumnVarNameInTable="columnTên_thanh_toán" msprop:Generator_UserColumnName="Tên thanh toán" type="xs:string" minOccurs="0" />
+              <xs:element name="Loại" msprop:Generator_ColumnPropNameInRow="Loại" msprop:Generator_ColumnPropNameInTable="LoạiColumn" msprop:Generator_ColumnVarNameInTable="columnLoại" msprop:Generator_UserColumnName="Loại" type="xs:string" minOccurs="0" />
+              <xs:element name="Giá" msprop:Generator_ColumnPropNameInRow="Giá" msprop:Generator_ColumnPropNameInTable="GiáColumn" msprop:Generator_ColumnVarNameInTable="columnGiá" msprop:Generator_UserColumnName="Giá" type="xs:string" minOccurs="0" />
+              <xs:element name="Kỳ" msprop:Generator_ColumnPropNameInRow="Kỳ" msprop:Generator_ColumnPropNameInTable="KỳColumn" msprop:Generator_ColumnVarNameInTable="columnKỳ" msprop:Generator_UserColumnName="Kỳ" type="xs:string" minOccurs="0" />
+              <xs:element name="Số_x0020_buổi_x0020__x002F__x0020_số_x0020_lượng" msprop:Generator_ColumnPropNameInRow="_Số_buổi___số_lượng" msprop:Generator_ColumnPropNameInTable="_Số_buổi___số_lượngColumn" msprop:Generator_ColumnVarNameInTable="_columnSố_buổi___số_lượng" msprop:Generator_UserColumnName="Số buổi / số lượng" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

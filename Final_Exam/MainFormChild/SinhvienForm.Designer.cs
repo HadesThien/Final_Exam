@@ -50,7 +50,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label1.Location = new System.Drawing.Point(9, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(315, 48);
+            this.label1.Size = new System.Drawing.Size(391, 59);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh sách học sinh";
             // 
@@ -61,7 +61,7 @@
             this.searchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchTextBox.Location = new System.Drawing.Point(588, 104);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(544, 31);
+            this.searchTextBox.Size = new System.Drawing.Size(544, 37);
             this.searchTextBox.TabIndex = 9;
             this.searchTextBox.Visible = false;
             this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
@@ -274,7 +274,6 @@
             this.studentGridView.EnableHeadersVisualStyles = false;
             this.studentGridView.GridColor = System.Drawing.Color.GhostWhite;
             this.studentGridView.Location = new System.Drawing.Point(17, 151);
-            this.studentGridView.MultiSelect = false;
             this.studentGridView.Name = "studentGridView";
             this.studentGridView.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -298,10 +297,11 @@
             this.studentGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentGridView_CellClick);
             this.studentGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentGridView_CellContentClick);
             this.studentGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.studentGridView_CellFormatting);
+            this.studentGridView.SelectionChanged += new System.EventHandler(this.studentGridView_SelectionChanged);
             // 
             // QuanLySinhVienForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 692);

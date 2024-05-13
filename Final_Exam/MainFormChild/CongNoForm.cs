@@ -33,15 +33,22 @@ namespace Final_Exam {
         }
 
         private void tatcaBtn_Click(object sender, EventArgs e) {
-
+            updateGridView();
         }
 
         private void registeredBtn_Click(object sender, EventArgs e) {
-
+            payment = new BUS_Payment("", DateTime.Now, DateTime.Now, "", "", 0, 0, "","");
+            dt = payment.selectRegisteredQuery();
+            paymentGridView.DataSource = dt;
+            paymentGridView.CellFormatting += paymentGridView_CellFormatting;            
+            
         }
 
         private void paidBtn_Click(object sender, EventArgs e) {
-
+            payment = new BUS_Payment("", DateTime.Now, DateTime.Now, "", "", 0, 0, "","");
+            dt = payment.selectPaidQuery();
+            paymentGridView.DataSource = dt;
+            paymentGridView.CellFormatting += paymentGridView_CellFormatting;            
         }
 
         private void searchBtn_Click(object sender, EventArgs e) {
@@ -128,9 +135,21 @@ namespace Final_Exam {
 
         }
 
+        private bool areSelectedRegistered()
+        {
+            foreach (DataGridViewRow row in  paymentGridView.SelectedRows)
+            {
+                if (row.Cells[5].Value.ToString() == "Thanh toán")
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
         private void paymentGridView_SelectionChanged(object sender, EventArgs e)
         {
-            if (paymentGridView.SelectedRows.Count > 0)
+            if ((paymentGridView.SelectedRows.Count > 0 && Account.account.getRole() == "admin") || (paymentGridView.SelectedRows.Count > 0 && areSelectedRegistered() == true))
             {
                 xoaBtn.Visible = true;
             }
@@ -146,6 +165,16 @@ namespace Final_Exam {
         }
 
         private void thanhToanBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void paymentGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
         {
 
         }
