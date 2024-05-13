@@ -156,9 +156,23 @@ namespace DAL
             return Connection.selectQuery(s);
         }
         public DataTable get5BirthDayStudent() {
-            string s = $"SELECT TOP 5 p.name, p.gender, p.dob, p.numberphone \r\nFROM student s \r\nINNER JOIN person p ON p.Id = s.studentId  \r\nWHERE MONTH(p.dob) = MONTH(GETDATE()) \r\nAND DAY(p.dob) <= DAY(EOMONTH(GETDATE())) \r\nORDER BY DAY(p.dob);";
+            string s = $"SELECT TOP 5 p.name, p.gender, p.dob, p.numberphone \r\nFROM student s \r\nINNER JOIN person p ON p.Id = s.studentId  \r\nWHERE MONTH(p.dob) = MONTH(GETDATE()) \r\nAND DAY(p.dob) <= DAY(DATEADD(dd, -1, DATEADD(mm, DATEDIFF(mm, 0, GETDATE()) + 1, 0))) \r\nORDER BY DAY(p.dob);";
             return Connection.selectQuery(s);
         }
+
+        public DataTable numOfNewStudents()
+        {
+            string s = "SELECT COUNT(s.studentId)\r\nFROM student s\r\nINNER JOIN person p ON p.Id = s.studentId \r\nWHERE MONTH(s.dateCreated)= MONTH(GETDATE())";
+            return Connection.selectQuery(s);
+        }
+
+        public DataTable numOfStudentsBirthday()
+        {
+            string s = "SELECT COUNT(s.studentId)\r\nFROM student s\r\nINNER JOIN person p ON p.Id = s.studentId \r\nWHERE MONTH(p.dob) = MONTH(GETDATE()) AND DAY(p.dob) <= DAY(DATEADD(dd, -1, DATEADD(mm, DATEDIFF(mm, 0, GETDATE()) + 1, 0)))";
+            return Connection.selectQuery(s);
+        }
+
+
         
     }
 }

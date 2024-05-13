@@ -139,5 +139,16 @@ namespace DAL
 
             return Connection.selectQuery(s);
         }
+
+        public DataTable paidRevenue()
+        {
+            string s = "SELECT SUM(c.price)\r\nFROM      Payment p\r\nJOIN      Student s ON p.studentId = s.studentId\r\nJOIN      Person pe ON s.studentId = pe.Id\r\nJOIN      Register r ON s.studentId = r.studentId AND r.classId = p.classId\r\nJOIN      Class c ON c.classId = r.classId\r\nWHERE p.status = N'Thanh toán' AND MONTH(p.period) = MONTH(GETDATE())";
+            return Connection.selectQuery(s);
+        }
+        public DataTable registeredRevenue()
+        {
+            string s = "SELECT SUM(c.price)\r\nFROM      Payment p\r\nJOIN      Student s ON p.studentId = s.studentId\r\nJOIN      Person pe ON s.studentId = pe.Id\r\nJOIN      Register r ON s.studentId = r.studentId AND r.classId = p.classId\r\nJOIN      Class c ON c.classId = r.classId\r\nWHERE p.status = N'Đăng ký' AND MONTH(p.period) = MONTH(GETDATE())";
+            return Connection.selectQuery(s);
+        }
     }
 }

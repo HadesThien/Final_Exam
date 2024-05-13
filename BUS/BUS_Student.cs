@@ -112,5 +112,14 @@ namespace BUS
             return student.get5BirthDayStudent();
         }
 
+        public string numOfNewStudents()
+        {
+            return student.numOfNewStudents().Rows[0][0].ToString();
+        }
+        public string numOfStudentsBirthday()
+        {
+            return student.numOfStudentsBirthday().Rows[0][0].ToString();
+        }
+
     }
 }

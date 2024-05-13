@@ -28,7 +28,10 @@ namespace Final_Exam {
             payment = new BUS_Payment("",DateTime.Now,DateTime.Now, "","",0,0,"","");
             dt = payment.get5newPayment();
             newPaymentGridView.DataSource = dt;
-
+            amountStudentinMonth.Text = student.numOfNewStudents();
+            studentsHaveBirhtdayinMonth.Text = student.numOfStudentsBirthday();
+            revenueInMonth.Text = payment.paidRevenue();
+            debtInMonth.Text = payment.registeredRevenue();
         }
 
         private void dashboardLabel_Click(object sender, EventArgs e) {

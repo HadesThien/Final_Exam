@@ -133,6 +133,15 @@ namespace BUS
         public DataTable get5newPayment() {
             return payment.select5NewPayment();
         }
+
+        public string paidRevenue()
+        {
+            return payment.paidRevenue().Rows[0][0].ToString();
+        }
+        public string registeredRevenue()
+        {
+            return payment.registeredRevenue().Rows[0][0].ToString();
+        }
     }
 
 }
