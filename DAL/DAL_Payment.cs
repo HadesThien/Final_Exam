@@ -67,11 +67,6 @@ namespace DAL
                 $"JOIN \r\n    Class c ON c.classId = r.classId";
             return Connection.selectQuery(s);
         }
-        public DataTable showPayments()
-        {
-            string s = "Select p.paymentId, c.subject + ' ' + cast(c.grade as varchar) + '.' + c.shift) as name, p.period,p.note,p.dateCreated From Payment p Join Register r On p.StudentId = r.registerId Join Class c On r.classId = c.ClassId;";
-            return Connection.selectQuery(s);
-        }
 
         public DataTable getLatestId()
         {
@@ -131,6 +126,17 @@ namespace DAL
         public DataTable selectStudentId()
         {
             string s = $"SELECT studentId FROM Payment WHERE paymentId = '{payment.PaymentId}'";
+            return Connection.selectQuery(s);
+        }
+        public DataTable select5NewPayment() {
+            // Viet Code o day 
+            string s = $"SELECT \r\n TOP 5   p.paymentId as [Mã thanh toán],\r\n    pe.name AS [Tên học sinh],\r\n    c.subject + ' ' + cast(c.grade as varchar) + '.' + c.shift AS [Tên lớp],c.Price as [Học phí],\r\n    RIGHT(CONVERT(VARCHAR(10), p.period, 103), 7) AS [Kỳ],\r\n    p.status as [Tình trạng],\r\n    p.numberOfSession as [Số buổi học],\r\n    p.dateCreated as [Ngày tạo]\r\n" +
+                $"FROM \r\n    Payment p\r\n" +
+                $"JOIN \r\n    Student s ON p.studentId = s.studentId\r\n" +
+                $"JOIN \r\n    Person pe ON s.studentId = pe.Id\r\n" +
+                $"JOIN \r\n    Register r ON s.studentId = r.studentId AND r.classId = p.classId\r\n" +
+                $"JOIN \r\n    Class c ON c.classId = r.classId";
+
             return Connection.selectQuery(s);
         }
     }

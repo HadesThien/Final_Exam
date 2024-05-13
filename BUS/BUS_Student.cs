@@ -105,6 +105,12 @@ namespace BUS
                 return "HS001";
             }
         }
+        public DataTable select5NewStudent() {
+            return student.get5RecentStudent();
+        }
+        public DataTable select5BirthDayStudent() {
+            return student.get5BirthDayStudent();
+        }
 
     }
 }

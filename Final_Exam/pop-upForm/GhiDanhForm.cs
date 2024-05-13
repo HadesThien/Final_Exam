@@ -184,8 +184,15 @@ namespace Final_Exam {
             {
                 defaultForm1();
             }
-            classTextBox.Visible = false;
-            buttonSelect.Visible = false;
+            if (tinhTrangComboBox.Texts == "Đang học") {
+                classListBox.Enabled = true;
+                classTextBox.Visible = true;
+                buttonSelect.Visible = true;
+            }
+            else{
+                classTextBox.Visible = false;
+                buttonSelect.Visible = false;
+            }
         }
 
         private void buttonSelect_Click(object sender, EventArgs e) {

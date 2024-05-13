@@ -130,6 +130,9 @@ namespace BUS
         {
             return payment.selectRegisteredQuery();
         }
+        public DataTable get5newPayment() {
+            return payment.select5NewPayment();
+        }
     }
 
 }
