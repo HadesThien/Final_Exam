@@ -26,28 +26,6 @@ namespace DAL
             string query2 = "INSERT INTO Student VALUES(N'" + student.School + "', N'" + student.Street + "', N'" + student.Ward + "', N'" + student.District + "', N'" + student.City + "', '" + student.DateCreated.ToString("yyyy/MM/dd") + "', N'" + student.Status + "', N'" + student.Note + "', '" + student.Id + "')";
             Connection.actionQuery(query1);
             Connection.actionQuery(query2);
-            //string query3 = "";
-            //{
-            //    for (int i = 0; i < student.Registers.Count; i++)
-            //    {
-            //        query3 = "INSERT INTO Register VALUES('" + student.Registers[i].AddmissionDay.ToString("d") + "', '" + student.Registers[i].State + "', '" + student.Registers[i].Student.Id + "', '" + student.Registers[i].Class.ClassId + "')";
-            //        Connection.actionQuery(query3);
-            //    }
-            //}
-            //{
-            //    for (int i = 0; i < student.Payments.Count; i++)
-            //    {
-            //        query3 = "INSERT INTO Payment VALUES('" + student.Payments[i].DateCreated + "', " + student.Payments[i].Month + ", N'" + student.Payments[i].Status + "', N'" + student.Payments[i].Note + "', " + student.Payments[i].Promotion + ", " + student.Payments[i].Number_Of_Session + ", '" + student.Payments[i].PaymentId + "', '" + student.Id + "')";
-            //        Connection.actionQuery(query3);
-            //    }
-            //}
-            //{
-            //    for (int i = 0; i < student.Buys.Count; i++)
-            //    {
-            //        query3 = "INSERT INTO Buy VALUES('" + student.Buys[i].BuyingDate.ToString("d") + "', " + student.Buys[i].Number + "', " + student.Buys[i].Price + "', '" + student.Buys[i].Status + "', '" + student.Buys[i].Month + "', N'" + student.Buys[i].Note + "', '" + student.Id + "', '" + student.Buys[i].Document.DocumentId + "')";
-            //        Connection.actionQuery(query3);
-            //    }
-            //}
         }
 
         public void updateQuery()
@@ -81,7 +59,7 @@ namespace DAL
             return Connection.selectQuery(s);
         }
         public DataTable searchedStudentQuery() {
-            string s = "Select p.Id,p.name,p.numberphone, p.dob, p.gender, s.dateCreated " +
+            string s = "Select p.Id as [Mã học sinh],p.name as [Tên học sinh],p.numberphone as [Số điện thoại], p.dob as [Ngày sinh], p.gender as [Giới tính], s.dateCreated as [Ngày tạo] " +
                 "From Person p " +
                 "INNER JOIN Student s ON s.studentId = p.Id " +
                 $"Where p.name like N'%{student.Name}%'";

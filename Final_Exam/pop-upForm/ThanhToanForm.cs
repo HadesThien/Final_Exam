@@ -41,6 +41,7 @@ namespace Final_Exam {
             saveBtn.Visible = false;
             studentListBox.Visible = true;
             cancelBtn.Visible = false;
+            documentCheckedListBox.Enabled = false;
             this.flag = flag;
         }
 
@@ -137,6 +138,7 @@ namespace Final_Exam {
             {
                 return;
             }
+            documentCheckedListBox.Enabled = true;
             string s = studentListBox.SelectedItem.ToString();
             studentLabel.Text = s;
             string studentId = s.Split(new string[] { " - " }, StringSplitOptions.None)[0];
@@ -376,6 +378,7 @@ namespace Final_Exam {
                     doc.updateAfterBuying();
                 }
             }
+            studentListBox.SelectedIndex = -1;
             studentListBox.SelectedIndex = 0;
             if (flag == null)
             {
