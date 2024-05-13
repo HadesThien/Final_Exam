@@ -347,6 +347,7 @@
             this.accountGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.accountGridView.Size = new System.Drawing.Size(1167, 529);
             this.accountGridView.TabIndex = 13;
+            this.accountGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.accountGridView_CellClick);
             // 
             // AccountInfoForm
             // 
