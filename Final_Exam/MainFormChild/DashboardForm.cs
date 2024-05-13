@@ -28,6 +28,8 @@ namespace Final_Exam {
             payment = new BUS_Payment("",DateTime.Now,DateTime.Now, "","",0,0,"","");
             dt = payment.get5newPayment();
             newPaymentGridView.DataSource = dt;
+            dt = payment.get5Debt();
+            debtGridView.DataSource = dt;
 
         }
 

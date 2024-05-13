@@ -125,6 +125,9 @@ namespace BUS
         public DataTable get5newPayment() {
             return payment.select5NewPayment();
         }
+        public DataTable get5Debt() {
+            return payment.get5Debt();
+        }
     }
 
 }
