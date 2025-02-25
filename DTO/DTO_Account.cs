@@ -1,30 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DTO {
     public class DTO_Account {
-        public string UserName {  get; set; }
-        public string Password { get; set; }
-        public DateTime DateCreated { get; set; }
-        public DateTime LastLoginDate { get; set; }
-        public string Role {  get; set; }
-        public string Email { get; set; }   
-        public string NumberPhone { get; set; }
-        public string Name { get; set; }
+        //Property
+        public string username;
+        public string password;
+        public DateTime dateCreated;
+        public string role;
 
-        public DTO_Account(string userName, string password, DateTime dateCreated, DateTime lastLoginDate, string role, string email, string numberPhone, string name) {
-            UserName = userName;
-            Password = password;
-            DateCreated = dateCreated;
-            LastLoginDate = lastLoginDate;
-            Role = role;
-            Email = email;
-            NumberPhone = numberPhone;
-            Name = name;
+        //Constructor
+        public DTO_Account(string userName, string password, DateTime dateCreated, string role) {
+            this.username= userName;
+            this.password= password;
+            this.dateCreated= dateCreated;
+            this.role = role;
         }
+        public DTO_Account() { }
+
+        //Methods
+        
+        //Setter
+        public void setUsername(string username) {this.username= username;}
+        public void setPassword(string password) {this.password= password;}
+        public void setDateCreated(DateTime dateCreated) {this.dateCreated= dateCreated;}
+        public void setRole(string role) {this.role= role;}
+
+        //Getter
+        public string getUsername() {return username;}
+        public string getPassword() {return password;}
+        public DateTime getDateCreated() {return dateCreated;}
+        public string getRole() {return role;}
 
     }
 }

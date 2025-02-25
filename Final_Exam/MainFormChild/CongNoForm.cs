@@ -1,5 +1,5 @@
 ﻿using BUS;
-using Final_Exam.pop_upForm;
+using NQH_Application.pop_upForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,10 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final_Exam {
+namespace NQH_Application{
     public partial class CongNoForm : Form {
         //Properties 
-        BUS_Payment payment;
         DataTable dt;
 
         //Constructor
@@ -26,10 +25,6 @@ namespace Final_Exam {
 
         public void updateGridView()
         {
-            payment = new BUS_Payment("", DateTime.Now, DateTime.Now, "", "", 0, 0, "","");
-            dt = payment.selectQuery();
-            paymentGridView.DataSource = dt;
-            paymentGridView.CellFormatting += paymentGridView_CellFormatting;            
         }
 
         private void tatcaBtn_Click(object sender, EventArgs e) {
@@ -37,18 +32,9 @@ namespace Final_Exam {
         }
 
         private void registeredBtn_Click(object sender, EventArgs e) {
-            payment = new BUS_Payment("", DateTime.Now, DateTime.Now, "", "", 0, 0, "","");
-            dt = payment.selectRegisteredQuery();
-            paymentGridView.DataSource = dt;
-            paymentGridView.CellFormatting += paymentGridView_CellFormatting;            
-            
         }
 
         private void paidBtn_Click(object sender, EventArgs e) {
-            payment = new BUS_Payment("", DateTime.Now, DateTime.Now, "", "", 0, 0, "","");
-            dt = payment.selectPaidQuery();
-            paymentGridView.DataSource = dt;
-            paymentGridView.CellFormatting += paymentGridView_CellFormatting;            
         }
 
         private void searchBtn_Click(object sender, EventArgs e) {
@@ -65,18 +51,6 @@ namespace Final_Exam {
         }
 
         private void xoaBtn_Click(object sender, EventArgs e) {
-            Form confirmForm = new ConfirmForm();
-            confirmForm.ShowDialog();
-            if (Account.confirmPassword == true)
-            {
-                foreach (DataGridViewRow row in paymentGridView.SelectedRows)
-                {
-                    payment = new BUS_Payment(row.Cells[0].Value.ToString(), DateTime.Now, DateTime.Now, "", "", 0.0f, 0, "", "");
-                    payment.deleteQuery();
-                }
-            }
-            Account.confirmPassword = false;
-            updateGridView();
         }
 
         private void searchTextBox_TextChanged(object sender, EventArgs e)
@@ -86,40 +60,6 @@ namespace Final_Exam {
 
         private void searchTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-           if(e.KeyCode == Keys.Enter) {
-                string searchValue = searchTextBox.Text;
-                if (!string.IsNullOrEmpty(searchValue))
-                {
-                    updateGridView();
-                    DataTable dt = new DataTable();
-                    dt.Columns.Add("Mã thanh toán");
-                    dt.Columns.Add("Tên học sinh");
-                    dt.Columns.Add("Tên lớp");
-                    dt.Columns.Add("Học phí");
-                    dt.Columns.Add("Kỳ");
-                    dt.Columns.Add("Tình trạng");
-                    dt.Columns.Add("Số buổi học");
-                    dt.Columns.Add("Ngày tạo");
-                    for (int i = 0; i < paymentGridView.Rows.Count; i++)
-                    {
-                        string s = paymentGridView.Rows[i].Cells[1].Value.ToString();
-                        if (s.IndexOf(searchValue, 0, StringComparison.OrdinalIgnoreCase) != -1)
-                        {
-                            DataRow dr = dt.NewRow();
-                            foreach(DataGridViewCell cell in paymentGridView.Rows[i].Cells)
-                            {
-                                dr[cell.ColumnIndex] = cell.Value;
-                            }
-                            dt.Rows.Add(dr);
-                        }
-                    }
-                    paymentGridView.DataSource = dt;
-                }
-                else
-                {
-                    updateGridView();
-                }
-           }
         }
 
         private void paymentGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e) {
@@ -149,9 +89,9 @@ namespace Final_Exam {
 
         private void paymentGridView_SelectionChanged(object sender, EventArgs e)
         {
-            if ((paymentGridView.SelectedRows.Count > 0 && Account.account.getRole() == "admin") || (paymentGridView.SelectedRows.Count > 0 && areSelectedRegistered() == true))
+            if ((paymentGridView.SelectedRows.Count > 0 && Account.getAccount().getRole() == "admin") || (paymentGridView.SelectedRows.Count > 0 && areSelectedRegistered() == true))
             {
-                xoaBtn.Visible = true;
+                xoaBtn.Visible = true; 
             }
             else
             {
@@ -174,9 +114,5 @@ namespace Final_Exam {
 
         }
 
-        private void rjButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-    }
+     }
 }

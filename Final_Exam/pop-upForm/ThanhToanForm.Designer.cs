@@ -1,4 +1,4 @@
-﻿namespace Final_Exam {
+﻿namespace NQH_Application {
     partial class ThanhToanForm {
         /// <summary>
         /// Required designer variable.
@@ -50,7 +50,7 @@
             this.noteTextBox = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.studentLabel = new System.Windows.Forms.Label();
-            this.paymentGridView = new Final_Exam.RoundedGridView();
+            this.paymentGridView = new NQH_Application.RoundedGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentGridView)).BeginInit();
@@ -101,12 +101,12 @@
             // 
             // studentListBox
             // 
-            this.studentListBox.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studentListBox.FormattingEnabled = true;
-            this.studentListBox.ItemHeight = 24;
+            this.studentListBox.ItemHeight = 20;
             this.studentListBox.Location = new System.Drawing.Point(21, 76);
             this.studentListBox.Name = "studentListBox";
-            this.studentListBox.Size = new System.Drawing.Size(291, 100);
+            this.studentListBox.Size = new System.Drawing.Size(291, 84);
             this.studentListBox.TabIndex = 15;
             this.studentListBox.SelectedIndexChanged += new System.EventHandler(this.studentListBox_SelectedIndexChanged);
             // 
@@ -120,7 +120,7 @@
             this.cancelBtn.BorderSize = 0;
             this.cancelBtn.FlatAppearance.BorderSize = 0;
             this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelBtn.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelBtn.ForeColor = System.Drawing.Color.Black;
             this.cancelBtn.Location = new System.Drawing.Point(22, 679);
             this.cancelBtn.Name = "cancelBtn";
@@ -133,7 +133,7 @@
             // 
             // saveBtn
             // 
-            this.saveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.saveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
             this.saveBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
@@ -142,7 +142,7 @@
             this.saveBtn.BorderSize = 0;
             this.saveBtn.FlatAppearance.BorderSize = 0;
             this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveBtn.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveBtn.ForeColor = System.Drawing.Color.White;
             this.saveBtn.Location = new System.Drawing.Point(116, 679);
             this.saveBtn.Name = "saveBtn";
@@ -151,83 +151,82 @@
             this.saveBtn.Text = "Lưu";
             this.saveBtn.TextColor = System.Drawing.Color.White;
             this.saveBtn.UseVisualStyleBackColor = false;
-            this.saveBtn.Click += new System.EventHandler(this.rjButton1_Click);
             // 
             // documentCheckedListBox
             // 
-            this.documentCheckedListBox.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.documentCheckedListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.documentCheckedListBox.FormattingEnabled = true;
             this.documentCheckedListBox.Location = new System.Drawing.Point(21, 417);
             this.documentCheckedListBox.Name = "documentCheckedListBox";
-            this.documentCheckedListBox.Size = new System.Drawing.Size(291, 114);
+            this.documentCheckedListBox.Size = new System.Drawing.Size(291, 109);
             this.documentCheckedListBox.TabIndex = 11;
             this.documentCheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.documentCheckedListBox_ItemCheck);
             this.documentCheckedListBox.SelectedIndexChanged += new System.EventHandler(this.documentCheckedListBox_SelectedIndexChanged);
             // 
             // classCheckedListBox
             // 
-            this.classCheckedListBox.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classCheckedListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.classCheckedListBox.FormattingEnabled = true;
             this.classCheckedListBox.Location = new System.Drawing.Point(22, 242);
             this.classCheckedListBox.Name = "classCheckedListBox";
-            this.classCheckedListBox.Size = new System.Drawing.Size(291, 114);
+            this.classCheckedListBox.Size = new System.Drawing.Size(291, 109);
             this.classCheckedListBox.TabIndex = 11;
             this.classCheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.classCheckedListBox_ItemCheck);
             this.classCheckedListBox.SelectedIndexChanged += new System.EventHandler(this.classCheckedListBox_SelectedIndexChanged);
             // 
             // label8
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(17, 648);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 24);
+            this.label8.Size = new System.Drawing.Size(99, 20);
             this.label8.TabIndex = 8;
             this.label8.Text = "Thành tiền:";
             // 
             // checkoutLabel
             // 
-            this.checkoutLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.checkoutLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkoutLabel.AutoSize = true;
-            this.checkoutLabel.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkoutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkoutLabel.Location = new System.Drawing.Point(148, 648);
             this.checkoutLabel.Name = "checkoutLabel";
             this.checkoutLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkoutLabel.Size = new System.Drawing.Size(20, 24);
+            this.checkoutLabel.Size = new System.Drawing.Size(19, 20);
             this.checkoutLabel.TabIndex = 8;
             this.checkoutLabel.Text = "0";
             // 
             // tempCheckoutLabel
             // 
-            this.tempCheckoutLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.tempCheckoutLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tempCheckoutLabel.AutoSize = true;
-            this.tempCheckoutLabel.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tempCheckoutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tempCheckoutLabel.Location = new System.Drawing.Point(148, 587);
             this.tempCheckoutLabel.Name = "tempCheckoutLabel";
             this.tempCheckoutLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tempCheckoutLabel.Size = new System.Drawing.Size(20, 24);
+            this.tempCheckoutLabel.Size = new System.Drawing.Size(19, 20);
             this.tempCheckoutLabel.TabIndex = 8;
             this.tempCheckoutLabel.Text = "0";
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(17, 587);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 24);
+            this.label6.Size = new System.Drawing.Size(83, 20);
             this.label6.TabIndex = 8;
             this.label6.Text = "Tạm tính:";
             // 
             // payBtn
             // 
-            this.payBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.payBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.payBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
             this.payBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
@@ -236,7 +235,7 @@
             this.payBtn.BorderSize = 0;
             this.payBtn.FlatAppearance.BorderSize = 0;
             this.payBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.payBtn.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.payBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.payBtn.ForeColor = System.Drawing.Color.White;
             this.payBtn.Location = new System.Drawing.Point(210, 679);
             this.payBtn.Name = "payBtn";
@@ -250,22 +249,22 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label12.Location = new System.Drawing.Point(100, 377);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 24);
+            this.label12.Size = new System.Drawing.Size(86, 20);
             this.label12.TabIndex = 5;
             this.label12.Text = "Đề cương";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label5.Location = new System.Drawing.Point(100, 202);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 24);
+            this.label5.Size = new System.Drawing.Size(73, 20);
             this.label5.TabIndex = 5;
             this.label5.Text = "Lớp học";
             // 
@@ -282,11 +281,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label1.Location = new System.Drawing.Point(38, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 24);
+            this.label1.Size = new System.Drawing.Size(155, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin học viên";
             // 
@@ -294,17 +293,17 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label3.Location = new System.Drawing.Point(12, 521);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 24);
+            this.label3.Size = new System.Drawing.Size(79, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Ghi Chú:";
             // 
             // noteTextBox
             // 
-            this.noteTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.noteTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.noteTextBox.Location = new System.Drawing.Point(88, 518);
             this.noteTextBox.Name = "noteTextBox";
@@ -315,11 +314,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Quicksand SemiBold", 24F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.label4.Location = new System.Drawing.Point(8, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(426, 48);
+            this.label4.Size = new System.Drawing.Size(410, 37);
             this.label4.TabIndex = 5;
             this.label4.Text = "Đăng ký mới / Thanh toán";
             // 
@@ -327,12 +326,12 @@
             // 
             this.studentLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.studentLabel.AutoSize = true;
-            this.studentLabel.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studentLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.studentLabel.Location = new System.Drawing.Point(537, 15);
             this.studentLabel.Name = "studentLabel";
             this.studentLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.studentLabel.Size = new System.Drawing.Size(172, 24);
+            this.studentLabel.Size = new System.Drawing.Size(181, 20);
             this.studentLabel.TabIndex = 7;
             this.studentLabel.Text = "[Học sinh thanh toán]";
             // 
@@ -344,8 +343,8 @@
             this.paymentGridView.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
             this.paymentGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.paymentGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.paymentGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.paymentGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.paymentGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;

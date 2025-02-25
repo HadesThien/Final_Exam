@@ -1,4 +1,4 @@
-﻿namespace Final_Exam {
+﻿namespace NQH_Application {
     partial class MainForm {
         /// <summary>
         /// Required designer variable.
@@ -31,20 +31,23 @@
             this.minimizeBtn = new CustomControls.RJControls.RJButton();
             this.exitBtn = new CustomControls.RJControls.RJButton();
             this.menuLabel = new System.Windows.Forms.Label();
-            this.menuBtn = new System.Windows.Forms.PictureBox();
             this.sidebar = new System.Windows.Forms.Panel();
+            this.elseBtn = new CustomControls.RJControls.RJButton();
+            this.employeeBtn = new CustomControls.RJControls.RJButton();
+            this.repositoryBtn = new CustomControls.RJControls.RJButton();
             this.panel8 = new System.Windows.Forms.Panel();
             this.logoutBtn = new CustomControls.RJControls.RJButton();
             this.panel14 = new System.Windows.Forms.Panel();
             this.paidBtn = new CustomControls.RJControls.RJButton();
             this.storePanel = new System.Windows.Forms.Panel();
-            this.storeBtn = new CustomControls.RJControls.RJButton();
+            this.documentBtn = new CustomControls.RJControls.RJButton();
             this.paymentPanel = new System.Windows.Forms.Panel();
             this.paymentBtn = new CustomControls.RJControls.RJButton();
             this.classPanel = new System.Windows.Forms.Panel();
             this.classBtn = new CustomControls.RJControls.RJButton();
             this.studentPanel = new System.Windows.Forms.Panel();
             this.studentBtn = new CustomControls.RJControls.RJButton();
+            this.menuBtn = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.accountBtn = new CustomControls.RJControls.RJButton();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -55,7 +58,6 @@
             this.sideBarTimer = new System.Windows.Forms.Timer(this.components);
             this.crossbar.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.menuBtn)).BeginInit();
             this.sidebar.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -63,6 +65,7 @@
             this.paymentPanel.SuspendLayout();
             this.classPanel.SuspendLayout();
             this.studentPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.menuBtn)).BeginInit();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -76,7 +79,7 @@
             this.crossbar.Controls.Add(this.flowLayoutPanel1);
             this.crossbar.Location = new System.Drawing.Point(0, -1);
             this.crossbar.Name = "crossbar";
-            this.crossbar.Size = new System.Drawing.Size(1699, 46);
+            this.crossbar.Size = new System.Drawing.Size(1699, 43);
             this.crossbar.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -149,27 +152,18 @@
             this.menuLabel.AutoSize = true;
             this.menuLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuLabel.ForeColor = System.Drawing.Color.White;
-            this.menuLabel.Location = new System.Drawing.Point(51, 7);
+            this.menuLabel.Location = new System.Drawing.Point(54, 7);
             this.menuLabel.Name = "menuLabel";
             this.menuLabel.Size = new System.Drawing.Size(188, 32);
             this.menuLabel.TabIndex = 1;
             this.menuLabel.Text = "Menu | Sidebar";
             // 
-            // menuBtn
-            // 
-            this.menuBtn.Image = ((System.Drawing.Image)(resources.GetObject("menuBtn.Image")));
-            this.menuBtn.Location = new System.Drawing.Point(10, 9);
-            this.menuBtn.Name = "menuBtn";
-            this.menuBtn.Size = new System.Drawing.Size(35, 33);
-            this.menuBtn.TabIndex = 1;
-            this.menuBtn.TabStop = false;
-            this.menuBtn.Click += new System.EventHandler(this.menuBtn_Click);
-            this.menuBtn.MouseLeave += new System.EventHandler(this.menuBtn_MouseLeave);
-            this.menuBtn.MouseHover += new System.EventHandler(this.menuBtn_MouseHover);
-            // 
             // sidebar
             // 
             this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(51)))), ((int)(((byte)(101)))));
+            this.sidebar.Controls.Add(this.elseBtn);
+            this.sidebar.Controls.Add(this.employeeBtn);
+            this.sidebar.Controls.Add(this.repositoryBtn);
             this.sidebar.Controls.Add(this.panel8);
             this.sidebar.Controls.Add(this.panel14);
             this.sidebar.Controls.Add(this.storePanel);
@@ -182,13 +176,88 @@
             this.sidebar.Controls.Add(this.panel10);
             this.sidebar.Controls.Add(this.panel3);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sidebar.Font = new System.Drawing.Font("JetBrains Mono NL", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.MaximumSize = new System.Drawing.Size(242, 1000);
             this.sidebar.MinimumSize = new System.Drawing.Size(62, 692);
             this.sidebar.Name = "sidebar";
             this.sidebar.Size = new System.Drawing.Size(242, 998);
             this.sidebar.TabIndex = 1;
-            this.sidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.sidebar_Paint);
+            // 
+            // elseBtn
+            // 
+            this.elseBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(51)))), ((int)(((byte)(101)))));
+            this.elseBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(51)))), ((int)(((byte)(101)))));
+            this.elseBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.elseBtn.BorderRadius = 0;
+            this.elseBtn.BorderSize = 0;
+            this.elseBtn.FlatAppearance.BorderSize = 0;
+            this.elseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.elseBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.elseBtn.ForeColor = System.Drawing.Color.White;
+            this.elseBtn.Image = ((System.Drawing.Image)(resources.GetObject("elseBtn.Image")));
+            this.elseBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.elseBtn.Location = new System.Drawing.Point(-11, 512);
+            this.elseBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.elseBtn.Name = "elseBtn";
+            this.elseBtn.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.elseBtn.Size = new System.Drawing.Size(270, 64);
+            this.elseBtn.TabIndex = 2;
+            this.elseBtn.Text = "        Khác";
+            this.elseBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.elseBtn.TextColor = System.Drawing.Color.White;
+            this.elseBtn.UseVisualStyleBackColor = false;
+            this.elseBtn.Click += new System.EventHandler(this.elseBtn_Click);
+            // 
+            // employeeBtn
+            // 
+            this.employeeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(51)))), ((int)(((byte)(101)))));
+            this.employeeBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(51)))), ((int)(((byte)(101)))));
+            this.employeeBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.employeeBtn.BorderRadius = 0;
+            this.employeeBtn.BorderSize = 0;
+            this.employeeBtn.FlatAppearance.BorderSize = 0;
+            this.employeeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.employeeBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeBtn.ForeColor = System.Drawing.Color.White;
+            this.employeeBtn.Image = ((System.Drawing.Image)(resources.GetObject("employeeBtn.Image")));
+            this.employeeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.employeeBtn.Location = new System.Drawing.Point(-12, 448);
+            this.employeeBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.employeeBtn.Name = "employeeBtn";
+            this.employeeBtn.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.employeeBtn.Size = new System.Drawing.Size(270, 64);
+            this.employeeBtn.TabIndex = 2;
+            this.employeeBtn.Text = "        Nhân sự";
+            this.employeeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.employeeBtn.TextColor = System.Drawing.Color.White;
+            this.employeeBtn.UseVisualStyleBackColor = false;
+            this.employeeBtn.Click += new System.EventHandler(this.employeeBtn_Click);
+            // 
+            // repositoryBtn
+            // 
+            this.repositoryBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(51)))), ((int)(((byte)(101)))));
+            this.repositoryBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(51)))), ((int)(((byte)(101)))));
+            this.repositoryBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.repositoryBtn.BorderRadius = 0;
+            this.repositoryBtn.BorderSize = 0;
+            this.repositoryBtn.FlatAppearance.BorderSize = 0;
+            this.repositoryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.repositoryBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.repositoryBtn.ForeColor = System.Drawing.Color.White;
+            this.repositoryBtn.Image = ((System.Drawing.Image)(resources.GetObject("repositoryBtn.Image")));
+            this.repositoryBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.repositoryBtn.Location = new System.Drawing.Point(-11, 384);
+            this.repositoryBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.repositoryBtn.Name = "repositoryBtn";
+            this.repositoryBtn.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.repositoryBtn.Size = new System.Drawing.Size(270, 64);
+            this.repositoryBtn.TabIndex = 2;
+            this.repositoryBtn.Text = "        Kho";
+            this.repositoryBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.repositoryBtn.TextColor = System.Drawing.Color.White;
+            this.repositoryBtn.UseVisualStyleBackColor = false;
+            this.repositoryBtn.Click += new System.EventHandler(this.repositoryBtn_Click);
             // 
             // panel8
             // 
@@ -227,7 +296,7 @@
             // panel14
             // 
             this.panel14.Controls.Add(this.paidBtn);
-            this.panel14.Location = new System.Drawing.Point(-1, 332);
+            this.panel14.Location = new System.Drawing.Point(-1, 325);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(242, 56);
             this.panel14.TabIndex = 3;
@@ -259,41 +328,41 @@
             // 
             // storePanel
             // 
-            this.storePanel.Controls.Add(this.storeBtn);
-            this.storePanel.Location = new System.Drawing.Point(-1, 276);
+            this.storePanel.Controls.Add(this.documentBtn);
+            this.storePanel.Location = new System.Drawing.Point(-1, 269);
             this.storePanel.Name = "storePanel";
             this.storePanel.Size = new System.Drawing.Size(242, 56);
             this.storePanel.TabIndex = 3;
             // 
-            // storeBtn
+            // documentBtn
             // 
-            this.storeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(51)))), ((int)(((byte)(101)))));
-            this.storeBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(51)))), ((int)(((byte)(101)))));
-            this.storeBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.storeBtn.BorderRadius = 0;
-            this.storeBtn.BorderSize = 0;
-            this.storeBtn.FlatAppearance.BorderSize = 0;
-            this.storeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.storeBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.storeBtn.ForeColor = System.Drawing.Color.White;
-            this.storeBtn.Image = ((System.Drawing.Image)(resources.GetObject("storeBtn.Image")));
-            this.storeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.storeBtn.Location = new System.Drawing.Point(-10, -5);
-            this.storeBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.storeBtn.Name = "storeBtn";
-            this.storeBtn.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.storeBtn.Size = new System.Drawing.Size(270, 64);
-            this.storeBtn.TabIndex = 2;
-            this.storeBtn.Text = "        Kho ";
-            this.storeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.storeBtn.TextColor = System.Drawing.Color.White;
-            this.storeBtn.UseVisualStyleBackColor = false;
-            this.storeBtn.Click += new System.EventHandler(this.khoDeBtn_Click);
+            this.documentBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(51)))), ((int)(((byte)(101)))));
+            this.documentBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(51)))), ((int)(((byte)(101)))));
+            this.documentBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.documentBtn.BorderRadius = 0;
+            this.documentBtn.BorderSize = 0;
+            this.documentBtn.FlatAppearance.BorderSize = 0;
+            this.documentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.documentBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.documentBtn.ForeColor = System.Drawing.Color.White;
+            this.documentBtn.Image = ((System.Drawing.Image)(resources.GetObject("documentBtn.Image")));
+            this.documentBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.documentBtn.Location = new System.Drawing.Point(-10, -5);
+            this.documentBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.documentBtn.Name = "documentBtn";
+            this.documentBtn.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.documentBtn.Size = new System.Drawing.Size(270, 64);
+            this.documentBtn.TabIndex = 2;
+            this.documentBtn.Text = "        Đề cương";
+            this.documentBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.documentBtn.TextColor = System.Drawing.Color.White;
+            this.documentBtn.UseVisualStyleBackColor = false;
+            this.documentBtn.Click += new System.EventHandler(this.khoDeBtn_Click);
             // 
             // paymentPanel
             // 
             this.paymentPanel.Controls.Add(this.paymentBtn);
-            this.paymentPanel.Location = new System.Drawing.Point(0, 220);
+            this.paymentPanel.Location = new System.Drawing.Point(0, 213);
             this.paymentPanel.Name = "paymentPanel";
             this.paymentPanel.Size = new System.Drawing.Size(242, 56);
             this.paymentPanel.TabIndex = 3;
@@ -326,7 +395,7 @@
             // classPanel
             // 
             this.classPanel.Controls.Add(this.classBtn);
-            this.classPanel.Location = new System.Drawing.Point(-1, 164);
+            this.classPanel.Location = new System.Drawing.Point(-1, 157);
             this.classPanel.Name = "classPanel";
             this.classPanel.Size = new System.Drawing.Size(242, 56);
             this.classPanel.TabIndex = 3;
@@ -359,11 +428,10 @@
             // studentPanel
             // 
             this.studentPanel.Controls.Add(this.studentBtn);
-            this.studentPanel.Location = new System.Drawing.Point(0, 108);
+            this.studentPanel.Location = new System.Drawing.Point(0, 101);
             this.studentPanel.Name = "studentPanel";
             this.studentPanel.Size = new System.Drawing.Size(242, 56);
             this.studentPanel.TabIndex = 3;
-            this.studentPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.studentPanel_Paint);
             // 
             // studentBtn
             // 
@@ -389,6 +457,19 @@
             this.studentBtn.TextColor = System.Drawing.Color.White;
             this.studentBtn.UseVisualStyleBackColor = false;
             this.studentBtn.Click += new System.EventHandler(this.hocVienBtn_Click);
+            // 
+            // menuBtn
+            // 
+            this.menuBtn.Image = ((System.Drawing.Image)(resources.GetObject("menuBtn.Image")));
+            this.menuBtn.InitialImage = ((System.Drawing.Image)(resources.GetObject("menuBtn.InitialImage")));
+            this.menuBtn.Location = new System.Drawing.Point(10, 9);
+            this.menuBtn.Name = "menuBtn";
+            this.menuBtn.Size = new System.Drawing.Size(35, 33);
+            this.menuBtn.TabIndex = 1;
+            this.menuBtn.TabStop = false;
+            this.menuBtn.Click += new System.EventHandler(this.menuBtn_Click);
+            this.menuBtn.MouseLeave += new System.EventHandler(this.menuBtn_MouseLeave);
+            this.menuBtn.MouseHover += new System.EventHandler(this.menuBtn_MouseHover);
             // 
             // panel9
             // 
@@ -427,7 +508,7 @@
             // panel10
             // 
             this.panel10.Controls.Add(this.dashboardBtn);
-            this.panel10.Location = new System.Drawing.Point(0, 52);
+            this.panel10.Location = new System.Drawing.Point(0, 45);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(242, 56);
             this.panel10.TabIndex = 3;
@@ -460,7 +541,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.dashboardPanel);
-            this.panel3.Location = new System.Drawing.Point(0, 52);
+            this.panel3.Location = new System.Drawing.Point(0, 45);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(242, 56);
             this.panel3.TabIndex = 3;
@@ -496,11 +577,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bodyPanel.AutoSize = true;
-            this.bodyPanel.Location = new System.Drawing.Point(241, 45);
+            this.bodyPanel.Location = new System.Drawing.Point(241, 42);
             this.bodyPanel.MinimumSize = new System.Drawing.Size(969, 647);
             this.bodyPanel.Name = "bodyPanel";
             this.bodyPanel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bodyPanel.Size = new System.Drawing.Size(1457, 953);
+            this.bodyPanel.Size = new System.Drawing.Size(1457, 956);
             this.bodyPanel.TabIndex = 2;
             // 
             // sideBarTimer
@@ -525,7 +606,6 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.crossbar.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.menuBtn)).EndInit();
             this.sidebar.ResumeLayout(false);
             this.sidebar.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -534,6 +614,7 @@
             this.paymentPanel.ResumeLayout(false);
             this.classPanel.ResumeLayout(false);
             this.studentPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.menuBtn)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -567,10 +648,13 @@
         private System.Windows.Forms.Panel classPanel;
         private CustomControls.RJControls.RJButton classBtn;
         private CustomControls.RJControls.RJButton paidBtn;
-        private CustomControls.RJControls.RJButton storeBtn;
+        private CustomControls.RJControls.RJButton documentBtn;
         private System.Windows.Forms.Panel paymentPanel;
         private CustomControls.RJControls.RJButton paymentBtn;
         private System.Windows.Forms.Panel storePanel;
         private System.Windows.Forms.Panel panel14;
+        private CustomControls.RJControls.RJButton repositoryBtn;
+        private CustomControls.RJControls.RJButton employeeBtn;
+        private CustomControls.RJControls.RJButton elseBtn;
     }
 }

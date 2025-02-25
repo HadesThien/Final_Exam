@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Final_Exam {
+namespace NQH_Application{
     
     
     /// <summary>

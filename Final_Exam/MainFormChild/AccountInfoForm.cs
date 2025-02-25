@@ -1,49 +1,54 @@
 ﻿using BUS;
-using Final_Exam.pop_upForm;
+using DTO;
+using NQH_Application.pop_upForm;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final_Exam {
+namespace NQH_Application{
     public partial class AccountInfoForm : Form {
         //Properties 
-        BUS_Account account;
-        private int currentIndex;
+        DTO_Account account; 
+        BUS_Account busAccount;
         DataTable dt; 
+        private int currentIndex;
+
+        private string username;
+        private string password;
+        private string dateCreated;
+        private string role;
+        
+        //This function is used to set some property of account object whenever event goes on 
+        public void setInfoAccoun(object sender, EventArgs e) {
+            this.username = accountGridView.Rows[currentIndex].Cells[0].Value.ToString();
+            this.password = accountGridView.Rows[currentIndex].Cells[1].Value.ToString();
+            this.dateCreated = accountGridView.Rows[currentIndex].Cells[2].Value.ToString();
+            this.role = accountGridView.Rows[currentIndex].Cells[3].Value.ToString();
+        }
 
         //Contructors 
         public AccountInfoForm() {
             InitializeComponent();
-            
         }
 
+        //This function is used to open register account form 
         private void registerBtn_Click(object sender, EventArgs e) {
             Form form = new RegisterAccountForm(this);
             form.ShowDialog();
         }
 
+        //This funcion is used to open changing account's password form 
         private void changePwBtn_Click(object sender, EventArgs e) {
-            string username = accountGridView.Rows[currentIndex].Cells[0].Value.ToString();
-            string password = accountGridView.Rows[currentIndex].Cells[1].Value.ToString();
-            string role = accountGridView.Rows[currentIndex].Cells[2].Value.ToString();
-            string email = accountGridView.Rows[currentIndex].Cells[3].Value.ToString();
-            string numberphone = accountGridView.Rows[currentIndex].Cells[4].Value.ToString();
-            string name = accountGridView.Rows[currentIndex].Cells[5].Value.ToString();
-            string lastLoginDate= accountGridView.Rows[currentIndex].Cells[6].Value.ToString();
-            string dateCreated = accountGridView.Rows[currentIndex].Cells[7].Value.ToString();
-            account = new BUS_Account(username,password,DateTime.Parse(dateCreated),DateTime.Parse(lastLoginDate),role,email,numberphone,name);
-            Form form = new DoiMatKhauForm(ref account);
+            this.account = new DTO_Account(username,password,DateTime.Parse(dateCreated),role);
+            this.busAccount = new BUS_Account(account);
+            Form form = new ChangePasswordForm(ref busAccount);
             form.ShowDialog();
             AccountInfoForm_Load(sender, e);
         }
+
+        //This function is used to check right of account and set visibility of some components
         private void accountGridView_CellClick(object sender, DataGridViewCellEventArgs e) {
-            if(Account.account.getRole() == "admin") {
+            if (Account.getAccount().getRole() == "Admin") {
                 changePwBtn.Visible = true;
                 xoaBtn.Visible = true;
                 updateBtn.Visible = true;
@@ -51,70 +56,59 @@ namespace Final_Exam {
             }
         }
 
+        //This fucntion is used to remove account in database 
         private void xoaBtn_Click(object sender, EventArgs e) {
-            string username = accountGridView.Rows[currentIndex].Cells[0].Value.ToString();
-            string password = accountGridView.Rows[currentIndex].Cells[1].Value.ToString();
-            string role = accountGridView.Rows[currentIndex].Cells[2].Value.ToString();
-            string email = accountGridView.Rows[currentIndex].Cells[3].Value.ToString();
-            string numberphone = accountGridView.Rows[currentIndex].Cells[4].Value.ToString();
-            string name = accountGridView.Rows[currentIndex].Cells[5].Value.ToString();
-            string lastLoginDate= accountGridView.Rows[currentIndex].Cells[6].Value.ToString();
-            string dateCreated = accountGridView.Rows[currentIndex].Cells[7].Value.ToString();
-            account = new BUS_Account(username,password,DateTime.Parse(dateCreated),DateTime.Parse(lastLoginDate),role,email,numberphone,name);
+            account = new DTO_Account(username,password,DateTime.Parse(dateCreated),role);
+            busAccount = new BUS_Account(account);
             Form confirmForm = new ConfirmForm();
             confirmForm.ShowDialog();
-            if(Account.confirmPassword == true)
-                account.remove();
-            Account.confirmPassword = false;
+            if(Account.isPermited() == true)
+                busAccount.remove();
+            Account.denyAccess();
             AccountInfoForm_Load(sender, e);
         }
 
+        //This function is used to be called in some event function because of reloading view when action goes on 
         public void updateGridView()
         {
-            account = new BUS_Account("", "",DateTime.Now,DateTime.Now,"","","","") ;
-            dt = account.showAccounts();
+            account = new DTO_Account("", "",DateTime.Now,"") ;
+            busAccount= new BUS_Account(account);
+            dt = busAccount.showAccounts();
             dt.Columns[0].ColumnName = "Tên đăng nhập";
             dt.Columns[1].ColumnName = "Mật khẩu";
-            dt.Columns[2].ColumnName = "Quyền";
-            dt.Columns[3].ColumnName = "Email";
-            dt.Columns[4].ColumnName = "Số điện thoại";
-            dt.Columns[5].ColumnName = "Tên người dùng";
-            dt.Columns[6].ColumnName = "Sử dụng gần đây";
-            dt.Columns[7].ColumnName = "Ngày tạo";
-
+            dt.Columns[2].ColumnName = "Ngày tạo";
+            dt.Columns[3].ColumnName = "Quyền";
+            dt.Columns.Remove(dt.Columns[4]);
             accountGridView.DataSource = dt;
             accountGridView.ClearSelection();
             //Set information of Account 
-            accountLabel.Text = Account.account.getUsername();
-            passwordLabel.Text = Account.account.getPassword();
-            nameLabel.Text = Account.account.getName();
-            numberPhoneLabel.Text = Account.account.getNumberphone();
-            emailLabel.Text = Account.account.getEmail();   
-            roleLabel.Text = Account.account.getRole(); 
-            if(Account.account.getRole()  != "admin") {
+            accountLabel.Text = Account.getAccount().getUsername();
+            passwordLabel.Text = Account.getAccount().getPassword();
+            roleLabel.Text = Account.getAccount().getRole();
+            numberPhoneLabel.Text = Account.getUser().getPhoneNumber();
+            emailLabel.Text = Account.getUser().getEmail();
+            nameLabel.Text = Account.getUser().getFullname();
+
+            if (Account.getAccount().getRole()  != "Admin") {
                 registerBtn.Visible = false;
                 accountGridView.Visible = false;    
                 updateBtn.Visible = false;
             }
         }
-
+        
+        //This function is used to load this form 
         private void AccountInfoForm_Load(object sender, EventArgs e) {
             updateGridView();
         }
 
+        //This function is used to open form for user to confirm updating this account's information
         private void updateBtn_Click(object sender, EventArgs e) {
-            string username = accountGridView.Rows[currentIndex].Cells[0].Value.ToString();
-            string password = accountGridView.Rows[currentIndex].Cells[1].Value.ToString();
-            string role = accountGridView.Rows[currentIndex].Cells[2].Value.ToString();
-            string email = accountGridView.Rows[currentIndex].Cells[3].Value.ToString();
-            string numberphone = accountGridView.Rows[currentIndex].Cells[4].Value.ToString();
-            string name = accountGridView.Rows[currentIndex].Cells[5].Value.ToString();
-            string lastLoginDate= accountGridView.Rows[currentIndex].Cells[6].Value.ToString();
-            string dateCreated = accountGridView.Rows[currentIndex].Cells[7].Value.ToString();
-            account = new BUS_Account(username,password,DateTime.Parse(dateCreated),DateTime.Parse(lastLoginDate),role,email,numberphone,name);
-            Form form = new RegisterAccountForm(account, this);
+            account = new DTO_Account(username,password,DateTime.Parse(dateCreated),role);
+            busAccount = new BUS_Account(account);
+            Form form = new RegisterAccountForm(busAccount, this);
             form.ShowDialog();
             AccountInfoForm_Load(sender, e);
         }
+
     }
 }

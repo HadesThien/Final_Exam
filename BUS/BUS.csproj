@@ -50,6 +50,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Activities" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -60,20 +61,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS_Account.cs" />
-    <Compile Include="BUS_Buy.cs" />
-    <Compile Include="BUS_Class.cs" />
-    <Compile Include="BUS_Document.cs" />
-    <Compile Include="BUS_Payment.cs" />
-    <Compile Include="BUS_Person.cs" />
-    <Compile Include="BUS_Register.cs" />
-    <Compile Include="BUS_Student.cs" />
-    <Compile Include="BUS_Teacher.cs" />
+    <Compile Include="BUS_DetailItem.cs" />
+    <Compile Include="BUS_Employee.cs" />
+    <Compile Include="BUS_Item.cs" />
+    <Compile Include="BUS_Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{d215b923-9e72-4025-bc05-d271577112c4}</Project>
       <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{95C2547F-52AF-4019-8F5C-87EE0AE5AC2C}</Project>
+      <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

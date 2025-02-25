@@ -1,10 +1,7 @@
 ﻿using DAL;
+using DTO;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BUS
 {
@@ -13,11 +10,13 @@ namespace BUS
         //Properties
         DAL_Account account; 
         //Constructos
-        public BUS_Account(string userName, string password, DateTime dateCreated, DateTime lastLoginDate, string role,string email,string numberPhone,string name) {
-            account = new DAL_Account(userName,password,dateCreated,lastLoginDate,role,email,numberPhone,name);
+        public BUS_Account(DTO_Account account) {
+            this.account = new DAL_Account(account);
         }
+
         public DataTable showAccounts() {
-            return account.selectQuery();
+            DataTable dt = account.selectQuery();
+            return dt;
         }
         public void remove() {
             account.deleteQuery();
@@ -43,18 +42,6 @@ namespace BUS
         }
         public string getRole() {
             return account.getRole();
-        }
-        public string getEmail() {
-            return account.getEmail();
-        }
-        public string getName() {
-            return account.getName();
-        }
-        public string getNumberphone() {
-            return account.getNumberphone();
-        }
-        public DateTime getLastLoginDate() {
-            return account.getLastLoginDate();
         }
         public DateTime getDateCreated() {
             return account.getDateCreated();

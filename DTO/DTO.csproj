@@ -50,6 +50,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Activities" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -60,15 +61,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTO_Account.cs" />
-    <Compile Include="DTO_Buy.cs" />
+    <Compile Include="DTO_Branch.cs" />
     <Compile Include="DTO_Class.cs" />
-    <Compile Include="DTO_Document.cs" />
+    <Compile Include="DTO_DetailItem.cs" />
+    <Compile Include="DTO_Item.cs" />
+    <Compile Include="DTO_JobDepartment.cs" />
+    <Compile Include="DTO_Leave.cs" />
     <Compile Include="DTO_Payment.cs" />
-    <Compile Include="DTO_Person.cs" />
+    <Compile Include="DTO_Payroll.cs" />
+    <Compile Include="DTO_Period.cs" />
+    <Compile Include="DTO_Register.cs" />
+    <Compile Include="DTO_Repository.cs" />
+    <Compile Include="DTO_Saler.cs" />
     <Compile Include="DTO_Student.cs" />
+    <Compile Include="DTO_Subject.cs" />
+    <Compile Include="DTO_Employee.cs" />
     <Compile Include="DTO_Teacher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DTO_Register.cs" />
+    <Compile Include="DTO_Salary.cs" />
+    <Compile Include="DTO_TeacherAssistant.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

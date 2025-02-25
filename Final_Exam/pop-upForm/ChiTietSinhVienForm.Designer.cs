@@ -1,4 +1,4 @@
-﻿namespace Final_Exam {
+﻿namespace NQH_Application{
     partial class ChiTietSinhVienForm {
         /// <summary>
         /// Required designer variable.
@@ -57,7 +57,7 @@
             this.removeBtn = new CustomControls.RJControls.RJButton();
             this.cancelBtn = new CustomControls.RJControls.RJButton();
             this.rjButton5 = new CustomControls.RJControls.RJButton();
-            this.paymentGridView = new Final_Exam.RoundedGridView();
+            this.paymentGridView = new NQH_Application.RoundedGridView();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();

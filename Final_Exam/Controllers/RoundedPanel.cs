@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final_Exam {
+namespace NQH_Application{
     public class RoundedPanel:Panel {
             private float _thickness = 5;
             public float Thickness {

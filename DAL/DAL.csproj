@@ -50,6 +50,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Activities" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -61,21 +62,45 @@
   <ItemGroup>
     <Compile Include="DAL_Account.cs" />
     <Compile Include="Connection.cs" />
-    <Compile Include="DAL_Buy.cs" />
-    <Compile Include="DAL_Class.cs" />
-    <Compile Include="DAL_Document.cs" />
-    <Compile Include="DAL_Payment.cs" />
-    <Compile Include="DAL_Person.cs" />
-    <Compile Include="DAL_Register.cs" />
-    <Compile Include="DAL_Student.cs" />
-    <Compile Include="DAL_Teacher.cs" />
+    <Compile Include="DAL_DetailItem.cs" />
+    <Compile Include="DAL_Employee.cs" />
+    <Compile Include="DAL_Item.cs" />
+    <Compile Include="DAL_Repository.cs" />
+    <Compile Include="NQH_Application.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NQH_Application.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{95c2547f-52af-4019-8f5c-87ee0ae5ac2c}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="NQH_Application.xsc">
+      <DependentUpon>NQH_Application.xsd</DependentUpon>
+    </None>
+    <None Include="NQH_Application.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NQH_Application.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NQH_Application.xss">
+      <DependentUpon>NQH_Application.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

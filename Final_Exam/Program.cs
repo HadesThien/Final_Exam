@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace Final_Exam {
+namespace NQH_Application{
 
     internal static class Program {
         /// <summary>
@@ -15,12 +15,12 @@ namespace Final_Exam {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DangNhapForm());
-            while(DangNhapForm.isLogin != MainForm.isLogout) {
-                if(DangNhapForm.isLogin == true ) 
+            Application.Run(new LoginForm());
+            while(LoginForm.isLogin != MainForm.isLogout) {
+                if(LoginForm.isLogin == true ) 
                     Application.Run(new MainForm());
                 if(MainForm.isLogout == true ) 
-                    Application.Run(new DangNhapForm());
+                    Application.Run(new LoginForm());
                 
             }
         }

@@ -1,4 +1,4 @@
-﻿namespace Final_Exam {
+﻿namespace NQH_Application{
     partial class CongNoForm {
         /// <summary>
         /// Required designer variable.
@@ -37,7 +37,7 @@
             this.tatcaBtn = new CustomControls.RJControls.RJButton();
             this.registeredBtn = new CustomControls.RJControls.RJButton();
             this.paidBtn = new CustomControls.RJControls.RJButton();
-            this.paymentGridView = new Final_Exam.RoundedGridView();
+            this.paymentGridView = new NQH_Application.RoundedGridView();
             ((System.ComponentModel.ISupportInitialize)(this.paymentGridView)).BeginInit();
             this.SuspendLayout();
             // 

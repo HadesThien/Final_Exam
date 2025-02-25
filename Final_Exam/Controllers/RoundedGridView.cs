@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final_Exam {
+namespace NQH_Application{
     internal class RoundedGridView:DataGridView {
         public int BorderRadius { get; set; } = 10;
 

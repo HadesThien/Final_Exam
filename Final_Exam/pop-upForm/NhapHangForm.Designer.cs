@@ -1,4 +1,4 @@
-﻿namespace Final_Exam {
+﻿namespace NQH_Application{
     partial class NhapHangForm {
         /// <summary>
         /// Required designer variable.

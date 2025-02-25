@@ -1,4 +1,5 @@
-﻿using ResizeMovable;
+﻿using NQH_Application.MainFormChild;
+using ResizeMovable;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,14 +11,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final_Exam {
+namespace NQH_Application{
     public partial class MainForm : Form {
         //Properties
         private MakeMovable move;
         public static bool isLogout = false;
         bool sideBarExpand = true;
         private Form currentFormChild;
-        List<Button> btns = new List<Button>();
+        List<Button> btns = new List<Button>(); // List of buttons is used to draw color when it's clicked
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
                 (
@@ -37,14 +38,20 @@ namespace Final_Exam {
             move = new MakeMovable(this);
             move.SetMovable(crossbar);
             this.DoubleBuffered = true;
+            // Draw button when clicked
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             btns.Add(dashboardBtn);
             btns.Add(studentBtn);
             btns.Add(classBtn);
-            btns.Add(storeBtn);
+            btns.Add(documentBtn);
             btns.Add(paidBtn);
             btns.Add(paymentBtn);
             btns.Add(accountBtn);
+            btns.Add(repositoryBtn);
+            btns.Add(accountBtn);
+            btns.Add(logoutBtn);
+            btns.Add(employeeBtn);
+            btns.Add(elseBtn);
             dashboardBtn.BackColor = Color.FromArgb(17, 21, 83);
             dashboardBtn.ForeColor = Color.GhostWhite;
         }
@@ -68,7 +75,7 @@ namespace Final_Exam {
 
         //Three buttons corner
         private void exitBtn_Click(object sender, EventArgs e) {
-            DangNhapForm.isLogin = false;
+            LoginForm.isLogin = false;
             this.Close();
         }
 
@@ -113,12 +120,12 @@ namespace Final_Exam {
         private void lopHocBtn_Click(object sender, EventArgs e)
         {
             changeBtn(classBtn);
-            OpenChildForm(new LophocForm());
+            OpenChildForm(new ClassForm());
         }
 
 
         private void khoDeBtn_Click(object sender, EventArgs e) {
-            changeBtn(storeBtn);
+            changeBtn(documentBtn);
             OpenChildForm(new KhoForm());
         }
 
@@ -177,22 +184,33 @@ namespace Final_Exam {
         private void logoutBtn_Click(object sender, EventArgs e) {
             if(MessageBox.Show("Bạn muốn đăng xuất ?","Đăng xuất", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes) { 
                 isLogout = true;
-                DangNhapForm.isLogin = false;
+                LoginForm.isLogin = false;
                 this.Close();
             }
         }
 
         private void accountBtn_Click(object sender, EventArgs e) {
+            changeBtn(accountBtn);
             Form form = new AccountInfoForm();
             OpenChildForm(form);
         }
 
-        private void sidebar_Paint(object sender, PaintEventArgs e) {
-
+        private void repositoryBtn_Click(object sender, EventArgs e) {
+            changeBtn(repositoryBtn);
+            Form form = new RepositoryForm();
+            OpenChildForm(form);
         }
 
-        private void studentPanel_Paint(object sender, PaintEventArgs e) {
+        private void employeeBtn_Click(object sender, EventArgs e) {
+            changeBtn(employeeBtn);
+            //Form form;
+            //OpenChildForm(form);
+        }
 
+        private void elseBtn_Click(object sender, EventArgs e) {
+            changeBtn(elseBtn);
+            //Form form;
+            //OpenChildForm (form);
         }
 
         //----------------Ends with all feature of menu Btn----------------

@@ -1,38 +1,49 @@
 ﻿using BUS;
+using DTO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace Final_Exam.pop_upForm {
+namespace NQH_Application.pop_upForm {
     public partial class RegisterAccountForm : Form {
         //Properties
-        BUS_Account account;
+        DTO_Account account;
+        BUS_Account busAccount;
         DataTable dt;
         private AccountInfoForm form;
+
+        //Configuration
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,     // x-coordinate of upper-left corner
+            int nTopRect,      // y-coordinate of upper-left corner
+            int nRightRect,    // x-coordinate of lower-right corner
+            int nBottomRect,   // y-coordinate of lower-right corner
+            int nWidthEllipse, // width of ellipse
+            int nHeightEllipse // height of ellipse
+        );
+
+
         //Contructor
         public RegisterAccountForm(AccountInfoForm form) {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.Fixed3D;
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             passwordTextBox.PasswordChar = true;
             this.form = form;
         }
-        public RegisterAccountForm( BUS_Account account, AccountInfoForm form ) {
+        public RegisterAccountForm( BUS_Account busAccount, AccountInfoForm form ) {
             InitializeComponent();
-            this.account = account;
+            this.busAccount = busAccount;
             passwordTextBox.PasswordChar = true;
-            accountTextBox.Texts = account.getUsername();
+            accountTextBox.Texts = busAccount.getUsername();
             accountTextBox.Enabled = false;
-            passwordTextBox.Texts= account.getPassword();
+            passwordTextBox.Texts= busAccount.getPassword();
             passwordTextBox.Enabled = false;
-            roleComboBox.Texts = account.getRole();
-            emailTextBox.Texts = account.getEmail();
-            numberPhoneTextBox.Texts = account.getNumberphone();
-            nameTextBox.Texts = account.getName();
+            roleComboBox.Texts = busAccount.getRole();
             this.form = form;
             saveBtn.Text = "Cập nhật";
         }
@@ -62,9 +73,12 @@ namespace Final_Exam.pop_upForm {
                     string email = emailTextBox.Texts.Trim();
                     string numberphone =numberPhoneTextBox.Texts.Trim();
                     string name = nameTextBox.Texts.Trim();
-                    account = new BUS_Account(username,password,DateTime.Now,DateTime.Now, role, email, numberphone, name);
-                    if(saveBtn.Text.Equals("Lưu")) account.addAccount();
-                    else if (saveBtn.Text.Equals("Cập nhật")) account.updateAccount();
+
+                    account = new DTO_Account(username,password,DateTime.Now, role);
+                    busAccount = new BUS_Account(account);
+
+                    if(saveBtn.Text.Equals("Lưu")) busAccount.addAccount();
+                    else if (saveBtn.Text.Equals("Cập nhật")) busAccount.updateAccount();
                     form.updateGridView();
                     this.Close();
                 }
@@ -83,12 +97,13 @@ namespace Final_Exam.pop_upForm {
             alertAccount.Visible = false;
         }
         private void accountTextBox_Leave(object sender, EventArgs e) {
-            if(accountTextBox.Texts == "") {
+            if( accountTextBox.Texts == "") {
                 alertAccount.Visible = true;
                 alertAccount.Text = "Tên đăng nhập là bắt buộc!";
             }else {
-                account = new BUS_Account("", "", DateTime.Now, DateTime.Now, "", "", "", "");
-                dt = account.showAccounts();
+                account = new DTO_Account("", "", DateTime.Now, "");
+                busAccount = new BUS_Account(account);
+                dt = busAccount.showAccounts();
                 foreach (DataRow row in  dt.Rows) {
                     if (row[0].ToString() == accountTextBox.Texts) {
                         alertAccount.Visible = true;

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final_Exam.pop_upForm {
+namespace NQH_Application.pop_upForm {
     public partial class ConfirmForm : Form {
         string confirm = "123";
         public ConfirmForm() {
@@ -23,7 +23,7 @@ namespace Final_Exam.pop_upForm {
 
         private void saveBtn_Click(object sender, EventArgs e) {
             if (passwordTextBox.Texts == confirm) {
-                Account.confirmPassword = true;
+                Account.access();
                 this.Close();
             }
             else alert.Visible = true;

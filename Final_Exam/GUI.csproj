@@ -73,6 +73,7 @@
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Activities" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.DirectoryServices" />
@@ -96,29 +97,34 @@
     <Compile Include="Controllers\DataGridViewNumericUpDownEditingControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="HoaDon.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HoaDon.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="HoaDonForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HoaDonForm.Designer.cs">
-      <DependentUpon>HoaDonForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainFormChild\AccountInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainFormChild\AccountInfoForm.Designer.cs">
       <DependentUpon>AccountInfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="pop-upForm\ChiTietLopHocForm.cs">
+    <Compile Include="MainFormChild\RepositoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="pop-upForm\ChiTietLopHocForm.Designer.cs">
-      <DependentUpon>ChiTietLopHocForm.cs</DependentUpon>
+    <Compile Include="MainFormChild\RepositoryForm.Designer.cs">
+      <DependentUpon>RepositoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NQH_ApplicationDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NQH_ApplicationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pop-upForm\DetailItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pop-upForm\DetailItemForm.Designer.cs">
+      <DependentUpon>DetailItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pop-upForm\DetailClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pop-upForm\DetailClassForm.Designer.cs">
+      <DependentUpon>DetailClassForm.cs</DependentUpon>
     </Compile>
     <Compile Include="pop-upForm\ChiTietSinhVienForm.cs">
       <SubType>Form</SubType>
@@ -132,11 +138,11 @@
     <Compile Include="MainFormChild\CongNoForm.Designer.cs">
       <DependentUpon>CongNoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DangNhapForm.cs">
+    <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DangNhapForm.Designer.cs">
-      <DependentUpon>DangNhapForm.cs</DependentUpon>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainFormChild\DashboardForm.cs">
       <SubType>Form</SubType>
@@ -150,17 +156,17 @@
     <Compile Include="pop-upForm\ConfirmForm.Designer.cs">
       <DependentUpon>ConfirmForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="pop-upForm\DoiMatKhauForm.cs">
+    <Compile Include="pop-upForm\ChangePasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="pop-upForm\DoiMatKhauForm.Designer.cs">
-      <DependentUpon>DoiMatKhauForm.cs</DependentUpon>
+    <Compile Include="pop-upForm\ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="pop-upForm\GhiDanhForm.cs">
+    <Compile Include="pop-upForm\CreateStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="pop-upForm\GhiDanhForm.Designer.cs">
-      <DependentUpon>GhiDanhForm.cs</DependentUpon>
+    <Compile Include="pop-upForm\CreateStudentForm.Designer.cs">
+      <DependentUpon>CreateStudentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainFormChild\KhoForm.cs">
       <SubType>Form</SubType>
@@ -168,11 +174,11 @@
     <Compile Include="MainFormChild\KhoForm.Designer.cs">
       <DependentUpon>KhoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainFormChild\LophocForm.cs">
+    <Compile Include="MainFormChild\ClassForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainFormChild\LophocForm.Designer.cs">
-      <DependentUpon>LophocForm.cs</DependentUpon>
+    <Compile Include="MainFormChild\ClassForm.Designer.cs">
+      <DependentUpon>ClassForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -208,11 +214,11 @@
     <Compile Include="Controllers\RoundedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="MainFormChild\SinhvienForm.cs">
+    <Compile Include="MainFormChild\StudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainFormChild\SinhvienForm.Designer.cs">
-      <DependentUpon>SinhvienForm.cs</DependentUpon>
+    <Compile Include="MainFormChild\StudentForm.Designer.cs">
+      <DependentUpon>StudentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="pop-upForm\RegisterAccountForm.cs">
       <SubType>Form</SubType>
@@ -236,11 +242,11 @@
     <Compile Include="pop-upForm\ThanhToanForm.Designer.cs">
       <DependentUpon>ThanhToanForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="pop-upForm\TaoLopForm.cs">
+    <Compile Include="pop-upForm\CreateClassForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="pop-upForm\TaoLopForm.Designer.cs">
-      <DependentUpon>TaoLopForm.cs</DependentUpon>
+    <Compile Include="pop-upForm\CreateClassForm.Designer.cs">
+      <DependentUpon>CreateClassForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ThanhToan.cs">
       <DependentUpon>ThanhToan.xsd</DependentUpon>
@@ -250,18 +256,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ThanhToan.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="HoaDon.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>HoaDon.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HoaDonForm.resx">
-      <DependentUpon>HoaDonForm.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="VietnameseUnitDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VietnameseUnitDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainFormChild\AccountInfoForm.resx">
       <DependentUpon>AccountInfoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pop-upForm\ChiTietLopHocForm.resx">
-      <DependentUpon>ChiTietLopHocForm.cs</DependentUpon>
+    <EmbeddedResource Include="MainFormChild\RepositoryForm.resx">
+      <DependentUpon>RepositoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop-upForm\DetailItemForm.resx">
+      <DependentUpon>DetailItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop-upForm\DetailClassForm.resx">
+      <DependentUpon>DetailClassForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pop-upForm\ChiTietSinhVienForm.resx">
       <DependentUpon>ChiTietSinhVienForm.cs</DependentUpon>
@@ -269,8 +279,8 @@
     <EmbeddedResource Include="MainFormChild\CongNoForm.resx">
       <DependentUpon>CongNoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DangNhapForm.resx">
-      <DependentUpon>DangNhapForm.cs</DependentUpon>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainFormChild\DashboardForm.resx">
       <DependentUpon>DashboardForm.cs</DependentUpon>
@@ -278,17 +288,17 @@
     <EmbeddedResource Include="pop-upForm\ConfirmForm.resx">
       <DependentUpon>ConfirmForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pop-upForm\DoiMatKhauForm.resx">
-      <DependentUpon>DoiMatKhauForm.cs</DependentUpon>
+    <EmbeddedResource Include="pop-upForm\ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pop-upForm\GhiDanhForm.resx">
-      <DependentUpon>GhiDanhForm.cs</DependentUpon>
+    <EmbeddedResource Include="pop-upForm\CreateStudentForm.resx">
+      <DependentUpon>CreateStudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainFormChild\KhoForm.resx">
       <DependentUpon>KhoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainFormChild\LophocForm.resx">
-      <DependentUpon>LophocForm.cs</DependentUpon>
+    <EmbeddedResource Include="MainFormChild\ClassForm.resx">
+      <DependentUpon>ClassForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
@@ -301,8 +311,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>RJTextBox1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainFormChild\SinhvienForm.resx">
-      <DependentUpon>SinhvienForm.cs</DependentUpon>
+    <EmbeddedResource Include="MainFormChild\StudentForm.resx">
+      <DependentUpon>StudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pop-upForm\RegisterAccountForm.resx">
       <DependentUpon>RegisterAccountForm.cs</DependentUpon>
@@ -315,9 +325,20 @@
     <EmbeddedResource Include="pop-upForm\ThanhToanForm.resx">
       <DependentUpon>ThanhToanForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pop-upForm\TaoLopForm.resx">
-      <DependentUpon>TaoLopForm.cs</DependentUpon>
+    <EmbeddedResource Include="pop-upForm\CreateClassForm.resx">
+      <DependentUpon>CreateClassForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="NQH_ApplicationDataSet.xsc">
+      <DependentUpon>NQH_ApplicationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NQH_ApplicationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NQH_ApplicationDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NQH_ApplicationDataSet.xss">
+      <DependentUpon>NQH_ApplicationDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -338,6 +359,17 @@
     <None Include="ThanhToan.xss">
       <DependentUpon>ThanhToan.xsd</DependentUpon>
     </None>
+    <None Include="VietnameseUnitDataSet.xsc">
+      <DependentUpon>VietnameseUnitDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VietnameseUnitDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VietnameseUnitDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VietnameseUnitDataSet.xss">
+      <DependentUpon>VietnameseUnitDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -350,6 +382,10 @@
     <ProjectReference Include="..\BUS_VN\BUS_VN.csproj">
       <Project>{c988f7c3-8c55-4033-9239-c6ced25776f9}</Project>
       <Name>BUS_VN</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{95C2547F-52AF-4019-8F5C-87EE0AE5AC2C}</Project>
+      <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -389,6 +425,21 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-create-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-trash-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-clear-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-remove-30.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

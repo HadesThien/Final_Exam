@@ -1,4 +1,4 @@
-﻿namespace Final_Exam.pop_upForm {
+﻿namespace NQH_Application.pop_upForm {
     partial class ConfirmForm {
         /// <summary>
         /// Required designer variable.

@@ -1,17 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DTO {
-    public class DTO_Teacher :DTO_Person{
-        //Properties
-        public string Subject { get; set; }
+    public class DTO_Teacher : DTO_Employee {
+        //Property
+        private string subject;
+        private List<DTO_Class> classes;
+
         //Constructor
-        public DTO_Teacher(string id, string name, string gender, DateTime dob,string numberPhone, string subject)
-            : base(id, name, gender, dob, numberPhone) {
-            Subject = subject;
+        public DTO_Teacher(
+            string id,
+            string fullname,
+            int coefficient,
+            int dayOffLeft,
+            DateTime dob,
+            string phoneNumber,
+            string email,
+            DateTime hireDate,
+            DTO_Subject subject
+
+            ) : 
+            base(id,fullname,coefficient,dayOffLeft,dob,phoneNumber,email,hireDate) {
+            this.subject = subject.getSubject();
+            this.classes = new List<DTO_Class>();
         }
+        //Methods
+        public void addClassObj(DTO_Class classObj) { classes.Add(classObj); }
+        public void removeClassObj(DTO_Class classObj ) { classes.Remove(classObj); }
+        //Setter
+        public void setSubject(string subject) { this.subject = subject; }  
+        public void setClasslist(List<DTO_Class> classes) { this.classes = classes; }
+        //Getter
+        public string getSubject( ) { return subject; }
+        public List<DTO_Class> getClasslist( ) { return classes; }
     }
 }

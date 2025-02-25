@@ -1,47 +1,114 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DTO
-{
-    public class DTO_Student :DTO_Person
-    {
-        //Properties
-        public string School { get; set; }
-        public string City { get; set; }
-        public string Street { get; set; }
-        public string Ward { get; set; }
-        public string District { get; set; }
-        public string Status { get; set; }
-        public string Note { get; set; }
-        public DateTime DateCreated { get; set; }
-        public List<DTO_Register> Registers { get; set; }
-        public List<DTO_Payment> Payments { get; set; }
-        public List<DTO_Buy> Buys { get; set; }
+namespace DTO {
+    public class DTO_Student {
+        //Property
+        private string studentId;
+        private string fullname;
+        private string address;
+        private DateTime dateOfBirth;
+        private string phoneNumber;
+        private string school;
+        private string status;
+        private string parrentPhoneNumber;
+        private string note;
+        private List<DTO_Payment> payments;
+        private List<DTO_Register> registers;
+
 
         //Constructor
-        public DTO_Student(string id, string name, string gender, DateTime dob,string numberPhone, string school, string street, string ward, string district, string city, DateTime dateCreated, string status, string note)
-            : base(id, name, gender, dob,numberPhone) {
-            School = school;
-            City = city;
-            Street = street;
-            Ward = ward;
-            District = district;
-            DateCreated = dateCreated;
-            Status = status;
-            Note = note;
-            Registers = new List<DTO_Register> ();
-            Payments = new List<DTO_Payment>();
-            Buys = new List<DTO_Buy>();
+        public DTO_Student(string studentId, string fullname, string address, DateTime dateOfBirth, string phoneNumber, string school, string status, string parrentPhoneNumber, string note) {
+            this.studentId = studentId;
+            this.fullname = fullname;
+            this.address = address;
+            this.dateOfBirth = dateOfBirth;
+            this.phoneNumber = phoneNumber;
+            this.school = school;
+            this.status = status;
+            this.parrentPhoneNumber = parrentPhoneNumber;
+            this.note = note;
+            payments = new List<DTO_Payment>();
+            registers = new List<DTO_Register>();
         }
+        public DTO_Student() {
+
+        }
+
         //Methods
-        public void register(DTO_Register r) {
-            Registers.Add(r);
+        //Setter
+        public void setStudentId(string studentId) {
+            this.studentId = studentId;
         }
-        public void removeRegister(DTO_Register r) {
-            Registers.Remove(r);
+        public void setFullName(string fullName) {
+            this.fullname = fullName;
         }
+
+        public void setStatus(string status) {
+            this.status = status;
+        }
+
+        public void setSchool(string school) {
+            this.school = school;
+        }
+        public void setPaymentList(List<DTO_Payment> payments) {
+            this.payments = payments;
+        }
+        public void setRegisterList(List<DTO_Register> registers) {
+            this.registers = registers;
+        }
+
+        public void setPhoneNumber(string phoneNumber) {
+            this.phoneNumber = phoneNumber;
+        }
+
+        public void setParrentPhoneNumber(string parrentPhoneNumber) {
+            this.parrentPhoneNumber = parrentPhoneNumber;
+        }
+        public void setNote(string note) {
+            this.note = note;
+        }
+        public void setAddress(string address) {
+            this.address = address;
+        }
+        public void setDateOfBirth(DateTime dateOfBirth) {
+            this.dateOfBirth = dateOfBirth;
+        }
+
+        //Getter
+        public string getStudentId() {
+            return this.studentId;
+        }
+        public string getFullName() {
+            return this.fullname;
+        }
+        public DateTime getDateOfBirth() {
+            return this.dateOfBirth;
+        }
+        public string getPhoneNumber() {
+            return this.phoneNumber;
+        }
+        public string getSchool() {
+            return this.school;
+        }
+        public string getStatus() {
+            return this.status;
+        }
+        public string getParrentPhoneNumber() {
+            return this.parrentPhoneNumber;
+        }
+        public string getNote() {
+            return this.note;
+        }
+        public List<DTO_Payment> getPayments() {
+            return this.payments;
+        }
+        public List<DTO_Register> getRegisters() {
+            return this.registers;
+        }
+        public string getAddress() {
+            return this.address;
+        }
+
     }
 }

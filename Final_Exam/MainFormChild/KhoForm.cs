@@ -9,10 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 
-namespace Final_Exam {
+namespace NQH_Application{
     public partial class KhoForm : Form {
 
-        private BUS_Document doc;       
 
         public KhoForm() {
             InitializeComponent();
@@ -37,21 +36,6 @@ namespace Final_Exam {
 
         public void updateGridView()
         {
-            doc = new BUS_Document(0, "", "", DateTime.Now, DateTime.Now, 0);
-            DataTable dt = doc.selectQuery();
-            documentGridView.DataSource = dt;
-
-            dt.Columns[0].ColumnName = "Mã đề cương";
-            dt.Columns[1].ColumnName = "Tên đề cương";
-            dt.Columns[2].ColumnName = "Số lượng";
-            dt.Columns[3].ColumnName = "Giá";
-            dt.Columns[4].ColumnName = "Ngày cập nhật";
-            dt.Columns[5].ColumnName = "Ngày tạo";
-
-            foreach (DataGridViewColumn col in documentGridView.Columns)
-            {
-                col.SortMode = DataGridViewColumnSortMode.NotSortable;
-            }
 
         }
 
@@ -86,26 +70,6 @@ namespace Final_Exam {
 
         private void searchTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                Console.WriteLine(searchTextBox.Text);
-                doc = new BUS_Document(0, "", searchTextBox.Text, DateTime.Now, DateTime.Now, 0);
-                DataTable dt = doc.searchDocument();
-
-                documentGridView.DataSource = dt;
-
-                dt.Columns[0].ColumnName = "Mã đề cương";
-                dt.Columns[1].ColumnName = "Tên đề cương";
-                dt.Columns[2].ColumnName = "Số lượng";
-                dt.Columns[3].ColumnName = "Giá";
-                dt.Columns[4].ColumnName = "Ngày cập nhật";
-                dt.Columns[5].ColumnName = "Ngày tạo";
-
-                foreach (DataGridViewColumn col in documentGridView.Columns)
-                {
-                    col.SortMode = DataGridViewColumnSortMode.NotSortable;
-                }
-            }
         }
 
         private void searchTextBox_TextChanged(object sender, EventArgs e)

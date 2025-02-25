@@ -1,4 +1,4 @@
-﻿namespace Final_Exam {
+﻿namespace NQH_Application{
     partial class KhoForm {
         /// <summary>
         /// Required designer variable.
@@ -36,7 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.importBtn = new CustomControls.RJControls.RJButton();
             this.updateBtn = new CustomControls.RJControls.RJButton();
-            this.documentGridView = new Final_Exam.RoundedGridView();
+            this.documentGridView = new NQH_Application.RoundedGridView();
             ((System.ComponentModel.ISupportInitialize)(this.documentGridView)).BeginInit();
             this.SuspendLayout();
             // 
