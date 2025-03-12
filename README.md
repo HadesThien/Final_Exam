@@ -7,7 +7,7 @@ Including many functional components aimed at processing operations such as:
 - Managing warehouse and items in the warehouse
 - And other sub-functions
 
-This project has just completed the use cases of warehouse management, the interface component only works on the Warehouse and Account parts.
+This project has been just completed the use cases of warehouse management, the interface component only works on the Warehouse and Account parts.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
